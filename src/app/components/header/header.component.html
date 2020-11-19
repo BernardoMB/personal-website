@@ -1,0 +1,16 @@
+<mat-toolbar color="primary">
+  <button mat-icon-button (click)="openNavigationMenu('Lo que sea', 23)" aria-label="menu icon button">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>{{name}} - {{title}}</span>
+  <span class="example-spacer"></span>
+  <button mat-icon-button [disabled]="!enableShareButton" [matMenuTriggerFor]="shareMenu" aria-label="share icon button">
+    <mat-icon>share</mat-icon>
+  </button>
+  <mat-menu #shareMenu="matMenu">
+    <button mat-menu-item>Copy link</button>
+    <button mat-menu-item>Share on Facebook</button>
+    <button mat-menu-item>Share on Twitter</button>
+    <button mat-menu-item>Share on Reddit</button>
+  </mat-menu>
+</mat-toolbar>
