@@ -1,0 +1,33 @@
+<mat-card class="example-card">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>{{name}}</mat-card-title>
+    <mat-card-subtitle>{{title}}</mat-card-subtitle>
+  </mat-card-header>
+  <!-- <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu"> -->
+  <mat-card-content>
+    <p class="card-content-description">
+      {{phoneNumber}}
+    </p>
+    <p class="card-content-description">
+      {{emailAddress}}
+    </p>
+    <p class="card-content-description">
+      {{physicalAddress}}
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button [matMenuTriggerFor]="shareMenu">SHARE</button>
+    <mat-menu #shareMenu="matMenu">
+      <button mat-menu-item>Copy link</button>
+      <button mat-menu-item>Share on Facebook</button>
+      <button mat-menu-item>Share on Twitter</button>
+      <button mat-menu-item>Share on Reddit</button>
+    </mat-menu>
+  </mat-card-actions>
+  <mat-card-footer>
+    <button class="info-button" mat-icon-button (click)="emitShowInfoEvent()" aria-label="info icon button">
+      <mat-icon>info</mat-icon>
+    </button>
+  </mat-card-footer>
+</mat-card>

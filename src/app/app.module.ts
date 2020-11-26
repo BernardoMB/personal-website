@@ -15,6 +15,7 @@ import {MatMenuModule} from '@angular/material/menu';
 import {MatCardModule} from '@angular/material/card';
 import { LandingComponent } from './components/landing/landing.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { PresentationCardComponent } from './components/presentation-card/presentation-card.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
     MainComponent,
     FooterComponent,
     LandingComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    PresentationCardComponent
   ],
   imports: [
     BrowserModule,

@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
   public name = 'Bernardo Mondragón Brozon';
   public title = 'Actuary & Full-Stack Developer';
+  public initials = 'BMB';
   public enableShareButton = true;
 
   constructor() {
