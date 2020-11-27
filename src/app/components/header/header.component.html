@@ -1,6 +1,6 @@
 <mat-toolbar class="header" color="primary">
-  <span>{{name}} - {{title}}</span>
-  <span class="example-spacer"></span>
+  <span>{{name}}</span>
+  <span class="spacer"></span>
   <div class="navigation-container">
     <a routerLink="/home" routerLinkActive="active">Home</a>
     <a routerLink="/about" routerLinkActive="active">About</a>
@@ -14,11 +14,11 @@
 </mat-toolbar>
 
 <mat-toolbar class="header-mobile" color="primary">
-  <button mat-icon-button (click)="openNavigationMenu('Lo que sea', 23)" aria-label="menu icon button">
+  <button mat-icon-button (click)="toggleSidenav.emit()" aria-label="menu icon button">
     <mat-icon>menu</mat-icon>
   </button>
   <span>{{initials}}</span>
-  <span class="example-spacer"></span>
+  <span class="spacer"></span>
   <button mat-icon-button [disabled]="!enableShareButton" [matMenuTriggerFor]="shareMenu" aria-label="share icon button">
     <mat-icon>share</mat-icon>
   </button>

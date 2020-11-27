@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -10,6 +10,7 @@ export class HeaderComponent implements OnInit {
   public title = 'Actuary & Full-Stack Developer';
   public initials = 'BMB';
   public enableShareButton = true;
+  @Output() toggleSidenav: EventEmitter<void> = new EventEmitter();
 
   constructor() {
     // Code executes on component initialization
@@ -19,11 +20,6 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
     // Code executes after component has been initialized
     console.log('Executing ngOnInit hook');
-  }
-
-  public openNavigationMenu(phrase: string, numero: number): { frase: string, numero: number } {
-    console.log(phrase, numero);
-    return { frase: phrase, numero };
   }
 
 }

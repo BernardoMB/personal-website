@@ -35,9 +35,10 @@ $personal-website-theme: mat-light-theme((
 @import './variables';
 
 /* You can add global styles to this file, and also import other style files */
-.header-text {
-  color: $naranja;
-}
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.no-scroll {
+  overflow-y: hidden;
+}

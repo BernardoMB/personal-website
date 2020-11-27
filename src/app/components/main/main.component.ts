@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
+import { Component, Inject, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-main',
@@ -6,10 +7,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main.component.scss']
 })
 export class MainComponent implements OnInit {
+  opened: boolean | undefined;
 
-  constructor() { }
+  constructor(@Inject(DOCUMENT) private document: any) { }
 
   ngOnInit(): void {
+  }
+
+  onOpenedStart(): void {
+    this.document.body.classList.add('no-scroll');
+  }
+
+  onClosedStart(): void {
+    this.document.body.classList.remove('no-scroll');
   }
 
 }

@@ -7,15 +7,16 @@ import { HeaderComponent } from './components/header/header.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MainComponent } from './components/main/main.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { LandingComponent } from './components/landing/landing.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
+import { PresentationCardComponent } from './components/presentation-card/presentation-card.component';
 
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatCardModule} from '@angular/material/card';
-import { LandingComponent } from './components/landing/landing.component';
-import { NotFoundComponent } from './components/not-found/not-found.component';
-import { PresentationCardComponent } from './components/presentation-card/presentation-card.component';
+import {MatSidenavModule} from '@angular/material/sidenav';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { PresentationCardComponent } from './components/presentation-card/presen
     MatIconModule,
     MatButtonModule,
     MatMenuModule,
-    MatCardModule
+    MatCardModule,
+    MatSidenavModule
   ],
   providers: [],
   bootstrap: [AppComponent]

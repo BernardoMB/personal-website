@@ -1,5 +1,20 @@
-<app-header></app-header>
-<div class="router-outlet-container">
-  <router-outlet></router-outlet>
-</div>
-<app-footer></app-footer>
+<mat-sidenav-container [ngClass]="{'no-scroll': opened}">
+  <mat-sidenav
+    mode="over"
+    [(opened)]="opened"
+    (openedStart)="onOpenedStart()"
+    (closedStart)="onClosedStart()"
+  >
+    Sidenav content
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <app-header (toggleSidenav)="opened = !opened"></app-header>
+    <div class="router-outlet-container">
+      <router-outlet></router-outlet>
+    </div>
+    <app-footer></app-footer>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+
+
