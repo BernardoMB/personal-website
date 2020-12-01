@@ -1,0 +1,12 @@
+<div class="sidenav-container">
+  <mat-toolbar color="primary">
+    <span>{{initials}}</span>
+  </mat-toolbar>
+  <div class="navigation-container">
+    <a routerLink="/home" routerLinkActive="active" (click)="sideBarNavigation.emit()">Home</a>
+    <a routerLink="/about" routerLinkActive="active" (click)="sideBarNavigation.emit()">About</a>
+    <a routerLink="/cv" routerLinkActive="active" (click)="sideBarNavigation.emit()">CV</a>
+    <a routerLink="/projects" routerLinkActive="active" (click)="sideBarNavigation.emit()">Projects</a>
+    <a routerLink="/hobbies" routerLinkActive="active" (click)="sideBarNavigation.emit()">Hobbies</a>
+  </div>
+</div>

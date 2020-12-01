@@ -17,6 +17,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatCardModule} from '@angular/material/card';
 import {MatSidenavModule} from '@angular/material/sidenav';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import {MatSidenavModule} from '@angular/material/sidenav';
     FooterComponent,
     LandingComponent,
     NotFoundComponent,
-    PresentationCardComponent
+    PresentationCardComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,

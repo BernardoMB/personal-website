@@ -5,10 +5,10 @@
     (openedStart)="onOpenedStart()"
     (closedStart)="onClosedStart()"
   >
-    Sidenav content
+    <app-sidebar [initials]="initials" (sideBarNavigation)="opened = false"></app-sidebar>
   </mat-sidenav>
   <mat-sidenav-content>
-    <app-header (toggleSidenav)="opened = !opened"></app-header>
+    <app-header [initials]="initials" (toggleSidenav)="opened = !opened"></app-header>
     <div class="router-outlet-container">
       <router-outlet></router-outlet>
     </div>

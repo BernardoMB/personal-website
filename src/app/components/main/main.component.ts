@@ -8,6 +8,7 @@ import { Component, Inject, OnInit } from '@angular/core';
 })
 export class MainComponent implements OnInit {
   opened: boolean | undefined;
+  initials = 'BMB';
 
   constructor(@Inject(DOCUMENT) private document: any) { }
 

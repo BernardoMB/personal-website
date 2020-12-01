@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -8,8 +8,8 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 export class HeaderComponent implements OnInit {
   public name = 'Bernardo Mondragón Brozon';
   public title = 'Actuary & Full-Stack Developer';
-  public initials = 'BMB';
   public enableShareButton = true;
+  @Input() initials: string | undefined;
   @Output() toggleSidenav: EventEmitter<void> = new EventEmitter();
 
   constructor() {
