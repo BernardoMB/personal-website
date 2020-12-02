@@ -4,5 +4,14 @@
     padding: 16px;
     height: unset;
   }
+  .row-2 {
+    display: flex;
+    justify-content: center;
+    height: unset;
+    margin: 10px 0px;
+    .powered-by {
+      font-size: 11px;
+      line-height: 1;
+    }
+  }
 }
-
