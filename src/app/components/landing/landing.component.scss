@@ -1,0 +1,14 @@
+.swiper-wrapper-container {
+  position: relative;
+  .swiper-container {
+    .swiper-wrapper {
+      .swiper-slide {
+        .slide-container {
+          max-width: 1280px;
+          margin: auto;
+          border: 1px solid red;
+        }
+      }
+    }
+  }
+}

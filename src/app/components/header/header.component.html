@@ -1,16 +1,18 @@
 <mat-toolbar class="header" color="primary">
-  <span>{{name}}</span>
-  <span class="spacer"></span>
-  <div class="navigation-container">
-    <a routerLink="/home" routerLinkActive="active">Home</a>
-    <a routerLink="/about" routerLinkActive="active">About</a>
-    <a routerLink="/cv" routerLinkActive="active">CV</a>
-    <a routerLink="/projects" routerLinkActive="active">Projects</a>
-    <a routerLink="/hobbies" routerLinkActive="active">Hobbies</a>
+  <div class="header-container">
+    <span>{{name}}</span>
+    <span class="spacer"></span>
+    <div class="navigation-container">
+      <a routerLink="/home" routerLinkActive="active">Home</a>
+      <a routerLink="/about" routerLinkActive="active">About</a>
+      <a routerLink="/cv" routerLinkActive="active">CV</a>
+      <a routerLink="/projects" routerLinkActive="active">Projects</a>
+      <a routerLink="/hobbies" routerLinkActive="active">Hobbies</a>
+    </div>
+    <button mat-icon-button [disabled]="!enableShareButton" [matMenuTriggerFor]="shareMenu" aria-label="share icon button">
+      <mat-icon>share</mat-icon>
+    </button>
   </div>
-  <button mat-icon-button [disabled]="!enableShareButton" [matMenuTriggerFor]="shareMenu" aria-label="share icon button">
-    <mat-icon>share</mat-icon>
-  </button>
 </mat-toolbar>
 
 <mat-toolbar class="header-mobile" color="primary">

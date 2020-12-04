@@ -1,1 +1,14 @@
-<p>about-root works!</p>
+<section class="about-jumbotron">
+  <div class="jumbotron-container">
+    <div class="jumbotron-overlay">
+      <div>About Myself</div>
+      <div>“Make the change that you want to see in the world.”</div>
+      <button>Call action</button>
+    </div>
+  </div>
+</section>
+<div class="tabs-navigation-container">
+  <a class="tab-selector" routerLink="active" [routerLink]="['./description']">Description</a>
+  <a class="tab-selector" routerLink="active" [routerLink]="['./biography']">Biography</a>
+</div>
+<router-outlet></router-outlet>
