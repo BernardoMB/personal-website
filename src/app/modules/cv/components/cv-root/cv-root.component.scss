@@ -1,13 +1,96 @@
 .about-jumbotron {
   .jumbotron-container {
+    background-image: url('/assets/images/jumbotrons/hero.png');
+    background-size: contain;
     .jumbotron-overlay {
+      .elements-container {
+        max-width: 1280px;
+        margin: auto;
+        color: white;
+        padding: 36px 16px;
+        h1 {
+          font-size: 46px;
+          font-weight: bold;
+          line-height: 120%;
+        }
+        h5 {
+          margin: 10px 0px;
+          font-size: 24px;
+          padding-bottom: 4px;
+          line-height: 120%;
+        }
+        button {
+          margin-top: 23px;
+          height: 46px;
+        }
+      }
+    }
+  }
+}
 
+.tab-group {
+  ::ng-deep {
+    .mat-tab-header {
+      border: none;
+    }
+    .mat-tab-list {
+      background-color: #f5f5f5;
+      .mat-tab-labels {
+        justify-content: space-between;
+        max-width: 1280px;
+        padding: 0px 16px;
+        margin: auto;
+        .mat-tab-label {
+          padding: 0px;
+          //flex-grow: 1;
+          min-width: unset;
+          max-width: 200px;
+          margin-bottom: 2px;
+          &:focus {
+            outline: 1px solid black;
+            outline-offset: -2px;
+            outline-style: dashed;
+            @media screen and (max-width: 450px) {
+              outline: none;
+            }
+          }
+          .mat-tab-label-content {
+            font-size: 16px;
+            color: #29303b;
+            font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+            font-weight: bold;
+            @media screen and (max-width: 425px) {
+              font-size: 13px;
+            }
+          }
+        }
+        .mat-tab-label-active {
+          opacity: 1;
+        }
+        &:before {
+          content: "";
+          position: absolute;
+          height: 2px;
+          background-color: #cacaca;
+          width: 100%;
+          z-index: 2;
+          bottom: 0px;
+          left: 0px;
+        }
+        @media screen and (max-width: 425px) {
+          padding: 0px 20px;
+        }
+      }
+      .mat-ink-bar {
+        background-color: #834dca;
+        height: 2px;
+        z-index: 2;
+      }
     }
   }
 }
 
 .tabs-navigation {
   .tab-selector {
-
   }
 }

@@ -1,14 +1,45 @@
 <section class="about-jumbotron">
   <div class="jumbotron-container">
     <div class="jumbotron-overlay">
-      <div>Experience</div>
-      <div>“Make the change that you want to see in the world.”</div>
-      <button>Call action</button>
+      <div class="elements-container">
+        <h1>Experience</h1>
+        <h5>Make the change that you want to see in the world</h5>
+        <button>Call action</button>
+      </div>
     </div>
   </div>
 </section>
+
+<mat-tab-group class="tab-group">
+  <mat-tab>
+    <ng-template mat-tab-label class="focus-outline">
+      <mat-icon class="example-tab-icon">thumb_up</mat-icon>
+      First
+    </ng-template>
+    Content 1
+  </mat-tab>
+
+  <mat-tab>
+    <ng-template mat-tab-label>
+      <mat-icon class="example-tab-icon">thumb_up</mat-icon>
+      Second
+    </ng-template>
+    Content 2
+  </mat-tab>
+
+  <mat-tab>
+    <ng-template mat-tab-label>
+      <mat-icon class="example-tab-icon">thumb_up</mat-icon>
+      Third
+    </ng-template>
+
+    Content 3
+  </mat-tab>
+</mat-tab-group>
+
+
 <div class="tabs-navigation-container">
-  <a class="tab-selector" routerLink="active" [routerLink]="['./description']">Curriculum Vitae</a>
-  <a class="tab-selector" routerLink="active" [routerLink]="['./biography']">Resume</a>
+  <a class="tab-selector" routerLink="active" [routerLink]="['./cv']">Curriculum Vitae</a>
+  <a class="tab-selector" routerLink="active" [routerLink]="['./resume']">Resume</a>
 </div>
 <router-outlet></router-outlet>

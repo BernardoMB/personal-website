@@ -57,3 +57,14 @@ body { margin: 0; font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
 .no-scroll {
   overflow-y: hidden;
 }
+
+$focus-outline-thickeness: 2px;
+.focus-outline {
+  &:focus {
+    outline: $focus-outline-thickeness solid #46DDA9;
+    outline-style: dashed;
+    @media screen and (max-width: 450px) {
+      outline: none;
+    }
+  }
+}
