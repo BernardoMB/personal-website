@@ -1,1 +1,14 @@
-<p>cv-root works!</p>
+<section class="about-jumbotron">
+  <div class="jumbotron-container">
+    <div class="jumbotron-overlay">
+      <div>Experience</div>
+      <div>“Make the change that you want to see in the world.”</div>
+      <button>Call action</button>
+    </div>
+  </div>
+</section>
+<div class="tabs-navigation-container">
+  <a class="tab-selector" routerLink="active" [routerLink]="['./description']">Curriculum Vitae</a>
+  <a class="tab-selector" routerLink="active" [routerLink]="['./biography']">Resume</a>
+</div>
+<router-outlet></router-outlet>
