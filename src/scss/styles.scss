@@ -58,10 +58,12 @@ body { margin: 0; font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
   overflow-y: hidden;
 }
 
+// $focus-outline-color: #46DDA9;
+$focus-outline-color: black;
 $focus-outline-thickeness: 2px;
 .focus-outline {
   &:focus {
-    outline: $focus-outline-thickeness solid #46DDA9;
+    outline: $focus-outline-thickeness solid $focus-outline-color;
     outline-style: dashed;
     @media screen and (max-width: 450px) {
       outline: none;

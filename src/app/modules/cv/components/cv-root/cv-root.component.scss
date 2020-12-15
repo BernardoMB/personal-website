@@ -29,6 +29,69 @@
 }
 
 .tab-group {
+  mat-icon {
+    color: #834dca;
+  }
+  .label {
+    margin-left: 5px;
+  }
+  .tab {
+    box-sizing: border-box;
+    overflow: hidden;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    max-width: 1312px;
+    padding: 40px 16px;
+    padding-bottom: 40px;
+    position: relative;
+  }
+  .tab-cv {
+    .cv-container {
+      padding: 32px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.08), 0px 4px 4px rgba(0, 0, 0, 0.25);
+      .document {
+        display: flex;
+        margin-bottom: 30px;
+        .left {
+
+        }
+        .left-purple {
+          background-color: #834dca;
+        }
+        .left-blue {
+          background-color: #0078d7;
+        }
+        .left-gray {
+          background-color: #c4c4c4;
+        }
+        .right {
+          flex-grow: 1;
+          margin-left: 32px;
+        }
+      }
+      .controls-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .control {
+          margin: 5px;
+          width: 20px;
+          height: 20px;
+          cursor: pointer;
+        }
+        .purple {
+          background-color: #834dca;
+        }
+        .blue {
+          background-color: #0078d7;
+        }
+        .gray {
+          background-color: #c4c4c4;
+        }
+      }
+    }
+  }
   ::ng-deep {
     .mat-tab-header {
       border: none;

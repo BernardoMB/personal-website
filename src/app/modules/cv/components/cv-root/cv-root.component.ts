@@ -6,6 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cv-root.component.scss']
 })
 export class CvRootComponent implements OnInit {
+  showDynamicDisplayContent: boolean = false;
+
+  // NgClass directive example
+  isPurple = true;
+  isBlue = false;
 
   constructor() { }
 

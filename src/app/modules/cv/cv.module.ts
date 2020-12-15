@@ -6,6 +6,7 @@ import { CvComponent } from './components/cv/cv.component';
 import { ResumeComponent } from './components/resume/resume.component';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatIconModule} from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [CvRootComponent, CvComponent, ResumeComponent],
@@ -13,7 +14,8 @@ import {MatIconModule} from '@angular/material/icon';
     CommonModule,
     CvRoutingModule,
     MatTabsModule,
-    MatIconModule
+    MatIconModule,
+    MatButtonModule
   ]
 })
 export class CvModule { }
