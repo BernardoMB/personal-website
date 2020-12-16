@@ -46,8 +46,8 @@
     padding-bottom: 40px;
     position: relative;
   }
-  .tab-cv {
-    .cv-container {
+  .tab-resume {
+    .resume-container {
       padding: 32px;
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.08), 0px 4px 4px rgba(0, 0, 0, 0.25);
       .document {
@@ -68,6 +68,61 @@
         .right {
           flex-grow: 1;
           margin-left: 32px;
+          color: #333333;
+          .name {
+            margin-top: 16px;
+            font-size: 24px;
+            font-weight: bold;
+          }
+          .date {
+            margin-top: 16px;
+            margin-bottom: 10px;
+            font-size: 14px;
+            font-weight: 500;
+          }
+          .profile-label {
+            color: #c4c4c4;
+            margin: 10px 0px;
+            font-size: 14px;
+          }
+          .profile {
+            margin: 10px 0px;
+            font-size: 14px;
+          }
+          .section-title {
+            margin-top: 16px;
+            margin-bottom: 10px;
+            font-size: 18px;
+            font-weight: bold;
+          }
+          .place {
+            margin: 10px 0px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 16px;
+            .left {
+              display: flex;
+              .position {
+                font-weight: bold;
+                margin-right: 10px;
+              }
+              .period {
+                color: #c4c4c4;
+                text-transform: uppercase;
+              }
+            }
+            .right {
+              flex-grow: unset;
+              font-weight: bold;
+              margin-left: 10px;
+            }
+          }
+          .points-list {
+            margin-bottom: 10px;
+            .point {
+              font-size: 14px;
+            }
+          }
         }
       }
       .controls-container {

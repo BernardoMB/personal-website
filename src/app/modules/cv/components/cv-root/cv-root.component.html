@@ -103,37 +103,43 @@ Mexico's Center of Investigation and Nation Security (CISEN)
       <mat-icon class="example-tab-icon">history_edu</mat-icon>
       <div class="label">Resume</div>
     </ng-template>
-    <div class="tab tab-cv">
-      <div class="cv-container">
+    <div class="tab tab-resume">
+      <div class="resume-container">
         <div class="document">
-          <div class="left" [ngClass]='isPurple ? "left-purple" : isBlue ? "left-blue" : "left-gray"'>
+          <div class="left" [ngClass]='isPurple ? "left-purple" : isBlue ? "left-blue" : "left-gray"' [style.color]="leftPanelFontColor">
             left column
           </div>
           <div class="right">
-            <div>Bernardo Mondragon Brozon</div>
-            <div>12/10/2020</div>
-            <div>Profile</div>
-            <div>
+            <div class="name">{{name}}</div>
+            <div class="date">{{date}}</div>
+            <div class="profile-label">Profile</div>
+            <div class="profile">
               Hard working man with +8 years of experience applying actuarial knowledge and developing all
 kinds of software solutions. Beign involved in several ambitious projects I have developed skills in
 insurance product development including software development and systems architecture. At the
 same time I consider myself a fully qualived actuary who has the confidence to work on my own
 initiative and the ability to play a key role in a leading company. I am a quick learner who can balance
 theory along with practical solutions. Right now I would like to join a company that is looking to hire
-the best talent, gain experience and face new challenges
+the best talent, gain experience and face new challenges.
             </div>
-            <div>Education</div>
+
+            <div class="section-title">Education</div>
             <div class="place">
-              <div class="left">Bachelor's in Actuarial Science</div>
-              <div class="center">AUG 2013 - AUG 2018</div>
+              <div class="left">
+                <div class="position">Bachelor's in Actuarial Science</div>
+                <div class="period">AUG 2013 - AUG 2018</div>
+              </div>
               <div class="right">Instituto Tecnologico Autonomo de Mexico (ITAM)</div>
+
             </div>
-            <ul class="Points">
-              <li>
+            <ul class="points-list">
+              <li class="point">
                 Applied mathematics and statistical methods to assess risk in insurance, finance and other industries and professions.
               </li>
             </ul>
+
             <div>Experience</div>
+
             <div class="place">
               <div class="left">CoFounder & Director</div>
               <div class="center">JAN 2019 - Present</div>
@@ -150,6 +156,7 @@ the best talent, gain experience and face new challenges
                 I have satisfied over 30+ customers providing them with software that suits their needs.
               </li>
             </ul>
+
             <div class="place">
               <div class="left">Full-stack Developer</div>
               <div class="center">JAN 2014 - DEC 2018</div>
@@ -168,7 +175,9 @@ Mexico's Center of Investigation and Nation Security (CISEN)
                 Succesfully parsed over 700 million CDR (call detail registries) from different random formats
               </li>
             </ul>
+
             <div>Achivements</div>
+
             <div class="place">
               <div class="left">Bachelor's in Actuarial Science</div>
               <div class="center">AUG 2013 - AUG 2018</div>
@@ -179,13 +188,14 @@ Mexico's Center of Investigation and Nation Security (CISEN)
                 Applied mathematics and statistical methods to assess risk in insurance, finance and other industries and professions.
               </li>
             </ul>
+
           </div>
         </div>
         <div class="controls-container">
           <div>
-            <div tabindex="0" class="control purple focus-outline" (click)="isPurple = true; isBlue = false;"></div>
-            <div tabindex="0" class="control blue focus-outline" (click)="isPurple = false; isBlue = true;"></div>
-            <div tabindex="0" class="control gray focus-outline" (click)="isPurple = false; isBlue = false;"></div>
+            <div tabindex="0" class="control purple focus-outline" (click)="isPurple = true; isBlue = false; leftPanelFontColor = 'white';"></div>
+            <div tabindex="0" class="control blue focus-outline" (click)="changeLeftPanelStyle('blue')"></div>
+            <div tabindex="0" class="control gray focus-outline" (click)="changeLeftPanelStyle('gray')"></div>
           </div>
           <button mat-raised-button color="primary">Download</button>
         </div>
