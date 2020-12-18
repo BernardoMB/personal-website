@@ -53,17 +53,69 @@
       .document {
         display: flex;
         margin-bottom: 30px;
-        .left {
-
+        .resume-left {
+          padding: 20px;
+          max-width: 200px;
+          position: relative;
+          .title {
+            font-size: 20px;
+            text-align: center;
+          }
+          .section-title {
+            font-size: 20px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-weight: bold;
+          }
+          .subtitle {
+            font-size: 16px;
+            opacity: 0.75;
+            margin-top: 20px;
+          }
+          .link-container {
+            display: flex;
+            .icon {
+              margin-right: 5px;
+            }
+            .link {
+              word-break: break-all;
+            }
+          }
+          .spanish-bar {
+            height: 4px;
+            width: calc(100% - 20px);
+          }
+          .english-bar {
+            height: 4px;
+            width: calc(80% - 20px);
+          }
         }
         .left-purple {
           background-color: #834dca;
+          .spanish-bar {
+            background-color: white;
+          }
+          .english-bar {
+            background-color: white;
+          }
         }
         .left-blue {
           background-color: #0078d7;
+          .spanish-bar {
+            background-color: white;
+          }
+          .english-bar {
+            background-color: white;
+          }
         }
         .left-gray {
           background-color: #c4c4c4;
+          .spanish-bar {
+            background-color: black;
+          }
+          .english-bar {
+            background-color: black;
+          }
         }
         .right {
           flex-grow: 1;
@@ -90,9 +142,9 @@
             font-size: 14px;
           }
           .section-title {
-            margin-top: 16px;
+            margin-top: 30px;
             margin-bottom: 10px;
-            font-size: 18px;
+            font-size: 20px;
             font-weight: bold;
           }
           .place {
