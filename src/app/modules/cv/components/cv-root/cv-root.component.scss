@@ -121,6 +121,7 @@
           flex-grow: 1;
           margin-left: 32px;
           color: #333333;
+          padding-right: 32px;
           .name {
             margin-top: 16px;
             font-size: 24px;
@@ -181,20 +182,32 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        .control {
-          margin: 5px;
-          width: 20px;
-          height: 20px;
-          cursor: pointer;
-        }
-        .purple {
-          background-color: #834dca;
-        }
-        .blue {
-          background-color: #0078d7;
-        }
-        .gray {
-          background-color: #c4c4c4;
+        .select-color-container {
+          display: flex;
+          flex-direction: column;
+          .select-color-label {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+          }
+          .color-container {
+            display: flex;
+            .control {
+              margin: 5px;
+              width: 20px;
+              height: 20px;
+              cursor: pointer;
+            }
+            .purple {
+              background-color: #834dca;
+            }
+            .blue {
+              background-color: #0078d7;
+            }
+            .gray {
+              background-color: #c4c4c4;
+            }
+          }
         }
       }
     }

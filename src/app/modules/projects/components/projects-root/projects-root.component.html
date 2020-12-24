@@ -1,1 +1,31 @@
-<p>projects-root works!</p>
+<section class="about-jumbotron">
+  <div class="jumbotron-container">
+    <div class="jumbotron-overlay">
+      <div class="elements-container">
+        <h1>Projects</h1>
+        <div class="year-columns-container">
+          <div
+            class="year-column"
+            *ngFor="let year of years"
+          >
+            <div
+              class="project-container"
+              *ngFor="let project of year.projects"
+            >
+              <div
+                class="project-img"
+                matTooltip="{{project.name}}"
+                [matTooltipPosition]="'right'"
+              >
+              </div>
+              <div class="project-code">
+                {{project.code}}
+              </div>
+            </div>
+            <div class="year">{{year.year}}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

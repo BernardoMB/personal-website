@@ -105,7 +105,7 @@ Mexico's Center of Investigation and Nation Security (CISEN)
     </ng-template>
     <div class="tab tab-resume">
       <div class="resume-container">
-        <div class="document">
+        <div id="document" class="document">
           <div class="resume-left" [ngClass]='isPurple ? "left-purple" : isBlue ? "left-blue" : "left-gray"' [style.color]="leftPanelFontColor">
             <div class="title">Actuary & Full-stack Developer</div>
             <div class="section-title">Details</div>
@@ -178,12 +178,17 @@ the best talent, gain experience and face new challenges.
           </div>
         </div>
         <div class="controls-container">
-          <div>
-            <div tabindex="0" class="control purple focus-outline" (click)="isPurple = true; isBlue = false; leftPanelFontColor = 'white';"></div>
-            <div tabindex="0" class="control blue focus-outline" (click)="changeLeftPanelStyle('blue')"></div>
-            <div tabindex="0" class="control gray focus-outline" (click)="changeLeftPanelStyle('gray')"></div>
+          <div class="select-color-container">
+            <div class="select-color-label">
+              Change color
+            </div>
+            <div class="color-container">
+              <div tabindex="0" class="control purple focus-outline" (click)="isPurple = true; isBlue = false; leftPanelFontColor = 'white';"></div>
+              <div tabindex="0" class="control blue focus-outline" (click)="changeLeftPanelStyle('blue')"></div>
+              <div tabindex="0" class="control gray focus-outline" (click)="changeLeftPanelStyle('gray')"></div>
+            </div>
           </div>
-          <button mat-raised-button color="primary">Download</button>
+          <button mat-raised-button color="primary" (click)="downloadResume()">Download</button>
         </div>
       </div>
     </div>

@@ -33,3 +33,9 @@ Kebab case: my-variable
 Pascal case: MyVariable
 Sanke case: my_variable
 
+## Next topics
+
+* Observbables
+* Services
+* Route resolvers
+* Local state management

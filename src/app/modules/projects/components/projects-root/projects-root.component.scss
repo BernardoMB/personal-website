@@ -1,0 +1,55 @@
+.about-jumbotron {
+  .jumbotron-container {
+    // background-image: url('/assets/images/jumbotrons/hero.png');
+    // background-size: contain;
+    .jumbotron-overlay {
+      .elements-container {
+        max-width: 1280px;
+        margin: auto;
+        h1 {
+          padding: 36px 16px;
+          padding-bottom: 0;
+          font-size: 46px;
+          font-weight: bold;
+          line-height: 120%;
+        }
+        .year-columns-container {
+          display: flex;
+          align-items: stretch;
+          overflow-x: auto;
+          padding: 16px 10px;
+          justify-content: center;
+          .year-column {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            .project-container {
+              .project-img {
+                height: 50px;
+                width: 50px;
+                margin: 0px 7px;
+                border: 1px dashed gray;
+                cursor: pointer;
+                transition: transform .2s; // Animation
+                &:hover {
+                  transform: scale(1.6);
+                }
+              }
+              .project-code {
+                margin: 0px 7px;
+                line-height: 1;
+                font-size: 12px;
+                margin-bottom: 2px;
+              }
+            }
+            .year {
+              margin: 0px 7px;
+              margin-top: 16px;
+              font-weight: bold;
+            }
+          }
+        }
+      }
+    }
+  }
+}

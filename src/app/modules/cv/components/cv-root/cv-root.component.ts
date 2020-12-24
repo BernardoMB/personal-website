@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import * as html2canvas from 'html2canvas';
 import * as moment from 'moment';
 
 @Component({
@@ -89,6 +90,21 @@ export class CvRootComponent implements OnInit {
         this.isPurple = true; this.isBlue = false; this.leftPanelFontColor = 'white';
         break;
     }
+  }
+
+  async downloadResume() {
+    window.scrollTo(0, 0);
+    setTimeout(async () => {
+      let element: HTMLElement;
+      element = <HTMLElement>(document.querySelector('#document'));
+      const canvas = await html2canvas.default(element);
+      /* document.body.appendChild(canvas); */
+      const contentDataURL = canvas.toDataURL('image/png');
+      const download = document.createElement('a');
+      download.href = contentDataURL;
+      download.download = ``;
+      download.click();
+    }, 1);
   }
 
 }
