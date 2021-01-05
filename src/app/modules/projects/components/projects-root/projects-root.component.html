@@ -16,6 +16,8 @@
                 class="project-img"
                 matTooltip="{{project.name}}"
                 [matTooltipPosition]="'right'"
+                [ngStyle]="{'background-image': 'url(' + project.image + ')'}"
+                [routerLink]="['./', project.id]"
               >
               </div>
               <div class="project-code">

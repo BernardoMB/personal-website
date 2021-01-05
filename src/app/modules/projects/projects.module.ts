@@ -6,6 +6,7 @@ import { ProjectDetailComponent } from './components/project-detail/project-deta
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { ProjectsService } from './services/projects.service';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { ProjectDetailResoverService } from './services/project-detail.resover.service';
 
 @NgModule({
   declarations: [ProjectsRootComponent, ProjectDetailComponent],
@@ -15,6 +16,9 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
     MatTooltipModule,
     MatProgressSpinnerModule
   ],
-  providers: [ProjectsService]
+  providers: [
+    ProjectsService,
+    ProjectDetailResoverService
+  ]
 })
 export class ProjectsModule { }

@@ -3,11 +3,12 @@
     // background-image: url('/assets/images/jumbotrons/hero.png');
     // background-size: contain;
     .jumbotron-overlay {
+      padding: 0px 16px;
       .elements-container {
         max-width: 1280px;
         margin: auto;
         h1 {
-          padding: 36px 16px;
+          padding: 36px 0px;
           padding-bottom: 0;
           font-size: 46px;
           font-weight: bold;
@@ -28,9 +29,14 @@
                 height: 50px;
                 width: 50px;
                 margin: 0px 7px;
-                border: 1px dashed gray;
+                //border: 1px dashed gray;
                 cursor: pointer;
                 transition: transform .2s; // Animation
+                // Background image
+                background-size: cover;
+                resize: both;
+                background-position-x: center;
+                background-position-y: center;
                 &:hover {
                   transform: scale(1.6);
                 }
