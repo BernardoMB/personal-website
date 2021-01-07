@@ -206,7 +206,7 @@ the best talent, gain experience and face new challenges.
 <button (click)="showDynamicDisplayContent = !showDynamicDisplayContent">Toggle div visibility</button>
 <div *ngIf="showDynamicDisplayContent; else myIdentifier" style="color: red;">Condition true dynamic content</div>
 <ng-template #myIdentifier>
-  <div style="color: blue;">Else dynamic content</div>
+  <div style="color: blue; height: 900px;">Else dynamic content</div>
 </ng-template>
 
 
