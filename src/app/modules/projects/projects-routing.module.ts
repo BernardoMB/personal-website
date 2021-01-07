@@ -6,7 +6,7 @@ import { ProjectDetailResoverService } from './services/project-detail.resover.s
 
 const routes: Routes = [
   { path: '', component: ProjectsRootComponent },
-  { path: ':project_id', component: ProjectDetailComponent, resolve: { projectDetailInfo: ProjectDetailResoverService } }
+  { path: ':id', component: ProjectDetailComponent, resolve: { projectDetailInfo: ProjectDetailResoverService } }
 ];
 
 @NgModule({

@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Project } from '../view-models/project.interface';
 import { ProjectsYear } from '../view-models/projects-year.interface';
 
 @Injectable({
@@ -62,4 +63,28 @@ export class ProjectsService {
       }, 5000);
     });
   }
+
+  getProyectById(id: number): Observable<Project> {
+    let found: Project | undefined = undefined;
+    let i = 0;
+    while (found == null && i < this.years.length) {
+      let j = 0;
+      const year = this.years[i];
+      while (found == null && j < year.projects.length) {
+        const project = year.projects[j];
+        if (id == project.id) {
+          found = project;
+        }
+        j++;
+      }
+      i++; // i = i + 1; // i += 1; // i -= -1;
+    }
+    return new Observable(obs => {
+      setTimeout(() => {
+        obs.next(found);
+        obs.complete();
+      }, 2000);
+    });
+  }
+
 }
