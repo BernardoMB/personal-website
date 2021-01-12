@@ -51,3 +51,20 @@
     display: flex;
   }
 }
+
+::ng-deep {
+  .settings-menu {
+    .label {
+      padding: 0px 10px;
+    }
+    .theme-radio-group {
+      display: flex;
+      flex-direction: column;
+      padding: 10px;
+      ::ng-deep {
+        .mat-radio-button {
+        }
+      }
+    }
+  }
+}

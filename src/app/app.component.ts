@@ -14,7 +14,14 @@ export class AppComponent {
   }
 
   ngOnInit() {
-    this.themeService.selectedTheme$.pipe(skip(1)).subscribe((theme: string) => {
+    const storedTheme = localStorage.getItem('theme');
+    if (storedTheme) {
+      this.themeService.setTheme(storedTheme);
+    } else {
+      localStorage.setItem('theme', 'light-theme');
+    }
+
+    this.themeService.selectedTheme$.pipe(skip(0)).subscribe((theme: string) => {
       this.theme = theme;
     });
   }

@@ -114,7 +114,7 @@ $warn: mat-palette($mat-red);
 
 // Create the theme object (a Sass map containing all of the palettes).
 // Create a light mixin
-$dark-theme: mat-light-theme(
+$dark-theme: mat-dark-theme(
   $dark-theme-primary,
   $dark-theme-accent,
   $warn

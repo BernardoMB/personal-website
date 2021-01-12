@@ -12,6 +12,9 @@
     <button mat-icon-button [disabled]="!enableShareButton" [matMenuTriggerFor]="shareMenu" aria-label="share icon button">
       <mat-icon>share</mat-icon>
     </button>
+    <button mat-icon-button [matMenuTriggerFor]="settingsMenu" aria-label="settings icon button">
+      <mat-icon>settings</mat-icon>
+    </button>
   </div>
 </mat-toolbar>
 
@@ -31,6 +34,14 @@
   <button mat-menu-item>Share on Facebook</button>
   <button mat-menu-item>Share on Twitter</button>
   <button mat-menu-item>Share on Reddit</button>
+</mat-menu>
+
+<mat-menu class="settings-menu" #settingsMenu="matMenu">
+  <div class="label">Theme</div>
+  <mat-radio-group class="theme-radio-group" aria-label="Select an option" [formControl]="themeControl">
+    <mat-radio-button value="light-theme">Light</mat-radio-button>
+    <mat-radio-button value="dark-theme">Dark theme</mat-radio-button>
+  </mat-radio-group>
 </mat-menu>
 
 <!-- <div style="border: 1px solid red; width: 50px; height: 50px; border-radius: 5px; margin: 5px;"></div> -->
