@@ -230,7 +230,6 @@
       .mat-tab-labels {
         justify-content: space-between;
         max-width: 1324px;
-        // padding: 0px 16px;
         margin: auto;
         align-items: center;
         .mat-tab-label {
@@ -345,11 +344,11 @@
             position: absolute;
             content: "";
             bottom: -2px;
-            width: 10px;
+            width: 11px;
             height: 2px;
             background-color: #cacaca;
             z-index: 1000;
-            right: 0px;
+            right: -1px;
             /* animation-delay: 5s;
             animation: fadein 1.5s; */
 

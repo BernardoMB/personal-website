@@ -1,0 +1,121 @@
+// Light theme
+
+// * Custom theme for Angular Material
+
+// For more information: https://material.angular.io/guide/theming
+
+// Import theming functionality
+@import '~@angular/material/theming';
+// Plus imports for other components in your app.
+
+// * Typography
+
+$dark-theme-typography: mat-typography-config(
+  $font-family: 'Segoe UI',
+  $headline: mat-typography-level(32px, 48px, 700),
+  $body-1: mat-typography-level(16px, 24px, 500)
+);
+
+// * Colors
+
+// See the following guide for Angular Material theming
+// https://coursetro.com/posts/code/116/Create-your-own-Angular-5-Material-Theme
+// Or see the following video
+// https://www.youtube.com/watch?v=kHbMm7psBag
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+// Incluide common styles
+// @include mat-core($custom-typography);
+
+// Define color palettes
+
+$dark-theme-primary-palette: (
+  50 : #ffede0,
+    100 : #ffd3b3,
+    200 : #ffb680,
+    300 : #ff994d,
+    400 : #ff8326,
+    500 : #ff6d00,
+    600 : #ff6500,
+    700 : #ff5a00,
+    800 : #ff5000,
+    900 : #ff3e00,
+    A100 : #ffffff,
+    A200 : #fff5f2,
+    A400 : #ffcbbf,
+    A700 : #ffb6a6,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #000000,
+        700 : #000000,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+
+$dark-theme-accent-palette: (
+  50 : #e0e0e0,
+    100 : #b3b3b3,
+    200 : #808080,
+    300 : #4d4d4d,
+    400 : #262626,
+    500 : #000000,
+    600 : #000000,
+    700 : #000000,
+    800 : #000000,
+    900 : #000000,
+    A100 : #a6a6a6,
+    A200 : #8c8c8c,
+    A400 : #737373,
+    A700 : #666666,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #ffffff,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    )
+);
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+// Define the primary pallete:
+// - (the second parameter passed to mat-palette() is the default primary color)
+// - (the third parameter passed to mat-palette() is the lighter variant of the color [some components use these values])
+// - (the Fourth parameter passed to mat-palette() is the darker variant of the color [some components use these values])
+$dark-theme-primary: mat-palette($dark-theme-primary-palette, 700, 400, 900);
+// Define the accent pallete  (the second parameter passed to mat-palette() is the default accent color)
+$dark-theme-accent: mat-palette($dark-theme-accent-palette, A200, A100, A400);
+// The warn palette is optional (defaults to red).
+// Provide an optional warning pallete
+$warn: mat-palette($mat-red);
+
+// Create the theme object (a Sass map containing all of the palettes).
+// Create a light mixin
+$dark-theme: mat-light-theme(
+  $dark-theme-primary,
+  $dark-theme-accent,
+  $warn
+);

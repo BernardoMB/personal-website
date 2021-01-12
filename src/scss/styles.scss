@@ -1,6 +1,48 @@
 // Theming
 
 @import './themes/light';
+@import './themes/dark';
+
+// Default
+
+// Override typography CSS classes (e.g., mat-h1, mat-display-1, mat-typography, etc.).
+@include mat-base-typography($light-theme-typography);
+// Override typography for a specific Angular Material components.
+@include mat-checkbox-typography($light-theme-typography);
+// Override typography for all Angular Material, including mat-base-typography and all components.
+@include angular-material-typography($light-theme-typography);
+// Use Angular Material themes
+@include mat-core($light-theme-typography);
+// Include Light theme
+@include angular-material-theme($light-theme);
+
+// Light theme
+.light-theme {
+  // Override typography CSS classes (e.g., mat-h1, mat-display-1, mat-typography, etc.).
+  @include mat-base-typography($light-theme-typography);
+  // Override typography for a specific Angular Material components.
+  @include mat-checkbox-typography($light-theme-typography);
+  // Override typography for all Angular Material, including mat-base-typography and all components.
+  @include angular-material-typography($light-theme-typography);
+  // Use Angular Material themes
+  @include mat-core($light-theme-typography);
+  // Include Light theme
+  @include angular-material-theme($light-theme);
+}
+
+// Dark theme
+.dark-theme {
+  // Override typography CSS classes (e.g., mat-h1, mat-display-1, mat-typography, etc.).
+  @include mat-base-typography($dark-theme-typography);
+  // Override typography for a specific Angular Material components.
+  @include mat-checkbox-typography($dark-theme-typography);
+  // Override typography for all Angular Material, including mat-base-typography and all components.
+  @include angular-material-typography($dark-theme-typography);
+  // Use Angular Material themes
+  @include mat-core($dark-theme-typography);
+  // Include Dark theme
+  @include angular-material-theme($dark-theme);
+}
 
 // custom variables
 
