@@ -25,7 +25,9 @@ export class HeaderComponent implements OnInit {
     // Code executes after component has been initialized
     console.log('Executing ngOnInit hook');
 
-    this.themeService.selectedTheme$.pipe(skip(0)).subscribe((theme: string) => {
+    this.themeService.selectedTheme$.pipe(
+      // skip(0)
+    ).subscribe((theme: string) => {
       this.themeControl.setValue(theme, {emitEvent: false});
     });
 
