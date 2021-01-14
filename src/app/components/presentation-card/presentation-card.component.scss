@@ -1,11 +1,25 @@
 .example-card {
   max-width: 400px;
+  ::ng-deep {
+    .mat-card-title {
+      margin-bottom: 0px;
+    }
+    .mat-card-subtitle {
+      margin-bottom: 0px;
+    }
+    .mat-card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
   .example-header-image {
     background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
     background-size: cover;
   }
   .card-content-description {
     white-space: normal;
+    margin-bottom: 0px;
   }
   .info-button {
     color: grey;

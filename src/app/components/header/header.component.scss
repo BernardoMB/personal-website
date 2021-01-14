@@ -15,12 +15,12 @@
     width: 100%;
     .navigation-container {
       display: flex;
-      a {
+      div {
         position: relative;
-        color: white;
         cursor: pointer;
         margin-right: 10px;
         text-decoration: none;
+        outline: none;
         &:visited {
           color: inherit;
         }

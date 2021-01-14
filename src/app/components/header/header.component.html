@@ -3,11 +3,11 @@
     <span>{{name}}</span>
     <span class="spacer"></span>
     <div class="navigation-container">
-      <a routerLink="/home" routerLinkActive="active">Home</a>
-      <a routerLink="/about" routerLinkActive="active">About</a>
-      <a routerLink="/cv" routerLinkActive="active">CV</a>
-      <a routerLink="/projects" routerLinkActive="active">Projects</a>
-      <a routerLink="/hobbies" routerLinkActive="active">Hobbies</a>
+      <div routerLink="/home" routerLinkActive="active">Home</div>
+      <div routerLink="/about" routerLinkActive="active">About</div>
+      <div routerLink="/cv" routerLinkActive="active">CV</div>
+      <div routerLink="/projects" routerLinkActive="active">Projects</div>
+      <div routerLink="/hobbies" routerLinkActive="active">Hobbies</div>
     </div>
     <button mat-icon-button [disabled]="!enableShareButton" [matMenuTriggerFor]="shareMenu" aria-label="share icon button">
       <mat-icon>share</mat-icon>
@@ -39,8 +39,8 @@
 <mat-menu class="settings-menu" #settingsMenu="matMenu">
   <div class="label">Theme</div>
   <mat-radio-group class="theme-radio-group" aria-label="Select an option" [formControl]="themeControl">
-    <mat-radio-button value="light-theme">Light</mat-radio-button>
-    <mat-radio-button value="dark-theme">Dark</mat-radio-button>
+    <mat-radio-button [color]="'accent'" value="light-theme">Light</mat-radio-button>
+    <mat-radio-button [color]="'primary'" value="dark-theme">Dark</mat-radio-button>
   </mat-radio-group>
 </mat-menu>
 
