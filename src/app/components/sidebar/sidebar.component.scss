@@ -1,3 +1,4 @@
+// Custom component default styles
 .sidenav-container {
   .navigation-container {
     display: flex;
@@ -26,13 +27,7 @@
   }
 }
 
-/* ::ng-deep .light-theme .sidenav-container .navigation-container a {
-  background-color: red;
-}
-::ng-deep .dark-theme .sidenav-container .navigation-container a {
-  background-color: blue;
-} */
-
+// Custom component theming
 @import '~@angular/material/theming';
 
 @mixin sidebar-theme($light-theme) {
@@ -44,3 +39,11 @@
     }
   }
 }
+
+// Custom component override theming
+/* ::ng-deep .light-theme .sidenav-container .navigation-container a {
+  background-color: red;
+}
+::ng-deep .dark-theme .sidenav-container .navigation-container a {
+  background-color: blue;
+} */
