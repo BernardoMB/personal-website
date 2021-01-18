@@ -23,11 +23,24 @@
         }
       }
     }
-    .light-theme a {
-      background-color: red;
-    }
-    .dark-theme a {
-      background-color: blue;
+  }
+}
+
+/* ::ng-deep .light-theme .sidenav-container .navigation-container a {
+  background-color: red;
+}
+::ng-deep .dark-theme .sidenav-container .navigation-container a {
+  background-color: blue;
+} */
+
+@import '~@angular/material/theming';
+
+@mixin sidebar-theme($light-theme) {
+  $primary: map-get($light-theme, primary);
+  $accent: map-get($light-theme, accent);
+  .sidenav-container {
+    a {
+      background-color: mat-color($accent);
     }
   }
 }

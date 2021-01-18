@@ -1,0 +1,5 @@
+@import '../app/components/sidebar/sidebar.component';
+
+@mixin component-themes($light-theme) {
+  @include sidebar-theme($light-theme);
+}

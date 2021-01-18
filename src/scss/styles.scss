@@ -2,6 +2,7 @@
 
 @import './themes/light';
 @import './themes/dark';
+@import './component-themes';
 
 // Default
 
@@ -15,6 +16,7 @@
 @include mat-core($light-theme-typography);
 // Include Light theme
 @include angular-material-theme($light-theme);
+@include component-themes($light-theme);
 
 // Light theme
 
@@ -29,6 +31,7 @@
   @include mat-core($light-theme-typography);
   // Include Light theme
   @include angular-material-theme($light-theme);
+  @include component-themes($light-theme);
 }
 
 // Dark theme
@@ -44,6 +47,7 @@
   @include mat-core($dark-theme-typography);
   // Include Dark theme
   @include angular-material-theme($dark-theme);
+  @include component-themes($dark-theme);
 }
 
 // custom variables

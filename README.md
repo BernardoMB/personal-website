@@ -29,6 +29,9 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## Features
 
 Theme selection storing previously used theme in localstorage
+https://medium.com/grensesnittet/dynamic-themes-in-angular-material-b6dc0c88dfd7
+And some modifications. Behavio subject to subscribe to theme changes.
+
 Swipper
 
 ## Other topics
