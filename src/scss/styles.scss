@@ -17,6 +17,7 @@
 @include angular-material-theme($light-theme);
 
 // Light theme
+
 .light-theme {
   // Override typography CSS classes (e.g., mat-h1, mat-display-1, mat-typography, etc.).
   @include mat-base-typography($light-theme-typography);
@@ -31,6 +32,7 @@
 }
 
 // Dark theme
+
 .dark-theme {
   // Override typography CSS classes (e.g., mat-h1, mat-display-1, mat-typography, etc.).
   @include mat-base-typography($dark-theme-typography);
