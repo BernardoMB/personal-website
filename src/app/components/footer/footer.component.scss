@@ -3,6 +3,11 @@
   .row-1 {
     padding: 16px;
     height: unset;
+    .site-map {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
   }
   .row-2 {
     display: flex;
@@ -10,8 +15,10 @@
     height: unset;
     margin: 10px 0px;
     .powered-by {
+      text-align: center;
       font-size: 11px;
-      line-height: 1;
+      line-height: 1.2;
+      white-space: normal;
     }
   }
 }
