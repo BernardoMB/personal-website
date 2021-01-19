@@ -3,10 +3,40 @@
   .row-1 {
     padding: 16px;
     height: unset;
+    display: flex;
+    justify-content: space-between;
     .site-map {
-      flex-grow: 1;
       display: flex;
       flex-direction: column;
+      margin-right: 20px;
+    }
+    .follow-me-container {
+      display: flex;
+      flex-direction: column;
+      margin-right: 20px;
+      .label {
+
+      }
+      .social-links-container {
+        display: flex;
+        margin-top: 20px;
+        i {
+          $icon-size: 28px;
+          font-size: $icon-size;
+          width: $icon-size;
+          height: $icon-size; 
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin: 0px 10px;
+          &:nth-child(1) {
+            margin-left: 0px;
+          }
+          &:last-child {
+            margin-right: 0px;
+          }
+        }
+      }
     }
   }
   .row-2 {

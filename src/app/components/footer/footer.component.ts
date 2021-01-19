@@ -21,4 +21,8 @@ export class FooterComponent implements OnInit {
     alert(info);
   }
 
+  navigateLink(link : string) {
+    window.open(link, '_blank');
+  }
+
 }
