@@ -9,8 +9,20 @@
       display: flex;
       flex-direction: column;
       margin-right: 20px;
+      a {
+        color: inherit;
+        text-decoration: none;
+        margin-right: 10px;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+      .child-route {
+        margin-left: 10px;
+        font-size: 18px;
+      }
     }
-    .follow-me-container {
+    .middle-container {
       display: flex;
       flex-direction: column;
       margin-right: 20px;
@@ -19,22 +31,60 @@
       }
       .social-links-container {
         display: flex;
-        margin-top: 20px;
         i {
           $icon-size: 28px;
           font-size: $icon-size;
           width: $icon-size;
-          height: $icon-size; 
+          height: $icon-size;
           display: flex;
           align-items: center;
           justify-content: center;
           margin: 0px 10px;
+          margin-top: 20px;
           &:nth-child(1) {
             margin-left: 0px;
           }
           &:last-child {
             margin-right: 0px;
           }
+        }
+      }
+      .site-terms-container {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 30px;
+        .link {
+          cursor: pointer;
+          margin-right: 20px;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+    @media screen and (max-width: 880px) {
+      flex-direction: column;
+      align-items: center;
+      .site-map {
+        margin: 0px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+        justify-content: center;
+      }
+      .middle-container {
+        margin: 0px;
+        margin-bottom: 20px;
+        .label {
+          text-align: center;
+        }
+        .social-links-container {
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+        .site-terms-container {
+          flex-wrap: wrap;
+          justify-content: center;
         }
       }
     }
