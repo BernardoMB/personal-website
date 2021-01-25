@@ -20,9 +20,9 @@
         <i class="fab fa-youtube"></i>
       </div>
       <div class="site-terms-container">
-        <div class="link">Privacy</div>
-        <div class="link">Terms of use</div>
-        <div class="link">Cookies</div>
+        <div class="link" (click)="openDialog('privacy')">Privacy</div>
+        <div class="link" (click)="openDialog('terms')">Terms of use</div>
+        <div class="link" (click)="openDialog('cookies')">Cookies</div>
       </div>
     </div>
     <app-presentation-card

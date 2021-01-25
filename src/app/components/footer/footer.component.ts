@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { CookiesPolicyDialogComponent } from '../../shared/components/cookies-policy-dialog/cookies-policy-dialog.component';
 
 @Component({
   selector: 'app-footer',
@@ -12,7 +14,7 @@ export class FooterComponent implements OnInit {
   emailAddressFooter = 'bmondragonbrozon@gmail.com';
   physicalAddressFooter = 'Paseo San Agustin 78, Lomas Verdes, Naucalpan, Edo. Mex., 53120';
 
-  constructor() { }
+  constructor(public dialog: MatDialog) { }
 
   ngOnInit(): void {
   }
@@ -23,6 +25,13 @@ export class FooterComponent implements OnInit {
 
   navigateLink(link : string) {
     window.open(link, '_blank');
+  }
+
+  openDialog(dialog: string) {
+    this.dialog.open(CookiesPolicyDialogComponent, {
+      height: '80vh',
+      autoFocus: false
+    });
   }
 
 }
