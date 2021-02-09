@@ -1,56 +1,80 @@
-.spacer {
-  display: flex;
-  flex-grow: 1;
-  justify-content: center;
-}
+// Custom component theming
+@import '~@angular/material/theming';
 
-.header {
-  z-index: 10;
-  position: relative;
-  overflow-x: hidden;
-  .header-container {
+@mixin header-theme($light-theme) {
+  $primary: map-get($light-theme, primary);
+  $accent: map-get($light-theme, accent);
+
+  .spacer {
     display: flex;
-    max-width: 1280px;
-    margin: auto;
-    width: 100%;
-    .navigation-container {
+    flex-grow: 1;
+    justify-content: center;
+  }
+
+  .header {
+    z-index: 10;
+    position: relative;
+    overflow-x: hidden;
+    .header-container {
       display: flex;
-      div {
-        position: relative;
+      max-width: 1280px;
+      margin: auto;
+      width: 100%;
+      span {
         cursor: pointer;
-        margin-right: 10px;
-        text-decoration: none;
-        outline: none;
-        &:visited {
-          color: inherit;
+        &:hover {
+          text-decoration: underline;
         }
-        &.active {
-          &:before {
-            content: '';
-            position: absolute;
-            height: 2px;
-            background-color: white;
-            width: 100%;
-            bottom: 0px;
+      }
+      .navigation-container {
+        display: flex;
+        div {
+          position: relative;
+          cursor: pointer;
+          margin-right: 10px;
+          text-decoration: none;
+          outline: none;
+          &:hover {
+            color: mat-color($accent);
+          }
+          &:visited {
+            color: inherit;
+          }
+          &.active {
+            &:before {
+              content: '';
+              position: absolute;
+              height: 2px;
+              background-color: white;
+              width: 100%;
+              bottom: 0px;
+            }
           }
         }
       }
     }
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
   }
-  @media screen and (max-width: 768px) {
+
+  .header-mobile {
+    z-index: 10;
+    position: relative;
+    overflow-x: hidden;
     display: none;
+    span {
+      cursor: pointer;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    @media screen and (max-width: 768px) {
+      display: flex;
+    }
   }
 }
 
-.header-mobile {
-  z-index: 10;
-  position: relative;
-  overflow-x: hidden;
-  display: none;
-  @media screen and (max-width: 768px) {
-    display: flex;
-  }
-}
 
 ::ng-deep {
   .settings-menu {

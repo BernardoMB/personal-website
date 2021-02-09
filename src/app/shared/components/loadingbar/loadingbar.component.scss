@@ -1,0 +1,69 @@
+@import '~@angular/material/theming';
+
+$loadingbar-height: 3px;
+$loadingbar-height-mobile: 4px;
+$glow-thickness: 0px;
+$header-height: 61px;
+
+@mixin loadingbar-theme($light-theme) {
+  $primary: map-get($light-theme, primary);
+  $accent: map-get($light-theme, accent);
+  $track-color: mat-color($primary);
+  $thumb-color: mat-color($accent);
+
+  // Style configuration
+  $color1: $track-color; // track color
+  $color2: $thumb-color; // thumb color
+
+  .hidden {
+    visibility: hidden;
+  }
+  .loader-overlay {
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    top: $header-height;
+  }
+  .loader {
+    height: $loadingbar-height;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background-color: $color1;
+    -webkit-box-shadow: 0px 0px $glow-thickness 0px $color1;
+    -moz-box-shadow: 0px 0px $glow-thickness 0px $color1;
+    box-shadow: 0px 0px $glow-thickness 0px $color1;
+    @media screen and (max-width: 425px) {
+      height: $loadingbar-height-mobile;
+    }
+  }
+  .loader:before {
+    display: block;
+    position: absolute;
+    content: "";
+    left: -200px;
+    width: 200px;
+    height: $loadingbar-height;
+    background-color: $color2;
+    animation: loading 2s linear infinite;
+    @media screen and (max-width: 425px) {
+      height: $loadingbar-height-mobile;
+    }
+  }
+  @keyframes loading {
+    from {left: -200px; width: 30%;}
+    50% {width: 30%;}
+    70% {width: 70%;}
+    80% {left: 50%;}
+    95% {left: 120%;}
+    to {left: 100%;}
+  }
+}
+
+::ng-deep {
+  .dark-theme {
+    .loader:before {
+      background-color: white;
+    }
+  }
+}

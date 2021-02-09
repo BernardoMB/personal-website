@@ -1,5 +1,11 @@
+@import '../app/components/header/header.component';
 @import '../app/components/sidebar/sidebar.component';
+@import '../app/components/footer/footer.component';
+@import '../app/shared/components/loadingbar/loadingbar.component';
 
 @mixin component-themes($light-theme) {
+  @include header-theme($light-theme);
   @include sidebar-theme($light-theme);
+  @include footer-theme($light-theme);
+  @include loadingbar-theme($light-theme);
 }

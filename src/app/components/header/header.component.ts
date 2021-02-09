@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { skip } from 'rxjs/operators';
 import { ThemeService } from '../../shared/services/theme.service';
 
@@ -16,7 +17,10 @@ export class HeaderComponent implements OnInit {
   @Output() toggleSidenav: EventEmitter<void> = new EventEmitter();
   themeControl = new FormControl('light-theme', [Validators.required]);
 
-  constructor(private themeService: ThemeService) {
+  constructor(
+    private themeService: ThemeService,
+    private router: Router // Dependency Injection
+  ) {
     // Code executes on component initialization
     console.log('Executing constructor');
   }
@@ -35,6 +39,10 @@ export class HeaderComponent implements OnInit {
       this.themeService.setTheme(value);
       localStorage.setItem('theme', <string>value);
     });
+  }
+
+  navigateToHomePage() {
+    this.router.navigate(['/']);
   }
 
 }

@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { LoaderService } from '../../../shared/services/loader.service';
 import { Project } from '../view-models/project.interface';
 import { ProjectsYear } from '../view-models/projects-year.interface';
 
@@ -53,18 +54,23 @@ export class ProjectsService {
     },
   ];
 
-  constructor() { }
+  constructor(
+    private loaderService: LoaderService
+  ) { }
 
   getProyectsYears(): Observable<ProjectsYear[]> {
+    this.loaderService.show();
     return new Observable(obs => {
       setTimeout(() => {
         obs.next(this.years);
         obs.complete();
+        this.loaderService.hide();
       }, 5000);
     });
   }
 
   getProyectById(id: number): Observable<Project> {
+    this.loaderService.show();
     let found: Project | undefined = undefined;
     let i = 0;
     while (found == null && i < this.years.length) {
@@ -83,6 +89,7 @@ export class ProjectsService {
       setTimeout(() => {
         obs.next(found);
         obs.complete();
+        this.loaderService.hide();
       }, 2000);
     });
   }

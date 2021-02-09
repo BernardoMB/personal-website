@@ -1,6 +1,6 @@
 <mat-toolbar class="header" color="primary">
   <div class="header-container">
-    <span>{{name}}</span>
+    <span (click)="navigateToHomePage()">{{name}}</span>
     <span class="spacer"></span>
     <div class="navigation-container">
       <div routerLink="/home" routerLinkActive="active">Home</div>
@@ -22,12 +22,14 @@
   <button mat-icon-button (click)="toggleSidenav.emit()" aria-label="menu icon button">
     <mat-icon>menu</mat-icon>
   </button>
-  <span>{{initials}}</span>
+  <span (click)="navigateToHomePage()">{{initials}}</span>
   <span class="spacer"></span>
   <button mat-icon-button [disabled]="!enableShareButton" [matMenuTriggerFor]="shareMenu" aria-label="share icon button">
     <mat-icon>share</mat-icon>
   </button>
 </mat-toolbar>
+
+<app-loadingbar></app-loadingbar>
 
 <mat-menu #shareMenu="matMenu">
   <button mat-menu-item>Copy link</button>
