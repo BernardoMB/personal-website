@@ -29,6 +29,8 @@
       .navigation-container {
         display: flex;
         div {
+          display: flex;
+          align-items: center;
           position: relative;
           cursor: pointer;
           margin-right: 10px;

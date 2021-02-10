@@ -1,0 +1,31 @@
+@import '~@angular/material/theming';
+
+@mixin scroll-to-top-theme($light-theme) {
+  $primary: map-get($light-theme, primary);
+  $accent: map-get($light-theme, accent);
+  $color: mat-color($accent);
+
+  .scroll-to-top {
+    z-index: 1;
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    opacity: 0;
+    transition: all .2s ease-in-out;
+    button {
+      box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+      background-color: $color;
+      &:hover {
+        background: none;
+        border: 1px solid $color;
+        background-color: white;
+        color: $color;
+      }
+    }
+  }
+
+  .show-scrollTop {
+    opacity: 1;
+    transition: all .2s ease-in-out;
+  }
+}

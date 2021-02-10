@@ -28,11 +28,27 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Features
 
+### Resolvers multiple calls
+
+### Themes
+
 Theme selection storing previously used theme in localstorage
 https://medium.com/grensesnittet/dynamic-themes-in-angular-material-b6dc0c88dfd7
 And some modifications. Behavio subject to subscribe to theme changes.
 
-Swipper
+### Swipper
+
+### Loading bar
+
+See loader.service.ts
+
+### Simulated API calls
+
+### Sidebar
+
+### Zoom in animation 
+
+See projects section
 
 ## Other topics
 

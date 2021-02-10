@@ -6,19 +6,27 @@ import { MatIconModule } from '@angular/material/icon';
 import { LoaderService } from './services/loader.service';
 import { ThemeService } from './services/theme.service';
 import { LoadingbarComponent } from './components/loadingbar/loadingbar.component';
+import { ScrollToTopComponent } from './components/scroll-to-top/scroll-to-top.component';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
-  declarations: [CookiesPolicyDialogComponent, LoadingbarComponent],
+  declarations: [CookiesPolicyDialogComponent, LoadingbarComponent, ScrollToTopComponent],
   imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
     CommonModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    MatTooltipModule
   ],
   entryComponents: [
     CookiesPolicyDialogComponent
   ],
   exports: [
-    LoadingbarComponent
+    LoadingbarComponent,
+    ScrollToTopComponent
   ],
   providers: [
     ThemeService,
