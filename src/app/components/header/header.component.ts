@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, HostListener, Input, OnInit, Output } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { skip } from 'rxjs/operators';
@@ -16,6 +16,14 @@ export class HeaderComponent implements OnInit {
   @Input() initials: string | undefined;
   @Output() toggleSidenav: EventEmitter<void> = new EventEmitter();
   themeControl = new FormControl('light-theme', [Validators.required]);
+
+  //#region Sticky header
+  isSticky = false;
+  @HostListener('window:scroll', [])
+  checkScroll() {
+    this.isSticky = window.pageYOffset >= 250;
+  }
+  //#endregion
 
   constructor(
     private themeService: ThemeService,

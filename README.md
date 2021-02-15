@@ -28,7 +28,13 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Features
 
+### Scroll to top button 
+
 ### Resolvers multiple calls
+
+See application resolver services
+
+### TypedJS
 
 ### Themes
 
@@ -46,7 +52,17 @@ See loader.service.ts
 
 ### Sidebar
 
+Using Angular Material drawer
+
 ### Zoom in animation 
+
+See projects section
+
+### Zoom in animation 
+
+See projects section
+
+### Sticky header
 
 See projects section
 
