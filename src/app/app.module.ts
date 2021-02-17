@@ -23,6 +23,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SharedModule } from './shared/shared.module';
 import {MatDialogModule} from '@angular/material/dialog';
+import { NgParticlesModule } from 'ng-particles';
 
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   direction: 'horizontal',
@@ -56,7 +57,8 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     MatDialogModule,
     SwiperModule,
     FontAwesomeModule,
-    SharedModule
+    SharedModule,
+    NgParticlesModule
   ],
   providers: [
     {

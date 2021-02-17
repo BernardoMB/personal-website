@@ -16,6 +16,7 @@
     z-index: 10;
     overflow-x: hidden;
     position: relative;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
     .header-container {
       display: flex;
       max-width: 1280px;
@@ -69,6 +70,7 @@
     height: 0px;
     opacity: 0;
     transition: opacity 0.25s ease-out, height 0.15s ease;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
     .header-container {
       display: flex;
       max-width: 1280px;
@@ -140,7 +142,6 @@
   }
 
 }
-
 
 ::ng-deep {
   .settings-menu {

@@ -79,6 +79,12 @@ $focus-outline-thickeness: 2px;
   }
 }
 
+// * Change ParticleJS styles
+
+#tsparticles {
+  height: 100%;
+}
+
 // * Change scrollbars styles
 
 body::-webkit-scrollbar {

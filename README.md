@@ -30,6 +30,10 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ### Scroll to top button 
 
+### Parallax effects
+
+### ParticleJS
+
 ### Resolvers multiple calls
 
 See application resolver services
