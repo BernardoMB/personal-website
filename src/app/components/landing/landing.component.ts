@@ -20,12 +20,12 @@ export class LandingComponent implements OnInit {
     },
   };
 
-  // Typed
+  //#region TypedJS
   typed: any;
   showElement1 = false;
   showElement2 = false;
   showElement3 = false;
-  showElement4 = false;
+  //#endregion 
 
   //#region Particles
   id = 'tsparticles';
@@ -142,8 +142,6 @@ export class LandingComponent implements OnInit {
         this.typed = new Typed('.typed-element-2', options2);
       }, 1);
     }, 4000);
-
-
   }
 
 }

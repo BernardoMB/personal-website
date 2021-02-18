@@ -2,7 +2,6 @@
   <div  class="swiper-container" [swiper]="config" [(index)]="index">
     <div class="swiper-wrapper">
       <div class="swiper-slide parallax-slide">
-
         <div class="slide-container">
           <div class="terminal">
             <div class="terminal-app-bar">
@@ -11,35 +10,33 @@
                 <div class="ball yellow-ball"></div>
                 <div class="ball green-ball"></div>
               </div>
-              <div class="middle">Bernardo</div>
+              <div class="middle">
+                <img src="../../../assets/icons/mac-home-folder.png" alt="home icon">
+                <div class="label">Bernardo</div>
+              </div>
               <div class="right"></div>
             </div>
             <div class="container">
-              <div class='element0'>
-                bernardo@personal-website ~$
+              <div class="element0">
+                bernardo@personal-website ~$ 
                 <span class="typed-element-0"></span>
               </div>
-              <div class='element1' *ngIf="showElement1" [ngClass]="showElement1 ? 'show' : 'nodisplay'">
+              <div class="element1" *ngIf="showElement1" [ngClass]="showElement1 ? 'show' : 'nodisplay'">
                 bernardo@personal-website ~$
                 <span class="typed-element-1"></span>
               </div>
-              <div class='element2' *ngIf="showElement2" [ngClass]="showElement2 ? 'show' : 'nodisplay'">
+              <div class="element2" *ngIf="showElement2" [ngClass]="showElement2 ? 'show' : 'nodisplay'">
                 bernardo@personal-website ~$
                 <span class="typed-element-2"></span>
               </div>
-              <div class='element3' *ngIf="showElement3" [ngClass]="showElement3 ? 'show' : 'nodisplay'">
+              <div class="element3" *ngIf="showElement3" [ngClass]="showElement3 ? 'show' : 'nodisplay'">
                 bernardo@personal-website ~$
                 <span class="typed-element-3"></span>
-              </div>
-              <div class='element4' *ngIf="showElement4" [ngClass]="showElement4 ? 'show' : 'nodisplay'">
-                bernardo@personal-website ~$
-                <span class="typed-element-4"></span>
               </div>
             </div>
           </div>
         </div>
-
-        <Particles style="height: 100%; position: absolute; top: 0px; width: 100%; z-index: 0;" [id]="id" [options]="particlesOptions"></Particles>
+        <Particles class="particles" [id]="id" [options]="particlesOptions"></Particles>
       </div>
       <div class="swiper-slide">
         <div class="slide-container">
@@ -65,6 +62,5 @@
   </div>
 </div>
 
-<section>
-  <!-- <span class="typed-element"></span> -->
+<section style="height: 900px;">
 </section>
