@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { CookiesPolicyDialogComponent } from '../../shared/components/cookies-policy-dialog/cookies-policy-dialog.component';
+import { PrivacyDialogComponent } from '../../shared/components/privacy-dialog/privacy-dialog.component';
 
 @Component({
   selector: 'app-footer',
@@ -28,10 +29,20 @@ export class FooterComponent implements OnInit {
   }
 
   openDialog(dialog: string) {
-    this.dialog.open(CookiesPolicyDialogComponent, {
-      height: '80vh',
-      autoFocus: false
-    });
+    switch (dialog) {
+      case 'privacy':
+        this.dialog.open(PrivacyDialogComponent, {
+          height: '80vh',
+          autoFocus: false
+        });
+        break;
+      case 'cookies':
+        this.dialog.open(CookiesPolicyDialogComponent, {
+          height: '80vh',
+          autoFocus: false
+        });
+        break;
+    }
   }
 
 }
