@@ -18,7 +18,7 @@
             </div>
             <div class="container">
               <div class="element0">
-                bernardo@personal-website ~$ 
+                bernardo@personal-website ~$
                 <span class="typed-element-0"></span>
               </div>
               <div class="element1" *ngIf="showElement1" [ngClass]="showElement1 ? 'show' : 'nodisplay'">
@@ -63,4 +63,15 @@
 </div>
 
 <section style="height: 900px;">
+  <!-- ! Practice -->
+  <input #myInput1 type="number">
+  <input #myInput2 type="number">
+  <button (click)="onButtonclick()">Click me!</button>
+  <button (click)="setValue()">Set value</button>
+
+  <app-cool-border [title]="'Landing'" [subtitle]="'Used on landing'" [description]="'Using shared component whose host is declared in app module'">
+    <div style="border: 1ps solid green; height: 35px;">
+      This is some random content
+    </div>
+  </app-cool-border>
 </section>

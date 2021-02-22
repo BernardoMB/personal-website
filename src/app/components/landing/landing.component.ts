@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
 import Typed, { TypedOptions } from 'typed.js';
 
@@ -25,7 +25,7 @@ export class LandingComponent implements OnInit {
   showElement1 = false;
   showElement2 = false;
   showElement3 = false;
-  //#endregion 
+  //#endregion
 
   //#region Particles
   id = 'tsparticles';
@@ -96,6 +96,10 @@ export class LandingComponent implements OnInit {
   }
   //#endregion
 
+  // ! Practice
+  @ViewChild('myInput1', { static: false }) myNumericInput1: ElementRef | undefined;
+  @ViewChild('myInput2', { static: false }) myNumericInput2: ElementRef | undefined;
+
   constructor() { }
 
   ngOnInit(): void {
@@ -142,6 +146,19 @@ export class LandingComponent implements OnInit {
         this.typed = new Typed('.typed-element-2', options2);
       }, 1);
     }, 4000);
+  }
+
+  // ! Practice
+  onButtonclick() {
+    const a = this.myNumericInput1?.nativeElement.valueAsNumber;
+    const b = this.myNumericInput2?.nativeElement.valueAsNumber;
+    console.log(a, typeof a);
+    console.log(b, typeof b);
+    alert(a + b);
+  }
+
+  setValue() {
+    this.myNumericInput1!.nativeElement.value = 24;
   }
 
 }

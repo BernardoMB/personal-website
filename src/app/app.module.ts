@@ -43,8 +43,8 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     BrowserAnimationsModule,
+    AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
     MatToolbarModule,
