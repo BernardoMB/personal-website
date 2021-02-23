@@ -1,4 +1,5 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
 import Typed, { TypedOptions } from 'typed.js';
 
@@ -96,6 +97,12 @@ export class LandingComponent implements OnInit {
   }
   //#endregion
 
+  contactForm = new FormGroup({
+    nameControl: new FormControl('', [Validators.required]),
+    emailControl: new FormControl(''),
+    messageControl: new FormControl('', [Validators.required]) 
+  });
+
   // ! Practice
   @ViewChild('myInput1', { static: false }) myNumericInput1: ElementRef | undefined;
   @ViewChild('myInput2', { static: false }) myNumericInput2: ElementRef | undefined;
@@ -157,8 +164,14 @@ export class LandingComponent implements OnInit {
     alert(a + b);
   }
 
+  // ! Practice
   setValue() {
     this.myNumericInput1!.nativeElement.value = 24;
+  }
+
+  // ! Practice
+  onInputBlur(event: any) {
+    console.log(event);
   }
 
 }

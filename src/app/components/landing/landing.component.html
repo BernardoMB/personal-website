@@ -62,9 +62,9 @@
   </div>
 </div>
 
-<section style="height: 900px;">
+<section>
   <!-- ! Practice -->
-  <input #myInput1 type="number">
+  <input #myInput1 type="number" (blur)="onInputBlur($event)">
   <input #myInput2 type="number">
   <button (click)="onButtonclick()">Click me!</button>
   <button (click)="setValue()">Set value</button>
@@ -74,4 +74,21 @@
       This is some random content
     </div>
   </app-cool-border>
+</section>
+
+<section class="contact-section">
+  <div class="contact-container">
+    <div>Contact</div>
+    <form [formGroup]="contactForm">
+      <mat-form-field appearance="outline">
+        <mat-label>Full Name</mat-label>
+        <input 
+          matInput
+          placeholder="Ex. John Doe"
+          formControlName="nameControl"
+          required
+        />
+      </mat-form-field>
+    </form>
+  </div>
 </section>

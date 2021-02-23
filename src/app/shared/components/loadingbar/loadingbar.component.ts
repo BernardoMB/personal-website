@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { LoaderService, LoaderState } from '../../services/loader.service';
 
@@ -7,7 +7,7 @@ import { LoaderService, LoaderState } from '../../services/loader.service';
   templateUrl: './loadingbar.component.html',
   styleUrls: ['./loadingbar.component.scss']
 })
-export class LoadingbarComponent implements OnInit {
+export class LoadingbarComponent implements OnInit, OnDestroy {
   show = false;
   private subscription: Subscription | undefined;
 
@@ -16,7 +16,12 @@ export class LoadingbarComponent implements OnInit {
   ngOnInit() {
     this.subscription = this.loaderService.loaderState
     .subscribe((state: LoaderState) => {
+      console.log('New value emmited');
       this.show = state.show;
     });
+  }
+
+  ngOnDestroy() {
+    this.subscription?.unsubscribe();
   }
 }
