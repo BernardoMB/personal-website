@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { LoaderService } from '../../../shared/services/loader.service';
+import { LoaderService } from 'src/app/services/loader.service';
 import { Project } from '../view-models/project.interface';
 import { ProjectsYear } from '../view-models/projects-year.interface';
 

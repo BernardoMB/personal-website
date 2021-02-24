@@ -26,6 +26,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SharedModule } from './shared/shared.module';
 import {MatDialogModule} from '@angular/material/dialog';
 import { NgParticlesModule } from 'ng-particles';
+import { LoadingbarComponent } from './components/loadingbar/loadingbar.component';
+import { LoaderService } from './services/loader.service';
 
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   direction: 'horizontal',
@@ -41,7 +43,8 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     LandingComponent,
     NotFoundComponent,
     PresentationCardComponent,
-    SidebarComponent
+    SidebarComponent,
+    LoadingbarComponent
   ],
   imports: [
     BrowserModule,
@@ -68,7 +71,8 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     {
       provide: SWIPER_CONFIG,
       useValue: DEFAULT_SWIPER_CONFIG
-    }
+    },
+    LoaderService
   ],
   bootstrap: [AppComponent]
 })

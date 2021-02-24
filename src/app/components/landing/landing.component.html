@@ -88,6 +88,7 @@
           formControlName="nameControl"
           required
         />
+        <mat-error *ngIf="contactForm.controls.nameControl.errors && contactForm.controls.nameControl.errors['required']">Full name is required</mat-error>
       </mat-form-field>
     </form>
   </div>

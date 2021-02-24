@@ -1,7 +1,7 @@
 @import '../app/components/header/header.component';
 @import '../app/components/sidebar/sidebar.component';
 @import '../app/components/footer/footer.component';
-@import '../app/shared/components/loadingbar/loadingbar.component';
+@import '../app/components/loadingbar/loadingbar.component.scss';
 @import '../app/shared/components/scroll-to-top/scroll-to-top.component';
 
 @mixin component-themes($light-theme) {
