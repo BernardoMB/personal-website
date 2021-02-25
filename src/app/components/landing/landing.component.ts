@@ -1,5 +1,5 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { AbstractControl, FormControl, FormGroup, Validators } from '@angular/forms';
 import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
 import Typed, { TypedOptions } from 'typed.js';
 
@@ -9,6 +9,7 @@ import Typed, { TypedOptions } from 'typed.js';
   styleUrls: ['./landing.component.scss']
 })
 export class LandingComponent implements OnInit {
+  //#region Swiper
   index = 0;
   config: SwiperConfigInterface = {
     navigation: {
@@ -20,6 +21,7 @@ export class LandingComponent implements OnInit {
       clickable: true
     },
   };
+  //#endregion
 
   //#region TypedJS
   typed: any;
@@ -97,19 +99,32 @@ export class LandingComponent implements OnInit {
   }
   //#endregion
 
+  //#region Contact form
   contactForm = new FormGroup({
+    toggleControl: new FormControl('whatsapp', [Validators.required]),
     nameControl: new FormControl('', [Validators.required]),
-    emailControl: new FormControl(''),
-    messageControl: new FormControl('', [Validators.required]) 
+    emailControl: new FormControl('', [Validators.email, (control: AbstractControl): {[key: string]: any} | null => {
+      const regularExpresion = /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/;
+      const match = regularExpresion.test(control.value);
+      if (!match) {
+        return { noMatchRegex: { errorMessage: 'Must enter a valid email address.' } };
+      }
+      return null;
+    }]),
+    messageControl: new FormControl('', [Validators.required])
   });
+  isSendEmail = false;
+  //#endregion
 
-  // ! Practice
+  //#region Practice
   @ViewChild('myInput1', { static: false }) myNumericInput1: ElementRef | undefined;
   @ViewChild('myInput2', { static: false }) myNumericInput2: ElementRef | undefined;
+  //#endregion
 
   constructor() { }
 
   ngOnInit(): void {
+    //#region Typed JS
     const options0: TypedOptions = {
       strings: [
         'Be yourself; everyone else is already taken.'
@@ -153,9 +168,26 @@ export class LandingComponent implements OnInit {
         this.typed = new Typed('.typed-element-2', options2);
       }, 1);
     }, 4000);
+    //#endregion
+
+    //#region Contact form
+    this.contactForm.controls.toggleControl.valueChanges.subscribe((value: string) => {
+      switch (value) {
+        case 'whatsapp':
+          this.isSendEmail = false;
+          break;
+        case 'email':
+          this.isSendEmail = true;
+          break;
+        default:
+          this.isSendEmail = false;
+          break;
+      }
+    });
+    //#endregion
   }
 
-  // ! Practice
+  //#region Practice
   onButtonclick() {
     const a = this.myNumericInput1?.nativeElement.valueAsNumber;
     const b = this.myNumericInput2?.nativeElement.valueAsNumber;
@@ -164,14 +196,30 @@ export class LandingComponent implements OnInit {
     alert(a + b);
   }
 
-  // ! Practice
   setValue() {
     this.myNumericInput1!.nativeElement.value = 24;
   }
 
-  // ! Practice
   onInputBlur(event: any) {
     console.log(event);
   }
+  //#endregion
 
+
+  //#region Contact form
+  submitContactForm() {
+    if (this.contactForm.valid) {
+      if (!this.isSendEmail) {
+        // Send whatsapp
+        const name = this.contactForm.controls.nameControl.value;
+        const message = this.contactForm.controls.messageControl.value;
+        const phoneNumber = '5215535592033';
+        const whatsAppMessage = `Hola soy ${name}. ${message}`;
+        window.open(`https://wa.me/${phoneNumber}?text=`);
+      } else {
+        // Send email
+      }
+    }
+  }
+  //#endregion
 }

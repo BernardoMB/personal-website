@@ -62,13 +62,12 @@
   </div>
 </div>
 
+<!-- ! Practice -->
 <section>
-  <!-- ! Practice -->
   <input #myInput1 type="number" (blur)="onInputBlur($event)">
   <input #myInput2 type="number">
   <button (click)="onButtonclick()">Click me!</button>
   <button (click)="setValue()">Set value</button>
-
   <app-cool-border [title]="'Landing'" [subtitle]="'Used on landing'" [description]="'Using shared component whose host is declared in app module'">
     <div style="border: 1ps solid green; height: 35px;">
       This is some random content
@@ -78,18 +77,46 @@
 
 <section class="contact-section">
   <div class="contact-container">
-    <div>Contact</div>
+    <div class="section-title">Contact</div>
     <form [formGroup]="contactForm">
-      <mat-form-field appearance="outline">
+      <mat-button-toggle-group name="fontStyle" aria-label="Contact chanel" formControlName="toggleControl" required>
+        <mat-button-toggle value="whatsapp">Whatsapp</mat-button-toggle>
+        <mat-button-toggle value="email">Email</mat-button-toggle>
+      </mat-button-toggle-group>
+      <mat-form-field appearance="outline" [color]="'accent'">
         <mat-label>Full Name</mat-label>
-        <input 
+        <input
           matInput
           placeholder="Ex. John Doe"
           formControlName="nameControl"
           required
         />
-        <mat-error *ngIf="contactForm.controls.nameControl.errors && contactForm.controls.nameControl.errors['required']">Full name is required</mat-error>
+        <mat-error *ngIf="contactForm.controls.nameControl.errors && contactForm.controls.nameControl.errors['required']">Full name is required.</mat-error>
       </mat-form-field>
+      <mat-form-field appearance="outline" [color]="'accent'" *ngIf="isSendEmail">
+        <mat-label>Email</mat-label>
+        <input
+          matInput
+          placeholder="Ex. john.doe@example.com"
+          formControlName="emailControl"
+          required
+        />
+        <mat-error *ngIf="contactForm.controls.emailControl.errors && contactForm.controls.emailControl.errors['noMatchRegex']">{{contactForm.controls.emailControl.errors['noMatchRegex']['errorMessage']}}</mat-error>
+        <mat-error *ngIf="contactForm.controls.emailControl.errors && contactForm.controls.emailControl.errors['email']">Must enter a valid email address.</mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="outline" [color]="'accent'">
+        <mat-label>Leave a message</mat-label>
+        <textarea
+          matInput
+          placeholder="Ex. It makes me feel..."
+          formControlName="messageControl"
+          required
+        ></textarea>
+        <mat-error *ngIf="contactForm.controls.messageControl.errors && contactForm.controls.messageControl.errors['required']">A message is required.</mat-error>
+      </mat-form-field>
+      <button class="send-whatsapp-button" mat-fab aria-label="Send whatsapp>
+        <mat-icon>send</mat-icon>
+      </button>
     </form>
   </div>
 </section>
