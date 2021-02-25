@@ -78,7 +78,7 @@
 <section class="contact-section">
   <div class="contact-container">
     <div class="section-title">Contact</div>
-    <form [formGroup]="contactForm">
+    <form [formGroup]="contactForm" (ngSubmit)="submitContactForm()">
       <mat-button-toggle-group name="fontStyle" aria-label="Contact chanel" formControlName="toggleControl" required>
         <mat-button-toggle value="whatsapp">Whatsapp</mat-button-toggle>
         <mat-button-toggle value="email">Email</mat-button-toggle>
@@ -114,7 +114,7 @@
         ></textarea>
         <mat-error *ngIf="contactForm.controls.messageControl.errors && contactForm.controls.messageControl.errors['required']">A message is required.</mat-error>
       </mat-form-field>
-      <button class="send-whatsapp-button" mat-fab aria-label="Send whatsapp>
+      <button class="send-whatsapp-button" mat-fab type="submit" aria-label="Send whatsapp">
         <mat-icon>send</mat-icon>
       </button>
     </form>
