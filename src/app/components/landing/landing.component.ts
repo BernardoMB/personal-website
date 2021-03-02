@@ -111,7 +111,7 @@ export class LandingComponent implements OnInit {
       }
       return null;
     }]),
-    messageControl: new FormControl('', [Validators.required])
+    messageControl: new FormControl('', [Validators.required, Validators.minLength(10)])
   });
   isSendEmail = false;
   //#endregion
@@ -205,20 +205,25 @@ export class LandingComponent implements OnInit {
   }
   //#endregion
 
-
   //#region Contact form
   submitContactForm() {
-    if (this.contactForm.valid) {
-      if (!this.isSendEmail) {
-        // Send whatsapp
+    if (!this.isSendEmail) {
+      // Send whatsapp
+      if (
+        this.contactForm.controls.nameControl.valid &&
+        this.contactForm.controls.messageControl.valid
+      ) {
         const name = this.contactForm.controls.nameControl.value;
         const message = this.contactForm.controls.messageControl.value;
         const phoneNumber = '5215535592033';
         const whatsAppMessage = `Hola soy ${name}. ${message}`;
-        window.open(`https://wa.me/${phoneNumber}?text=`);
+        const encoded = encodeURIComponent(whatsAppMessage);
+        window.open(`https://wa.me/${phoneNumber}?text=${encoded}`);
       } else {
-        // Send email
+        alert('Submitted form is invalid.');
       }
+    } else {
+      // Send email
     }
   }
   //#endregion
