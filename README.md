@@ -34,6 +34,8 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ### ParticleJS
 
+### Diaog service
+
 ### Resolvers multiple calls
 
 See application resolver services
@@ -62,9 +64,9 @@ Using Angular Material drawer
 
 See projects section
 
-### Zoom in animation 
+### Send whatsapp
 
-See projects section
+See landing page
 
 ### Sticky header
 

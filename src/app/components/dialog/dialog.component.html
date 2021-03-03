@@ -1,0 +1,9 @@
+<div style="position: relative; display: inline-block;">
+  <p>
+    {{ data.message }}
+  </p>
+  <div class="options-container">
+    <button mat-flat-button color="accent" (click)="closeDialog('Close')">Close</button>
+    <button mat-flat-button color="accent" *ngFor="let option of data.options" (click)="closeDialog('option')">{{option}}</button>
+  </div>
+</div>

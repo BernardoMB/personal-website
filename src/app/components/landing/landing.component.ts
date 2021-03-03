@@ -1,14 +1,16 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { AfterViewChecked, AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { AbstractControl, FormControl, FormGroup, Validators } from '@angular/forms';
 import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
 import Typed, { TypedOptions } from 'typed.js';
+import { ContactService } from '../../services/contact.service';
+import { DialogService } from '../../services/dialog.service';
 
 @Component({
   selector: 'app-landing',
   templateUrl: './landing.component.html',
   styleUrls: ['./landing.component.scss']
 })
-export class LandingComponent implements OnInit {
+export class LandingComponent implements OnInit, AfterViewInit {
   //#region Swiper
   index = 0;
   config: SwiperConfigInterface = {
@@ -121,9 +123,30 @@ export class LandingComponent implements OnInit {
   @ViewChild('myInput2', { static: false }) myNumericInput2: ElementRef | undefined;
   //#endregion
 
-  constructor() { }
+  constructor(
+    private contactService: ContactService,
+    private dialogService: DialogService
+  ) { }
 
   ngOnInit(): void {
+    //#region Contact form
+    this.contactForm.controls.toggleControl.valueChanges.subscribe((value: string) => {
+      switch (value) {
+        case 'whatsapp':
+          this.isSendEmail = false;
+          break;
+        case 'email':
+          this.isSendEmail = true;
+          break;
+        default:
+          this.isSendEmail = false;
+          break;
+      }
+    });
+    //#endregion
+  }
+
+  ngAfterViewInit() {
     //#region Typed JS
     const options0: TypedOptions = {
       strings: [
@@ -169,22 +192,6 @@ export class LandingComponent implements OnInit {
       }, 1);
     }, 4000);
     //#endregion
-
-    //#region Contact form
-    this.contactForm.controls.toggleControl.valueChanges.subscribe((value: string) => {
-      switch (value) {
-        case 'whatsapp':
-          this.isSendEmail = false;
-          break;
-        case 'email':
-          this.isSendEmail = true;
-          break;
-        default:
-          this.isSendEmail = false;
-          break;
-      }
-    });
-    //#endregion
   }
 
   //#region Practice
@@ -220,10 +227,25 @@ export class LandingComponent implements OnInit {
         const encoded = encodeURIComponent(whatsAppMessage);
         window.open(`https://wa.me/${phoneNumber}?text=${encoded}`);
       } else {
-        alert('Submitted form is invalid.');
+        const message = 'Submitted form is invalid.';
+        const options = ['Ok'];
+        this.dialogService.openDialog(message, options).subscribe((result: string) => {});
       }
     } else {
-      // Send email
+      if (
+        this.contactForm.controls.nameControl.valid &&
+        this.contactForm.controls.messageControl.valid &&
+        this.contactForm.controls.emailControl.valid
+      ) {
+        const name = this.contactForm.controls.nameControl.value;
+        const email = this.contactForm.controls.emailControl.value;
+        const message = this.contactForm.controls.messageControl.value;
+        this.contactService.sendEmail(name, email ,message);
+      } else {
+        const message = 'Submitted form is invalid.';
+        const options = ['Ok'];
+        this.dialogService.openDialog(message, options).subscribe((result: string) => {});
+      }
     }
   }
   //#endregion

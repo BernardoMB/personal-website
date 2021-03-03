@@ -113,7 +113,7 @@
           required
         ></textarea>
         <mat-error *ngIf="contactForm.controls.messageControl.errors && contactForm.controls.messageControl.errors['required']">A message is required.</mat-error>
-        <mat-error *ngIf="contactForm.controls.messageControl.errors && contactForm.controls.messageControl.errors['minlength']">Message requires a minimun length of {{contactForm.controls.messageControl.errors['minlength'].requiredLength}}.</mat-error>
+        <mat-error *ngIf="contactForm.controls.messageControl.errors && contactForm.controls.messageControl.errors['minlength']">Message requires a minimun length of {{contactForm.controls.messageControl.errors['minlength'].requiredLength}} characters.</mat-error>
       </mat-form-field>
       <button class="send-whatsapp-button" mat-fab type="submit" aria-label="Send whatsapp">
         <mat-icon>send</mat-icon>
