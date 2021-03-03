@@ -1,1 +1,18 @@
-<p>project-detail works!</p>
+<section class="proyect-jumbotron">
+    <div *ngIf="!!project" class="jumbotron-container" [ngStyle]="{'background-image': 'url(' + project.image + ')' }">
+        <div class="jumbotron-overlay">
+            <div class="elements-container">
+                <h1>{{project.code}}</h1>
+                <h5>{{project.name}}</h5>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="project-description-section">
+    <div *ngIf="!!project" class="project-description-container">
+        <div class="project-name">{{project.name}}</div>
+        <div class="project-description" [innerHtml]="project.description">
+        </div>
+    </div>
+</section>

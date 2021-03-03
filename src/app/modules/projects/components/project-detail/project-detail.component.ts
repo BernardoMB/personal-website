@@ -12,7 +12,8 @@ export class ProjectDetailComponent implements OnInit, OnDestroy {
   projectDetailInfoSubscription: Subscription | undefined;
   project: Project | undefined;
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute) {
+  }
 
   ngOnInit(): void {
     console.log('Resolved data', this.route.snapshot.data);
