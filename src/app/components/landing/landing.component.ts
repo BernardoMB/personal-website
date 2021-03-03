@@ -168,7 +168,7 @@ export class LandingComponent implements OnInit, AfterViewInit {
 
     setTimeout(() => {
       this.showElement1 = true;
-    }, 3000);
+    }, 4000);
 
     setTimeout(() => {
       this.showElement2 = true;
@@ -190,7 +190,7 @@ export class LandingComponent implements OnInit, AfterViewInit {
         /* if (!!this.typed) this.typed.destroy(); */
         this.typed = new Typed('.typed-element-2', options2);
       }, 1);
-    }, 4000);
+    }, 5000);
     //#endregion
   }
 
