@@ -168,7 +168,30 @@ export class LandingComponent implements OnInit, AfterViewInit {
 
     setTimeout(() => {
       this.showElement1 = true;
-    }, 4000);
+      setTimeout(() => {
+        const options1: TypedOptions = {
+          strings: [
+            ' '
+          ],
+          typeSpeed: 30,
+          /* backSpeed: 50,
+          showCursor: true,
+          cursorChar: '|',
+          loop: false */
+          cursorChar: '_',
+          backDelay: 750,
+          loop: false,
+          loopCount: 0,
+          onComplete: function(self) {
+            setTimeout(() => {
+              (<any>self).cursor.remove()
+            }, 1500);
+          }
+        };
+        /* if (!!this.typed) this.typed.destroy(); */
+        this.typed = new Typed('.typed-element-1', options1);
+      }, 1);
+    }, 2500);
 
     setTimeout(() => {
       this.showElement2 = true;
@@ -190,7 +213,7 @@ export class LandingComponent implements OnInit, AfterViewInit {
         /* if (!!this.typed) this.typed.destroy(); */
         this.typed = new Typed('.typed-element-2', options2);
       }, 1);
-    }, 5000);
+    }, 4000);
     //#endregion
   }
 

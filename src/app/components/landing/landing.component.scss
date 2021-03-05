@@ -60,7 +60,8 @@
             .container {
               font-family: Monaco, Consolas, "Lucida Console", monospace;
               background-color: #000000c4;
-              color: #1EFF00;
+              //color: #1EFF00;
+              color: white;
               min-height: 200px;
               padding: 10px 60px 10px 10px;
               border-bottom-right-radius: 5px;
@@ -78,10 +79,11 @@
       .parallax-slide {
         overflow: hidden;
         position: relative;
-        background-image: url(https://images.unsplash.com/photo-1415018255745-0ec3f7aee47b?dpr=1&auto=format&fit=crop&w=1500&h=938&q=80&cs=tinysrgb&crop=);
+        background-image: url(../../../assets/images/jumbotrons/servers.jpeg);
         background-attachment: fixed;
         background-size: cover;
         resize: both;
+        background-position-y: -220px;
         .particles {
           position: absolute;
           top: 0px;

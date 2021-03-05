@@ -1,0 +1,61 @@
+.hobbies-jumbotron {
+  .jumbotron-container {
+    background-image: url('/assets/images/jumbotrons/hero.png');
+    background-size: contain;
+    .jumbotron-overlay {
+          /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,ffffff+100,ffffff+100&0.3+0,0.3+100 */
+          background: -moz-linear-gradient(-45deg,  rgba(0,0,0,0.3) 0%, rgba(255,255,255,0.3) 100%); /* FF3.6-15 */
+          background: -webkit-linear-gradient(-45deg,  rgba(0,0,0,0.3) 0%,rgba(255,255,255,0.3) 100%); /* Chrome10-25,Safari5.1-6 */
+          background: linear-gradient(135deg,  rgba(0,0,0,0.3) 0%,rgba(255,255,255,0.3) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4d000000', endColorstr='#4dffffff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+      .elements-container {
+        max-width: 1280px;
+        margin: auto;
+        color: white;
+        padding: 36px 16px;
+        h1 {
+          font-size: 46px;
+          font-weight: bold;
+          line-height: 120%;
+        }
+        h5 {
+          margin: 10px 0px;
+          font-size: 24px;
+          padding-bottom: 4px;
+          line-height: 120%;
+        }
+        button {
+          margin-top: 23px;
+          height: 46px;
+        }
+      }
+    }
+  }
+}
+
+
+.hobbies-section {
+  .hobbies-container {
+      max-width: 1280px;
+      margin: auto;
+      padding: 36px 16px;
+      .title {
+          text-align: center;
+          margin: 30px 0px;
+          font-size: 28px;
+          font-weight: 600;
+      }
+      .cards-container {
+        display: flex;
+        margin-bottom: 30px;
+        ::ng-deep {
+          mat-card {
+            margin-right: 20px;
+            mat-card-title {
+              margin-bottom: 20px;
+            }
+          }
+        }
+      }
+  }
+}
