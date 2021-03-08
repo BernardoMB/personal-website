@@ -1,3 +1,15 @@
+mat-sidenav-container {
+  background-color: unset;
+  mat-sidenav {
+    background-color: white;
+    display: flex;
+    font-family: 'Nunito', sans-serif;
+    flex-direction: column;
+    position: fixed;
+    top: 0px;
+  }
+}
+
 .router-outlet-container {
   min-height: calc(100vh - 56px - 331px);
   @media screen and (min-width: 600px) {

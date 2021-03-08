@@ -16,6 +16,7 @@
     <button mat-icon-button [matMenuTriggerFor]="settingsMenu" aria-label="settings icon button">
       <mat-icon>settings</mat-icon>
     </button>
+    <div mat-card-avatar class="profile-image"></div>
   </div>
 </mat-toolbar>
 
@@ -36,6 +37,7 @@
     <button mat-icon-button [matMenuTriggerFor]="settingsMenu" aria-label="settings icon button">
       <mat-icon>settings</mat-icon>
     </button>
+    <div mat-card-avatar class="profile-image"></div>
   </div>
 </mat-toolbar>
 <!-- #endregion -->
@@ -50,6 +52,19 @@
   <button mat-icon-button [disabled]="!enableShareButton" [matMenuTriggerFor]="shareMenu" aria-label="share icon button">
     <mat-icon>share</mat-icon>
   </button>
+  <div mat-card-avatar class="profile-image"></div>
+</mat-toolbar>
+
+<mat-toolbar class="sticky-header-mobile" [ngClass]="{'sticky': isSticky}" color="primary">
+  <button mat-icon-button (click)="toggleSidenav.emit()" aria-label="menu icon button">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span (click)="navigateToHomePage()">{{initials}}</span>
+  <span class="spacer"></span>
+  <button mat-icon-button [disabled]="!enableShareButton" [matMenuTriggerFor]="shareMenu" aria-label="share icon button">
+    <mat-icon>share</mat-icon>
+  </button>
+  <div mat-card-avatar class="profile-image"></div>
 </mat-toolbar>
 <!-- #endregion -->
 
