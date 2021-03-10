@@ -1,5 +1,6 @@
 import { OverlayContainer } from '@angular/cdk/overlay';
-import { Component, OnDestroy } from '@angular/core';
+import { Component, HostListener, OnDestroy } from '@angular/core';
+import { NavigationEnd, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { pairwise, skip } from 'rxjs/operators';
 import { ThemeService } from './shared/services/theme.service';
@@ -13,7 +14,22 @@ export class AppComponent implements OnDestroy {
   theme = 'light-theme';
   selectedThemesubscription: Subscription | undefined;
 
-  constructor(private themeService: ThemeService, private overlayContainer: OverlayContainer) {
+  //#region Scroll indicator bar
+  @HostListener('window:scroll')
+  onScroll(event: any) {
+    var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    var scrolled = (winScroll / height) * 100;
+    document.getElementById('header-scrollIndicatorBar')!.style.width = scrolled + '%';
+    document.getElementById('sticky-header-scrollIndicatorBar')!.style.width = scrolled + '%';
+  }
+  //#endregion
+
+  constructor(
+    private themeService: ThemeService,
+    private overlayContainer: OverlayContainer,
+    private router: Router
+  ) {
 
   }
 
@@ -41,6 +57,18 @@ export class AppComponent implements OnDestroy {
       this.overlayContainer.getContainerElement().classList.remove(<string>previous);
       this.overlayContainer.getContainerElement().classList.add(<string>current);
     });
+
+    //#region Scroll indicator bar
+    this.router.events.subscribe((evt) => {
+      if (evt instanceof NavigationEnd) {
+        var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        var scrolled = (winScroll / height) * 100;
+        document.getElementById('header-scrollIndicatorBar')!.style.width = scrolled + '%';
+        document.getElementById('sticky-header-scrollIndicatorBar')!.style.width = scrolled + '%';
+      }
+    });
+    //#endregion
   }
 
   ngOnDestroy() {

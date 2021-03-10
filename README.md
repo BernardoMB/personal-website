@@ -72,6 +72,10 @@ See landing page
 
 See projects section
 
+### Scroll indicator progress bar
+
+See code sections with tag Scroll indicator bar
+
 ## Other topics
 
 Camel case: myVariable
