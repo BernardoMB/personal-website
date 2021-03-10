@@ -1,0 +1,18 @@
+// Custom component theming
+@import '~@angular/material/theming';
+
+@mixin scroll-indicator-theme($light-theme) {
+  $primary: map-get($light-theme, primary);
+  $accent: map-get($light-theme, accent);
+
+  .progress-container {
+    width: 100%;
+    height: 4px;
+    .progress-bar {
+      height: 4px;
+      width: 0%;
+      background-color: mat-color($accent);
+    }
+  }
+}
+

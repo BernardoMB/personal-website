@@ -7,7 +7,7 @@ $header-break: 820px;
   $primary: map-get($light-theme, primary);
   $accent: map-get($light-theme, accent);
 
-  .progress-container {
+  /* .progress-container {
     width: 100%;
     height: 4px;
     position: absolute;
@@ -19,7 +19,7 @@ $header-break: 820px;
       width: 0%;
       background-color: mat-color($accent);
     }
-  }
+  } */
 
   .spacer {
     display: flex;
@@ -78,6 +78,12 @@ $header-break: 820px;
         background-image: url('/assets/images/profile/profile-square-aspect-ratio.jpg');
         background-size: cover;
       }
+    }
+    .progress-indicator-container {
+      width: 100%;
+      position: absolute;
+      bottom: 0px;
+      left: 0px;
     }
     @media screen and (max-width: $header-break) {
       display: none;
@@ -138,6 +144,12 @@ $header-break: 820px;
         background-image: url('/assets/images/profile/profile-square-aspect-ratio.jpg');
         background-size: cover;
       }
+    }
+    .progress-indicator-container {
+      width: 100%;
+      position: absolute;
+      bottom: 0px;
+      left: 0px;
     }
     @media screen and (max-width: $header-break) {
       display: none;

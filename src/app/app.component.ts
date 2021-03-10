@@ -14,21 +14,9 @@ export class AppComponent implements OnDestroy {
   theme = 'light-theme';
   selectedThemesubscription: Subscription | undefined;
 
-  //#region Scroll indicator bar
-  @HostListener('window:scroll')
-  onScroll(event: any) {
-    var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-    var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    var scrolled = (winScroll / height) * 100;
-    document.getElementById('header-scrollIndicatorBar')!.style.width = scrolled + '%';
-    document.getElementById('sticky-header-scrollIndicatorBar')!.style.width = scrolled + '%';
-  }
-  //#endregion
-
   constructor(
     private themeService: ThemeService,
-    private overlayContainer: OverlayContainer,
-    private router: Router
+    private overlayContainer: OverlayContainer
   ) {
 
   }
@@ -57,18 +45,6 @@ export class AppComponent implements OnDestroy {
       this.overlayContainer.getContainerElement().classList.remove(<string>previous);
       this.overlayContainer.getContainerElement().classList.add(<string>current);
     });
-
-    //#region Scroll indicator bar
-    this.router.events.subscribe((evt) => {
-      if (evt instanceof NavigationEnd) {
-        var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-        var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        var scrolled = (winScroll / height) * 100;
-        document.getElementById('header-scrollIndicatorBar')!.style.width = scrolled + '%';
-        document.getElementById('sticky-header-scrollIndicatorBar')!.style.width = scrolled + '%';
-      }
-    });
-    //#endregion
   }
 
   ngOnDestroy() {

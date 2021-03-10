@@ -32,6 +32,7 @@ import { LoaderService } from './services/loader.service';
 import { ContactService } from './services/contact.service';
 import { DialogComponent } from './components/dialog/dialog.component';
 import { DialogService } from './services/dialog.service';
+import { ScrollIndicatorComponent } from './components/scroll-indicator/scroll-indicator.component';
 
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   direction: 'horizontal',
@@ -49,7 +50,8 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     PresentationCardComponent,
     SidebarComponent,
     LoadingbarComponent,
-    DialogComponent
+    DialogComponent,
+    ScrollIndicatorComponent
   ],
   imports: [
     BrowserModule,

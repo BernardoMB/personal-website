@@ -18,8 +18,8 @@
     </button>
     <div mat-card-avatar class="profile-image"></div>
   </div>
-  <div class="progress-container">
-    <div id="header-scrollIndicatorBar" class="progress-bar"></div>
+  <div class="progress-indicator-container">
+    <app-scroll-indicator [indicatorName]="'scroll-indicator-header'"></app-scroll-indicator>
   </div>
 </mat-toolbar>
 
@@ -42,8 +42,8 @@
     </button>
     <div mat-card-avatar class="profile-image"></div>
   </div>
-  <div class="progress-container">
-    <div id="sticky-header-scrollIndicatorBar" class="progress-bar"></div>
+  <div class="progress-indicator-container">
+    <app-scroll-indicator [indicatorName]="'scroll-indicator-sticky-header'"></app-scroll-indicator>
   </div>
 </mat-toolbar>
 <!-- #endregion -->
