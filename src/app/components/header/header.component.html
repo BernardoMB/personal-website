@@ -59,6 +59,9 @@
     <mat-icon>share</mat-icon>
   </button>
   <div mat-card-avatar class="profile-image"></div>
+  <div class="progress-indicator-container">
+    <app-scroll-indicator [indicatorName]="'scroll-indicator-header-mobile'"></app-scroll-indicator>
+  </div>
 </mat-toolbar>
 
 <mat-toolbar class="sticky-header-mobile" [ngClass]="{'sticky': isSticky}" color="primary">
@@ -71,6 +74,9 @@
     <mat-icon>share</mat-icon>
   </button>
   <div mat-card-avatar class="profile-image"></div>
+  <div class="progress-indicator-container">
+    <app-scroll-indicator [indicatorName]="'scroll-indicator-sticky-header-mobile'"></app-scroll-indicator>
+  </div>
 </mat-toolbar>
 <!-- #endregion -->
 
