@@ -14,6 +14,10 @@ export class LandingComponent implements OnInit, AfterViewInit {
   //#region Swiper
   index = 0;
   config: SwiperConfigInterface = {
+    autoplay: {
+      delay: 8000,
+      disableOnInteraction: false,
+    },
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
@@ -153,15 +157,14 @@ export class LandingComponent implements OnInit, AfterViewInit {
         'Be yourself; everyone else is already taken.'
       ],
       typeSpeed: 30,
-      /* backSpeed: 50,
-      showCursor: true,
-      cursorChar: '|',
-      loop: false */
       cursorChar: '_',
       backDelay: 750,
       loop: false,
       loopCount: 0,
-      onComplete: function(self) { (<any>self).cursor.remove() }
+      onComplete: function(self) {
+        (<any>self).cursor.remove();
+
+      }
     };
     if (!!this.typed) this.typed.destroy();
     this.typed = new Typed('.typed-element-0', options0);
@@ -174,10 +177,6 @@ export class LandingComponent implements OnInit, AfterViewInit {
             ' '
           ],
           typeSpeed: 30,
-          /* backSpeed: 50,
-          showCursor: true,
-          cursorChar: '|',
-          loop: false */
           cursorChar: '_',
           backDelay: 750,
           loop: false,
@@ -188,7 +187,6 @@ export class LandingComponent implements OnInit, AfterViewInit {
             }, 1500);
           }
         };
-        /* if (!!this.typed) this.typed.destroy(); */
         this.typed = new Typed('.typed-element-1', options1);
       }, 1);
     }, 2500);
@@ -201,16 +199,11 @@ export class LandingComponent implements OnInit, AfterViewInit {
             'Oscar Wilde'
           ],
           typeSpeed: 30,
-          /* backSpeed: 50,
-          showCursor: true,
-          cursorChar: '|',
-          loop: false */
           cursorChar: '_',
           backDelay: 750,
           loop: false,
           loopCount: 0
         };
-        /* if (!!this.typed) this.typed.destroy(); */
         this.typed = new Typed('.typed-element-2', options2);
       }, 1);
     }, 4000);

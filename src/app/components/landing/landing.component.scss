@@ -79,11 +79,12 @@
       .parallax-slide {
         overflow: hidden;
         position: relative;
-        background-image: url(../../../assets/images/jumbotrons/servers.jpeg);
+        background-image: url(../../../assets/images/jumbotrons/servers2.jpg);
         background-attachment: fixed;
         background-size: cover;
         resize: both;
         background-position-y: -220px;
+        background-position-x: center;
         .particles {
           position: absolute;
           top: 0px;
@@ -92,6 +93,9 @@
           z-index: 0;
         }
       }
+    }
+    .swiper-pagination {
+      // Insert pagination styles here
     }
   }
 }

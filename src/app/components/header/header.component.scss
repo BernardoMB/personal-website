@@ -7,12 +7,6 @@ $header-break: 820px;
   $primary: map-get($light-theme, primary);
   $accent: map-get($light-theme, accent);
 
-  .spacer {
-    display: flex;
-    flex-grow: 1;
-    justify-content: center;
-  }
-
   /* #region Desktop header */
   .header {
     z-index: 10;
@@ -31,6 +25,11 @@ $header-break: 820px;
         &:hover {
           color: mat-color($accent);
         }
+      }
+      .spacer {
+        display: flex;
+        flex-grow: 1;
+        justify-content: center;
       }
       .navigation-container {
         display: flex;
@@ -98,6 +97,11 @@ $header-break: 820px;
           color: mat-color($accent);
         }
       }
+      .spacer {
+        display: flex;
+        flex-grow: 1;
+        justify-content: center;
+      }
       .navigation-container {
         display: flex;
         div {
@@ -149,11 +153,30 @@ $header-break: 820px;
     overflow-x: hidden;
     display: none;
     position: relative;
-    span {
+
+    .hamburger {
+      ::ng-deep {
+        .mat-icon-button {
+          background-color: pink;
+        }
+        .mat-button-wrapper {
+          background-color: orange;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    }
+    .initials {
       cursor: pointer;
       &:hover {
         text-decoration: underline;
       }
+    }
+    .spacer {
+      display: flex;
+      flex-grow: 1;
+      justify-content: center;
     }
     .profile-image {
       background-image: url('/assets/images/profile/profile-square-aspect-ratio.jpg');
@@ -179,11 +202,16 @@ $header-break: 820px;
     height: 0px;
     opacity: 0;
     transition: opacity 0.25s ease-out, height 0.15s ease;
-    span {
+    .initials {
       cursor: pointer;
       &:hover {
         text-decoration: underline;
       }
+    }
+    .spacer {
+      display: flex;
+      flex-grow: 1;
+      justify-content: center;
     }
     .profile-image {
       background-image: url('/assets/images/profile/profile-square-aspect-ratio.jpg');
@@ -223,5 +251,10 @@ $header-break: 820px;
         }
       }
     }
+  }
+  .mat-button-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
