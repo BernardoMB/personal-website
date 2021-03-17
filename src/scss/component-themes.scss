@@ -4,6 +4,7 @@
 @import '../app/components/loadingbar/loadingbar.component';
 @import '../app/shared/components/scroll-to-top/scroll-to-top.component';
 @import '../app/components/scroll-indicator/scroll-indicator.component';
+@import './ng-feedback-theme';
 
 @mixin component-themes($light-theme) {
   @include header-theme($light-theme);
@@ -12,4 +13,5 @@
   @include loadingbar-theme($light-theme);
   @include scroll-to-top-theme($light-theme);
   @include scroll-indicator-theme($light-theme);
+  @include ng-feedback-theme($light-theme);
 }

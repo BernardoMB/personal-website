@@ -1,0 +1,17 @@
+@mixin ng-feedback-theme($light-theme) {
+    $primary: map-get($light-theme, primary);
+    $accent: map-get($light-theme, accent);
+    .feedbackDialog {
+        .dialog-title {
+            background-color: mat-color($primary) !important;
+        }
+        .submit-button {
+            color: mat-color($accent) !important;
+        }
+        .toolbar {
+            .merge-button {
+                color: mat-color($accent) !important;
+            }
+        }
+    }
+}
