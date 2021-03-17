@@ -19,14 +19,14 @@ export class ProjectDetailResoverService implements Resolve<any> {
     const projectId = route.params.id;
     return this.projectsService.getProyectById(projectId).pipe(
       map((project: Project) => {
-        console.log('Got from service', project);
+        //console.log('Got from service', project);
         if (project) {
-          console.log('Returning project', project);
+          //console.log('Returning project', project);
           return {
             project
           };
         } else {
-          console.log('Returning null');
+          //console.log('Returning null');
           return {
             project: null
           };

@@ -40,9 +40,6 @@ $header-height: 61px;
         left: -200px;
         width: 200px;
         height: $loadingbar-height;
-        //background-color: $color2;
-        background-color: #50e6ff;
-        //background-color: #89c402;
         animation: loading 2s linear infinite;
         @media screen and (max-width: 425px) {
           height: $loadingbar-height-mobile;
@@ -64,6 +61,11 @@ $header-height: 61px;
 }
 
 ::ng-deep {
+  .light-theme {
+    .loader:before {
+      background-color: #50e6ff;
+    }
+  }
   .dark-theme {
     .loader:before {
       background-color: white;

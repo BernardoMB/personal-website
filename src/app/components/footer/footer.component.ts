@@ -13,7 +13,7 @@ export class FooterComponent implements OnInit {
   titleFooter = 'Actuary & Full-Satck Developer';
   phoneNumberFooter = '55 3559 2033';
   emailAddressFooter = 'bmondragonbrozon@gmail.com';
-  physicalAddressFooter = 'Paseo San Agustin 78, Lomas Verdes, Naucalpan, Edo. Mex., 53120';
+  physicalAddressFooter = 'Lomas Verdes, Naucalpan, Edo. Mex., 53120';
 
   constructor(public dialog: MatDialog) { }
 

@@ -76,6 +76,10 @@ See projects section
 
 See code sections with tag Scroll indicator bar
 
+### Ng Feedback
+
+See landing page ocmponent.
+
 ## Other topics
 
 Camel case: myVariable

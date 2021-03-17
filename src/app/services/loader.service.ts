@@ -15,12 +15,10 @@ export class LoaderService {
   constructor() { }
 
   show() {
-    console.log('Nexting true');
     this.loaderSubject.next({ show: true } as LoaderState);
   }
 
   hide() {
-    console.log('Nexting false');
     this.loaderSubject.next({ show: false } as LoaderState);
   }
 }

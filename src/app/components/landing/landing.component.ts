@@ -16,7 +16,7 @@ export class LandingComponent implements OnInit, AfterViewInit {
   config: SwiperConfigInterface = {
     autoplay: {
       delay: 8000,
-      disableOnInteraction: false,
+      disableOnInteraction: true,
     },
     navigation: {
       nextEl: '.swiper-button-next',

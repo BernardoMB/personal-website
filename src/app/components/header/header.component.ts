@@ -30,12 +30,12 @@ export class HeaderComponent implements OnInit {
     private router: Router // Dependency Injection
   ) {
     // Code executes on component initialization
-    console.log('Executing constructor');
+    //console.log('Executing constructor');
   }
 
   ngOnInit(): void {
     // Code executes after component has been initialized
-    console.log('Executing ngOnInit hook');
+    //console.log('Executing ngOnInit hook');
 
     this.themeService.selectedTheme$.pipe(
       // skip(0)

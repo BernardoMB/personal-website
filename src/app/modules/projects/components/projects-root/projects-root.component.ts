@@ -16,7 +16,7 @@ export class ProjectsRootComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.yearsSubscription = this.projectsService.getProyectsYears().subscribe((years: ProjectsYear[]) => {
-      console.log('Years', years);
+      // console.log('Years', years);
       this.years =  years;
     });
   }
