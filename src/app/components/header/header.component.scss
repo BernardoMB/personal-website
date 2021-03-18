@@ -11,7 +11,7 @@ $header-break: 820px;
   .header {
     z-index: 10;
     overflow: hidden;
-    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0 0 1px 1px rgb(20 23 28 / 10%), 0 3px 1px 0 rgb(20 23 28 / 10%);
     position: relative;
     .header-container {
       display: flex;
@@ -78,7 +78,7 @@ $header-break: 820px;
   .sticky-header {
     z-index: 10;
     overflow: hidden;
-    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0 0 1px 1px rgb(20 23 28 / 10%), 0 3px 1px 0 rgb(20 23 28 / 10%);
     position: fixed;
     top: 0px;
     height: 0px;
@@ -153,7 +153,7 @@ $header-break: 820px;
     overflow-x: hidden;
     display: none;
     position: relative;
-
+    box-shadow: 0 0 1px 1px rgb(20 23 28 / 10%), 0 3px 1px 0 rgb(20 23 28 / 10%);
     .hamburger {
       ::ng-deep {
         .mat-icon-button {
@@ -202,6 +202,7 @@ $header-break: 820px;
     height: 0px;
     opacity: 0;
     transition: opacity 0.25s ease-out, height 0.15s ease;
+    box-shadow: 0 0 1px 1px rgb(20 23 28 / 10%), 0 3px 1px 0 rgb(20 23 28 / 10%);
     .initials {
       cursor: pointer;
       &:hover {
@@ -233,6 +234,9 @@ $header-break: 820px;
     height: 64px;
     opacity: 1;
     transition: opacity 0.65s ease-out, height 0.25s ease;
+    @media screen and (max-width: $header-break) {
+      height: 56px;
+    }
   }
 
 }
