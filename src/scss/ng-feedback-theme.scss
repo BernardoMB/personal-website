@@ -2,8 +2,21 @@
     $primary: map-get($light-theme, primary);
     $accent: map-get($light-theme, accent);
     .feedbackDialog {
+        .dialog {
+          @media screen and (max-width: 820px) {
+            width: 240px;
+          }
+        }
+        .screenshot-content {
+          @media screen and (max-width: 820px) {
+            height: 160px;
+          }
+        }
         .dialog-title {
             background-color: mat-color($primary) !important;
+        }
+        .dialog-content {
+          height: 100px;
         }
         .submit-button {
             color: mat-color($accent) !important;
