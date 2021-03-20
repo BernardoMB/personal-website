@@ -68,11 +68,14 @@
               .container {
                 font-family: Monaco, Consolas, "Lucida Console", monospace;
                 background-color: #000000c4;
-                color: white;
                 min-height: 200px;
                 padding: 10px 10px 10px 10px;
                 border-bottom-right-radius: 5px;
                 border-bottom-left-radius: 5px;
+                color: white;
+                .typed-element {
+                  color: #89c402;
+                }
               }
             }
             .nodisplay {
@@ -187,6 +190,9 @@
           text-align: center;
           i {
             font-size: 70px;
+          }
+          .icon {
+            width: 80px;
           }
         }
         .title {
