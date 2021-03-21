@@ -113,11 +113,22 @@
           background-position-y: center;
           .slide-container {
             height: 100%;
-            padding: 0px 30px;
+            padding: 0px 16px;
             display: flex;
             flex-direction: column;
             justify-content: center;
             color: #f4f5f6;
+            .contact-link {
+              float: right;
+              position: absolute;
+              top: 0px;
+              color: #89c402;
+              cursor: pointer;
+              text-decoration: none;
+              &:hover {
+                text-decoration: underline;
+              }
+            }
             .title {
               font-size: 54px;
               font-weight: 600;

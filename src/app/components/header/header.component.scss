@@ -155,16 +155,11 @@ $header-break: 820px;
     position: relative;
     box-shadow: 0 0 1px 1px rgb(20 23 28 / 10%), 0 3px 1px 0 rgb(20 23 28 / 10%);
     .hamburger {
-      ::ng-deep {
-        .mat-icon-button {
-          background-color: pink;
-        }
-        .mat-button-wrapper {
-          background-color: orange;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
+      margin-left: -10px;
+      .mat-button-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
     }
     .initials {
@@ -203,6 +198,14 @@ $header-break: 820px;
     opacity: 0;
     transition: opacity 0.25s ease-out, height 0.15s ease;
     box-shadow: 0 0 1px 1px rgb(20 23 28 / 10%), 0 3px 1px 0 rgb(20 23 28 / 10%);
+    .hamburger {
+      margin-left: -10px;
+      .mat-button-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
     .initials {
       cursor: pointer;
       &:hover {

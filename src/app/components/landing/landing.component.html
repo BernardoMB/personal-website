@@ -40,7 +40,7 @@
       </div>
       <div class="swiper-slide programming-slide">
         <div class="slide-container">
-          <div style="float: right; position: absolute; top: 0px; color: #89c402;">Contact me</div>
+          <a class="contact-link" href="home/#contact">Contact me</a>
           <h1 class="title">Get to know me</h1>
           <div class="phrase">Allways inspired by the beauty of knowledge</div>
         </div>
@@ -136,7 +136,7 @@
   <button appBetterHighlight>Style me using basic directive</button>
 </section>
 
-<section class="contact-section">
+<section id="contact" class="contact-section">
   <div class="contact-container">
     <div class="section-title">Contact</div>
     <form [formGroup]="contactForm" (ngSubmit)="submitContactForm()">

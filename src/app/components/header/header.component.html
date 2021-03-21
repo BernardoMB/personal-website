@@ -68,7 +68,7 @@
 </mat-toolbar>
 
 <mat-toolbar class="sticky-header-mobile" [ngClass]="{'sticky': isSticky}" color="primary">
-  <button mat-icon-button (click)="toggleSidenav.emit()" aria-label="menu icon button">
+  <button mat-icon-button class="hamburger" (click)="toggleSidenav.emit()" aria-label="menu icon button">
     <mat-icon>menu</mat-icon>
   </button>
   <span class="initials" (click)="navigateToHomePage()">{{initials}}</span>
