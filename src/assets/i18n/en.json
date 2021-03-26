@@ -1,0 +1,21 @@
+{
+  "HEADER": {
+    "HOME": "Home",
+    "ABOUT": "About",
+    "CV": "CV",
+    "PROJECTS": "Projects",
+    "HOBBIES": "Hobbies",
+    "SHARE ON FACEBOOK": "Shore on facebook"
+  },
+  "FOOTER": {
+    "HOME": "Home",
+    "ABOUT": "About",
+    "CV": "CV",
+    "PROJECTS": "Projects",
+    "HOBBIES": "Hobbies",
+    "PRIVACY": "Privacy"
+  },
+  "CV": {
+    "RESUME": "Resume"
+  }
+}

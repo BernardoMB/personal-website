@@ -7,6 +7,9 @@ import { ResumeComponent } from './components/resume/resume.component';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatIconModule} from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { HttpLoaderFactory } from '../../app.module';
 
 @NgModule({
   declarations: [CvRootComponent, CvComponent, ResumeComponent],
@@ -15,7 +18,15 @@ import { MatButtonModule } from '@angular/material/button';
     CvRoutingModule,
     MatTabsModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    HttpClientModule,
+    TranslateModule.forChild({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    })
   ]
 })
 export class CvModule { }

@@ -80,6 +80,10 @@ See code sections with tag Scroll indicator bar
 
 See landing page ocmponent.
 
+### Ngx Translate
+
+See `en.json`, `es.json`, `app.module.ts`, `app.component.ts`, `header.component.ts` to change the language and a child module like `cv.module.ts`.
+
 ## Other topics
 
 Camel case: myVariable

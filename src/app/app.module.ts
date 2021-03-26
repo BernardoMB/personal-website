@@ -26,6 +26,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SharedModule } from './shared/shared.module';
 import { MatDialogModule} from '@angular/material/dialog';
+import { MatSelectModule } from '@angular/material/select';
 import { NgParticlesModule } from 'ng-particles';
 import { LoadingbarComponent } from './components/loadingbar/loadingbar.component';
 import { LoaderService } from './services/loader.service';
@@ -36,6 +37,13 @@ import { ScrollIndicatorComponent } from './components/scroll-indicator/scroll-i
 import { NgxMdFeedbackModule } from '@digikare/ngx-md-feedback';
 import { BasicHightlightDirective } from './directives/highlight.practice.directive';
 import { BetterHighlightDirective } from './directives/better-highlight.directive';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}
 
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   direction: 'horizontal',
@@ -75,11 +83,20 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     MatRadioModule,
     MatButtonToggleModule,
     MatDialogModule,
+    MatSelectModule,
     SwiperModule,
     FontAwesomeModule,
     SharedModule,
     NgParticlesModule,
-    NgxMdFeedbackModule
+    NgxMdFeedbackModule,
+    HttpClientModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    })
   ],
   providers: [
     {

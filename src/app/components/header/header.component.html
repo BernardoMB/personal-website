@@ -4,8 +4,8 @@
     <span (click)="navigateToHomePage()">{{name}}</span>
     <div class="spacer"></div>
     <div class="navigation-container">
-      <div routerLink="/home" routerLinkActive="active">Home</div>
-      <div routerLink="/about" routerLinkActive="active">About</div>
+      <div routerLink="/home" routerLinkActive="active">{{ 'HEADER.HOME' | translate }}</div>
+      <div routerLink="/about" routerLinkActive="active">{{ 'HEADER.ABOUT' | translate }}</div>
       <div routerLink="/cv" routerLinkActive="active">CV</div>
       <div routerLink="/projects" routerLinkActive="active">Projects</div>
       <div routerLink="/hobbies" routerLinkActive="active">Hobbies</div>
@@ -30,7 +30,7 @@
     <div class="spacer"></div>
     <div class="navigation-container">
       <div routerLink="/home" routerLinkActive="active">Home</div>
-      <div routerLink="/about" routerLinkActive="active">About</div>
+      <div routerLink="/about" routerLinkActive="active">{{ 'HEADER.ABOUT' | translate }}</div>
       <div routerLink="/cv" routerLinkActive="active">CV</div>
       <div routerLink="/projects" routerLinkActive="active">Projects</div>
       <div routerLink="/hobbies" routerLinkActive="active">Hobbies</div>
@@ -93,6 +93,13 @@
 </mat-menu>
 
 <mat-menu class="settings-menu" #settingsMenu="matMenu">
+  <mat-form-field appearance="outline">
+    <mat-label>Language</mat-label>
+    <mat-select [value]="selectedLanguage" (valueChange)="changeLanguage($event)">
+      <mat-option [value]="'en'">English</mat-option>
+      <mat-option [value]="'es'">Español</mat-option>
+    </mat-select>
+  </mat-form-field>
   <div class="label">Theme</div>
   <mat-radio-group class="theme-radio-group" aria-label="Select an option" [formControl]="themeControl">
     <mat-radio-button [color]="'accent'" value="light-theme">Light</mat-radio-button>

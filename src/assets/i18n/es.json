@@ -1,0 +1,20 @@
+{
+  "HEADER": {
+    "HOME": "Inicio",
+    "ABOUT": "Acerca de",
+    "CV": "CV",
+    "PROJECTS": "Proyectos",
+    "HOBBIES": "Pasatiempos"
+  },
+  "FOOTER": {
+    "HOME": "Inicio",
+    "ABOUT": "Acerca de",
+    "CV": "CV",
+    "PROJECTS": "Proyectos",
+    "HOBBIES": "Pasatiempos",
+    "PRIVACY": "Politica de privacidad"
+  },
+  "CV": {
+    "RESUME": "Hoja de vida"
+  }
+}

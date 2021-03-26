@@ -1,6 +1,7 @@
 import { OverlayContainer } from '@angular/cdk/overlay';
 import { Component, HostListener, OnDestroy } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 import { Subscription } from 'rxjs';
 import { pairwise, skip } from 'rxjs/operators';
 import { ThemeService } from './shared/services/theme.service';
@@ -16,9 +17,15 @@ export class AppComponent implements OnDestroy {
 
   constructor(
     private themeService: ThemeService,
-    private overlayContainer: OverlayContainer
+    private overlayContainer: OverlayContainer,
+    private translateService: TranslateService
   ) {
-
+    const defaultLang = 'en';
+    translateService.addLangs(['en', 'es']);
+    translateService.setDefaultLang(defaultLang);
+    const browserLang = translateService.getBrowserLang();
+    const langToUse = browserLang.match(/en|es/) ? browserLang : defaultLang;
+    translateService.use(langToUse);
   }
 
   ngOnInit() {

@@ -28,6 +28,8 @@
     "@fortawesome/free-brands-svg-icons": "^5.15.1",
     "@fortawesome/free-regular-svg-icons": "^5.15.1",
     "@fortawesome/free-solid-svg-icons": "^5.15.1",
+    "@ngx-translate/core": "^13.0.0",
+    "@ngx-translate/http-loader": "^6.0.0",
     "html2canvas": "^1.0.0-rc.5",
     "install": "^0.13.0",
     "moment": "^2.29.1",

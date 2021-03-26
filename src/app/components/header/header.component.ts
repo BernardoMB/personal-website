@@ -1,6 +1,7 @@
 import { Component, EventEmitter, HostListener, Input, OnInit, Output } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { TranslateService, TranslateStore } from '@ngx-translate/core';
 import { skip } from 'rxjs/operators';
 import { ThemeService } from '../../shared/services/theme.service';
 
@@ -16,6 +17,7 @@ export class HeaderComponent implements OnInit {
   @Input() initials: string | undefined;
   @Output() toggleSidenav: EventEmitter<void> = new EventEmitter();
   themeControl = new FormControl('light-theme', [Validators.required]);
+  selectedLanguage: string = '';
 
   //#region Sticky header
   isSticky = false;
@@ -27,10 +29,12 @@ export class HeaderComponent implements OnInit {
 
   constructor(
     private themeService: ThemeService,
-    private router: Router // Dependency Injection
+    private router: Router, // Dependency Injection
+    private translateService: TranslateService
   ) {
     // Code executes on component initialization
     //console.log('Executing constructor');
+    this.selectedLanguage = translateService.currentLang;
   }
 
   ngOnInit(): void {
@@ -47,6 +51,10 @@ export class HeaderComponent implements OnInit {
       this.themeService.setTheme(value);
       localStorage.setItem('theme', <string>value);
     });
+  }
+
+  changeLanguage(language: string): void {
+    this.translateService.use(language);
   }
 
   navigateToHomePage() {
