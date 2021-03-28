@@ -1,4 +1,4 @@
-<div class="swiper-wrapper-container">
+<section id="top" class="swiper-wrapper-container">
   <div  class="swiper-container" [swiper]="config" [(index)]="index">
     <div class="swiper-wrapper">
       <div class="swiper-slide parallax-slide">
@@ -40,7 +40,8 @@
       </div>
       <div class="swiper-slide programming-slide">
         <div class="slide-container">
-          <a class="contact-link" href="home/#contact">Contact me</a>
+          <!-- <a class="contact-link" href="home/#contact">Contact me</a> -->
+          <div class="contact-link" (click)="navigateToFragment('contact')">Contact me</div>
           <h1 class="title">Get to know me</h1>
           <div class="phrase">Allways inspired by the beauty of knowledge</div>
         </div>
@@ -59,11 +60,11 @@
     <!-- <div class="swiper-button-prev"></div>
     <div class="swiper-button-next"></div> -->
   </div>
-</div>
+</section>
 
 <div style="padding: 11px;background-color: gainsboro;display: flex;justify-content: center;color: dimgray;">Welcome to my personal website! </div>
 
-<section class="services-section">
+<section id="services" class="services-section">
   <div class="services-container">
     <div class="service-container">
       <div class="icon-container">

@@ -1,5 +1,6 @@
 import { AfterViewChecked, AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { AbstractControl, FormControl, FormGroup, Validators } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
 import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
 import Typed, { TypedOptions } from 'typed.js';
 import { ContactService } from '../../services/contact.service';
@@ -129,7 +130,9 @@ export class LandingComponent implements OnInit, AfterViewInit {
 
   constructor(
     private contactService: ContactService,
-    private dialogService: DialogService
+    private dialogService: DialogService,
+    private router: Router,
+    private route: ActivatedRoute
   ) { }
 
   ngOnInit(): void {
@@ -265,4 +268,15 @@ export class LandingComponent implements OnInit, AfterViewInit {
     }
   }
   //#endregion
+
+  navigateToFragment(fragment: string): void {
+    console.log('Function call');
+    this.router.navigate([`./`], {
+      fragment: fragment,
+      /* preserveFragment: true, */
+      /* skipLocationChange: true, */
+      relativeTo: this.route,
+      replaceUrl: true,
+    });
+  }
 }

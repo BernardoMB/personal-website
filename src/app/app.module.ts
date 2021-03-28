@@ -40,6 +40,8 @@ import { BetterHighlightDirective } from './directives/better-highlight.directiv
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { WINDOW_PROVIDERS } from './providers/window.provider';
+import { DOCUMENT_PROVIDERS } from './providers/document.provider';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -105,7 +107,9 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     },
     LoaderService,
     ContactService,
-    DialogService
+    DialogService,
+    ...DOCUMENT_PROVIDERS,
+    ...WINDOW_PROVIDERS,
   ],
   entryComponents: [
     DialogComponent

@@ -1,7 +1,7 @@
 <mat-toolbar class="footer">
   <mat-toolbar-row class="row-1">
     <div class="site-map">
-      <a [routerLink]="['/home']" routerLinkActive="router-link-active">{{ 'FOOTER.HOME' }}</a>
+      <a [routerLink]="['/home']" routerLinkActive="router-link-active">{{ 'FOOTER.HOME' | translate }}</a>
       <a [routerLink]="['/about']" routerLinkActive="router-link-active">About</a>
       <a class="child-route" [routerLink]="['/about/description']" routerLinkActive="router-link-active">Description</a>
       <a class="child-route" [routerLink]="['/about/biography']" routerLinkActive="router-link-active">Biography</a>
