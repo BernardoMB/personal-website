@@ -269,14 +269,14 @@ export class LandingComponent implements OnInit, AfterViewInit {
   }
   //#endregion
 
-  navigateToFragment(fragment: string): void {
+  /* navigateToFragment(fragment: string): void {
     console.log('Function call');
     this.router.navigate([`./`], {
       fragment: fragment,
-      /* preserveFragment: true, */
-      /* skipLocationChange: true, */
+      //preserveFragment: true,
+      //skipLocationChange: true,
       relativeTo: this.route,
       replaceUrl: true,
     });
-  }
+  } */
 }

@@ -39,13 +39,16 @@ export class ScrollToTopComponent implements OnInit {
   }
 
   scrollToTop() {
-    (function smoothscroll() {
+    /* (function smoothscroll() {
       const currentScroll = document.documentElement.scrollTop || document.body.scrollTop;
+      console.log(currentScroll);
       if (currentScroll > 0) {
+        console.log('scrolling');
         window.requestAnimationFrame(smoothscroll);
         window.scrollTo(0, currentScroll - (currentScroll / 8));
       }
-    })();
+    })(); */
+    window.scrollTo(0, 0);
   }
 
   ngOnInit() {
