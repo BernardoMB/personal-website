@@ -8,6 +8,7 @@ import { BiographyComponent } from './components/biography/biography.component';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { HttpLoaderFactory } from '../../app.module';
 import { HttpClient } from '@angular/common/http';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 
 @NgModule({
@@ -15,6 +16,7 @@ import { HttpClient } from '@angular/common/http';
   imports: [
     CommonModule,
     AboutRoutingModule,
+    SharedModule,
     TranslateModule.forChild({
       loader: {
         provide: TranslateLoader,
