@@ -90,8 +90,9 @@ export class HeaderComponent implements OnInit {
           })
         )
         .subscribe(() => {
-          const offset = this.window.pageYOffset + this.window.screen.height / 2;
-          const sectionsIds = ['top', 'services', 'security', 'features', 'download', 'contact'];
+          const offset = this.window.pageYOffset/*  + this.window.screen.height / 2 */;
+          //console.log(offset);
+          const sectionsIds = ['top', 'services', 'contact'];
           sectionsIds.forEach((sectionId: string) => {
             !!this.document.getElementById(sectionId) ? this.onLandingPage = true : this.onLandingPage = false;
           });
@@ -103,22 +104,18 @@ export class HeaderComponent implements OnInit {
                 return 0;
               }
             });
+            //console.log(offsets);
             if (offsets[0] <= offset && offset < offsets[1]) {
               this.currentSection = 'top';
             } else if (offsets[1] <= offset && offset < offsets[2]) {
               this.currentSection = 'services';
-            } else if (offsets[2] <= offset && offset < offsets[3]) {
-              this.currentSection = 'security';
-            } else if (offsets[3] <= offset && offset < offsets[4]) {
-              this.currentSection = 'features';
-            } else if (offsets[4] <= offset && offset < offsets[5]) {
-              this.currentSection = 'download';
-            } else if (offsets[5] <= offset /* && offset < offsets[6] */) {
+            } else if (offsets[2] <= offset) {
               this.currentSection = 'contact';
             }
           } else {
             this.currentSection = '';
           }
+          //console.log(this.currentSection);
         });
     }
     //#endregion
