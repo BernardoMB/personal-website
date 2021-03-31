@@ -10,10 +10,20 @@
     <a routerLink="/hobbies" routerLinkActive="active" (click)="sideBarNavigation.emit()">Hobbies</a>
   </div>
   <div class="theming-contanier">
+    <div class="label">Language</div>
+    <div class="select-container">
+      <mat-select class="language-select" [value]="selectedLanguage" (valueChange)="changeLanguage($event)">
+        <mat-option [value]="'en'">English</mat-option>
+        <mat-option [value]="'es'">Español</mat-option>
+      </mat-select>
+    </div>
+  </div>
+  <div class="theming-contanier">
     <div class="label">Theme</div>
     <mat-radio-group class="theme-radio-group" aria-label="Select an option" [formControl]="themeControl">
       <mat-radio-button [color]="'accent'" value="light-theme">Light</mat-radio-button>
       <mat-radio-button [color]="'primary'" value="dark-theme">Dark</mat-radio-button>
+      <mat-radio-button [color]="'accent'" value="mint-theme">Mint</mat-radio-button>
     </mat-radio-group>
   </div>
 </div>

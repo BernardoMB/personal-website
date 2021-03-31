@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
+import { TranslateService } from '@ngx-translate/core';
 import { ThemeService } from 'src/app/shared/services/theme.service';
 
 @Component({
@@ -11,8 +12,12 @@ export class SidebarComponent implements OnInit {
   @Input() initials: string | undefined;
   @Output() sideBarNavigation: EventEmitter<void> = new EventEmitter();
   themeControl = new FormControl('light-theme', [Validators.required]);
+  selectedLanguage: string = '';
 
-  constructor(private themeService: ThemeService) { }
+  constructor(
+    private themeService: ThemeService,
+    private translateService: TranslateService,
+  ) { }
 
   ngOnInit(): void {
     this.themeService.selectedTheme$.pipe(
@@ -25,6 +30,12 @@ export class SidebarComponent implements OnInit {
       this.themeService.setTheme(value);
       localStorage.setItem('theme', <string>value);
     });
+
+    this.selectedLanguage = this.translateService.currentLang;
+  }
+
+  changeLanguage(language: string): void {
+    this.translateService.use(language);
   }
 
 }

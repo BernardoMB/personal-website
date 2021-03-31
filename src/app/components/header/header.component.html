@@ -93,17 +93,16 @@
 </mat-menu>
 
 <mat-menu class="settings-menu" #settingsMenu="matMenu">
-  <mat-form-field appearance="outline">
-    <mat-label>Language</mat-label>
-    <mat-select [value]="selectedLanguage" (valueChange)="changeLanguage($event)">
-      <mat-option [value]="'en'">English</mat-option>
-      <mat-option [value]="'es'">Español</mat-option>
-    </mat-select>
-  </mat-form-field>
+  <div class="label">Language</div>
+  <mat-select [value]="selectedLanguage" (valueChange)="changeLanguage($event)">
+    <mat-option [value]="'en'">English</mat-option>
+    <mat-option [value]="'es'">Español</mat-option>
+  </mat-select>
   <div class="label">Theme</div>
   <mat-radio-group class="theme-radio-group" aria-label="Select an option" [formControl]="themeControl">
     <mat-radio-button [color]="'accent'" value="light-theme">Light</mat-radio-button>
     <mat-radio-button [color]="'primary'" value="dark-theme">Dark</mat-radio-button>
+    <mat-radio-button [color]="'primary'" value="mint-theme">Mint</mat-radio-button>
   </mat-radio-group>
 </mat-menu>
 <!-- #endregion -->

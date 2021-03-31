@@ -2,6 +2,7 @@
 
 @import './themes/light';
 @import './themes/dark';
+@import './themes/mint';
 @import './component-themes';
 
 // Default
@@ -48,6 +49,22 @@
   // Include Dark theme
   @include angular-material-theme($dark-theme);
   @include component-themes($dark-theme);
+}
+
+// Mint theme
+
+.mint-theme {
+  // Override typography CSS classes (e.g., mat-h1, mat-display-1, mat-typography, etc.).
+  @include mat-base-typography($mint-theme-typography);
+  // Override typography for a specific Angular Material components.
+  @include mat-checkbox-typography($mint-theme-typography);
+  // Override typography for all Angular Material, including mat-base-typography and all components.
+  @include angular-material-typography($mint-theme-typography);
+  // Use Angular Material themes
+  @include mat-core($mint-theme-typography);
+  // Include Dark theme
+  @include angular-material-theme($mint-theme);
+  @include component-themes($mint-theme);
 }
 
 // #endregion

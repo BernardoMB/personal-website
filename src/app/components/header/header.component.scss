@@ -241,13 +241,16 @@ $header-break: 820px;
       height: 56px;
     }
   }
-
 }
 
 ::ng-deep {
   .settings-menu {
+    display: flex;
     .label {
       padding: 0px 10px;
+    }
+    mat-select {
+      padding: 10px;
     }
     .theme-radio-group {
       display: flex;
@@ -263,5 +266,41 @@ $header-break: 820px;
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  // Theming
+  .light-theme {
+    .settings-menu {
+      .label {
+        color: black;
+      }
+    }
+    .mat-radio-label-content {
+      color: black;
+    }
+  }
+  .dark-theme {
+
+    .header {
+      background-color: #212121 !important;
+    }
+    .sticky-header {
+      background-color: #212121 !important;
+    }
+    .header-mobile {
+      background-color: #212121 !important;
+    }
+    .sticky-header-mobile {
+      background-color: #212121 !important;
+    }
+
+    .settings-menu {
+      .label {
+        color: white;
+      }
+    }
+    .mat-radio-label-content {
+      color: white;
+    }
   }
 }

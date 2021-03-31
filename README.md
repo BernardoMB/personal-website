@@ -84,6 +84,10 @@ See landing page ocmponent.
 
 See `en.json`, `es.json`, `app.module.ts`, `app.component.ts`, `header.component.ts` to change the language and a child module like `cv.module.ts`.
 
+### Scroll to section
+
+See `header.component.ts`, `app-routing.module.ts`, styles for html on `styles.scss` global style file, and `landing.component.ts`.
+
 ## Other topics
 
 Camel case: myVariable
