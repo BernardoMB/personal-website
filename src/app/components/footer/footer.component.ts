@@ -11,7 +11,7 @@ import { PrivacyDialogComponent } from '../../shared/components/privacy-dialog/p
 export class FooterComponent implements OnInit {
   nameFooter = 'Bernardo Mondragón Brozon';
   titleFooter = 'Actuary & Full-Satck Developer';
-  phoneNumberFooter = '55 3559 2033';
+  phoneNumberFooter = '+52 55 3559 2033';
   emailAddressFooter = 'bmondragonbrozon@gmail.com';
   physicalAddressFooter = 'Lomas Verdes, Naucalpan, Edo. Mex., 53120';
 

@@ -12,10 +12,14 @@
     .mat-card-title {
       margin-bottom: 0px;
       white-space: normal;
+      line-height: 1;
+      margin: 5px 0px;
     }
     .mat-card-subtitle {
       margin-bottom: 0px;
       white-space: normal;
+      line-height: 1;
+      margin: 5px 0px !important;
     }
     .mat-card-footer {
       display: flex;
@@ -35,7 +39,8 @@
     }
     .card-content-description {
       white-space: normal;
-      margin-bottom: 0px;
+      line-height: 1;
+      margin: 5px 0px;
     }
     .email {
       word-break: break-all;

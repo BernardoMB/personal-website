@@ -111,10 +111,17 @@
   }
 
   // Theming
+  .light-theme {
+    .row-2 {
+      padding: 6px 16px;
+      background-color: #007dd7;
+      color: white;
+    }
+  }
   .dark-theme {
     .row-2 {
       padding: 6px 16px;
-      background-color: #dc7724;
+      background-color: #c95000;
     }
   }
 }
