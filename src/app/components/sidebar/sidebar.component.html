@@ -1,6 +1,6 @@
 <div class="sidenav-container">
   <mat-toolbar color="primary">
-    <span>{{initials}}</span>
+    <span (click)="navigateToHomePage()">{{initials}}</span>
   </mat-toolbar>
   <div class="navigation-container">
     <a routerLink="/home" routerLinkActive="active" (click)="sideBarNavigation.emit()">Home</a>

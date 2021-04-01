@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { ThemeService } from 'src/app/shared/services/theme.service';
 
@@ -17,6 +18,7 @@ export class SidebarComponent implements OnInit {
   constructor(
     private themeService: ThemeService,
     private translateService: TranslateService,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -38,4 +40,7 @@ export class SidebarComponent implements OnInit {
     this.translateService.use(language);
   }
 
+  navigateToHomePage() {
+    this.router.navigate(['/']);
+  }
 }

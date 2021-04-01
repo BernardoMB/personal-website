@@ -14,5 +14,13 @@
       background-color: mat-color($accent);
     }
   }
-}
 
+  // Theming
+  .dark-theme {
+    .progress-container {
+      .progress-bar {
+        background-color: #6f4ab1 !important;
+      }
+    }
+  }
+}

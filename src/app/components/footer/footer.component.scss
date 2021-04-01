@@ -100,13 +100,21 @@
       display: flex;
       justify-content: center;
       height: unset;
-      margin: 10px 0px;
+      padding: 10px 16px;
       .powered-by {
         text-align: center;
         font-size: 11px;
         line-height: 1.2;
         white-space: normal;
       }
+    }
+  }
+
+  // Theming
+  .dark-theme {
+    .row-2 {
+      padding: 6px 16px;
+      background-color: #dc7724;
     }
   }
 }

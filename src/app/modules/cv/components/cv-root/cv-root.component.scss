@@ -418,3 +418,35 @@
   .tab-selector {
   }
 }
+
+// Theming
+::ng-deep {
+  .dark-theme {
+    $inkbar-background-color: black;
+    $tab-hover-background-color: black;
+    .mat-tab-list {
+      background-color: #212121 !important;
+      .mat-tab-labels {
+        .mat-tab-label {
+          .mat-tab-label-content {
+            .label {
+              color: white !important;
+            }
+          }
+          &:before {
+            background-color: $inkbar-background-color !important;
+          }
+          &:after {
+            background-color: $inkbar-background-color !important;
+          }
+          &:hover {
+            background-color: $tab-hover-background-color !important;
+          }
+        }
+        &:before {
+          background-color: $inkbar-background-color !important;
+        }
+      }
+    }
+  }
+}

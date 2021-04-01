@@ -68,6 +68,11 @@
 }
 
 // Custom component override theming
+.dark-theme {
+  mat-toolbar {
+    background-color: #313131 !important;
+  }
+}
 ::ng-deep .light-theme .sidenav-container .navigation-container a {
   border-bottom: 1px solid gainsboro;
   color: black;
@@ -85,7 +90,11 @@
     color: white;
   }
   &.active {
-    background-color: gray;
+    background-color: #007dd7;
+    font-weight: 600;
+    &:before {
+      background-color: #32e8ff;
+    }
   }
 }
 ::ng-deep .mint-theme .sidenav-container .navigation-container a {
