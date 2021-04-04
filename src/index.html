@@ -5,10 +5,12 @@
   <title>Bernardo Mondragón</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- #region Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <script src="https://kit.fontawesome.com/ab07459370.js" crossorigin="anonymous"></script>
-  <!-- Favicons -->
+  <!-- #endregion -->
+  <!-- #region Favicons -->
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="shortcut icon" href="assets/favicons/favicon.ico">
   <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
@@ -18,6 +20,8 @@
   <link rel="mask-icon" href="assets/favicons/safari-pinned-tab.svg" color="#5bbad5">
   <meta name="msapplication-TileColor" content="#603cba">
   <meta name="msapplication-config" content="assets/favicons/browserconfig.xml">
+  <!-- #endregion -->
+  <!-- #region Coloring browser window -->
   <!-- Theme on browser window -->
   <meta name="theme-color" content="#212121"/>
   <!-- Windows Phone -->
@@ -25,8 +29,29 @@
   <!-- IOS -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <!-- #endregion -->
+  <!-- #region Share on Facebook button -->
+  <!-- You can use Open Graph tags to customize link previews.
+  Learn more: https://developers.facebook.com/docs/sharing/webmasters -->
+  <meta property="og:url"           content="http://192.168.1.225:4204" />
+  <meta property="og:type"          content="website" />
+  <meta property="og:title"         content="Bernardo Mondragon's Website" />
+  <meta property="og:description"   content="Online portfolio" />
+  <meta property="og:image"         content="http://www.your-domain.com/path/image.jpg" />
+  <!-- #endregion -->
 </head>
 <body class="mat-typography">
   <app-root></app-root>
+  <!-- #region Shace on Facebook -->
+  <script>
+    (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
+  <!-- #endregion -->
 </body>
 </html>

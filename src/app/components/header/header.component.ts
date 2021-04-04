@@ -129,4 +129,12 @@ export class HeaderComponent implements OnInit {
     this.router.navigate(['/']);
   }
 
+  shareOnFacebook() {
+    console.log('Clicked share on Facebook button');
+    const shareOnFacebookButton = this.document.getElementById('facebook-share-button');
+    console.log(shareOnFacebookButton);
+    shareOnFacebookButton?.click();
+    shareOnFacebookButton!.click();
+  }
+
 }

@@ -87,7 +87,7 @@
 <!-- #region Menus -->
 <mat-menu #shareMenu="matMenu">
   <button mat-menu-item>Copy link</button>
-  <button mat-menu-item>Share on Facebook</button>
+  <button mat-menu-item (click)="shareOnFacebook()">Share on Facebook</button>
   <button mat-menu-item>Share on Twitter</button>
   <button mat-menu-item>Share on Reddit</button>
 </mat-menu>
