@@ -92,6 +92,7 @@
           background-attachment: fixed;
           background-size: cover;
           resize: both;
+          height: 358px;
           background-position: 50% calc(50% + -45px);
           .particles {
             position: absolute;
@@ -100,6 +101,17 @@
             width: 100%;
             z-index: 0;
           }
+          @supports (-webkit-touch-callout: none) {
+            /* CSS specific to iOS devices */
+            background-attachment: unset;
+            background-position: 50% calc(50%);
+          }
+        }
+        .parallax-slide::after {
+          content: '';
+          height: 40px;
+          width: 40px;
+          background-color: red;
         }
         .programming-slide {
           overflow: hidden;
@@ -108,7 +120,7 @@
           background-size: cover;
           resize: both;
           background-position-x: center;
-          height: 357.51px;
+          height: 358px;
           background-position-y: center;
           .slide-container {
             height: 100%;
@@ -152,7 +164,7 @@
           background-size: cover;
           resize: both;
           background-position-x: center;
-          height: 357.51px;
+          height: 358px;
           background-position-y: center;
           .slide-container {
             height: 100%;
@@ -215,6 +227,7 @@
     justify-content: center;
     background-color: gainsboro;
     color: dimgray;
+    text-align: center;
   }
 
   @keyframes float {
@@ -373,4 +386,3 @@
     color: gainsboro;
   }
 }
-

@@ -55,6 +55,14 @@
 @mixin sidebar-theme($light-theme) {
   $primary: map-get($light-theme, primary);
   $accent: map-get($light-theme, accent);
+  mat-toolbar {
+    span {
+      cursor: pointer;
+      &:hover {
+        color: mat-color($accent);
+      }
+    }
+  }
   .sidenav-container {
     a {
       border-bottom: 1px solid mat-color($primary);
