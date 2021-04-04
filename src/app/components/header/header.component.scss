@@ -165,7 +165,8 @@ $header-break: 820px;
     .initials {
       cursor: pointer;
       &:hover {
-        text-decoration: underline;
+        //text-decoration: underline;
+        color: mat-color($accent);
       }
     }
     .spacer {
@@ -209,7 +210,8 @@ $header-break: 820px;
     .initials {
       cursor: pointer;
       &:hover {
-        text-decoration: underline;
+        //text-decoration: underline;
+        color: mat-color($accent);
       }
     }
     .spacer {
