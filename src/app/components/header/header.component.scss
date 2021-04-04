@@ -280,17 +280,8 @@ $header-break: 820px;
     }
   }
   .dark-theme {
-
-    .header {
-      background-color: #212121 !important;
-    }
-    .sticky-header {
-      background-color: #212121 !important;
-    }
-    .header-mobile {
-      background-color: #212121 !important;
-    }
-    .sticky-header-mobile {
+    // Select elements with the following classes
+    .header,.sticky-header,.header-mobile,.sticky-header-mobile {
       background-color: #212121 !important;
     }
 
