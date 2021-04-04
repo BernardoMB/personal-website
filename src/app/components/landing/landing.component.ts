@@ -128,6 +128,24 @@ export class LandingComponent implements OnInit, AfterViewInit {
   @ViewChild('myInput2', { static: false }) myNumericInput2: ElementRef | undefined;
   //#endregion
 
+  //#region Skills
+  skills = [
+    { name: 'JavaScript/TypeScript', completion: 95, label: 'Experienced'},
+    { name: 'C#', completion: 80, label: 'Experienced'},
+    { name: 'HTML/CSS', completion: 90, label: 'Experienced'},
+    { name: 'R', completion: 80, label: 'Experienced'},
+    { name: 'Java', completion: 75, label: 'Experienced'},
+    { name: 'SQL', completion: 70, label: 'Experienced'},
+    { name: 'MongoDB', completion: 85, label: 'Experienced'},
+    { name: 'Azure', completion: 75, label: 'Experienced'},
+    { name: 'AWS', completion: 65, label: 'Intermediate'},
+    { name: 'Visual Basic', completion: 40, label: 'Beginner'},
+    { name: 'Microsoft Excel', completion: 75, label: 'Experienced'},
+    { name: 'LaTex', completion: 80, label: 'Experienced'},
+    { name: 'MatLab', completion: 40, label: 'Beginner'},
+  ];
+  //#endregion
+
   constructor(
     private contactService: ContactService,
     private dialogService: DialogService,
@@ -150,6 +168,10 @@ export class LandingComponent implements OnInit, AfterViewInit {
           break;
       }
     });
+    //#endregion
+    //#region Skills
+    this.skills = this.skills.sort((a, b) => b.completion - a.completion);
+    console.log(this.skills);
     //#endregion
   }
 

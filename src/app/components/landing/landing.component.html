@@ -1,5 +1,5 @@
 <section id="top" class="swiper-wrapper-container">
-  <div  class="swiper-container" [swiper]="config" [(index)]="index">
+  <div class="swiper-container" [swiper]="config" [(index)]="index">
     <div class="swiper-wrapper">
       <div class="swiper-slide parallax-slide">
         <div class="slide-container">
@@ -11,7 +11,10 @@
                 <div class="ball green-ball"></div>
               </div>
               <div class="middle">
-                <img src="../../../assets/icons/mac-home-folder.png" alt="home icon">
+                <img
+                  src="../../../assets/icons/mac-home-folder.png"
+                  alt="home icon"
+                />
                 <div class="label">Bernardo</div>
               </div>
               <div class="right"></div>
@@ -21,22 +24,38 @@
                 bernardo@personal-website ~$
                 <span class="typed-element typed-element-0"></span>
               </div>
-              <div class="element1" *ngIf="showElement1" [ngClass]="showElement1 ? 'show' : 'nodisplay'">
+              <div
+                class="element1"
+                *ngIf="showElement1"
+                [ngClass]="showElement1 ? 'show' : 'nodisplay'"
+              >
                 bernardo@personal-website ~$
                 <span class="typed-element typed-element-1"></span>
               </div>
-              <div class="element2" *ngIf="showElement2" [ngClass]="showElement2 ? 'show' : 'nodisplay'">
+              <div
+                class="element2"
+                *ngIf="showElement2"
+                [ngClass]="showElement2 ? 'show' : 'nodisplay'"
+              >
                 bernardo@personal-website ~$
                 <span class="typed-element typed-element-2"></span>
               </div>
-              <div class="element3" *ngIf="showElement3" [ngClass]="showElement3 ? 'show' : 'nodisplay'">
+              <div
+                class="element3"
+                *ngIf="showElement3"
+                [ngClass]="showElement3 ? 'show' : 'nodisplay'"
+              >
                 bernardo@personal-website ~$
                 <span class="typed-element typed-element-3"></span>
               </div>
             </div>
           </div>
         </div>
-        <Particles class="particles" [id]="id" [options]="particlesOptions"></Particles>
+        <Particles
+          class="particles"
+          [id]="id"
+          [options]="particlesOptions"
+        ></Particles>
       </div>
       <div class="swiper-slide programming-slide">
         <div class="slide-container">
@@ -49,7 +68,9 @@
       <div class="swiper-slide keyboard-slide">
         <div class="slide-container">
           <h1 class="title">Checkout my work</h1>
-          <div class="phrase">Vast experience delivering best quality software</div>
+          <div class="phrase">
+            Vast experience delivering best quality software
+          </div>
           <button mat-flat-button>View projects</button>
         </div>
       </div>
@@ -61,72 +82,167 @@
   </div>
 </section>
 
-<div class="welcome-banner">Welcome to my personal website! </div>
+<div class="welcome-banner">Welcome to my personal website!</div>
 
 <section id="services" class="services-section">
   <div class="services-container">
     <div class="service-container">
       <div class="icon-container">
-          <div class="icon" style="animation: float 6s ease-in-out infinite;">
-            <svg aria-hidden="true" role="presentation" data-slug-id="pricing11" viewBox="0 0 48 49" xmlns="http://www.w3.org/2000/svg">
-              <path d="M10.1119 13.2031H0V35.8811H10.1119V13.2031Z" fill="#0078D4"></path>
-              <path d="M22.7327 5.75H12.6377V35.9648H22.7327V5.75Z" fill="#0078D4"></path>
-              <path d="M35.3455 0.589844H25.2842V35.9836H35.3539V0.589844H35.3455Z" fill="#0078D4"></path>
-              <path d="M47.9832 25.8867H37.9219V35.9836H47.9748V25.8867H47.9832Z" fill="#0078D4"></path>
-              <path d="M47.9828 38.4492H7.86377V40.9671H47.9758V38.4492H47.9828Z" fill="#0078D7"></path>
-              <path d="M11.3926 48.5824C17.6483 48.5824 22.7169 43.5129 22.7169 37.256C22.7169 30.9992 17.6483 25.9297 11.3926 25.9297C5.13692 25.9297 0.0683594 30.9992 0.0683594 37.256C0.0683594 43.5129 5.13692 48.5824 11.3926 48.5824Z" fill="#50E6FF"></path>
-              <path d="M14.3552 37.4411C13.8837 36.9442 13.1007 36.4979 11.9978 36.0937V33.2642C12.8734 33.3821 13.6564 33.6263 14.3552 34.0558V32.0348C13.8332 31.74 13.0502 31.5632 11.9978 31.5127V30.1484H10.8948V31.5379C10.0192 31.6053 9.27825 31.9169 8.72256 32.4811C8.15845 33.0453 7.86377 33.7106 7.86377 34.5021C7.86377 35.2937 8.0911 35.9085 8.56259 36.4053C9.00883 36.8937 9.79184 37.3485 10.8948 37.7442V40.4643C10.4486 40.439 9.92655 40.3043 9.35403 40.1021C8.74782 39.8832 8.31842 39.6811 8.049 39.4537V41.5169C8.90779 41.9716 9.84236 42.2158 10.878 42.2158V43.7822H11.9809V42.1737C12.9913 42.0558 13.749 41.7443 14.271 41.2474C14.7846 40.759 15.054 40.0769 15.054 39.2516C15.054 38.519 14.8267 37.9127 14.3552 37.4411ZM10.8948 35.6474C10.2044 35.3021 9.8592 34.8811 9.8592 34.3421C9.8592 33.7611 10.2044 33.399 10.8948 33.2642V35.6474ZM11.9809 40.4474V38.1821C12.6966 38.5021 13.0586 38.8727 13.0586 39.3695C13.0586 39.9506 12.6966 40.3127 11.9809 40.4474Z" fill="#0078D4"></path>
-              </svg>
-          </div>
+        <div class="icon" style="animation: float 6s ease-in-out infinite">
+          <svg
+            aria-hidden="true"
+            role="presentation"
+            data-slug-id="pricing11"
+            viewBox="0 0 48 49"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10.1119 13.2031H0V35.8811H10.1119V13.2031Z"
+              fill="#0078D4"
+            ></path>
+            <path
+              d="M22.7327 5.75H12.6377V35.9648H22.7327V5.75Z"
+              fill="#0078D4"
+            ></path>
+            <path
+              d="M35.3455 0.589844H25.2842V35.9836H35.3539V0.589844H35.3455Z"
+              fill="#0078D4"
+            ></path>
+            <path
+              d="M47.9832 25.8867H37.9219V35.9836H47.9748V25.8867H47.9832Z"
+              fill="#0078D4"
+            ></path>
+            <path
+              d="M47.9828 38.4492H7.86377V40.9671H47.9758V38.4492H47.9828Z"
+              fill="#0078D7"
+            ></path>
+            <path
+              d="M11.3926 48.5824C17.6483 48.5824 22.7169 43.5129 22.7169 37.256C22.7169 30.9992 17.6483 25.9297 11.3926 25.9297C5.13692 25.9297 0.0683594 30.9992 0.0683594 37.256C0.0683594 43.5129 5.13692 48.5824 11.3926 48.5824Z"
+              fill="#50E6FF"
+            ></path>
+            <path
+              d="M14.3552 37.4411C13.8837 36.9442 13.1007 36.4979 11.9978 36.0937V33.2642C12.8734 33.3821 13.6564 33.6263 14.3552 34.0558V32.0348C13.8332 31.74 13.0502 31.5632 11.9978 31.5127V30.1484H10.8948V31.5379C10.0192 31.6053 9.27825 31.9169 8.72256 32.4811C8.15845 33.0453 7.86377 33.7106 7.86377 34.5021C7.86377 35.2937 8.0911 35.9085 8.56259 36.4053C9.00883 36.8937 9.79184 37.3485 10.8948 37.7442V40.4643C10.4486 40.439 9.92655 40.3043 9.35403 40.1021C8.74782 39.8832 8.31842 39.6811 8.049 39.4537V41.5169C8.90779 41.9716 9.84236 42.2158 10.878 42.2158V43.7822H11.9809V42.1737C12.9913 42.0558 13.749 41.7443 14.271 41.2474C14.7846 40.759 15.054 40.0769 15.054 39.2516C15.054 38.519 14.8267 37.9127 14.3552 37.4411ZM10.8948 35.6474C10.2044 35.3021 9.8592 34.8811 9.8592 34.3421C9.8592 33.7611 10.2044 33.399 10.8948 33.2642V35.6474ZM11.9809 40.4474V38.1821C12.6966 38.5021 13.0586 38.8727 13.0586 39.3695C13.0586 39.9506 12.6966 40.3127 11.9809 40.4474Z"
+              fill="#0078D4"
+            ></path>
+          </svg>
+        </div>
       </div>
       <h3 class="title">Actuary</h3>
-      <div class="description">Applied Mathematics to assess risk in insurance, finance and other industries and professions. More generally, actuaries apply rigorous mathematics to model matters of uncertainty.</div>
+      <div class="description">
+        Applied Mathematics to assess risk in insurance, finance and other
+        industries and professions. More generally, actuaries apply rigorous
+        mathematics to model matters of uncertainty.
+      </div>
     </div>
     <div class="service-container">
       <div class="icon-container">
-        <div class="icon" style="animation: float2 6s ease-in-out infinite;">
-          <svg aria-hidden="true" role="presentation" data-slug-id="code02" viewBox="0 0 48 49" xmlns="http://www.w3.org/2000/svg">
+        <div class="icon" style="animation: float2 6s ease-in-out infinite">
+          <svg
+            aria-hidden="true"
+            role="presentation"
+            data-slug-id="code02"
+            viewBox="0 0 48 49"
+            xmlns="http://www.w3.org/2000/svg"
+          >
             <path d="M0 43.0454H48V6.08545H0V43.0454Z" fill="#0078D4"></path>
-            <path d="M0 10.0758H47.9832V5.07373H0V10.0758Z" fill="#50E6FF"></path>
-            <path d="M7.47789 8.89865C8.15226 8.89865 8.69894 8.35196 8.69894 7.6776C8.69894 7.00323 8.15226 6.45654 7.47789 6.45654C6.80352 6.45654 6.25684 7.00323 6.25684 7.6776C6.25684 8.35196 6.80352 8.89865 7.47789 8.89865Z" fill="#0078D4"></path>
-            <path d="M3.68834 8.89865C4.36271 8.89865 4.90939 8.35196 4.90939 7.6776C4.90939 7.00323 4.36271 6.45654 3.68834 6.45654C3.01397 6.45654 2.46729 7.00323 2.46729 7.6776C2.46729 8.35196 3.01397 8.89865 3.68834 8.89865Z" fill="#0078D4"></path>
-            <path d="M11.3514 8.89865C12.0258 8.89865 12.5725 8.35196 12.5725 7.6776C12.5725 7.00323 12.0258 6.45654 11.3514 6.45654C10.6771 6.45654 10.1304 7.00323 10.1304 7.6776C10.1304 8.35196 10.6771 8.89865 11.3514 8.89865Z" fill="#0078D4"></path>
-            <path d="M35.2503 17.6479L33.4482 19.4501L39.284 25.2858L33.3809 31.189L35.183 32.9911L42.8882 25.2858L35.2503 17.6479Z" fill="#50E6FF"></path>
-            <path d="M12.5896 32.9911L14.4001 31.189L8.56429 25.3532L14.4674 19.4501L12.6653 17.6479L4.95166 25.3532L12.5896 32.9911Z" fill="#50E6FF"></path>
-            <path d="M31.5537 27.8871C32.9582 27.8871 34.0968 26.7485 34.0968 25.3439C34.0968 23.9394 32.9582 22.8008 31.5537 22.8008C30.1491 22.8008 29.0105 23.9394 29.0105 25.3439C29.0105 26.7485 30.1491 27.8871 31.5537 27.8871Z" fill="white"></path>
-            <path d="M23.8903 27.8871C25.2949 27.8871 26.4335 26.7485 26.4335 25.3439C26.4335 23.9394 25.2949 22.8008 23.8903 22.8008C22.4858 22.8008 21.3472 23.9394 21.3472 25.3439C21.3472 26.7485 22.4858 27.8871 23.8903 27.8871Z" fill="white"></path>
-            <path d="M16.3957 27.8871C17.8002 27.8871 18.9389 26.7485 18.9389 25.3439C18.9389 23.9394 17.8002 22.8008 16.3957 22.8008C14.9911 22.8008 13.8525 23.9394 13.8525 25.3439C13.8525 26.7485 14.9911 27.8871 16.3957 27.8871Z" fill="white"></path>
-            </svg>
+            <path
+              d="M0 10.0758H47.9832V5.07373H0V10.0758Z"
+              fill="#50E6FF"
+            ></path>
+            <path
+              d="M7.47789 8.89865C8.15226 8.89865 8.69894 8.35196 8.69894 7.6776C8.69894 7.00323 8.15226 6.45654 7.47789 6.45654C6.80352 6.45654 6.25684 7.00323 6.25684 7.6776C6.25684 8.35196 6.80352 8.89865 7.47789 8.89865Z"
+              fill="#0078D4"
+            ></path>
+            <path
+              d="M3.68834 8.89865C4.36271 8.89865 4.90939 8.35196 4.90939 7.6776C4.90939 7.00323 4.36271 6.45654 3.68834 6.45654C3.01397 6.45654 2.46729 7.00323 2.46729 7.6776C2.46729 8.35196 3.01397 8.89865 3.68834 8.89865Z"
+              fill="#0078D4"
+            ></path>
+            <path
+              d="M11.3514 8.89865C12.0258 8.89865 12.5725 8.35196 12.5725 7.6776C12.5725 7.00323 12.0258 6.45654 11.3514 6.45654C10.6771 6.45654 10.1304 7.00323 10.1304 7.6776C10.1304 8.35196 10.6771 8.89865 11.3514 8.89865Z"
+              fill="#0078D4"
+            ></path>
+            <path
+              d="M35.2503 17.6479L33.4482 19.4501L39.284 25.2858L33.3809 31.189L35.183 32.9911L42.8882 25.2858L35.2503 17.6479Z"
+              fill="#50E6FF"
+            ></path>
+            <path
+              d="M12.5896 32.9911L14.4001 31.189L8.56429 25.3532L14.4674 19.4501L12.6653 17.6479L4.95166 25.3532L12.5896 32.9911Z"
+              fill="#50E6FF"
+            ></path>
+            <path
+              d="M31.5537 27.8871C32.9582 27.8871 34.0968 26.7485 34.0968 25.3439C34.0968 23.9394 32.9582 22.8008 31.5537 22.8008C30.1491 22.8008 29.0105 23.9394 29.0105 25.3439C29.0105 26.7485 30.1491 27.8871 31.5537 27.8871Z"
+              fill="white"
+            ></path>
+            <path
+              d="M23.8903 27.8871C25.2949 27.8871 26.4335 26.7485 26.4335 25.3439C26.4335 23.9394 25.2949 22.8008 23.8903 22.8008C22.4858 22.8008 21.3472 23.9394 21.3472 25.3439C21.3472 26.7485 22.4858 27.8871 23.8903 27.8871Z"
+              fill="white"
+            ></path>
+            <path
+              d="M16.3957 27.8871C17.8002 27.8871 18.9389 26.7485 18.9389 25.3439C18.9389 23.9394 17.8002 22.8008 16.3957 22.8008C14.9911 22.8008 13.8525 23.9394 13.8525 25.3439C13.8525 26.7485 14.9911 27.8871 16.3957 27.8871Z"
+              fill="white"
+            ></path>
+          </svg>
         </div>
       </div>
       <h3 class="title">Developer</h3>
-      <div class="description">The process of conceiving, specifying, designing, programming, documenting, testing, and bug fixing involved in creating and maintaining applications, frameworks, or other software components.</div>
+      <div class="description">
+        The process of conceiving, specifying, designing, programming,
+        documenting, testing, and bug fixing involved in creating and
+        maintaining applications, frameworks, or other software components.
+      </div>
     </div>
     <div class="service-container">
       <div class="icon-container">
-        <div class="icon" style="animation: float 6s ease-in-out infinite;">
-          <svg aria-hidden="true" role="presentation" data-slug-id="users07" viewBox="0 0 48 49" xmlns="http://www.w3.org/2000/svg">
-            <path d="M42.8551 6.25852C42.8551 9.70487 40.058 12.5019 36.6116 12.5019C33.1652 12.5019 30.3682 9.70487 30.3682 6.25852C30.3682 2.81217 33.1652 0.0151367 36.6116 0.0151367C40.058 0.0151367 42.8551 2.81217 42.8551 6.25852Z" fill="#50E6FF"></path>
-            <path d="M36.5621 14.8469C42.8555 14.8469 48.0001 19.9415 48.0001 26.2848V27.7333H25.124V26.2848C25.124 19.9415 30.2686 14.8469 36.5621 14.8469Z" fill="#50E6FF"></path>
-            <path d="M17.7312 26.5355C17.7312 29.9819 14.9341 32.7789 11.4878 32.7789C8.04136 32.7789 5.19434 29.9819 5.19434 26.5355C5.19434 23.0892 7.99141 20.2921 11.4878 20.2921C14.9841 20.2921 17.7312 23.0892 17.7312 26.5355Z" fill="#0078D4"></path>
-            <path d="M11.438 35.1278C17.7314 35.1278 22.8761 40.2224 22.8761 46.5657V47.9642H0V46.5157C0 40.2224 5.09467 35.1278 11.438 35.1278Z" fill="#0078D4"></path>
-            </svg>
+        <div class="icon" style="animation: float 6s ease-in-out infinite">
+          <svg
+            aria-hidden="true"
+            role="presentation"
+            data-slug-id="users07"
+            viewBox="0 0 48 49"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M42.8551 6.25852C42.8551 9.70487 40.058 12.5019 36.6116 12.5019C33.1652 12.5019 30.3682 9.70487 30.3682 6.25852C30.3682 2.81217 33.1652 0.0151367 36.6116 0.0151367C40.058 0.0151367 42.8551 2.81217 42.8551 6.25852Z"
+              fill="#50E6FF"
+            ></path>
+            <path
+              d="M36.5621 14.8469C42.8555 14.8469 48.0001 19.9415 48.0001 26.2848V27.7333H25.124V26.2848C25.124 19.9415 30.2686 14.8469 36.5621 14.8469Z"
+              fill="#50E6FF"
+            ></path>
+            <path
+              d="M17.7312 26.5355C17.7312 29.9819 14.9341 32.7789 11.4878 32.7789C8.04136 32.7789 5.19434 29.9819 5.19434 26.5355C5.19434 23.0892 7.99141 20.2921 11.4878 20.2921C14.9841 20.2921 17.7312 23.0892 17.7312 26.5355Z"
+              fill="#0078D4"
+            ></path>
+            <path
+              d="M11.438 35.1278C17.7314 35.1278 22.8761 40.2224 22.8761 46.5657V47.9642H0V46.5157C0 40.2224 5.09467 35.1278 11.438 35.1278Z"
+              fill="#0078D4"
+            ></path>
+          </svg>
         </div>
       </div>
       <h3 class="title">Teacher</h3>
-      <div class="description">I teach programming lessons for starters who want to jump into the software development world.</div>
+      <div class="description">
+        I teach programming lessons for starters who want to jump into the
+        software development world.
+      </div>
     </div>
   </div>
 </section>
 
 <!-- ! Practice -->
 <section>
-  <input #myInput1 type="number" (blur)="onInputBlur($event)">
-  <input #myInput2 type="number">
+  <input #myInput1 type="number" (blur)="onInputBlur($event)" />
+  <input #myInput2 type="number" />
   <button (click)="onButtonclick()">Click me!</button>
   <button (click)="setValue()">Set value</button>
-  <app-cool-border [title]="'Landing'" [subtitle]="'Used on landing'" [description]="'Using shared component whose host is declared in app module'">
-    <div style="border: 1ps solid green; height: 35px;">
+  <app-cool-border
+    [title]="'Landing'"
+    [subtitle]="'Used on landing'"
+    [description]="
+      'Using shared component whose host is declared in app module'
+    "
+  >
+    <div style="border: 1ps solid green; height: 35px">
       This is some random content
     </div>
   </app-cool-border>
@@ -141,16 +257,42 @@
 </section>
 
 <!-- Your share button code -->
-<div id="facebook-share-button" class="fb-share-button"
-data-href="http://192.168.1.225:4204"
-data-layout="button_count">
-</div>
+<div
+  id="facebook-share-button"
+  class="fb-share-button"
+  data-href="http://192.168.1.225:4204"
+  data-layout="button_count"
+></div>
+
+<section id="skills" class="skills-section">
+  <div class="skills-container">
+    <h3 class="section-title">Skills</h3>
+    <mat-card>
+      <div class="skill-container" *ngFor="let skill of skills">
+        <div class="skill-top-row">
+          <div>{{skill.name}}</div>
+          <div class="center-label">{{skill.label}}</div>
+          <div class="completion">{{skill.completion / 100 | percent }}</div>
+        </div>
+        <mat-progress-bar mode="buffer" value="{{skill.completion}}"></mat-progress-bar>
+        <div class="skill-bottom-row">
+          <div class="center-label">{{skill.label}}</div>
+        </div>
+      </div>
+    </mat-card>
+  </div>
+</section>
 
 <section id="contact" class="contact-section">
   <div class="contact-container">
     <h3 class="section-title">Contact</h3>
     <form [formGroup]="contactForm" (ngSubmit)="submitContactForm()">
-      <mat-button-toggle-group name="fontStyle" aria-label="Contact chanel" formControlName="toggleControl" required>
+      <mat-button-toggle-group
+        name="fontStyle"
+        aria-label="Contact chanel"
+        formControlName="toggleControl"
+        required
+      >
         <mat-button-toggle value="whatsapp">Whatsapp</mat-button-toggle>
         <mat-button-toggle value="email">Email</mat-button-toggle>
       </mat-button-toggle-group>
@@ -162,9 +304,19 @@ data-layout="button_count">
           formControlName="nameControl"
           required
         />
-        <mat-error *ngIf="contactForm.controls.nameControl.errors && contactForm.controls.nameControl.errors['required']">Full name is required.</mat-error>
+        <mat-error
+          *ngIf="
+            contactForm.controls.nameControl.errors &&
+            contactForm.controls.nameControl.errors['required']
+          "
+          >Full name is required.</mat-error
+        >
       </mat-form-field>
-      <mat-form-field appearance="outline" [color]="'accent'" *ngIf="isSendEmail">
+      <mat-form-field
+        appearance="outline"
+        [color]="'accent'"
+        *ngIf="isSendEmail"
+      >
         <mat-label>Email</mat-label>
         <input
           matInput
@@ -172,8 +324,24 @@ data-layout="button_count">
           formControlName="emailControl"
           required
         />
-        <mat-error *ngIf="contactForm.controls.emailControl.errors && contactForm.controls.emailControl.errors['noMatchRegex']">{{contactForm.controls.emailControl.errors['noMatchRegex']['errorMessage']}}</mat-error>
-        <mat-error *ngIf="contactForm.controls.emailControl.errors && contactForm.controls.emailControl.errors['email']">Must enter a valid email address.</mat-error>
+        <mat-error
+          *ngIf="
+            contactForm.controls.emailControl.errors &&
+            contactForm.controls.emailControl.errors['noMatchRegex']
+          "
+          >{{
+            contactForm.controls.emailControl.errors["noMatchRegex"][
+              "errorMessage"
+            ]
+          }}</mat-error
+        >
+        <mat-error
+          *ngIf="
+            contactForm.controls.emailControl.errors &&
+            contactForm.controls.emailControl.errors['email']
+          "
+          >Must enter a valid email address.</mat-error
+        >
       </mat-form-field>
       <mat-form-field appearance="outline" [color]="'accent'">
         <mat-label>Leave a message</mat-label>
@@ -183,10 +351,32 @@ data-layout="button_count">
           formControlName="messageControl"
           required
         ></textarea>
-        <mat-error *ngIf="contactForm.controls.messageControl.errors && contactForm.controls.messageControl.errors['required']">A message is required.</mat-error>
-        <mat-error *ngIf="contactForm.controls.messageControl.errors && contactForm.controls.messageControl.errors['minlength']">Message requires a minimun length of {{contactForm.controls.messageControl.errors['minlength'].requiredLength}} characters.</mat-error>
+        <mat-error
+          *ngIf="
+            contactForm.controls.messageControl.errors &&
+            contactForm.controls.messageControl.errors['required']
+          "
+          >A message is required.</mat-error
+        >
+        <mat-error
+          *ngIf="
+            contactForm.controls.messageControl.errors &&
+            contactForm.controls.messageControl.errors['minlength']
+          "
+          >Message requires a minimun length of
+          {{
+            contactForm.controls.messageControl.errors["minlength"]
+              .requiredLength
+          }}
+          characters.</mat-error
+        >
       </mat-form-field>
-      <button class="send-whatsapp-button" mat-fab type="submit" aria-label="Send whatsapp">
+      <button
+        class="send-whatsapp-button"
+        mat-fab
+        type="submit"
+        aria-label="Send whatsapp"
+      >
         <mat-icon>send</mat-icon>
       </button>
     </form>

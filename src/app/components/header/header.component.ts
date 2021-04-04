@@ -1,3 +1,4 @@
+import { Clipboard } from '@angular/cdk/clipboard';
 import { isPlatformBrowser } from '@angular/common';
 import { Component, EventEmitter, HostListener, Inject, Input, OnInit, Output, PLATFORM_ID } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
@@ -45,7 +46,10 @@ export class HeaderComponent implements OnInit {
     //#region Scroll to section
     @Inject(PLATFORM_ID) private platformId: any,
     @Inject(WindowRef) private windowRef: WindowRef,
-    @Inject(DocumentRef) private documentRef: DocumentRef
+    @Inject(DocumentRef) private documentRef: DocumentRef,
+    //#endregion
+    //#region Copy to clipboard
+    private clipboard: Clipboard
     //#endregion
   ) {
     // Code executes on component initialization
@@ -129,12 +133,26 @@ export class HeaderComponent implements OnInit {
     this.router.navigate(['/']);
   }
 
+  copyLinkToClipboard() {
+    // TODO: Copy actual url. Should fetch this value from environment.ts
+    this.clipboard.copy('http://192.168.1.255:4204');
+  }
+
   shareOnFacebook() {
-    console.log('Clicked share on Facebook button');
-    const shareOnFacebookButton = this.document.getElementById('facebook-share-button');
-    console.log(shareOnFacebookButton);
-    shareOnFacebookButton?.click();
-    shareOnFacebookButton!.click();
+    const postUrl = encodeURI(document.location.href);
+    window.open(`https://www.facebook.com/sharer.php?u=${postUrl}`);
+  }
+
+  shareOnTwitter() {
+    const postUrl = encodeURI(document.location.href);
+    const text = 'Checkout this awesome website';
+    window.open(`https://www.twitter.com/share?url=${postUrl}&text=${text}`);
+  }
+
+  shareOnReddit() {
+    const postUrl = encodeURI(document.location.href);
+    const text = encodeURI('Checkout this awesome website');
+    window.open(`http://www.reddit.com/submit?url=${postUrl}&title=${text}`);
   }
 
 }
