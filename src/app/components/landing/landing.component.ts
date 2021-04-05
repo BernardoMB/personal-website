@@ -281,7 +281,16 @@ export class LandingComponent implements OnInit, AfterViewInit {
         const name = this.contactForm.controls.nameControl.value;
         const email = this.contactForm.controls.emailControl.value;
         const message = this.contactForm.controls.messageControl.value;
-        this.contactService.sendEmail(name, email ,message);
+        this.contactService.sendEmail(name, email ,message).subscribe(() => {
+          const msg = 'Thank you for your message.';
+          const options = ['Ok'];
+          this.contactForm.reset();
+          this.contactForm.controls.toggleControl.setValue('email');
+          Object.keys(this.contactForm.controls).forEach((key) => {
+            this.contactForm.controls[`${key}`].setErrors(null);
+          });
+          this.dialogService.openDialog(msg, []).subscribe((result: string) => {});
+        });
       } else {
         const message = 'Submitted form is invalid.';
         const options = ['Ok'];

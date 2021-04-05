@@ -230,7 +230,7 @@
 </section>
 
 <!-- ! Practice -->
-<section>
+<!-- <section>
   <input #myInput1 type="number" (blur)="onInputBlur($event)" />
   <input #myInput2 type="number" />
   <button (click)="onButtonclick()">Click me!</button>
@@ -246,23 +246,23 @@
       This is some random content
     </div>
   </app-cool-border>
-  <!-- Not the best practice -->
+  Not the best practice
   <button basicHightlight>Style me using basic directive</button>
-  <!-- Best practice -->
+  Best practice
   <button appBetterHighlight>Style me using basic directive</button>
-  <!-- Test buttons -->
+  Test buttons
   <button mat-flat-button color="primary">Hola 1</button>
   <button mat-flat-button color="accent">Hola 2</button>
   <button mat-flat-button color="warn">Hola 3</button>
-</section>
+</section> -->
 
 <!-- Your share button code -->
-<div
+<!-- <div
   id="facebook-share-button"
   class="fb-share-button"
   data-href="http://192.168.1.225:4204"
   data-layout="button_count"
-></div>
+></div> -->
 
 <section id="skills" class="skills-section">
   <div class="skills-container">
@@ -324,7 +324,7 @@
           formControlName="emailControl"
           required
         />
-        <mat-error
+        <!-- <mat-error
           *ngIf="
             contactForm.controls.emailControl.errors &&
             contactForm.controls.emailControl.errors['noMatchRegex']
@@ -334,7 +334,7 @@
               "errorMessage"
             ]
           }}</mat-error
-        >
+        > -->
         <mat-error
           *ngIf="
             contactForm.controls.emailControl.errors &&

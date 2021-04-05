@@ -135,10 +135,12 @@ export class HeaderComponent implements OnInit {
     this.router.navigate(['/']);
   }
 
+  //#region Copy to clipboard
   copyLinkToClipboard() {
     // TODO: Copy actual url. Should fetch this value from environment.ts
-    this.clipboard.copy('http://192.168.1.255:4204');
+    this.clipboard.copy('http://192.168.1.225:4204');
   }
+  //#endregion
 
   shareOnFacebook() {
     const postUrl = encodeURI(document.location.href);

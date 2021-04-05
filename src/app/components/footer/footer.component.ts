@@ -3,6 +3,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { DialogService } from '../../services/dialog.service';
 import { CookiesPolicyDialogComponent } from '../../shared/components/cookies-policy-dialog/cookies-policy-dialog.component';
 import { PrivacyDialogComponent } from '../../shared/components/privacy-dialog/privacy-dialog.component';
+import { TermDialogComponent } from '../../shared/components/term-dialog/term-dialog.component';
 
 @Component({
   selector: 'app-footer',
@@ -36,6 +37,12 @@ export class FooterComponent implements OnInit {
     switch (dialog) {
       case 'privacy':
         this.dialog.open(PrivacyDialogComponent, {
+          height: '80vh',
+          autoFocus: false
+        });
+        break;
+      case 'terms':
+        this.dialog.open(TermDialogComponent, {
           height: '80vh',
           autoFocus: false
         });

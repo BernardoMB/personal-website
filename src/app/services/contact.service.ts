@@ -14,9 +14,9 @@ export class ContactService {
     // TODO: Make http call to API
     return new Observable(obs => {
       setTimeout(() => {
+        this.loaderService.hide();
         obs.next(true);
         obs.complete();
-        this.loaderService.hide();
       }, 5000);
     });
   }
