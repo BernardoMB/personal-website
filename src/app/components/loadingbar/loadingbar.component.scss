@@ -11,10 +11,6 @@ $header-height: 61px;
   $track-color: mat-color($primary);
   $thumb-color: mat-color($accent);
 
-  // Style configuration
-  $color1: $track-color; // track color
-  $color2: $thumb-color; // thumb color
-
   .hidden {
     visibility: hidden;
   }
@@ -29,10 +25,10 @@ $header-height: 61px;
       width: 100%;
       position: relative;
       overflow: hidden;
-      background-color: $color1;
-      -webkit-box-shadow: 0px 0px $glow-thickness 0px $color1;
-      -moz-box-shadow: 0px 0px $glow-thickness 0px $color1;
-      box-shadow: 0px 0px $glow-thickness 0px $color1;
+      background-color: $track-color;
+      -webkit-box-shadow: 0px 0px $glow-thickness 0px $track-color;
+      -moz-box-shadow: 0px 0px $glow-thickness 0px $track-color;
+      box-shadow: 0px 0px $glow-thickness 0px $track-color;
       &::before {
         display: block;
         position: absolute;
@@ -41,6 +37,7 @@ $header-height: 61px;
         width: 200px;
         height: $loadingbar-height;
         animation: loading 2s linear infinite;
+        background-color: $thumb-color;
         @media screen and (max-width: 425px) {
           height: $loadingbar-height-mobile;
         }
@@ -63,12 +60,15 @@ $header-height: 61px;
 ::ng-deep {
   .light-theme {
     .loader:before {
-      background-color: #50e6ff;
+      //background-color: #50e6ff;
     }
   }
   .dark-theme {
-    .loader:before {
-      background-color: white;
+    .loader {
+      background-color: #212121 !important;
+      &:before {
+        background-color: #6f4ab1 !important;
+      }
     }
   }
 }

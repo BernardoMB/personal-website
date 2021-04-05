@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { DialogService } from '../../services/dialog.service';
 import { CookiesPolicyDialogComponent } from '../../shared/components/cookies-policy-dialog/cookies-policy-dialog.component';
 import { PrivacyDialogComponent } from '../../shared/components/privacy-dialog/privacy-dialog.component';
 
@@ -15,13 +16,16 @@ export class FooterComponent implements OnInit {
   emailAddressFooter = 'bmondragonbrozon@gmail.com';
   physicalAddressFooter = 'Lomas Verdes, Naucalpan, Edo. Mex., 53120';
 
-  constructor(public dialog: MatDialog) { }
+  constructor(
+    public dialog: MatDialog,
+    public dialogService: DialogService
+  ) { }
 
   ngOnInit(): void {
   }
 
   onShowInfo(info: string): void {
-    alert(info);
+    this.dialogService.openDialog(info, ['Ok']);
   }
 
   navigateLink(link : string) {

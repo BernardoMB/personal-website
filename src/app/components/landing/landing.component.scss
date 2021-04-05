@@ -263,7 +263,7 @@
     .services-container {
       max-width: 1280px;
       margin: auto;
-      padding: 60px 20px;
+      padding: 60px 16px;
       display: flex;
       justify-content: space-around;
       flex-wrap: wrap;
@@ -273,6 +273,11 @@
         min-width: 142px;
         .icon-container {
           text-align: center;
+          background-image: url(../../../assets/images/icons/floating-icon-background.png);
+          background-size: cover;
+          resize: both;
+          background-position-x: center;
+          background-position-y: center;
           i {
             font-size: 70px;
           }
@@ -287,6 +292,13 @@
         .description {
           font-weight: 400;
         }
+        @media screen and (max-width: 425px) {
+          margin: 20px 0px;
+          max-width: unset;
+        }
+      }
+      @media screen and (max-width: 425px) {
+
       }
     }
   }
@@ -295,7 +307,7 @@
     .skills-container {
       max-width: 725px;
       margin: auto;
-      padding: 60px 20px;
+      padding: 60px 16px;
       .section-title {
         text-align: center;
         font-size: 20px;
@@ -340,7 +352,7 @@
     .contact-container {
       max-width: 1280px;
       margin: auto;
-      padding: 60px 20px;
+      padding: 60px 16px;
       .section-title {
         text-align: center;
         font-size: 20px;

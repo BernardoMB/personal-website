@@ -19,7 +19,7 @@ export class PresentationCardComponent implements OnInit {
   }
 
   emitShowInfoEvent(): void {
-    const info = 'This information is personal infromation and by no means shall be used for non-legal propuses.';
+    const info = 'This is personal infromation and by no means shall be used for non-legal propuses.';
     this.showInfo.emit(info);
   }
 
