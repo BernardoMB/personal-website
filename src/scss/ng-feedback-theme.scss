@@ -28,3 +28,21 @@
         }
     }
 }
+
+.dark-theme {
+  .dialog-content {
+    .description {
+      background-color: #4c4c4c;
+    }
+  }
+  .screenshot-checkbox {
+    background-color: #343434 !important;
+  }
+  .screenshot-content {
+    background-color: #4c4c4c !important;
+  }
+  .mat-dialog-actions {
+    background-color: #343434;
+    border-top: 1px solid #070707 !important;
+  }
+}

@@ -171,7 +171,6 @@ export class LandingComponent implements OnInit, AfterViewInit {
     //#endregion
     //#region Skills
     this.skills = this.skills.sort((a, b) => b.completion - a.completion);
-    console.log(this.skills);
     //#endregion
   }
 
