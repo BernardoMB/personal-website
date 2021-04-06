@@ -1,5 +1,7 @@
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { catchError, tap } from 'rxjs/operators';
 import { LoaderService } from './loader.service';
 
 @Injectable({
@@ -7,18 +9,29 @@ import { LoaderService } from './loader.service';
 })
 export class ContactService {
 
-  constructor(private loaderService: LoaderService) { }
+  constructor(
+    private loaderService: LoaderService,
+    private http: HttpClient
+  ) { }
 
-  sendEmail(name: string, email: string, message: string): Observable<boolean> {
+  sendEmail(name: string, email: string, message: string): Observable<string> {
     this.loaderService.show();
-    // TODO: Make http call to API
-    return new Observable(obs => {
-      setTimeout(() => {
+    const url = `https://9s8f1zma6g.execute-api.us-west-2.amazonaws.com/default/SendEmailFromPersonalWebsiteMessage`;
+    const sendMessageFromSenderDTO = {
+      "SenderName": name,
+      "SenderEmailAddress": email,
+      "SenderMessage": message
+    };
+    return this.http.post<string>(url, sendMessageFromSenderDTO).pipe(
+      tap(() => {
         this.loaderService.hide();
-        obs.next(true);
-        obs.complete();
-      }, 5000);
-    });
+      }),
+      catchError((errorResponse: HttpErrorResponse) => {
+        alert(`Error sending message. Try again later. ${errorResponse.error.message}`);
+        throw errorResponse.error;
+        this.loaderService.hide();
+      })
+    );
   }
 
   sendFeedback(description: string, screenshot: string): Observable<boolean> {
