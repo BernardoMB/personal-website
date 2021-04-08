@@ -73,16 +73,18 @@
     cursor: pointer;
     outline-offset: -3px;
     outline-width: 1px;
+    font-weight: 400;
     mat-icon {
       margin-right: 6px;
       color: gray;
     }
     &.active {
+      font-weight: 500;
       &:before {
         content: '';
         position: absolute;
         height: 2px;
-        background-color: #f9826c;
+        background-color: #f9826c !important;
         width: 100%;
         bottom: -1px;
         left: 0px;
@@ -112,8 +114,9 @@
       mat-icon {
       }
       &.active {
+        color: lightgray !important;
         &:before {
-          background-color: #f9826c;
+          background-color: #f9826c !important;
         }
       }
       &:hover {
