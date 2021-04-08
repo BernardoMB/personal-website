@@ -5,26 +5,25 @@
       <div class="phrase">
         “Make the change that you want to see in the world.”
       </div>
-      <button mat-flat-button [routerLink]="['/projects']">View projects</button>
+      <button mat-flat-button [routerLink]="['/home']" fragment="contact">Get in touch</button>
     </div>
   </div>
-  <Particles
+  <!-- <Particles
     class="particles"
     [id]="id"
     [options]="particlesOptions2"
-  ></Particles>
+  ></Particles> -->
 </div>
 
-<!-- <section class="about-jumbotron">
-  <div class="jumbotron-container">
-    <div class="jumbotron-overlay">
-
-    </div>
-  </div>
-</section> -->
 
 <div class="tabs-navigation-container">
-  <a class="tab-selector" routerLink="active" [routerLink]="['./description']">Description</a>
-  <a class="tab-selector" routerLink="active" [routerLink]="['./biography']">Biography</a>
+  <div class="tab focus-outline" routerLinkActive="active" [routerLink]="['./description']">
+    <mat-icon>contact_page</mat-icon>
+    <div>Description</div>
+  </div>
+  <div class="tab focus-outline" routerLinkActive="active" [routerLink]="['./biography']">
+    <mat-icon>auto_stories</mat-icon>
+    <div>Biography</div>
+  </div>
 </div>
 <router-outlet></router-outlet>

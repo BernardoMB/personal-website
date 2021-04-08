@@ -10,6 +10,8 @@ import { HttpLoaderFactory } from '../../app.module';
 import { HttpClient } from '@angular/common/http';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { NgParticlesModule } from 'ng-particles';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
 
 
 @NgModule({
@@ -19,6 +21,8 @@ import { NgParticlesModule } from 'ng-particles';
     AboutRoutingModule,
     SharedModule,
     NgParticlesModule,
+    MatToolbarModule,
+    MatIconModule,
     TranslateModule.forChild({
       loader: {
         provide: TranslateLoader,
