@@ -9,6 +9,7 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { HttpLoaderFactory } from '../../app.module';
 import { HttpClient } from '@angular/common/http';
 import { SharedModule } from 'src/app/shared/shared.module';
+import { NgParticlesModule } from 'ng-particles';
 
 
 @NgModule({
@@ -17,6 +18,7 @@ import { SharedModule } from 'src/app/shared/shared.module';
     CommonModule,
     AboutRoutingModule,
     SharedModule,
+    NgParticlesModule,
     TranslateModule.forChild({
       loader: {
         provide: TranslateLoader,

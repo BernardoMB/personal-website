@@ -30,12 +30,24 @@ export class MainComponent implements OnInit {
   }
 
   onSendFeedback(event: any): void {
+    // Reactive smooth scrolling for html element.
+    // This has to bee done because the Ng feedback dialog requires no smooth scroll bahavior in order to take screen shot.
+    this.document.getElementById('html-element').style.scrollBehavior = 'smooth';
     if (event.error) {
       return;
     }
     this.contactService.sendFeedback(event.description, event.screenshot).subscribe((res) => {
       this.dialogService.openDialog('Thank you for your feedback!', ['Ok']).subscribe((result: string) => { });
     });
+  }
+
+  /**
+   * This funcitino is being called so the Ng feedback can place the right screen shot
+   *
+   * @memberof MainComponent
+   */
+  deactivateSmothScrolling() {
+    this.document.getElementById('html-element').style.scrollBehavior = 'unset';
   }
 
 }

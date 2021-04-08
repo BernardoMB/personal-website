@@ -309,4 +309,8 @@ export class LandingComponent implements OnInit, AfterViewInit {
       replaceUrl: true,
     });
   } */
+
+  navigateLink(link : string) {
+    window.open(link, '_blank');
+  }
 }

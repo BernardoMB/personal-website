@@ -34,6 +34,8 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ### ParticleJS
 
+### Fontawesome icons
+
 ### Diaog service
 
 ### Resolvers multiple calls

@@ -1,12 +1,28 @@
-<section class="about-jumbotron">
+<div class="about-jumbotron">
   <div class="jumbotron-container">
-    <div class="jumbotron-overlay">
-      <div>About Myself</div>
-      <div>“Make the change that you want to see in the world.”</div>
-      <button>Call action</button>
+    <div style="z-index: 1; display: flex; justify-content: center; flex-direction: column; align-items: center;">
+      <h1 class="title">About me</h1>
+      <div class="phrase">
+        “Make the change that you want to see in the world.”
+      </div>
+      <button mat-flat-button [routerLink]="['/projects']">View projects</button>
     </div>
   </div>
-</section>
+  <Particles
+    class="particles"
+    [id]="id"
+    [options]="particlesOptions2"
+  ></Particles>
+</div>
+
+<!-- <section class="about-jumbotron">
+  <div class="jumbotron-container">
+    <div class="jumbotron-overlay">
+
+    </div>
+  </div>
+</section> -->
+
 <div class="tabs-navigation-container">
   <a class="tab-selector" routerLink="active" [routerLink]="['./description']">Description</a>
   <a class="tab-selector" routerLink="active" [routerLink]="['./biography']">Biography</a>

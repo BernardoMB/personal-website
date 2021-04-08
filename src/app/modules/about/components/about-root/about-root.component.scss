@@ -1,0 +1,66 @@
+.about-jumbotron {
+  overflow: hidden;
+  position: relative;
+
+  /* background-image: url(../../../../../assets/images/jumbotrons/about.jpg);
+  background-size: cover;
+  resize: both;
+  background-position-x: center;
+  background-position-y: center;
+  background-position: 50% calc(50% - 150px);
+  background-attachment: fixed; */
+
+  background-image: url(../../../../../assets/images/jumbotrons/hero-motif-left.png),url(../../../../../assets/images/jumbotrons/hero-motif-right.png);
+  background-position: top 30px left 30px,bottom 30px right 30px;
+  background-repeat: no-repeat;
+  background-size: 402px 382px;
+  .jumbotron-container {
+    height: 100%;
+    padding: 80px 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #f4f5f6;
+    .title {
+      font-size: 54px;
+      font-weight: 600;
+      line-height: 1.1;
+      margin-bottom: 12px;
+    }
+    .phrase {
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 1.3;
+      margin-bottom: 0px;
+    }
+    button {
+      margin-top: 24px;
+      background-color: #89c402;
+      border: 1px solid #89c402;
+      border-radius: 4px;
+      color: #1a1a1f;
+      display: inline-block;
+      font-size: 14px;
+      font-weight: 600;
+      padding: 10px 16px;
+      line-height: 1;
+      &:hover {
+        background-color: #9bdd02;
+        text-decoration: underline;
+      }
+    }
+  }
+  .particles {
+    position: absolute;
+    top: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+  }
+  @supports (-webkit-touch-callout: none) {
+    /* CSS specific to iOS devices */
+    background-attachment: unset;
+    background-position: 50% calc(50%);
+  }
+}

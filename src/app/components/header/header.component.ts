@@ -96,7 +96,7 @@ export class HeaderComponent implements OnInit {
         .subscribe(() => {
           const offset = this.window.pageYOffset/*  + this.window.screen.height / 2 */;
           //console.log(offset);
-          const sectionsIds = ['top', 'services', 'skills', 'contact'];
+          const sectionsIds = ['top', 'services', 'skills', 'my-work', 'contact'];
           sectionsIds.forEach((sectionId: string) => {
             !!this.document.getElementById(sectionId) ? this.onLandingPage = true : this.onLandingPage = false;
           });
@@ -116,6 +116,8 @@ export class HeaderComponent implements OnInit {
             } else if (offsets[2] <= offset) {
               this.currentSection = 'skills';
             } else if (offsets[3] <= offset) {
+              this.currentSection = 'my-work';
+            } else if (offsets[4] <= offset) {
               this.currentSection = 'contact';
             }
           } else {

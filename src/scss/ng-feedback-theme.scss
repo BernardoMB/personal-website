@@ -33,6 +33,7 @@
   .dialog-content {
     .description {
       background-color: #4c4c4c;
+      border-radius: 0px !important;
     }
   }
   .screenshot-checkbox {
@@ -45,4 +46,14 @@
     background-color: #343434;
     border-top: 1px solid #070707 !important;
   }
+}
+
+feedback-toolbar {
+  left: calc(50% - 116px) !important;
+}
+
+.toolbar-tips {
+  font-size: 20px !important;
+  line-height: 1.2 !important;
+  width: unset !important;
 }
