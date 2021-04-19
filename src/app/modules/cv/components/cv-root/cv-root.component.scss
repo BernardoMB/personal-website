@@ -20,8 +20,28 @@
           line-height: 120%;
         }
         button {
-          margin-top: 23px;
-          height: 46px;
+          margin-top: 24px;
+          background-color: #d59dff;
+          border: 1px solid #d59dff;
+          color: #1a1a1f;
+          font-weight: 600!important;
+          font-size: 1.125rem!important;
+          line-height: 1.333!important;
+          padding: 8px 10px;
+          border-radius: 2px;
+          text-align: left;
+          display: inline-flex;
+          vertical-align: bottom;
+          font-family: inherit;
+          cursor: pointer;
+          .download-icon {
+            margin-left: 20px;
+            font-weight: 100;
+          }
+          &:hover {
+            background-color: #e1bdfc;
+            border: 1px solid #e1bdfc;
+          }
         }
       }
     }
