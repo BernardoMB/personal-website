@@ -28,27 +28,32 @@ export class ContactService {
       }),
       catchError((errorResponse: HttpErrorResponse) => {
         alert(`Error sending message. Try again later. ${errorResponse.error.message}`);
-        throw errorResponse.error;
         this.loaderService.hide();
+        throw errorResponse.error;
       })
     );
   }
 
-  sendFeedback(description: string, screenshot: string): Observable<boolean> {
+  sendFeedback(description: string, screenshot: string): Observable<string> {
     this.loaderService.show();
-    // TODO: Make http call to API
-    /* const url = 'https://wumc802kr5.execute-api.us-west-1.amazonaws.com/testing/feedback';
-    return this.http.post<any>(url, {
-      description,
-      screenshot,
-    }); */
-    return new Observable(obs => {
+    const url = 'https://9s8f1zma6g.execute-api.us-west-2.amazonaws.com/default/SendFeedbackFromPersonalWebsite';
+    const sendFeedbackDTO = { description, screenshot }; // DTO: Data Transfer Object
+    return this.http.post<any>(url, sendFeedbackDTO).pipe(
+      tap(() => {
+        this.loaderService.hide();
+      }),
+      catchError((errorResponse: HttpErrorResponse) => {
+        alert(`Error sending feedback. Try again later. ${errorResponse.error.message}`);
+        this.loaderService.hide();
+        throw errorResponse.error;
+      })
+    );
+    /* return new Observable(obs => {
       setTimeout(() => {
         obs.next(true);
         obs.complete();
         this.loaderService.hide();
       }, 2000);
-    });
+    }); */
   }
-
 }
