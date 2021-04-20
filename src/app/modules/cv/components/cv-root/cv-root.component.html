@@ -4,7 +4,7 @@
       <div class="elements-container">
         <h1>Experience</h1>
         <h5>Make the change that you want to see in the world</h5>
-        <button (click)="downloadResumeZip()">
+        <button class="download-resumes-button" (click)="downloadResumeZip()">
           Free download
           <mat-icon class="download-icon">download</mat-icon>
         </button>
@@ -223,7 +223,11 @@ the best talent, gain experience and face new challenges.
               <div tabindex="0" class="control gray focus-outline" (click)="changeLeftPanelStyle('gray')"></div>
             </div>
           </div>
-          <button mat-raised-button color="primary" (click)="downloadResume()">Download</button>
+          <!-- <button mat-raised-button color="primary" (click)="downloadResume()">Download</button> -->
+          <button class="download-resumes-button" (click)="downloadResumeZip()">
+            Free download
+            <mat-icon class="download-icon">download</mat-icon>
+          </button>
         </div>
       </div>
     </div>

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
+import { Component, OnInit, Inject } from '@angular/core';
 import * as html2canvas from 'html2canvas';
 import * as moment from 'moment';
 
@@ -69,7 +70,9 @@ export class CvRootComponent implements OnInit {
     }]
   }];
 
-  constructor() { }
+  constructor(
+    @Inject(DOCUMENT) private document: any,
+  ) { }
 
   ngOnInit(): void {
   }
@@ -93,6 +96,7 @@ export class CvRootComponent implements OnInit {
   }
 
   async downloadResume() {
+    this.document.getElementById('html-element').style.scrollBehavior = 'unset';
     window.scrollTo(0, 0);
     setTimeout(async () => {
       let element: HTMLElement;
@@ -104,11 +108,12 @@ export class CvRootComponent implements OnInit {
       download.href = contentDataURL;
       download.download = ``;
       download.click();
+      this.document.getElementById('html-element').style.scrollBehavior = 'smooth';
     }, 1);
   }
 
   async downloadResumeZip() {
-    window.open(`\/assets/Resume Bernardo Mondragon.zip`);
+    window.open(`/assets/Resume Bernardo Mondragon.zip`);
   }
 
 }
