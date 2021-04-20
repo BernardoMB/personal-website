@@ -107,4 +107,8 @@ export class CvRootComponent implements OnInit {
     }, 1);
   }
 
+  async downloadResumeZip() {
+    window.open(`\/assets/Resume Bernardo Mondragon.zip`);
+  }
+
 }
