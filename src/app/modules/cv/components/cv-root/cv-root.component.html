@@ -34,14 +34,64 @@
 
           <h1>Experience</h1>
 
-          <h3>Senior Full-stack Developer</h3>
-          <div style="display: flex; align-items: baseline;">
-            <b style="margin-right: 20px;">Zurich Insurance Company, Mexico City</b>
-            <p>NOV 2020 - PRESENT</p>
+          <div class="entry-container">
+            <div class="left">
+              <img class="copmany-logo" src="../../../../../assets/images/logos/Zurich.PNG" alt="company logo">
+            </div>
+            <div class="right">
+              <h3 class="position">Senior Full-stack Developer</h3>
+              <div class="company-container">
+                <p class="company">Zurich Insurance Company Ltd</p>
+                <p class="employment-type">Full-time</p>
+              </div>
+              <div class="dates-container">
+                <h4 class="dates">
+                  <span class="start-date">Nov 2020</span>
+                  –
+                  <span class="end-date">Present</span>
+                </h4>
+                <h4 class="employment-duration">
+                  <span class="duration">6 mos</span>
+                </h4>
+              </div>
+              <h4 class="location-container">
+                <span>Mexico City, Mexico</span>
+              </h4>
+              <div class="job-description">
+                <p>Full stack development of sureties administration system for Zurich North América.</p>
+                <p>Financial Analysis and Underwriting automation.</p>
+                <p>Technologies used: Blazor, .Net, Entity Framework, SQL Server, Bitbucket, Jira, Jfrog, Jenkins, Linux VMs, Figma.</p>
+              </div>
+            </div>
           </div>
-          <p>Agile development and support of internal applications to manage surety bond policies.</p>
-          <p>Coordinate and execute development within the company and external providers.</p>
-          <p>Technologies used: Blazor, .Net, Entity Framework, SQL Server, Bitbucket, Jira, Jfrog, Jenkins, Linux VMs, Figma.</p>
+
+          <div class="entry-container" *ngFor="let experience of experiences">
+            <div class="left">
+              <img class="copmany-logo" src="{{experience.logoUrl}}" alt="company logo">
+            </div>
+            <div class="right">
+              <h3 class="position">{{experience.position}}</h3>
+              <div class="company-container">
+                <p class="company">{{experience.company}}</p>
+                <p class="employment-type">{{experience.employmentType}}</p>
+              </div>
+              <div class="dates-container">
+                <h4 class="dates">
+                  <span class="start-date">{{experience.startDate | date : 'mediumDate'}}</span>
+                  –
+                  <span class="end-date">{{experience.endDate != null ? experience.endDate : 'Present'}}</span>
+                </h4>
+                <h4 class="employment-duration">
+                  <span class="duration">{{getDuration(experience.startDate, experience.endDate)}}</span>
+                </h4>
+              </div>
+              <h4 class="location-container">
+                <span>{{experience.location}}</span>
+              </h4>
+              <div class="job-description" [innerHTML]="experience.description">
+              </div>
+            </div>
+          </div>
 
           <h3>CoFounder & Director</h3>
           <div style="display: flex; align-items: baseline;">

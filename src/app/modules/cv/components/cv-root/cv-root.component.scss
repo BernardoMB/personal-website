@@ -76,6 +76,76 @@
     padding-bottom: 40px;
     position: relative;
   }
+  .tab-cv {
+    .cv-container {
+      .document {
+        .entry-container {
+          display: flex;
+          padding-top: 24px;
+          .left {
+            margin-right: 24px;
+            padding-bottom: 20px;
+            .copmany-logo {
+              width: 56px;
+              height: 56px;
+              background-size: cover;
+            }
+          }
+          .right {
+            flex-grow: 1;
+            padding-bottom: 20px;
+            border-bottom: 1px solid gainsboro;
+            .position {
+              font-size: 1.6rem;
+              line-height: 1.5;
+              font-weight: 600;
+              margin: 0px;
+            }
+            .company-container {
+              display: flex;
+              p {
+                margin: 0px;
+              }
+              .company {}
+              .employment-type {
+                &:before {
+                  content: "\00B7";
+                  margin: 0 5px;
+                }
+              }
+            }
+            .dates-container {
+              display: flex;
+              opacity: 0.6;
+              h4 {
+                font-size: 14px;
+                line-height: 1.2;
+                font-weight: 400;
+                margin-bottom: 0px;
+              }
+              .dates {}
+              .employment-duration {
+                &:before {
+                  content: "\00B7";
+                  margin: 0 5px;
+                }
+              }
+            }
+            .location-container {
+              opacity: 0.6;
+            }
+            .job-description {
+              ::ng-deep {
+                p {
+                  margin: 0px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
   .tab-resume {
     .resume-container {
       padding: 32px;

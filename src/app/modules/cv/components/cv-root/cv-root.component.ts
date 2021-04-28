@@ -20,6 +20,25 @@ export class CvRootComponent implements OnInit {
   // NgStyle directive example
   leftPanelFontColor = 'white';
 
+  //#region CV Tab content
+  experiences = [
+    {
+      logoUrl: '../../../../../assets/images/logos/Zurich.PNG',
+      position: 'Senior Full-stack Developer',
+      company: 'Zurich Insurance Company Ltd',
+      employmentType: 'Full-time',
+      startDate: '2020-11-01T00:00:00.000Z',
+      endDate: null,
+      location: 'Mexico City, Mexico',
+      description: `
+        <p>Full stack development of sureties administration system for Zurich North América.</p>
+        <p>Financial Analysis and Underwriting automation.</p>
+        <p>Technologies used: Blazor, .Net, Entity Framework, SQL Server, Bitbucket, Jira, Jfrog, Jenkins, Linux VMs, Figma.</p>
+      `
+    }
+  ];
+  //#endregion
+
   // NgFor directive example
   // TODO: Fetch this information from database
   sections = [{
@@ -93,6 +112,14 @@ export class CvRootComponent implements OnInit {
         this.isPurple = true; this.isBlue = false; this.leftPanelFontColor = 'white';
         break;
     }
+  }
+
+  getDuration(startDate: any, endDate: any) {
+    const durationEndDate = endDate != null ? endDate : new Date();
+    const start = moment(startDate);
+    const end = moment(durationEndDate);
+    const duration = moment.duration(start.diff(end)).humanize();
+    return duration;
   }
 
   async downloadResume() {
