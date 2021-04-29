@@ -77,6 +77,20 @@ export class CvRootComponent implements OnInit {
           <p>Coded algorithms and designed UI UX flows for lead generation in digital platforms.</p>
           <p>Succesfully increased the lead convertion ratio for 40+ clients.</p>
       `
+    },
+    {
+      logoUrl: '../../../../../assets/images/logos/Koomkin.PNG',
+      position: 'Producer',
+      company: 'Ecorise Youth Innovations',
+      employmentType: 'Full-time',
+      startDate: '2016-08-01T00:00:00.000Z',
+      endDate: '2017-02-01T00:00:00.000Z',
+      location: 'Austin, TX',
+      description: `
+      <p>Analyzed digital marketing campaigns data to maximize lead conversion rates for customers.</p>
+          <p>Coded algorithms and designed UI UX flows for lead generation in digital platforms.</p>
+          <p>Succesfully increased the lead convertion ratio for 40+ clients.</p>
+      `
     }
   ];
   //#endregion
