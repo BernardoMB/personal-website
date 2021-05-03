@@ -9,11 +9,11 @@ const routes: Routes = [
     path: '',
     component:
     CvRootComponent,
-    children: [
+    /* children: [
       { path: '', redirectTo: 'cv', pathMatch: 'full' },
       { path: 'cv', component: CvComponent },
       { path: 'resume', component: ResumeComponent },
-    ]
+    ] */
   }
 ];
 

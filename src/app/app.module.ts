@@ -44,6 +44,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { WINDOW_PROVIDERS } from './providers/window.provider';
 import { DOCUMENT_PROVIDERS } from './providers/document.provider';
 import { ClipboardModule } from '@angular/cdk/clipboard';
+import { MatTabsModule } from '@angular/material/tabs';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -88,6 +89,7 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     MatButtonToggleModule,
     MatDialogModule,
     MatSelectModule,
+    MatTabsModule,
     MatProgressBarModule,
     ClipboardModule,
     SwiperModule,

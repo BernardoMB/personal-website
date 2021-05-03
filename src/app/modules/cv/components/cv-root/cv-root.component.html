@@ -13,7 +13,7 @@
   </div>
 </section>
 
-<mat-tab-group class="tab-group">
+<mat-tab-group class="tab-group" (selectedIndexChange)="onTabNavigation($event)" [(selectedIndex)]="selectedTabIndex">
   <mat-tab>
     <ng-template mat-tab-label class="focus-outline">
       <mat-icon class="example-tab-icon">sticky_note_2</mat-icon>
@@ -123,6 +123,9 @@
 
         </div>
       </div>
+      <div class="interrupter-container">
+        <div class="interrupter"></div>
+      </div>
     </div>
   </mat-tab>
 
@@ -216,7 +219,6 @@ the best talent, gain experience and face new challenges.
               <div tabindex="0" class="control gray focus-outline" (click)="changeLeftPanelStyle('gray')"></div>
             </div>
           </div>
-          <!-- <button mat-raised-button color="primary" (click)="downloadResume()">Download</button> -->
           <button class="download-resumes-button" (click)="downloadResumeZip()">
             Free download
             <mat-icon class="download-icon">download</mat-icon>
@@ -235,15 +237,15 @@ the best talent, gain experience and face new challenges.
   </mat-tab>
 </mat-tab-group>
 
-<button (click)="showDynamicDisplayContent = !showDynamicDisplayContent">Toggle div visibility</button>
+<!-- <button (click)="showDynamicDisplayContent = !showDynamicDisplayContent">Toggle div visibility</button>
 <div *ngIf="showDynamicDisplayContent; else myIdentifier" style="color: red;">Condition true dynamic content</div>
 <ng-template #myIdentifier>
   <div style="color: blue; height: 900px;">Else dynamic content</div>
-</ng-template>
+</ng-template> -->
 
-<div class="tabs-navigation-container">
+<!-- <div class="tabs-navigation-container">
   <a class="tab-selector" routerLink="active" [routerLink]="['./cv']">Curriculum Vitae</a>
   <a class="tab-selector" routerLink="active" [routerLink]="['./resume']">Resume</a>
-</div>
+</div> -->
 
-<router-outlet></router-outlet>
+<!-- <router-outlet></router-outlet> -->

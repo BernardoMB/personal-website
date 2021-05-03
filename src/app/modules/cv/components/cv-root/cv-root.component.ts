@@ -1,7 +1,9 @@
 import { DOCUMENT } from '@angular/common';
 import { Component, OnInit, Inject } from '@angular/core';
+import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import * as html2canvas from 'html2canvas';
 import * as moment from 'moment';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-cv-root',
@@ -12,6 +14,8 @@ export class CvRootComponent implements OnInit {
   showDynamicDisplayContent: boolean = false;
   name = 'Bernardo Mondragon Brozon';
   date = moment().format('MM/DD/YYYY');
+  routeFragmentSubscription: Subscription | undefined;
+  selectedTabIndex: number | undefined;
 
   // NgClass directive example
   isPurple = true;
@@ -147,9 +151,51 @@ export class CvRootComponent implements OnInit {
 
   constructor(
     @Inject(DOCUMENT) private document: any,
-  ) { }
+    private router: Router,
+    private route: ActivatedRoute
+  ) {
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        const fragment = event.url.split('#')[1];
+        if (fragment) {
+          return;
+        }
+        window.scrollTo(0, 0);
+      }
+      return;
+    });
+
+    // Set the current tab getting route fragment if any
+    this.routeFragmentSubscription = this.route.fragment.subscribe((fragment: string) => {
+      if (fragment) {
+        switch (fragment) {
+          case 'cv': 
+            this.selectedTabIndex = 0;
+            break;
+          case 'resume':
+            this.selectedTabIndex = 1;
+            break;
+          case 'activities': 
+            this.selectedTabIndex = 2;
+            break;
+          default:
+            this.selectedTabIndex = 0;
+            break;
+        }
+      }
+    });
+  }
 
   ngOnInit(): void {
+  }
+
+  onTabNavigation(tabIndex: number) {
+    const fragments = ['cv', 'resume', 'activities'];
+    this.router.navigate(['./'], {
+      fragment: fragments[tabIndex],
+      relativeTo: this.route,
+      replaceUrl: true
+    });
   }
 
   changeLeftPanelStyle(color: string): void {
