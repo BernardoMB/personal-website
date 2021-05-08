@@ -45,6 +45,7 @@ import { WINDOW_PROVIDERS } from './providers/window.provider';
 import { DOCUMENT_PROVIDERS } from './providers/document.provider';
 import { ClipboardModule } from '@angular/cdk/clipboard';
 import { MatTabsModule } from '@angular/material/tabs';
+import { RootStoreModule } from './store/root-store.module';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -104,7 +105,8 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
         useFactory: HttpLoaderFactory,
         deps: [HttpClient]
       }
-    })
+    }),
+    RootStoreModule
   ],
   providers: [
     {
