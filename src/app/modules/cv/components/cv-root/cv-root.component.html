@@ -13,229 +13,248 @@
   </div>
 </section>
 
-<mat-tab-group class="tab-group" (selectedIndexChange)="onTabNavigation($event)" [(selectedIndex)]="selectedTabIndex">
-  <mat-tab>
-    <ng-template mat-tab-label class="focus-outline">
-      <mat-icon class="example-tab-icon">sticky_note_2</mat-icon>
-      <div class="label">Curriculum Vitae</div>
-    </ng-template>
-    <div class="tab tab-cv">
-      <div class="cv-container">
-        <div class="document">
-
-          <h1>Education</h1>
-
-          <h3>Instituto Tecnológico Autónomo de México (ITAM)</h3>
-          <div style="display: flex; align-items: baseline;">
-            <b style="margin-right: 20px;">Bachelor's in Actuarial Science</b>
-            <p>AUG 2013 - AUG 2018</p>
+  <mat-tab-group class="tab-group" (selectedIndexChange)="onTabNavigation($event)" [(selectedIndex)]="selectedTabIndex">
+    <mat-tab>
+      <ng-template mat-tab-label class="focus-outline">
+        <mat-icon class="example-tab-icon">sticky_note_2</mat-icon>
+        <div class="label">Curriculum Vitae</div>
+      </ng-template>
+      <div class="tab tab-cv">
+        <div class="cv-container">
+          <div class="document">
+            <div class="entries-container">
+              <h1>Education</h1>
+              <div class="entry-container" *ngFor="let experience of schools">
+                <div class="left">
+                  <img *ngIf="experience.logoUrl != ''" class="copmany-logo" src="{{experience.logoUrl}}" alt="company logo">
+                  <div *ngIf="experience.logoUrl === ''" class="copmany-logo no-img"></div>
+                </div>
+                <div class="right">
+                  <h3 class="position">{{experience.position}}</h3>
+                  <div class="company-container">
+                    <p class="company">{{experience.company}}</p>
+                    <p *ngIf="experience.employmentType != ''" class="employment-type">{{experience.employmentType}}</p>
+                  </div>
+                  <div class="dates-container">
+                    <h4 class="dates">
+                      <span class="start-date">{{experience.startDate | date : 'mediumDate'}}</span>
+                      –
+                      <span *ngIf="experience.endDate != null" class="end-date">{{experience.endDate | date : 'mediumDate'}}</span>
+                      <span *ngIf="experience.endDate == null" class="end-date">Present</span>
+                    </h4>
+                    <h4 class="employment-duration">
+                      <span class="duration">{{getDuration(experience.startDate, experience.endDate)}}</span>
+                    </h4>
+                  </div>
+                  <h4 class="location-container">
+                    <span>{{experience.location}}</span>
+                  </h4>
+                  <div class="job-description" [innerHTML]="experience.description">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="entries-container">
+              <h1>Experience</h1>
+              <div class="entry-container" *ngFor="let experience of experiences">
+                <div class="left">
+                  <img *ngIf="experience.logoUrl != ''" class="copmany-logo" src="{{experience.logoUrl}}" alt="company logo">
+                  <div *ngIf="experience.logoUrl === ''" class="copmany-logo no-img"></div>
+                </div>
+                <div class="right">
+                  <h3 class="position">{{experience.position}}</h3>
+                  <div class="company-container">
+                    <p class="company">{{experience.company}}</p>
+                    <p class="employment-type">{{experience.employmentType}}</p>
+                  </div>
+                  <div class="dates-container">
+                    <h4 class="dates">
+                      <span class="start-date">{{experience.startDate | date : 'mediumDate'}}</span>
+                      –
+                      <span *ngIf="experience.endDate != null" class="end-date">{{experience.endDate | date : 'mediumDate'}}</span>
+                      <span *ngIf="experience.endDate == null" class="end-date">Present</span>
+                    </h4>
+                    <h4 class="employment-duration">
+                      <span class="duration">{{getDuration(experience.startDate, experience.endDate)}}</span>
+                    </h4>
+                  </div>
+                  <h4 class="location-container">
+                    <span>{{experience.location}}</span>
+                  </h4>
+                  <div class="job-description" [innerHTML]="experience.description">
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <p>Applied mathematics and statistical methods to assess risk in insurance, finance and other industries and professions.</p>
+        </div>
+        <div class="cv-container" style="margin-top: 20px; padding: 20px;">
+          <div class="document">
+            <h1>Freelance</h1>
 
-          <h1>Experience</h1>
+            <h3>Instructor</h3>
+            <div style="display: flex; align-items: baseline;">
+              <b style="margin-right: 20px;">Mexico City</b>
+              <p>JAN 2019 - PRESENT</p>
+            </div>
+            <p>I teach online courses and create tutorials for students who want to get started  in the software development industry.</p>
+            <p>I have taught hundreds of hours of programing lectures.</p>
 
-          <div class="entry-container" *ngFor="let experience of experiences">
-            <div class="left">
-              <img class="copmany-logo" src="{{experience.logoUrl}}" alt="company logo">
+            <h1>Achievements</h1>
+
+            <h3>Advisor and judge appointment</h3>
+            <div style="display: flex; align-items: baseline;">
+              <b style="margin-right: 20px;">Universidad Nacional Autónoma de México (UNAM)</b>
+              <p>OCT 2018</p>
+            </div>
+            <p>I was appointed to be judge and advisor of the UNAMxHacks Hackathon organized by the National University of Mexico (UNAM).</p>
+            <p>Helped contenders to choose and implement different technologies in order for them to solve the event's challenges.</p>
+
+            <h1>Online courses</h1>
+
+            <p>The Complete Node.js Developer Course</p>
+            <h3>35 hours</h3>
+            <a href="https://www.udemy.com/share/101WGiA0MScldSRHw=/">View course</a>
+
+            <p>Angular - The Complete Guide</p>
+            <h3>33.5 hours</h3>
+            <a href="https://www.udemy.com/share/101WAUA0MScldSRHw=/">View course</a>
+
+            <p>NestJS Zero to Hero - Modern TypeScript Back-end Development</p>
+            <h3>8.5 hours</h3>
+            <a href="https://www.udemy.com/share/101WAUA0MScldSRHw=/">View course</a>
+
+            <p>AWS Serverless APIs & Apps - A Complete Introduction</p>
+            <h3>8 hours</h3>
+            <a href="https://www.udemy.com/share/101XtiA0MScldSRHw=/">View course</a>
+
+            <p>Blazor: Getting Started</p>
+            <h3>4 hours</h3>
+            <a href="https://www.linkedin.com/learning/blazor-getting-started/demo-blazor-project-structure?u=2107241">View course</a>
+
+            <h1>Programing Languages</h1>
+
+            <p>SQL, R, Python, Java, C#, .Net, Blazor, MongoDB, PostgreSQL, MySQL, SQL Server,MySQL, SQL Server, TypeScript, JavaScript, Visual Basic, Objective C, Angular, RMarkdown, MatLab, Maple LaTeX, HTML5, CSS, SCSS, MongoDB, PostgreSQL, SQL, NodeJS, Express, NestJS</p>
+
+            <h1>Technologies</h1>
+
+            <p>Microsoft Azure, App Services, Azure Functions, CosmosDB, Event Grid, Azure Storage Azure Media Services, Azure Devops, Amazon Web Services, AWS Lambda, API Gateway, S3, EC2, Google Cloud, Heroku</p>
+
+          </div>
+        </div>
+        <div class="interrupter-container">
+          <div class="interrupter"></div>
+        </div>
+      </div>
+    </mat-tab>
+
+    <mat-tab>
+      <ng-template mat-tab-label>
+        <mat-icon class="example-tab-icon">history_edu</mat-icon>
+        <div class="label">{{'CV.RESUME' | translate }}</div>
+      </ng-template>
+      <div class="tab tab-resume">
+        <div class="resume-container">
+          <div id="document" class="document">
+            <div class="resume-left" [ngClass]='isPurple ? "left-purple" : isBlue ? "left-blue" : "left-gray"' [style.color]="leftPanelFontColor">
+              <div class="title">Actuary & Full-stack Developer</div>
+              <div class="section-title">Details</div>
+              <div>Mexico City, Mexico</div>
+              <div>+52 1 55 3559 2033</div>
+              <div>bmondragonbrozon@gmail.com</div>
+              <div class="subtitle">Nationality</div>
+              <div>Mexican</div>
+              <div class="subtitle">Date of birth</div>
+              <div>12-16-1993</div>
+              <div class="section-title">Links</div>
+              <div class="link-container">
+                <div class="icon">Github icon</div>
+                <div class="link">https://github.com/BernardoMB</div>
+              </div>
+              <div class="link-container">
+                <div class="icon">Linkedin icon</div>
+                <div class="link">https://linkedin.com/in/bernardo-mondragon</div>
+              </div>
+              <div class="link-container">
+                <div class="icon">Academia icon</div>
+                <div class="link">https://independent.academia.edu/BernardoMondragon</div>
+              </div>
+              <div class="section-title">Skills</div>
+              <ul>
+                <li>Analytical and flexible approach to problem solving</li>
+                <li>Able to deal with complex maths and technical problems</li>
+              </ul>
+              <div class="section-title">Programming</div>
+              <p><b>Languages: </b>SQL, R, Python, Java, C#, .Net, MongoDB, PostgreSQL, MySQL, SQL Server,MySQL, SQL Server, TypeScript, JavaScript, Visual Basic, Objective C, Angular, RMarkdown, Python, Bookdown, MatLab, Maple, LaTeX, HTML5, CSS, SCSS, MongoDB, PostgreSQL, SQL, NodeJS, Express, NestJS</p>
+              <p><b>Architect: </b> Microsoft Azure, App Services, Azure Functions, CosmosDB, Event Grid, Azure Storage Azure Media Services, Azure Devops, Amazon Web Services, AWS Lambda, API Gateway, S3, EC2, Google Cloud, Heroku</p>
+              <div class="section-title">Languages</div>
+              <div>Spanish</div>
+              <div class="spanish-bar"></div>
+              <div>English</div>
+              <div class="english-bar"></div>
             </div>
             <div class="right">
-              <h3 class="position">{{experience.position}}</h3>
-              <div class="company-container">
-                <p class="company">{{experience.company}}</p>
-                <p class="employment-type">{{experience.employmentType}}</p>
+              <div class="name">{{name}}</div>
+              <div class="date">{{date}}</div>
+              <div class="profile-label">Profile</div>
+              <div class="profile">
+                Hard working man with +8 years of experience applying actuarial knowledge and developing all
+  kinds of software solutions. Beign involved in several ambitious projects I have developed skills in
+  insurance product development including software development and systems architecture. At the
+  same time I consider myself a fully qualived actuary who has the confidence to work on my own
+  initiative and the ability to play a key role in a leading company. I am a quick learner who can balance
+  theory along with practical solutions. Right now I would like to join a company that is looking to hire
+  the best talent, gain experience and face new challenges.
               </div>
-              <div class="dates-container">
-                <h4 class="dates">
-                  <span class="start-date">{{experience.startDate | date : 'mediumDate'}}</span>
-                  –
-                  <span *ngIf="experience.endDate != null" class="end-date">{{experience.endDate | date : 'mediumDate'}}</span>
-                  <span *ngIf="experience.endDate == null" class="end-date">Present</span>
-                </h4>
-                <h4 class="employment-duration">
-                  <span class="duration">{{getDuration(experience.startDate, experience.endDate)}}</span>
-                </h4>
-              </div>
-              <h4 class="location-container">
-                <span>{{experience.location}}</span>
-              </h4>
-              <div class="job-description" [innerHTML]="experience.description">
-              </div>
-            </div>
-          </div>
 
-          <h3>Producer</h3>
-          <div style="display: flex; align-items: baseline;">
-            <b style="margin-right: 20px;">Ecorise Youth Innovations, Austin TX</b>
-            <p>JAN 2012 - AUG 2013</p>
-          </div>
-          <p>Pedagogue, designer, and producer of educational interactive and animated content.</p>
-          <p>Animated over 40 educational video lectures for hundreads of students coursing elementary schcool.</p>
-
-          <h1>Freelance</h1>
-
-          <h3>Instructor</h3>
-          <div style="display: flex; align-items: baseline;">
-            <b style="margin-right: 20px;">Mexico City</b>
-            <p>JAN 2019 - PRESENT</p>
-          </div>
-          <p>I teach online courses and create tutorials for students who want to get started  in the software development industry.</p>
-          <p>I have taught hundreds of hours of programing lectures.</p>
-
-          <h1>Achievements</h1>
-
-          <h3>Advisor and judge appointment</h3>
-          <div style="display: flex; align-items: baseline;">
-            <b style="margin-right: 20px;">Universidad Nacional Autónoma de México (UNAM)</b>
-            <p>OCT 2018</p>
-          </div>
-          <p>I was appointed to be judge and advisor of the UNAMxHacks Hackathon organized by the National University of Mexico (UNAM).</p>
-          <p>Helped contenders to choose and implement different technologies in order for them to solve the event's challenges.</p>
-
-          <h1>Online courses</h1>
-
-          <p>The Complete Node.js Developer Course</p>
-          <h3>35 hours</h3>
-          <a href="https://www.udemy.com/share/101WGiA0MScldSRHw=/">View course</a>
-
-          <p>Angular - The Complete Guide</p>
-          <h3>33.5 hours</h3>
-          <a href="https://www.udemy.com/share/101WAUA0MScldSRHw=/">View course</a>
-
-          <p>NestJS Zero to Hero - Modern TypeScript Back-end Development</p>
-          <h3>8.5 hours</h3>
-          <a href="https://www.udemy.com/share/101WAUA0MScldSRHw=/">View course</a>
-
-          <p>AWS Serverless APIs & Apps - A Complete Introduction</p>
-          <h3>8 hours</h3>
-          <a href="https://www.udemy.com/share/101XtiA0MScldSRHw=/">View course</a>
-
-          <p>Blazor: Getting Started</p>
-          <h3>4 hours</h3>
-          <a href="https://www.linkedin.com/learning/blazor-getting-started/demo-blazor-project-structure?u=2107241">View course</a>
-
-          <h1>Programing Languages</h1>
-
-          <p>SQL, R, Python, Java, C#, .Net, Blazor, MongoDB, PostgreSQL, MySQL, SQL Server,MySQL, SQL Server, TypeScript, JavaScript, Visual Basic, Objective C, Angular, RMarkdown, MatLab, Maple LaTeX, HTML5, CSS, SCSS, MongoDB, PostgreSQL, SQL, NodeJS, Express, NestJS</p>
-
-          <h1>Technologies</h1>
-
-          <p>Microsoft Azure, App Services, Azure Functions, CosmosDB, Event Grid, Azure Storage Azure Media Services, Azure Devops, Amazon Web Services, AWS Lambda, API Gateway, S3, EC2, Google Cloud, Heroku</p>
-
-        </div>
-      </div>
-      <div class="interrupter-container">
-        <div class="interrupter"></div>
-      </div>
-    </div>
-  </mat-tab>
-
-  <mat-tab>
-    <ng-template mat-tab-label>
-      <mat-icon class="example-tab-icon">history_edu</mat-icon>
-      <div class="label">{{'CV.RESUME' | translate }}</div>
-    </ng-template>
-    <div class="tab tab-resume">
-      <div class="resume-container">
-        <div id="document" class="document">
-          <div class="resume-left" [ngClass]='isPurple ? "left-purple" : isBlue ? "left-blue" : "left-gray"' [style.color]="leftPanelFontColor">
-            <div class="title">Actuary & Full-stack Developer</div>
-            <div class="section-title">Details</div>
-            <div>Mexico City, Mexico</div>
-            <div>+52 1 55 3559 2033</div>
-            <div>bmondragonbrozon@gmail.com</div>
-            <div class="subtitle">Nationality</div>
-            <div>Mexican</div>
-            <div class="subtitle">Date of birth</div>
-            <div>12-16-1993</div>
-            <div class="section-title">Links</div>
-            <div class="link-container">
-              <div class="icon">Github icon</div>
-              <div class="link">https://github.com/BernardoMB</div>
-            </div>
-            <div class="link-container">
-              <div class="icon">Linkedin icon</div>
-              <div class="link">https://linkedin.com/in/bernardo-mondragon</div>
-            </div>
-            <div class="link-container">
-              <div class="icon">Academia icon</div>
-              <div class="link">https://independent.academia.edu/BernardoMondragon</div>
-            </div>
-            <div class="section-title">Skills</div>
-            <ul>
-              <li>Analytical and flexible approach to problem solving</li>
-              <li>Able to deal with complex maths and technical problems</li>
-            </ul>
-            <div class="section-title">Programming</div>
-            <p><b>Languages: </b>SQL, R, Python, Java, C#, .Net, MongoDB, PostgreSQL, MySQL, SQL Server,MySQL, SQL Server, TypeScript, JavaScript, Visual Basic, Objective C, Angular, RMarkdown, Python, Bookdown, MatLab, Maple, LaTeX, HTML5, CSS, SCSS, MongoDB, PostgreSQL, SQL, NodeJS, Express, NestJS</p>
-            <p><b>Architect: </b> Microsoft Azure, App Services, Azure Functions, CosmosDB, Event Grid, Azure Storage Azure Media Services, Azure Devops, Amazon Web Services, AWS Lambda, API Gateway, S3, EC2, Google Cloud, Heroku</p>
-            <div class="section-title">Languages</div>
-            <div>Spanish</div>
-            <div class="spanish-bar"></div>
-            <div>English</div>
-            <div class="english-bar"></div>
-          </div>
-          <div class="right">
-            <div class="name">{{name}}</div>
-            <div class="date">{{date}}</div>
-            <div class="profile-label">Profile</div>
-            <div class="profile">
-              Hard working man with +8 years of experience applying actuarial knowledge and developing all
-kinds of software solutions. Beign involved in several ambitious projects I have developed skills in
-insurance product development including software development and systems architecture. At the
-same time I consider myself a fully qualived actuary who has the confidence to work on my own
-initiative and the ability to play a key role in a leading company. I am a quick learner who can balance
-theory along with practical solutions. Right now I would like to join a company that is looking to hire
-the best talent, gain experience and face new challenges.
-            </div>
-
-            <div *ngFor="let section of sections; let i = index">
-              <div class="section-title">{{section.title}}</div>
-              <div *ngFor="let place of section.places">
-                <div class="place">
-                  <div class="left">
-                    <div class="position">{{place.position}}</div>
-                    <div class="period">{{place.startDate | date : 'shortDate'}} - {{place.endDate | date : 'shortDate'}}</div>
+              <div *ngFor="let section of sections; let i = index">
+                <div class="section-title">{{section.title}}</div>
+                <div *ngFor="let place of section.places">
+                  <div class="place">
+                    <div class="left">
+                      <div class="position">{{place.position}}</div>
+                      <div class="period">{{place.startDate | date : 'shortDate'}} - {{place.endDate | date : 'shortDate'}}</div>
+                    </div>
+                    <div class="right">{{place.place}}</div>
                   </div>
-                  <div class="right">{{place.place}}</div>
+                  <ul class="points-list">
+                    <li class="point" *ngFor="let point of place.points">
+                      {{point}}
+                    </li>
+                  </ul>
                 </div>
-                <ul class="points-list">
-                  <li class="point" *ngFor="let point of place.points">
-                    {{point}}
-                  </li>
-                </ul>
+              </div>
+
+            </div>
+          </div>
+          <div class="controls-container">
+            <div class="select-color-container">
+              <div class="select-color-label">
+                Change color
+              </div>
+              <div class="color-container">
+                <div tabindex="0" class="control purple focus-outline" (click)="isPurple = true; isBlue = false; leftPanelFontColor = 'white';"></div>
+                <div tabindex="0" class="control blue focus-outline" (click)="changeLeftPanelStyle('blue')"></div>
+                <div tabindex="0" class="control gray focus-outline" (click)="changeLeftPanelStyle('gray')"></div>
               </div>
             </div>
-
+            <button class="download-resumes-button" (click)="downloadResumeZip()">
+              Free download
+              <mat-icon class="download-icon">download</mat-icon>
+            </button>
           </div>
-        </div>
-        <div class="controls-container">
-          <div class="select-color-container">
-            <div class="select-color-label">
-              Change color
-            </div>
-            <div class="color-container">
-              <div tabindex="0" class="control purple focus-outline" (click)="isPurple = true; isBlue = false; leftPanelFontColor = 'white';"></div>
-              <div tabindex="0" class="control blue focus-outline" (click)="changeLeftPanelStyle('blue')"></div>
-              <div tabindex="0" class="control gray focus-outline" (click)="changeLeftPanelStyle('gray')"></div>
-            </div>
-          </div>
-          <button class="download-resumes-button" (click)="downloadResumeZip()">
-            Free download
-            <mat-icon class="download-icon">download</mat-icon>
-          </button>
         </div>
       </div>
-    </div>
-  </mat-tab>
+    </mat-tab>
 
-  <mat-tab>
-    <ng-template mat-tab-label>
-      <mat-icon class="example-tab-icon">spellcheck</mat-icon>
-      <div class="label">Other Activities</div>
-    </ng-template>
-    Content 3
-  </mat-tab>
-</mat-tab-group>
+    <mat-tab>
+      <ng-template mat-tab-label>
+        <mat-icon class="example-tab-icon">spellcheck</mat-icon>
+        <div class="label">Other Activities</div>
+      </ng-template>
+      Content 3
+    </mat-tab>
+  </mat-tab-group>
 
 <!-- <button (click)="showDynamicDisplayContent = !showDynamicDisplayContent">Toggle div visibility</button>
 <div *ngIf="showDynamicDisplayContent; else myIdentifier" style="color: red;">Condition true dynamic content</div>

@@ -25,6 +25,20 @@ export class CvRootComponent implements OnInit {
   leftPanelFontColor = 'white';
 
   //#region CV Tab content
+  schools = [
+    {
+      logoUrl: '../../../../../assets/images/logos/logo-itam-green-2.png',
+      position: 'Bachelor\'s in Actuarial Science',
+      company: 'Institutlo Technológico Autónomo de México (ITAM)',
+      employmentType: '',
+      startDate: '2013-08-01T00:00:00.000Z',
+      endDate: '2018-12-20T00:00:00.000Z',
+      location: 'Mexico City, Mexico',
+      description: `
+        <p>Applied mathematics and statistical methods to assess risk in insurance, finance and other industries and professions.</p>
+      `
+    },
+  ];
   experiences = [
     {
       logoUrl: '../../../../../assets/images/logos/Zurich.PNG',
@@ -55,7 +69,7 @@ export class CvRootComponent implements OnInit {
       `
     },
     {
-      logoUrl: '../../../../../assets/images/logos/Kalyptio.png',
+      logoUrl: '',
       position: 'Senior Full-stack Developer',
       company: 'Neolinx de Mexico',
       employmentType: 'Full-time',
@@ -83,7 +97,7 @@ export class CvRootComponent implements OnInit {
       `
     },
     {
-      logoUrl: '../../../../../assets/images/logos/Koomkin.PNG',
+      logoUrl: '../../../../../assets/images/logos/Ecorise.png',
       position: 'Producer',
       company: 'Ecorise Youth Innovations',
       employmentType: 'Full-time',
@@ -91,9 +105,8 @@ export class CvRootComponent implements OnInit {
       endDate: '2017-02-01T00:00:00.000Z',
       location: 'Austin, TX',
       description: `
-      <p>Analyzed digital marketing campaigns data to maximize lead conversion rates for customers.</p>
-          <p>Coded algorithms and designed UI UX flows for lead generation in digital platforms.</p>
-          <p>Succesfully increased the lead convertion ratio for 40+ clients.</p>
+          <p>Pedagogue, designer, and producer of educational interactive and animated content.</p>
+          <p>Animated over 40 educational video lectures for hundreads of students coursing elementary schcool.</p>
       `
     }
   ];
@@ -160,7 +173,7 @@ export class CvRootComponent implements OnInit {
         if (fragment) {
           return;
         }
-        window.scrollTo(0, 0);
+        //window.scrollTo(0, 0);
       }
       return;
     });
@@ -169,13 +182,13 @@ export class CvRootComponent implements OnInit {
     this.routeFragmentSubscription = this.route.fragment.subscribe((fragment: string) => {
       if (fragment) {
         switch (fragment) {
-          case 'cv': 
+          case 'cv':
             this.selectedTabIndex = 0;
             break;
           case 'resume':
             this.selectedTabIndex = 1;
             break;
-          case 'activities': 
+          case 'activities':
             this.selectedTabIndex = 2;
             break;
           default:
@@ -194,7 +207,7 @@ export class CvRootComponent implements OnInit {
     this.router.navigate(['./'], {
       fragment: fragments[tabIndex],
       relativeTo: this.route,
-      replaceUrl: true
+      replaceUrl: false
     });
   }
 

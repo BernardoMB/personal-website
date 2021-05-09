@@ -3,9 +3,30 @@
   position: relative;
   background-color: #303030;
   background-image: url(../../../../../assets/images/jumbotrons/hero-motif-left.png),url(../../../../../assets/images/jumbotrons/hero-motif-right.png);
-  background-position: top 30px left 30px,bottom 30px right 30px;
+  background-position: top 30px left 30px, bottom 30px right 30px;
   background-repeat: no-repeat;
   background-size: 402px 382px;
+  .img-1 {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    background-image: url(../../../../../assets/images/jumbotrons/hero-motif-left.png);
+    background-repeat: no-repeat;
+    background-size: 402px 382px;
+    width: 100%;
+    height: 100%;
+  }
+  .img-2 {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    background-image: url(../../../../../assets/images/jumbotrons/hero-motif-right.png);
+    background-position: bottom 0px right 0px;
+    background-repeat: no-repeat;
+    background-size: 402px 382px;
+    width: 100%;
+    height: 100%;
+  }
   .jumbotron-container {
     height: 100%;
     padding: 80px 16px;
@@ -55,11 +76,11 @@
     width: 100%;
     z-index: 0;
   }
-  @supports (-webkit-touch-callout: none) {
-    /* CSS specific to iOS devices */
+  /* @supports (-webkit-touch-callout: none) {
+    // CSS specific to iOS devices
     background-attachment: unset;
     background-position: 50% calc(50%);
-  }
+  } */
   @media screen and (max-width: 720px) {
     background-position: top 30px left -160px,bottom 30px right -160px;
   }

@@ -51,7 +51,7 @@
 }
 
 .tab-group {
-  min-height: 300px;
+  min-height: 545px;
   mat-icon {
     color: #834dca;
     margin-right: 10px;
@@ -79,67 +79,103 @@
   }
   .tab-cv {
     .cv-container {
+      padding: 20px 0px;
+      background-color: white;
+      border-radius: 0.8rem;
+      border: 1px solid gainsboro;
       .document {
-        .entry-container {
-          display: flex;
-          padding-top: 24px;
-          .left {
-            margin-right: 24px;
-            padding-bottom: 20px;
-            .copmany-logo {
-              width: 56px;
-              height: 56px;
-              background-size: cover;
-            }
+        .entries-container {
+          h1 {
+            padding-left: 20px;
           }
-          .right {
-            flex-grow: 1;
-            padding-bottom: 20px;
-            border-bottom: 1px solid gainsboro;
-            .position {
-              font-size: 1.6rem;
-              line-height: 1.5;
-              font-weight: 600;
-              margin: 0px;
+          .entry-container {
+            display: flex;
+            padding-top: 24px;
+            padding-left: 20px;
+            .left {
+              padding-bottom: 20px;
+              margin-right: 24px;
+              .copmany-logo {
+                width: 56px;
+                height: 56px;
+                background-size: cover;
+              }
+              @media screen and (max-width: 425px) {
+                text-align: center;
+                margin-right: 20px;
+                .copmany-logo.no-img {
+                  display: none;
+                }
+              }
             }
-            .company-container {
-              display: flex;
-              p {
+            .right {
+              padding-right: 20px;
+              flex-grow: 1;
+              padding-bottom: 20px;
+              border-bottom: 1px solid gainsboro;
+              .position {
+                font-size: 1.6rem;
+                line-height: 1.5;
+                font-weight: 600;
                 margin: 0px;
               }
-              .company {}
-              .employment-type {
-                &:before {
-                  content: "\00B7";
-                  margin: 0 5px;
-                }
-              }
-            }
-            .dates-container {
-              display: flex;
-              opacity: 0.6;
-              h4 {
-                font-size: 14px;
-                line-height: 1.2;
-                font-weight: 400;
-                margin-bottom: 0px;
-              }
-              .dates {}
-              .employment-duration {
-                &:before {
-                  content: "\00B7";
-                  margin: 0 5px;
-                }
-              }
-            }
-            .location-container {
-              opacity: 0.6;
-            }
-            .job-description {
-              ::ng-deep {
+              .company-container {
+                display: flex;
                 p {
                   margin: 0px;
                 }
+                .company {}
+                .employment-type {
+                  &:before {
+                    content: "\00B7";
+                    margin: 0 5px;
+                  }
+                }
+              }
+              .dates-container {
+                display: flex;
+                opacity: 0.6;
+                h4 {
+                  font-size: 14px;
+                  line-height: 1.2;
+                  font-weight: 400;
+                  margin-bottom: 0px;
+                }
+                .dates {}
+                .employment-duration {
+                  &:before {
+                    content: "\00B7";
+                    margin: 0 5px;
+                  }
+                }
+              }
+              .location-container {
+                opacity: 0.6;
+              }
+              .job-description {
+                ::ng-deep {
+                  p {
+                    margin: 0px;
+                  }
+                }
+              }
+            }
+            &:last-child {
+              .right {
+                border-bottom: none;
+              }
+              margin-bottom: 20px;
+              border-bottom: 1px solid gainsboro;
+            }
+            @media screen and (max-width: 425px) {
+              flex-direction: column;
+            }
+          }
+          &:last-child {
+            .entry-container {
+              margin-bottom: 0px;
+              &:last-child {
+                border-bottom: none;
               }
             }
           }
@@ -549,6 +585,15 @@
         }
         &:before {
           background-color: $inkbar-background-color !important;
+        }
+      }
+    }
+
+    .tab-group {
+      .tab-cv {
+        .cv-container {
+          background-color: #212121 !important;
+          border: 2px solid black !important;
         }
       }
     }
