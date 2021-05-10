@@ -159,6 +159,9 @@
                   }
                 }
               }
+              @media screen and (max-width: 425px) {
+                border-bottom: none;
+              }
             }
             &:last-child {
               .right {
@@ -169,6 +172,7 @@
             }
             @media screen and (max-width: 425px) {
               flex-direction: column;
+              border-bottom: 1px solid gainsboro;
             }
           }
           &:last-child {
