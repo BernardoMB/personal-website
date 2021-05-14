@@ -50,8 +50,8 @@ export class CvRootComponent implements OnInit {
       location: 'Mexico City, Mexico',
       description: `
         <p>Full stack development of sureties administration system for Zurich North América.</p>
-        <p>Financial Analysis and Underwriting automation.</p>
-        <p>Technologies used: Blazor, .Net, Entity Framework, SQL Server, Bitbucket, Jira, Jfrog, Jenkins, Linux VMs, Figma.</p>
+        <p>Financial Analysis, Underwriting Automation and Account Management.</p>
+        <p>Technologies used: .Net, Blazor, Entity Framework, SQL Server, Git, Bitbucket, Jira, Jfrog, Jenkins, Linux VMs, Figma.</p>
       `
     },
     {

@@ -1,7 +1,7 @@
 // Custom component theming
 @import '~@angular/material/theming';
 
-$header-break: 820px;
+$header-break: 860px;
 
 @mixin header-theme($light-theme) {
   $primary: map-get($light-theme, primary);
