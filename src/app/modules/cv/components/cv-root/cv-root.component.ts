@@ -17,13 +17,6 @@ export class CvRootComponent implements OnInit {
   routeFragmentSubscription: Subscription | undefined;
   selectedTabIndex: number | undefined;
 
-  // NgClass directive example
-  isPurple = true;
-  isBlue = false;
-
-  // NgStyle directive example
-  leftPanelFontColor = 'white';
-
   //#region CV Tab content
   schools = [
     {
@@ -112,6 +105,16 @@ export class CvRootComponent implements OnInit {
   ];
   //#endregion
 
+  //#region Resume tab
+
+  //#region Html resume
+  // NgClass directive example
+  isPurple = true;
+  isBlue = false;
+
+  // NgStyle directive example
+  leftPanelFontColor = 'white';
+
   // NgFor directive example
   // TODO: Fetch this information from database
   sections = [{
@@ -161,6 +164,13 @@ export class CvRootComponent implements OnInit {
       ]
     }]
   }];
+  //#endregion
+  
+  //#region Pdf viewer
+  pdfSrc = 'assets/CV En.pdf';
+  //#endregion 
+  
+  //#endregion
 
   constructor(
     @Inject(DOCUMENT) private document: any,

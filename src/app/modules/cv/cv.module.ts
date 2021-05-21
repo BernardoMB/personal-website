@@ -10,6 +10,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { HttpLoaderFactory } from '../../app.module';
+import { PdfViewerModule } from 'ng2-pdf-viewer';
 
 @NgModule({
   declarations: [CvRootComponent, CvComponent, ResumeComponent],
@@ -26,7 +27,8 @@ import { HttpLoaderFactory } from '../../app.module';
         useFactory: HttpLoaderFactory,
         deps: [HttpClient]
       }
-    })
+    }),
+    PdfViewerModule
   ]
 })
 export class CvModule { }
