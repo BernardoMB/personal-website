@@ -399,6 +399,16 @@
     }
     .download-resumes-button {}
   }
+  .tab-time {
+    padding-left: 40px;
+    padding-right: 40px;
+    .chart-container {
+      padding: 20px 0px;
+      background-color: white;
+      border-radius: 0.8rem;
+      border: 1px solid gainsboro;
+    }
+  }
   ::ng-deep {
     .mat-tab-header {
       border: none;

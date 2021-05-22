@@ -13,7 +13,7 @@ export class HobbiesService {
       name: 'Football Soccer',
       imageUrl: 'https://images.pexels.com/photos/46798/the-ball-stadion-football-the-pitch-46798.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
       description: `
-        <p>I love playing football with my friends that I see every weekend.</p>
+        <p>I love playing football with my friends who I see every weekend.</p>
         <p>Football is a sport that joins a lot of peoble together so we can have a great time doing something that is very athletic and enjoyable.</p>
         <p>My favorite teams are <b>Club America</b> (from Mexico) and <b>Real Madrid F.C.</b> (from Spain).</p>
       `
