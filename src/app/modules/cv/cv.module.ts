@@ -11,6 +11,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { HttpLoaderFactory } from '../../app.module';
 import { PdfViewerModule } from 'ng2-pdf-viewer';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 @NgModule({
   declarations: [CvRootComponent, CvComponent, ResumeComponent],
@@ -28,7 +29,8 @@ import { PdfViewerModule } from 'ng2-pdf-viewer';
         deps: [HttpClient]
       }
     }),
-    PdfViewerModule
+    PdfViewerModule,
+    NgxChartsModule
   ]
 })
 export class CvModule { }

@@ -4,6 +4,7 @@ import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import * as html2canvas from 'html2canvas';
 import * as moment from 'moment';
 import { Subscription } from 'rxjs';
+import { single } from './data';
 
 @Component({
   selector: 'app-cv-root',
@@ -172,11 +173,28 @@ export class CvRootComponent implements OnInit {
   
   //#endregion
 
+  //#region My Time chart
+  single = [];
+  view = [700, 200];
+  //view = undefined;
+
+  // options
+  gradient: boolean = true;
+  showLegend: boolean = true;
+  showLabels: boolean = true;
+  isDoughnut: boolean = false;
+
+  colorScheme = {
+    domain: ['#5AA454', '#A10A28', '#C7B42C', '#AAAAAA']
+  };
+  //#endregion
+
   constructor(
     @Inject(DOCUMENT) private document: any,
     private router: Router,
     private route: ActivatedRoute
   ) {
+    // Router events
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
         const fragment = event.url.split('#')[1];
@@ -207,6 +225,9 @@ export class CvRootComponent implements OnInit {
         }
       }
     });
+
+    // My Time chart
+    Object.assign(this, { single });
   }
 
   ngOnInit(): void {
@@ -267,5 +288,19 @@ export class CvRootComponent implements OnInit {
   async downloadResumeZip() {
     window.open(`/assets/Resume Bernardo Mondragon.zip`);
   }
+
+  //#region My Time
+  onSelect(data: any): void {
+    console.log('Item clicked', JSON.parse(JSON.stringify(data)));
+  }
+
+  onActivate(data: any): void {
+    console.log('Activate', JSON.parse(JSON.stringify(data)));
+  }
+
+  onDeactivate(data: any): void {
+    console.log('Deactivate', JSON.parse(JSON.stringify(data)));
+  }
+  //#endregion
 
 }
