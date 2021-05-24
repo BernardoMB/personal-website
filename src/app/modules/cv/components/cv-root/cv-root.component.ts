@@ -166,17 +166,17 @@ export class CvRootComponent implements OnInit {
     }]
   }];
   //#endregion
-  
+
   //#region Pdf viewer
   pdfSrc = 'assets/CV En.pdf';
-  //#endregion 
-  
+  //#endregion
+
   //#endregion
 
   //#region My Time chart
   single = [];
-  view = [700, 200];
-  //view = undefined;
+  view: any = [700, 200];
+  // view = undefined;
 
   // options
   gradient: boolean = true;

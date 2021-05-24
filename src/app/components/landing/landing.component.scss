@@ -504,6 +504,10 @@
       left: 0;
       top: -170px;
       z-index: -1;
+      @media screen and (max-width: 430px) {
+        top: unset !important;
+        bottom: -320px;
+      }
     }
   }
 
