@@ -2,6 +2,7 @@ import { CommonModule } from "@angular/common";
 import { NgModule } from "@angular/core";
 import { EffectsModule } from "@ngrx/effects";
 import { StoreModule } from "@ngrx/store";
+import { ProjectsEffects } from "./projects.effects";
 import * as fromProjects from "./projects.reducer";
 
 @NgModule({
@@ -13,7 +14,7 @@ import * as fromProjects from "./projects.reducer";
       fromProjects.reducer
     ),
     EffectsModule.forFeature([
-      // Add projects effects
+      ProjectsEffects
     ])
   ]
 })

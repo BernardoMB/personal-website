@@ -13,7 +13,7 @@ import { metaReducers } from './root-reducers';
         StoreModule.forRoot({}, {
             metaReducers,
             runtimeChecks: {
-                strictStateImmutability: true, 
+                strictStateImmutability: true,
                 strictActionImmutability: true
             }
         }),
