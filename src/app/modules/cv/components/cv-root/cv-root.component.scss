@@ -132,6 +132,11 @@
                   }
                 }
               }
+              .company-container.zurich {
+                @media screen and (max-width: 440px) {
+                  display: unset !important;
+                }
+              }
               .dates-container {
                 display: flex;
                 opacity: 0.6;
@@ -426,12 +431,23 @@
       }
     }
     ::ng-deep {
-      
+
     }
   }
   ::ng-deep {
     .mat-tab-header {
       border: none;
+      .mat-tab-header-pagination-before, .mat-tab-header-pagination-after {
+        &::after {
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 2px;
+          background-color: #cacaca;
+          bottom: 0px;
+          left: 0px;
+        }
+      }
     }
     .mat-tab-list {
       background-color: #f5f5f5;
@@ -632,6 +648,13 @@
   .dark-theme {
     $inkbar-background-color: black;
     $tab-hover-background-color: black;
+    .mat-tab-header {
+      .mat-tab-header-pagination-before, .mat-tab-header-pagination-after {
+        &::after {
+          background-color: black !important;
+        }
+      }
+    }
     .mat-tab-list {
       background-color: #212121 !important;
       .mat-tab-labels {
