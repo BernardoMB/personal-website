@@ -94,4 +94,13 @@ export class ProjectsService {
     });
   }
 
+  getTotalProjects(): Observable<number> {
+    return new Observable(obs => {
+      setTimeout(() => {
+        obs.next(29);
+        obs.complete();
+      }, 6 * 1000);
+    });
+  }
+
 }

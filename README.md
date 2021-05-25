@@ -26,6 +26,15 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
+## Kill a process 
+
+(Ser paciente)
+
+```bash
+$ netstat -ano | findstr :<PORT>
+$ taskkill /PID <PROCESS_ID> /F
+```
+
 ## Features
 
 ### Scroll to top button 
