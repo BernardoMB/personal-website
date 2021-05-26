@@ -1,8 +1,8 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Subscription } from 'rxjs';
-import { getTotalProjects } from '../../../../store/projects/projects.actions';
-import { selectTotalProjects } from '../../../../store/projects/projects.selectors';
+import { getProjectYears, getTotalProjects } from '../../../../store/projects/projects.actions';
+import { selectProjectYears, selectTotalProjects } from '../../../../store/projects/projects.selectors';
 import { ProjectsState } from '../../../../store/projects/projects.state';
 import { ProjectsService } from '../../services/projects.service';
 import { ProjectsYear } from '../../view-models/projects-year.interface';
@@ -17,6 +17,8 @@ export class ProjectsRootComponent implements OnInit, OnDestroy {
   yearsSubscription: Subscription = new Subscription;
   totalProjects: number | undefined;
   totalProjetsSubscription: Subscription | undefined;
+  projectYears: ProjectsYear[] | undefined;
+  projetYearsSubscription: Subscription | undefined;
 
   constructor(
     private projectsService: ProjectsService,
@@ -39,11 +41,18 @@ export class ProjectsRootComponent implements OnInit, OnDestroy {
     this.totalProjetsSubscription = this.projectsStore.select(selectTotalProjects).subscribe((totalProjects: number) => {
       this.totalProjects = totalProjects;
     });
+
+    // Projects
+    this.projectsStore.dispatch(getProjectYears());
+    this.projetYearsSubscription = this.projectsStore.select(selectProjectYears).subscribe((projectYears: ProjectsYear[]) => {
+      this.projectYears = projectYears;
+    });
   }
 
   ngOnDestroy(): void {
     this.yearsSubscription?.unsubscribe();
     this.totalProjetsSubscription?.unsubscribe();
+    this.projetYearsSubscription?.unsubscribe();
   }
 
 }

@@ -3,7 +3,8 @@ import { Actions, createEffect, ofType } from '@ngrx/effects';
 import { of } from 'rxjs';
 import { catchError, exhaustMap, map } from 'rxjs/operators';
 import { ProjectsService } from '../../modules/projects/services/projects.service';
-import { getTotalProjects, getTotalProjectsFailure, getTotalProjectsSuccess } from './projects.actions';
+import { ProjectsYear } from '../../modules/projects/view-models/projects-year.interface';
+import { getProjectYears, getProjectYearsFailure, getProjectYearsSuccess, getTotalProjects, getTotalProjectsFailure, getTotalProjectsSuccess } from './projects.actions';
 
 @Injectable()
 export class ProjectsEffects {
@@ -17,6 +18,20 @@ export class ProjectsEffects {
       catchError((error) => {
         return of(
           getTotalProjectsFailure
+        );
+      })
+    ))
+  ));
+
+  getProjectYearsEffect$ = createEffect(() => this.actions$.pipe(
+    ofType(getProjectYears),
+    exhaustMap((action) => this.projectsService.getProyectsYears().pipe(
+      map((projectYears: ProjectsYear[]) => {
+        return getProjectYearsSuccess({projectYears});
+      }),
+      catchError((error) => {
+        return of(
+          getProjectYearsFailure
         );
       })
     ))
