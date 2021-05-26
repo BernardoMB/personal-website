@@ -78,11 +78,12 @@
     position: relative;
   }
   .tab-cv {
+    $cards-border: 1px solid gainsboro;
     .cv-container {
       padding: 20px 0px;
       background-color: white;
       border-radius: 0.8rem;
-      border: 1px solid gainsboro;
+      border: $cards-border;
       .document {
         .entries-container {
           h1 {
@@ -112,7 +113,7 @@
               padding-right: 20px;
               flex-grow: 1;
               padding-bottom: 20px;
-              border-bottom: 1px solid gainsboro;
+              border-bottom: $cards-border;
               .position {
                 font-size: 1.6rem;
                 line-height: 1.5;
@@ -173,11 +174,11 @@
                 border-bottom: none;
               }
               margin-bottom: 20px;
-              border-bottom: 1px solid gainsboro;
+              border-bottom: $cards-border;
             }
             @media screen and (max-width: 425px) {
               flex-direction: column;
-              border-bottom: 1px solid gainsboro;
+              border-bottom: $cards-border;
             }
           }
           &:last-child {
@@ -199,7 +200,7 @@
         width: 80px;
         height: 4px;
         border-radius: 4px;
-        background-color: #5c5c5c;
+        background-color: $cards-border;
       }
     }
   }
@@ -682,9 +683,43 @@
 
     .tab-group {
       .tab-cv {
+        $cards-border: 1px solid rgb(69, 69, 69);
         .cv-container {
           background-color: #212121 !important;
-          border: 1px solid gainsboro !important;
+          border: $cards-border !important;
+          .document {
+            .entries-container {
+              .entry-container {
+                .right {
+                  border-bottom: $cards-border !important;
+                  @media screen and (max-width: 425px) {
+                    border-bottom: none !important;
+                  }
+                }
+                &:last-child {
+                  .right {
+                    border-bottom: none !important;
+                  }
+                  border-bottom: $cards-border !important;
+                }
+                @media screen and (max-width: 425px) {
+                  border-bottom: $cards-border !important;
+                }
+              }
+              &:last-child {
+                .entry-container {
+                  &:last-child {
+                    border-bottom: none !important;
+                  }
+                }
+              }
+            }
+          }
+        }
+        .interrupter-container {
+          .interrupter {
+            background-color: $cards-border !important;
+          }
         }
       }
     }

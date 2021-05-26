@@ -31,7 +31,7 @@
               </div>
               <div class="right">
                 <h3 class="position">{{experience.position}}</h3>
-                <div class="company-container" [ngClass]="{'first': true, 'second': true, 'third': false}">
+                <div class="company-container">
                   <p class="company">{{experience.company}}</p>
                   <p *ngIf="experience.employmentType != ''" class="employment-type">{{experience.employmentType}}</p>
                 </div>
@@ -63,7 +63,7 @@
               </div>
               <div class="right">
                 <h3 class="position">{{experience.position}}</h3>
-                <div class="company-container">
+                <div class="company-container" [ngClass]="{'zurich': experience.company == 'Zurich Insurance Company Ltd' }">
                   <p class="company">{{experience.company}}</p>
                   <p class="employment-type">{{experience.employmentType}}</p>
                 </div>
