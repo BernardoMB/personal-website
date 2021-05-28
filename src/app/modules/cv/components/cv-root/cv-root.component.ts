@@ -185,7 +185,7 @@ export class CvRootComponent implements OnInit {
   isDoughnut: boolean = false;
 
   colorScheme = {
-    domain: ['#5AA454', '#A10A28', '#C7B42C', '#AAAAAA']
+    domain: ['#57167e', '#9b3192', '#ea5f89', '#f7b7a3', '#fff1c9']
   };
   //#endregion
 

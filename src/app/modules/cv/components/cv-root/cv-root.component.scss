@@ -409,7 +409,6 @@
     padding-left: 16px;
     padding-right: 16px;
     .time-chart {
-      border: 1px solid green;
       ::ng-deep {
         > div:first-of-type {
           width: 100% !important;
@@ -446,7 +445,7 @@
                   overflow: unset;
                   display: flex;
                   flex-wrap: wrap;
-                  justify-content: space-between;
+                  justify-content: space-around;
                   .legend-item {
                     margin-bottom: 14px;
                     .item-label {
