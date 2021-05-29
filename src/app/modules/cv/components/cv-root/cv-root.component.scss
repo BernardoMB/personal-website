@@ -415,11 +415,11 @@
           height: unset !important;
           display: flex;
           align-items: center;
+          justify-content: center;
           .advanced-pie.chart {
             height: unset !important;
           }
           .advanced-pie-legend-wrapper {
-            flex-grow: 1;
             width: unset !important;
             height: unset !important;
             .advanced-pie-legend {
@@ -445,7 +445,6 @@
                   overflow: unset;
                   display: flex;
                   flex-wrap: wrap;
-                  justify-content: space-around;
                   .legend-item {
                     margin-bottom: 14px;
                     .item-label {
@@ -454,6 +453,9 @@
                     .item-value {
                       margin-top: unset;
                     }
+                  }
+                  @media screen and (max-width: 508px) {
+                    justify-content: space-around;
                   }
                 } 
               }
@@ -666,6 +668,9 @@
           right: 0px;
         } */
       }
+    }
+    .mat-tab-body-content {
+      overflow: hidden;
     }
   }
 }
