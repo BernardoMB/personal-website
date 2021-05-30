@@ -354,7 +354,7 @@
     }
   }
 
-  @keyframes rotate-2 {
+  @keyframes rotate {
     0% {
       -webkit-transform: rotate(15deg);
       -moz-transform: rotate(15deg);
@@ -434,10 +434,10 @@
               width: 100%;
               border-radius: 50%;
               z-index: -1;
-              -webkit-animation: rotate-2 30s linear infinite;
-              -moz-animation: rotate-2 30s linear infinite;
-              -o-animation: rotate-2 30s linear infinite;
-              animation: rotate-2 30s linear infinite;
+              -webkit-animation: rotate 30s linear infinite;
+              -moz-animation: rotate 30s linear infinite;
+              -o-animation: rotate 30s linear infinite;
+              animation: rotate 30s linear infinite;
               &:before {
                 position: absolute;
                 content: '';
@@ -509,6 +509,10 @@
         bottom: -320px;
       }
     }
+  }
+
+  .coffee-section {
+    text-align: center;
   }
 
   .contact-section {

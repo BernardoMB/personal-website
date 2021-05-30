@@ -62,19 +62,17 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    // Code executes after component has been initialized
-    //console.log('Executing ngOnInit hook');
-
+    //#region Change theme
     this.themeService.selectedTheme$.pipe(
       // skip(0)
     ).subscribe((theme: string) => {
       this.themeControl.setValue(theme, {emitEvent: false});
     });
-
     this.themeControl.valueChanges.subscribe((value) => {
       this.themeService.setTheme(value);
       localStorage.setItem('theme', <string>value);
     });
+    //#endregion
 
     //#region Scroll to section
     if (isPlatformBrowser(this.platformId)) {
@@ -96,7 +94,7 @@ export class HeaderComponent implements OnInit {
         .subscribe(() => {
           const offset = this.window.pageYOffset/*  + this.window.screen.height / 2 */;
           //console.log(offset);
-          const sectionsIds = ['top', 'services', 'skills', 'my-work', 'contact'];
+          const sectionsIds = ['top', 'services', 'skills', 'my-work', 'coffee', 'contact'];
           sectionsIds.forEach((sectionId: string) => {
             !!this.document.getElementById(sectionId) ? this.onLandingPage = true : this.onLandingPage = false;
           });
@@ -118,6 +116,8 @@ export class HeaderComponent implements OnInit {
             } else if (offsets[3] <= offset) {
               this.currentSection = 'my-work';
             } else if (offsets[4] <= offset) {
+              this.currentSection = 'coffee';
+            } else if (offsets[5] <= offset) {
               this.currentSection = 'contact';
             }
           } else {

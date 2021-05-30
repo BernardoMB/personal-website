@@ -106,28 +106,6 @@ export class LandingComponent implements OnInit, AfterViewInit {
   }
   //#endregion
 
-  //#region Contact form
-  contactForm = new FormGroup({
-    toggleControl: new FormControl('whatsapp', [Validators.required]),
-    nameControl: new FormControl('', [Validators.required]),
-    emailControl: new FormControl('', [Validators.email, /*(control: AbstractControl): {[key: string]: any} | null => {
-      const regularExpresion = /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/;
-      const match = regularExpresion.test(control.value);
-      if (!match) {
-        return { noMatchRegex: { errorMessage: 'Must enter a valid email address.' } };
-      }
-      return null;
-    }*/]),
-    messageControl: new FormControl('', [Validators.required, Validators.minLength(10)])
-  });
-  isSendEmail = false;
-  //#endregion
-
-  //#region Practice
-  @ViewChild('myInput1', { static: false }) myNumericInput1: ElementRef | undefined;
-  @ViewChild('myInput2', { static: false }) myNumericInput2: ElementRef | undefined;
-  //#endregion
-
   //#region Skills
   skills = [
     { name: 'JavaScript/TypeScript', completion: 95, label: 'Experienced'},
@@ -144,6 +122,23 @@ export class LandingComponent implements OnInit, AfterViewInit {
     { name: 'LaTex', completion: 80, label: 'Experienced'},
     { name: 'MatLab', completion: 40, label: 'Beginner'},
   ];
+  //#endregion
+
+  //#region Contact form
+  contactForm = new FormGroup({
+    toggleControl: new FormControl('whatsapp', [Validators.required]),
+    nameControl: new FormControl('', [Validators.required]),
+    emailControl: new FormControl('', [Validators.email, /*(control: AbstractControl): {[key: string]: any} | null => {
+      const regularExpresion = /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/;
+      const match = regularExpresion.test(control.value);
+      if (!match) {
+        return { noMatchRegex: { errorMessage: 'Must enter a valid email address.' } };
+      }
+      return null;
+    }*/]),
+    messageControl: new FormControl('', [Validators.required, Validators.minLength(10)])
+  });
+  isSendEmail = false;
   //#endregion
 
   constructor(
@@ -234,24 +229,6 @@ export class LandingComponent implements OnInit, AfterViewInit {
     //#endregion
   }
 
-  //#region Practice
-  onButtonclick() {
-    const a = this.myNumericInput1?.nativeElement.valueAsNumber;
-    const b = this.myNumericInput2?.nativeElement.valueAsNumber;
-    console.log(a, typeof a);
-    console.log(b, typeof b);
-    alert(a + b);
-  }
-
-  setValue() {
-    this.myNumericInput1!.nativeElement.value = 24;
-  }
-
-  onInputBlur(event: any) {
-    console.log(event);
-  }
-  //#endregion
-
   //#region Contact form
   submitContactForm() {
     if (!this.isSendEmail) {
@@ -299,17 +276,6 @@ export class LandingComponent implements OnInit, AfterViewInit {
     }
   }
   //#endregion
-
-  /* navigateToFragment(fragment: string): void {
-    console.log('Function call');
-    this.router.navigate([`./`], {
-      fragment: fragment,
-      //preserveFragment: true,
-      //skipLocationChange: true,
-      relativeTo: this.route,
-      replaceUrl: true,
-    });
-  } */
 
   navigateLink(link : string) {
     window.open(link, '_blank');

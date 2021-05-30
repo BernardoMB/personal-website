@@ -231,41 +231,6 @@
   </div>
 </section>
 
-<!-- ! Practice -->
-<!-- <section>
-  <input #myInput1 type="number" (blur)="onInputBlur($event)" />
-  <input #myInput2 type="number" />
-  <button (click)="onButtonclick()">Click me!</button>
-  <button (click)="setValue()">Set value</button>
-  <app-cool-border
-    [title]="'Landing'"
-    [subtitle]="'Used on landing'"
-    [description]="
-      'Using shared component whose host is declared in app module'
-    "
-  >
-    <div style="border: 1ps solid green; height: 35px">
-      This is some random content
-    </div>
-  </app-cool-border>
-  Not the best practice
-  <button basicHightlight>Style me using basic directive</button>
-  Best practice
-  <button appBetterHighlight>Style me using basic directive</button>
-  Test buttons
-  <button mat-flat-button color="primary">Hola 1</button>
-  <button mat-flat-button color="accent">Hola 2</button>
-  <button mat-flat-button color="warn">Hola 3</button>
-</section> -->
-
-<!-- Your share button code -->
-<!-- <div
-  id="facebook-share-button"
-  class="fb-share-button"
-  data-href="http://192.168.1.225:4204"
-  data-layout="button_count"
-></div> -->
-
 <section id="skills" class="skills-section">
   <div class="skills-container">
     <h3 class="section-title skills-title">Skills</h3>
@@ -322,6 +287,10 @@
   <div class="choose-shape">
     <img src="assets/images/elements/choose-shape.png" alt="">
   </div>
+</section>
+
+<section id="coffee" class="coffee-section">
+  <button mat-flat-button [routerLink]="['/coffee']">Buy me a coffee</button>
 </section>
 
 <section id="contact" class="contact-section">

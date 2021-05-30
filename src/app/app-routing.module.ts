@@ -15,6 +15,7 @@ const routes: Routes = [
       { path: 'cv', loadChildren: () => import('./modules/cv/cv.module').then(mod => mod.CvModule) },
       { path: 'projects', loadChildren: () => import('./modules/projects/projects.module').then(mod => mod.ProjectsModule) },
       { path: 'hobbies', loadChildren: () => import('./modules/hobbies/hobbies.module').then(mod => mod.HobbiesModule) },
+      { path: 'coffee', loadChildren: () => import('./modules/coffee/coffee.module').then(mod => mod.CoffeeModule) },
     ]
   },
   {
