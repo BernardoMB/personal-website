@@ -4,7 +4,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `ng serve` for a dev server. Navigate to `http://localhost:4204/`. The app will automatically reload if you change any of the source files.
+
+Run `npm run serve-devices` to debug this application locally in mobile devices.
 
 ## Code scaffolding
 
@@ -30,11 +32,19 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ### Scroll to top button 
 
+See `scroll-to-top.component.ts`.
+
 ### Parallax effects
+
+See landing page carousel.
 
 ### ParticleJS
 
+See landing page carousel.
+
 ### Ngx Charts
+
+See experience.
 
 ### Fontawesome icons
 
@@ -42,47 +52,58 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ### Resolvers multiple calls
 
-See application resolver services
+See application resolver services.
 
 ### TypedJS
 
+See landing page carousel.
+
 ### Themes
 
-Theme selection storing previously used theme in localstorage
+Theme selection storing previously used theme in localstorage.
+
+See the following tutorial for working with angular material theming:
 https://medium.com/grensesnittet/dynamic-themes-in-angular-material-b6dc0c88dfd7
-And some modifications. Behavio subject to subscribe to theme changes.
+
+See behavior subject to subscribe to theme changes.
 
 ### Swipper
 
+See landing page carousel.
+
 ### Loading bar
 
-See loader.service.ts
+See `loader.service.ts` and `loadingbar.component.ts`.
 
 ### Simulated API calls
 
+Some `.service.ts` files have or had simulated API calls.
+
 ### Sidebar
 
-Using Angular Material drawer
+Using Angular Material drawer.
 
-### Zoom in animation 
+### Animations
 
-See projects section
+* Zoom in: See projects section.
+* Bouncing: See landing page.
+* Rotating: See landing page.
 
 ### Send whatsapp
 
-See landing page
+See `landing.component.ts`.
 
 ### Sticky header
 
-See projects section
+See `header.component.ts`.
 
 ### Scroll indicator progress bar
 
-See code sections with tag Scroll indicator bar
+See `scroll-indicator.component.ts`.
 
 ### Ng Feedback
 
-See landing page ocmponent.
+See landing page component. This library's styles were modified, please see `ng-feedback-theme.scss`.
 
 ### Ngx Translate
 
