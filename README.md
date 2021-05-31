@@ -126,3 +126,7 @@ Sanke case: my_variable
 * Services
 * Route resolvers
 * Local state management
+
+## AWS
+
+This website makes API calls to AWS API Gateway integrated with AWS Lambda.
