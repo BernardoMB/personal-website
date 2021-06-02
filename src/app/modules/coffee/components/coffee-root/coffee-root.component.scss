@@ -1,0 +1,74 @@
+.payment-section {
+	.payment-container {
+		margin: auto;
+		display: flex;
+		flex-direction: column;
+		max-width: 1280px;
+		padding: 40px 16px;
+		position: relative;
+		.form-container {
+		  margin: 20px 0px;
+		  padding: 15px;
+		  //background-color: #f8f8f9;
+		  border: 1px solid #dedfe0;
+		  border-radius: 4px;
+		  .new-card-form {
+			display: flex;
+			flex-direction: column;
+			margin-bottom: 20px;
+			::ng-deep {
+			  .mat-form-field-outline {
+				border-radius: 5px;
+				//background-color: white;
+			  }
+			  .mat-radio-label-content {
+				display: flex;
+				align-items: center;
+			  }
+			}
+			.checkbox {
+			  color: grey;
+			}
+			.fields-container {
+			  display: flex;
+			  mat-form-field {
+				margin-right: 10px;
+				flex-grow: 1;
+				&:nth-last-child(1) {
+				  margin-right: 0px;
+				}
+				@media screen and (max-width: 1060px) {
+				  margin-right: 0px !important;
+				}
+			  }
+			  @media screen and (max-width: 1060px) {
+				flex-direction: column;
+			  }
+			}
+			mat-icon {
+			  color: gainsboro;
+			}
+		  }
+		  .secure-connection-container {
+			display: flex;
+			justify-content: flex-end;
+			align-items: center;
+			color: gainsboro;
+			mat-icon {
+			  font-size: 36px;
+			  width: 36px;
+			  height: 36px;
+			}
+			.labels-container {
+			  display: flex;
+			  flex-direction: column;
+			  justify-content: flex-start;
+			  div {
+				line-height: 1;
+			  }
+			}
+		  }
+		}
+	}
+}
+

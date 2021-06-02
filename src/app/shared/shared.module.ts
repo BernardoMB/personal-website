@@ -10,6 +10,7 @@ import { PrivacyDialogComponent } from './components/privacy-dialog/privacy-dial
 import { TermDialogComponent } from './components/term-dialog/term-dialog.component';
 import { CoolBorderComponent } from './components/cool-border/cool-border.component';
 import { ReadTimePipe } from './pipes/read-time.pipe';
+import { CreditCardNumberPipe } from './pipes/credit-card-number.pipe';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ReadTimePipe } from './pipes/read-time.pipe';
     PrivacyDialogComponent,
     TermDialogComponent,
     CoolBorderComponent, // ! Practice
-    ReadTimePipe
+    ReadTimePipe,
+    CreditCardNumberPipe
   ],
   imports: [
     CommonModule,
@@ -34,7 +36,8 @@ import { ReadTimePipe } from './pipes/read-time.pipe';
   exports: [
     ScrollToTopComponent,
     CoolBorderComponent,
-    ReadTimePipe
+    ReadTimePipe,
+    CreditCardNumberPipe
   ],
   providers: [
     ThemeService
