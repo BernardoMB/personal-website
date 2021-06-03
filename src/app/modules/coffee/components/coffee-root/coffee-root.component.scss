@@ -1,3 +1,65 @@
+.download-resumes-button {
+	margin-top: 24px;
+	background-color: #d59dff;
+	border: 1px solid #d59dff;
+	color: #1a1a1f;
+	font-weight: 600!important;
+	font-size: 1.125rem!important;
+	line-height: 1.333!important;
+	padding: 8px 10px;
+	border-radius: 2px;
+	align-items: center;
+	text-align: left;
+	display: inline-flex;
+	vertical-align: bottom;
+	font-family: inherit;
+	cursor: pointer;
+	.download-icon {
+	  margin-left: 20px;
+	  font-weight: 100;
+	}
+	&:hover {
+	  background-color: #e1bdfc;
+	  border: 1px solid #e1bdfc;
+	}
+  }
+  
+  .about-jumbotron {
+	.jumbotron-container {
+	  background-image: url('/assets/images/jumbotrons/contributions.png');
+	  background-size: contain;
+	  .jumbotron-overlay {
+		background: linear-gradient(to right, rgba(0, 0, 0, 0.65) 20%, rgba(0, 0, 0, 0) 100%);
+		.elements-container {
+		  max-width: 1280px;
+		  margin: auto;
+		  color: white;
+		  padding: 36px 16px;
+		  h1 {
+			font-size: 46px;
+			font-weight: bold;
+			line-height: 120%;
+		  }
+		  h5 {
+			margin: 10px 0px;
+			font-size: 24px;
+			padding-bottom: 4px;
+			line-height: 120%;
+		  }
+		}
+	  }
+	}
+  }
+
+  .welcome-banner {
+    padding: 11px;
+    display: flex;
+    justify-content: center;
+    background-color: gainsboro;
+    color: dimgray;
+    text-align: center;
+  }
+
 .payment-section {
 	.payment-container {
 		margin: auto;
@@ -72,3 +134,23 @@
 	}
 }
 
+::ng-deep .light-theme {
+	.welcome-banner {
+	  background-color: gainsboro;
+	  color: dimgray;
+	}
+  }
+  
+  ::ng-deep .dark-theme {
+	.welcome-banner {
+	  background-color: #212121;
+	  color: gainsboro;
+	}
+  }
+  
+  ::ng-deep .mint-theme {
+	.welcome-banner {
+	  background-color: gainsboro;
+	  color: dimgray;
+	}
+  }
