@@ -1,1 +1,9 @@
-<p>not-found works!</p>
+<section *ngIf="showEasterEgg" class="nyanSection">
+    <!-- <particles id="nyanParticles"  [params]="nyanParams" [style]="nyanStyle" [width]="nyanWidth" [height]="nyanHeight"></particles> -->
+    <div class="banner">Error 404 - Page not found</div>
+    <Particles
+    id="nyanParticles"
+          [id]="'nyanParticles'"
+          [options]="nyanParams"
+        ></Particles>
+  </section>

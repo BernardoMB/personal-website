@@ -61,12 +61,14 @@
   }
 
 .payment-section {
+	text-align: center;
 	.payment-container {
 		margin: auto;
 		display: flex;
 		flex-direction: column;
 		max-width: 1280px;
 		padding: 40px 16px;
+		padding-bottom: 20px;
 		position: relative;
 		.form-container {
 		  margin: 20px 0px;
