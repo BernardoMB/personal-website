@@ -3,12 +3,15 @@ import { isPlatformBrowser } from '@angular/common';
 import { Component, EventEmitter, HostListener, Inject, Input, OnInit, Output, PLATFORM_ID } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { Store } from '@ngrx/store';
 import { TranslateService, TranslateStore } from '@ngx-translate/core';
 import { fromEvent, of } from 'rxjs';
 import { map, pairwise, skip, switchMap, throttleTime } from 'rxjs/operators';
 import { DocumentRef } from '../../providers/document.provider';
 import { WindowRef } from '../../providers/window.provider';
 import { ThemeService } from '../../shared/services/theme.service';
+import { selectDataState } from '../../store/data/data.selectors';
+import { DataState } from '../../store/data/data.state';
 
 @Component({
   selector: 'app-header',
@@ -16,7 +19,7 @@ import { ThemeService } from '../../shared/services/theme.service';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  public name = 'Bernardo Mondragón Brozon';
+  public name: string = '';
   public title = 'Actuary & Full-Stack Developer';
   public enableShareButton = true;
   @Input() initials: string | undefined;
@@ -49,8 +52,9 @@ export class HeaderComponent implements OnInit {
     @Inject(DocumentRef) private documentRef: DocumentRef,
     //#endregion
     //#region Copy to clipboard
-    private clipboard: Clipboard
+    private clipboard: Clipboard,
     //#endregion
+    private dataStore: Store<DataState>
   ) {
     // Code executes on component initialization
     //console.log('Executing constructor');
@@ -127,6 +131,10 @@ export class HeaderComponent implements OnInit {
         });
     }
     //#endregion
+
+    this.dataStore.select(selectDataState).subscribe((dataState: DataState) => {
+      this.name = dataState.fullname;
+    });
   }
 
   changeLanguage(language: string): void {

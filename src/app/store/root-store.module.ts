@@ -5,6 +5,7 @@ import { RouterState, StoreRouterConnectingModule } from '@ngrx/router-store';
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from 'src/environments/environment';
+import { DataStoreModule } from './data/data.store.module';
 import { ProjectsStoreModule } from './projects/projects.store.module';
 import { metaReducers } from './root-reducers';
 
@@ -25,7 +26,8 @@ import { metaReducers } from './root-reducers';
             logOnly: environment.production,
         }),
         EffectsModule.forRoot([]),
-        ProjectsStoreModule
+        ProjectsStoreModule,
+        DataStoreModule
     ]
 })
 export class RootStoreModule {}
