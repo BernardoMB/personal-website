@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AbstractControl, FormControl, FormGroup, Validators } from '@angular/forms';
+import { ContactService } from '../../../../services/contact.service';
+import { DialogService } from '../../../../services/dialog.service';
 
 @Component({
   selector: 'app-coffee-root',
@@ -78,7 +80,10 @@ export class CoffeeRootComponent implements OnInit {
     }
   } */);
 
-  constructor() {
+  constructor(
+    private dialogService: DialogService,
+    private contactService: ContactService
+  ) {
     //#region Define set of expiration years
     this.expirationYears = [];
     const date = new Date();
@@ -92,8 +97,31 @@ export class CoffeeRootComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onPurchaseCoffee() {
-    // Call Stripe API
+  onCompletePayment() {
+    this.newCardForm.markAsTouched();
+    this.newCardForm.controls.nameOnCardControl.markAsTouched();
+    this.newCardForm.controls.cardNumberControl.markAsTouched();
+    this.newCardForm.controls.expiryMonthControl.markAsTouched();
+    this.newCardForm.controls.expiryYearControl.markAsTouched();
+    this.newCardForm.controls.securityCodeControl.markAsTouched();
+    if (this.newCardForm.valid) {
+      const paymentDto = {
+        nameOnCard: this.newCardForm.get('nameOnCardControl')?.value.toString().trim(),
+        cardNumber: this.newCardForm.get('cardNumberControl')?.value.toString().trim().replace(/\s/g, ''),
+        expiryMonth: this.newCardForm.get('expiryMonthControl')?.value.toString().trim(),
+        expiryYear: this.newCardForm.get('expiryYearControl')?.value.toString().trim().slice(-2),
+        securityCode: this.newCardForm.get('securityCodeControl')?.value.toString().trim()
+      };
+      this.contactService.buyCoffee(paymentDto).subscribe((response: { success: boolean; errorMessage: string }) => {
+        const message = 'Thank you!';
+        const options = ['Ok'];
+        this.dialogService.openDialog(message, options).subscribe((result: string) => {});
+      });
+    } else {
+      const message = 'Payment form is invalid.';
+      const options = ['Ok'];
+      this.dialogService.openDialog(message, options).subscribe((result: string) => {});
+    }
   }
 
 }

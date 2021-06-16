@@ -4,12 +4,12 @@
       <div class="elements-container">
         <h1>Like my work?</h1>
         <h5>Feel free to donate and support my work</h5>
-        <button class="download-resumes-button">
+        <button class="download-resumes-button" (click)="onCompletePayment()">
           Donate $5 <span style="font-size: 10px; margin-left: 2px; margin-top: 6px;">USD</span>
           <mat-icon class="download-icon">volunteer_activism</mat-icon>
         </button>
       </div>
-    </div>
+    </div> 
   </div>
 </section>
 
@@ -144,7 +144,7 @@
           </div>
         </div>
     </div>
-    <button class="download-resumes-button" style="margin-bottom: 40px; margin-top: 0px;">
+    <button class="download-resumes-button" (click)="onCompletePayment()" style="margin-bottom: 40px; margin-top: 0px;">
       Donate $5 <span style="font-size: 10px; margin-left: 2px; margin-top: 6px;">USD</span>
       <mat-icon class="download-icon">volunteer_activism</mat-icon>
     </button>
