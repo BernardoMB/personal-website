@@ -243,13 +243,19 @@ export class LandingComponent implements OnInit, AfterViewInit {
         const whatsAppMessage = `Hola soy ${name}. ${message}`;
         const encoded = encodeURIComponent(whatsAppMessage);
         window.open(`https://wa.me/${phoneNumber}?text=${encoded}`);
+
       } else {
         const message = 'Submitted form is invalid.';
         const options = ['Ok'];
         this.dialogService.openDialog(message, options).subscribe((result: string) => {});
+        this.contactForm.reset();
+        this.contactForm.controls.toggleControl.setValue('email');
+        Object.keys(this.contactForm.controls).forEach((key) => {
+          this.contactForm.controls[`${key}`].setErrors(null);
+        });
       }
     } else {
-      // Sned email
+      // Send email
       if (
         this.contactForm.controls.nameControl.valid &&
         this.contactForm.controls.messageControl.valid &&

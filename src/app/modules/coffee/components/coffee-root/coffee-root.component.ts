@@ -113,7 +113,11 @@ export class CoffeeRootComponent implements OnInit {
         securityCode: this.newCardForm.get('securityCodeControl')?.value.toString().trim()
       };
       this.contactService.buyCoffee(paymentDto).subscribe((response: { success: boolean; errorMessage: string }) => {
-        const message = 'Thank you!';
+        this.newCardForm.reset();
+        Object.keys(this.newCardForm.controls).forEach((key) => {
+          this.newCardForm.controls[`${key}`].setErrors(null);
+        });
+        const message = 'Thank you for donating!';
         const options = ['Ok'];
         this.dialogService.openDialog(message, options).subscribe((result: string) => {});
       });
