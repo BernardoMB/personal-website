@@ -42,7 +42,6 @@
   resize: both;
   background-position-x: center;
   background-position-y: bottom;
-  border-bottom: 2px solid gainsboro;
   .jumbotron-container {
     height: 100%;
     padding: 80px 0px;
@@ -58,7 +57,7 @@
       justify-content: center;
       flex-direction: column;
       align-items: flex-start;
-      background-color: #333738;
+      background-color: #303030;
       padding: 25px 16px;
     }
     .title {
@@ -77,8 +76,9 @@
     }
     button {
       margin-top: 24px;
-      background-color: #f66b4c;
-      border: 1px solid #f66b4c;
+      $normal-color: #f66b4c;
+      background-color: $normal-color;
+      border: 1px solid $normal-color;
       border-radius: 4px;
       color: white;
       display: inline-block;
@@ -89,11 +89,24 @@
       line-height: 1;
       cursor: pointer;
       &:hover {
-        background-color: #f66b4c;
-        border: 1px solid #f66b4c;
+        $hover-color: #ff8e74;
+        background-color: $hover-color;
+        border: 1px solid $hover-color;
         text-decoration: underline;
       }
     }
+  }
+}
+
+.welcome-banner {
+  padding: 11px;
+  display: flex;
+  justify-content: center;
+  background-color: #303030;
+  color: #f4f5f6;
+  text-align: center;
+  b {
+    color: #f66b4c;
   }
 }
 
@@ -102,23 +115,48 @@
       max-width: 1280px;
       margin: auto;
       padding: 36px 16px;
-      .title {
-          text-align: center;
-          margin: 30px 0px;
-          font-size: 28px;
-          font-weight: 600;
-      }
       .cards-container {
         display: flex;
-        margin-bottom: 30px;
+        flex-wrap: wrap;
+        justify-content: space-around;
         ::ng-deep {
           mat-card {
             margin-right: 20px;
+            margin-bottom: 30px;
+            max-width: 250px;
             mat-card-title {
               margin-bottom: 20px;
             }
+            @media screen and (max-width: 600px) {
+              margin-right: 0px;
+              max-width: unset;
+            }
           }
         }
+        @media screen and (max-width: 600px) {
+          flex-direction: column;
+        }
       }
+  }
+}
+
+.interrupter-container {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0px;
+  margin-top: 0px;
+  .interrupter {
+    width: 80px;
+    height: 4px;
+    border-radius: 4px;
+    background-color: #5c5c5c;
+  }
+}
+
+::ng-deep {
+  .dark-theme {
+    .welcome-banner {
+      border-bottom: 1px solid black !important;
+    }
   }
 }
