@@ -6,9 +6,10 @@
   $accent: map-get($light-theme, accent);
 
   .landing-button {
+    $normal-color: #89c402;
     margin-top: 24px;
-    background-color: #89c402;
-    border: 1px solid #89c402;
+    background-color: $normal-color;
+    border: 1px solid $normal-color;
     border-radius: 4px;
     color: #1a1a1f;
     display: inline-block;
@@ -19,7 +20,9 @@
     font-family: inherit;
     cursor: pointer;
     &:hover {
-      background-color: #9bdd02;
+      $hover-color: #9bdd02;
+      background-color: $hover-color;
+      border: 1px solid $hover-color;
       text-decoration: underline;
     }
   }

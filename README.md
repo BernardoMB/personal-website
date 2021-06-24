@@ -113,19 +113,14 @@ See `en.json`, `es.json`, `app.module.ts`, `app.component.ts`, `header.component
 
 See `header.component.ts`, `app-routing.module.ts`, styles for html on `styles.scss` global style file, and `landing.component.ts`.
 
+### NgRx
+
 ## Other topics
 
 Camel case: myVariable
 Kebab case: my-variable
 Pascal case: MyVariable
 Sanke case: my_variable
-
-## Next topics
-
-* Observbables
-* Services
-* Route resolvers
-* Local state management
 
 ## AWS
 
