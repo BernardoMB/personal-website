@@ -136,4 +136,6 @@ App service name: bernardomondragon
 
 After deployment is done make sure your files are uploaded in directory site/wwwroot. If not, then map physical path to site/wwwroot/<app_name> in Azure App Settings configurations.
 
-Add web.config file to src directory. Dot forget to include web.config file in angular.json
+Add web.config file to src directory. Dot forget to include web.config file in angular.json.
+
+Web config also includes tweks for making the NgxTranslate library to work.
