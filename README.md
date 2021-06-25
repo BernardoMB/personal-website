@@ -128,10 +128,12 @@ This website makes API calls to AWS API Gateway integrated with AWS Lambda.
 
 ## Azure
 
+Deployed using the following tutorial: https://towardsdatascience.com/how-to-deploy-web-apps-with-azure-52ca340b41b9
+
 App service name: bernardomondragon
 
 # Deployment notes
 
 After deployment is done make sure your files are uploaded in directory site/wwwroot. If not, then map physical path to site/wwwroot/<app_name> in Azure App Settings configurations.
 
-Add web.config file to src directory.
+Add web.config file to src directory. Dot forget to include web.config file in angular.json
