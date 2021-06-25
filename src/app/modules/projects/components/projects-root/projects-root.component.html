@@ -16,7 +16,7 @@
                 class="project-img"
                 matTooltip="{{project.name}}"
                 [matTooltipPosition]="'right'"
-                [ngStyle]="{'background-image': 'url(' + project.image + ')'}"
+                [ngStyle]="{'background-image': 'url(' + project.thumbnail + ')'}"
                 [routerLink]="['./', project.id]"
               >
               </div>
@@ -35,19 +35,4 @@
       </div>
     </div>
   </div>
-</section>
-
-<section>
-  <app-cool-border [title]="'Projects root'" [subtitle]="'Used on projects root'" [description]="'Using shared component whose host is declared in projects module'">
-    <div style="background-color: pink;">
-      This is some random content
-    </div>
-    <p>Lorem ipsum shalala shalala</p>
-    <select name="" id="">
-      <option value="1">Opcion 1</option>
-      <option value="1">Opcion 3</option>
-      <option value="1">Opcion 2</option>
-      <option value="1">Opcion 4</option>
-    </select>
-  </app-cool-border>
 </section>

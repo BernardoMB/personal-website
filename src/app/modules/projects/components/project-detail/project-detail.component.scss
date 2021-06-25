@@ -1,52 +1,131 @@
-.proyect-jumbotron {
-    .jumbotron-container {
-        background-size: contain;
-      .jumbotron-overlay {
-            /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,ffffff+100,ffffff+100&0.3+0,0.3+100 */
-            background: -moz-linear-gradient(-45deg,  rgba(0,0,0,0.3) 0%, rgba(255,255,255,0.3) 100%); /* FF3.6-15 */
-            background: -webkit-linear-gradient(-45deg,  rgba(0,0,0,0.3) 0%,rgba(255,255,255,0.3) 100%); /* Chrome10-25,Safari5.1-6 */
-            background: linear-gradient(135deg,  rgba(0,0,0,0.3) 0%,rgba(255,255,255,0.3) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4d000000', endColorstr='#4dffffff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-        .elements-container {
-          max-width: 1280px;
-          margin: auto;
-          color: white;
-          padding: 36px 16px;
-          h1 {
-            font-size: 46px;
-            font-weight: bold;
-            line-height: 120%;
-          }
-          h5 {
-            margin: 10px 0px;
-            font-size: 24px;
-            padding-bottom: 4px;
-            line-height: 120%;
-          }
-          button {
-            margin-top: 23px;
-            height: 46px;
-          }
+.top-toolbar {
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1280px;
+  padding: 0px 16px; 
+  display: flex; 
+  justify-content: space-between;
+  .left {
+    .label {
+      cursor: pointer;
+      text-transform: uppercase;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  .right {
+    .info-label {
+      cursor: pointer;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.swiper-container {
+  max-width: 1280px;
+  height: 80vh;
+  padding: 0px 16px;
+  .swiper-wrapper {
+    .swiper-slide {
+      .slide-container {
+        text-align: center;
+        height: 100%;
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: contain;
         }
       }
     }
   }
+  .swiper-pagination {
+    // Insert pagination styles here
+    .swiper-pagination-bullet-active {
+      background-color: red;
+    }
+  }
+}
 
+.bottom-toolbar {
+  max-width: 1280px;
+  margin: auto; 
+  padding: 0px 16px; 
+  display: flex;
+  justify-content: space-between;
+  .label {
+    text-transform: uppercase;
+  }
+  .swiper-buttons-container {
+    display: flex;
+    align-items: center;
+    .swiper-button {
+      position: relative;
+      left: unset !important;
+      right: unset !important;
+      top: unset !important;
+      width: unset !important;
+      height: unset !important;
+      line-height: 1 !important;
+      margin: 0px;
+      color: black;
+    }
+    .swiper-button-prev {
+      z-index: 1 !important;
+      &::after {
+        content: unset !important;
+      }
+    }
+    .swiper-button-next {
+      z-index: 1 !important;
+      &::after {
+        content: unset !important;
+      }
+    }
+    .swiper-pagination {
+      z-index: 1 !important;
+      position: relative;
+      bottom: 1px;
+    }
+  }
+}
 
 .project-description-section {
-    .project-description-container {
-        max-width: 1280px;
-        margin: auto;
-        padding: 36px 16px;
-        .project-name {
-            text-align: center;
-            margin: 30px 0px;
-            font-size: 28px;
-            font-weight: 600;
-        }
-        .project-description {
-            margin-bottom: 30px;
-        }
+  .project-description-container {
+    max-width: 1280px;
+    margin: auto;
+    padding: 0px 16px;
+    .project-name {
+      text-align: center;
+      margin: 30px 0px;
+      font-size: 28px;
+      font-weight: 600;
     }
+    .project-description {
+      margin: 30px 0px;
+    }
+  }
 }
-        
+
+.interrupter-container {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0px;
+  .interrupter {
+    width: 80px;
+    height: 4px;
+    border-radius: 4px;
+    background-color: #5c5c5c;
+  }
+}
+
+::ng-deep {
+  .dark-theme {
+    .swiper-button {
+      color: #ffffff !important;
+    }
+  }
+}

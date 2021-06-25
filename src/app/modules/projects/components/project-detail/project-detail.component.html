@@ -1,18 +1,47 @@
-<section class="proyect-jumbotron">
-    <div *ngIf="!!project" class="jumbotron-container" [ngStyle]="{'background-image': 'url(' + project.image + ')' }">
-        <div class="jumbotron-overlay">
-            <div class="elements-container">
-                <h1>{{project.code}}</h1>
-                <h5>{{project.name}}</h5>
-            </div>
-        </div>
+<div class="top-toolbar">
+  <div class="left">
+    <div class="label" (click)="navigateToProjects()">
+      Projects
     </div>
+  </div>
+  <div class="right">
+    <div class="info-label" (click)="scroll(projectDescription)">INFO</div>
+  </div>
+</div>
+
+<div class="swiper-container" [swiper]="config" [(index)]="index">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide" *ngFor="let img of project?.images">
+      <div class="slide-container">
+        <img src="{{img}}" alt="">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="bottom-toolbar">
+  <div class="label">{{project?.name}}</div>
+  <div class="swiper-buttons-container">
+    <div class="swiper-button swiper-button-prev">
+      <mat-icon style="transform: rotate(180deg);">play_arrow</mat-icon>
+    </div>
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button swiper-button-next">
+      <mat-icon>play_arrow</mat-icon>
+    </div>
+  </div>
+</div>
+
+<section #projectDescription class="project-description-section">
+  <div *ngIf="!!project" class="project-description-container">
+    <!-- <div class="project-name">{{ project.name }}</div> -->
+    <div
+      class="project-description"
+      [innerHtml]="project.description"
+    ></div>
+  </div>
 </section>
 
-<section class="project-description-section">
-    <div *ngIf="!!project" class="project-description-container">
-        <div class="project-name">{{project.name}}</div>
-        <div class="project-description" [innerHtml]="project.description">
-        </div>
-    </div>
-</section>
+<div class="interrupter-container">
+  <div class="interrupter"></div>
+</div>

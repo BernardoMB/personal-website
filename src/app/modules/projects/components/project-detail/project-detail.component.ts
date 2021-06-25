@@ -1,5 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
 import { Subscription } from 'rxjs';
 import { Project } from '../../view-models/project.interface';
 
@@ -11,8 +12,31 @@ import { Project } from '../../view-models/project.interface';
 export class ProjectDetailComponent implements OnInit, OnDestroy {
   projectDetailInfoSubscription: Subscription | undefined;
   project: Project | undefined;
+  //#region Swiper
+  index = 0;
+  config: SwiperConfigInterface = {
+    spaceBetween: 30,
+    effect: 'fade',
+    autoplay: {
+      delay: 8000,
+      disableOnInteraction: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+      type: "fraction",
+    },
+  };
+  //#endregion
 
-  constructor(private route: ActivatedRoute) {
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router
+  ) {
   }
 
   ngOnInit(): void {
@@ -29,6 +53,14 @@ export class ProjectDetailComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
     this.projectDetailInfoSubscription?.unsubscribe();
+  }
+
+  scroll(el: HTMLElement) {
+    el.scrollIntoView();
+  }
+
+  navigateToProjects() {
+    this.router.navigate(['/projects']);
   }
 
 }
