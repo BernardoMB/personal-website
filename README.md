@@ -125,3 +125,7 @@ Sanke case: my_variable
 ## AWS
 
 This website makes API calls to AWS API Gateway integrated with AWS Lambda.
+
+## Azure
+
+App service name: bernardomondragon
