@@ -48,7 +48,7 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { PdfViewerModule } from 'ng2-pdf-viewer';
 
 export function HttpLoaderFactory(http: HttpClient) {
-  return new TranslateHttpLoader(http);
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
 
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {

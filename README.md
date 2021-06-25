@@ -129,3 +129,9 @@ This website makes API calls to AWS API Gateway integrated with AWS Lambda.
 ## Azure
 
 App service name: bernardomondragon
+
+# Deployment notes
+
+After deployment is done make sure your files are uploaded in directory site/wwwroot. If not, then map physical path to site/wwwroot/<app_name> in Azure App Settings configurations.
+
+Add web.config file to src directory.
