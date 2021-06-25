@@ -1,11 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-not-found',
   templateUrl: './not-found.component.html',
   styleUrls: ['./not-found.component.scss']
 })
-export class NotFoundComponent implements OnInit {
+export class NotFoundComponent implements OnInit, AfterViewInit {
   showEasterEgg = true;
   nyanParams: object = {
     particles: {
@@ -127,8 +127,85 @@ export class NotFoundComponent implements OnInit {
   };
 
   constructor() { }
-
+  
   ngOnInit(): void {
+    /* for (let index = 0; index < 5; index++) {
+      let definiteUrl = '';
+      const url = 'assets/audio/NyanCatSong.mp3';
+      for (let index2 = 0; index2 < index; index2++) {
+        definiteUrl += '../'
+      }
+      definiteUrl += url;
+      console.log(definiteUrl);
+      this.playAudio(definiteUrl);
+    } */
+
+    var myButton: any = document.createElement("button");
+    myButton.click();
+
+    var audio: any = document.createElement("AUDIO")
+    document.body.appendChild(audio);
+    audio.src = '../../../assets/audio/NyanCatSong.mp3';
+
+    document.body.addEventListener("mousemove", function () {
+        //audio.play();
+    });
+
+    
+  }
+
+  ngAfterViewInit(): void {
+    //this.playAudio2();
+
+    (document.getElementById('video') as any).muted = true; 
+    (document.getElementById('video') as any).play();
+    
+    /* var foo = document.getElementById("foo");
+    (foo as any).addEventListener("click", function() {
+      display("Clicked");
+    }, false);
+    setTimeout(function() {
+      display("Artificial click:");
+      (foo as any).click(); // <==================== The artificial click
+    }, 500);
+
+      function display(msg: string) {
+        var p = document.createElement('p');
+        p.innerHTML = String(msg);
+        document.body.appendChild(p);
+      } */
+
+    /* setTimeout(() => {
+      this.unmute();
+    }, 5000); */
+
+    const intervalId = setInterval(this.unmute, 1000);
+  }
+
+  playAudio(url: string) {
+    let audio = new Audio(); 
+    audio.src = url;
+    audio.load();
+    //audio.play();
+  }
+  
+  playAudio2() {
+    let audio = new Audio(); 
+    audio.src = '../../../assets/audio/NyanCatSong.mp3';
+    audio.load();
+    //audio.play();
+  }
+
+  onHover() {
+    console.log('Calling on hover method');
+    //this.playAudio2();
+  }
+
+  async unmute() {
+    console.log('unmute');
+    (document.getElementById('video') as any).muted = false; 
+    /* while (true) {
+    }  */
   }
 
 }

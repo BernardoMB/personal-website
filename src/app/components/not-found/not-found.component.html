@@ -1,9 +1,13 @@
-<section *ngIf="showEasterEgg" class="nyanSection">
-    <!-- <particles id="nyanParticles"  [params]="nyanParams" [style]="nyanStyle" [width]="nyanWidth" [height]="nyanHeight"></particles> -->
-    <div class="banner">Error 404 - Page not found</div>
-    <Particles
+<section *ngIf="showEasterEgg" class="nyanSection" (mouseenter)="onHover()">
+  <!-- <particles id="nyanParticles"  [params]="nyanParams" [style]="nyanStyle" [width]="nyanWidth" [height]="nyanHeight"></particles> -->
+  <div class="banner">Error 404 - Page not found</div>
+  <Particles
     id="nyanParticles"
-          [id]="'nyanParticles'"
-          [options]="nyanParams"
-        ></Particles>
-  </section>
+    [id]="'nyanParticles'"
+    [options]="nyanParams"
+  ></Particles>
+</section>
+
+<video muted style="display: none;" id="video" src="../../../assets/audio/NyanCatSong.mp3" autoplay loop></video>
+
+<!-- <div id="foo">xxxxxxx</div> -->
