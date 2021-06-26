@@ -28,9 +28,8 @@ export class PresentationCardComponent implements OnInit {
     this.showInfo.emit(info);
   }
 
-  copyLinkToClipboard() {
-    // TODO: Copy actual url. Should fetch this value from environment.ts
-    this.clipboard.copy('http://192.168.1.225:4204');
+  copyToClipboard(str: string) {
+    this.clipboard.copy(str);
   }
 
   shareOnFacebook() {

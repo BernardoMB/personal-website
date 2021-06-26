@@ -30,13 +30,13 @@
     <button class="info-button" mat-icon-button (click)="emitShowInfoEvent()" aria-label="info icon button">
       <mat-icon>info</mat-icon>
     </button>
-    <button mat-button [matMenuTriggerFor]="shareMenu">SHARE</button>
+    <button class="info-button" mat-icon-button [matMenuTriggerFor]="shareMenu" aria-label="info icon button">
+      <mat-icon>content_copy</mat-icon>
+    </button>
   </mat-card-footer>
 </mat-card>
 
 <mat-menu #shareMenu="matMenu">
-  <button mat-menu-item (click)="copyLinkToClipboard()">Copy link</button>
-  <button mat-menu-item (click)="shareOnFacebook()">Share on Facebook</button>
-  <button mat-menu-item (click)="shareOnTwitter()">Share on Twitter</button>
-  <button mat-menu-item (click)="shareOnReddit()">Share on Reddit</button>
+  <button mat-menu-item (click)="copyToClipboard('525535592033')">Copy phone number</button>
+  <button mat-menu-item (click)="copyToClipboard('BMondragonBrozon@gmail.com')">Copy email</button>
 </mat-menu>
