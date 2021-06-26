@@ -1,11 +1,12 @@
-import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnDestroy, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-not-found',
   templateUrl: './not-found.component.html',
   styleUrls: ['./not-found.component.scss']
 })
-export class NotFoundComponent implements OnInit, AfterViewInit {
+export class NotFoundComponent implements OnInit, AfterViewInit, OnDestroy {
   showEasterEgg = true;
   nyanParams: object = {
     particles: {
@@ -125,6 +126,9 @@ export class NotFoundComponent implements OnInit, AfterViewInit {
     height: '100%',
     /* 'z-index': -1, */
   };
+  public showPauseButton: boolean = true;
+
+  intervalId: any;
 
   constructor() { }
   
@@ -151,7 +155,9 @@ export class NotFoundComponent implements OnInit, AfterViewInit {
         //audio.play();
     });
 
-    
+    setTimeout(() => {
+      this.showPauseButton = false;
+    }, 10);
   }
 
   ngAfterViewInit(): void {
@@ -179,7 +185,26 @@ export class NotFoundComponent implements OnInit, AfterViewInit {
       this.unmute();
     }, 5000); */
 
-    const intervalId = setInterval(this.unmute, 1000);
+
+    (document.getElementById('video') as any).onplay = function() {
+      console.log('Video played');
+      this.showPauseButton = true;
+    };
+
+    var vid = document.getElementById("video");
+    (vid as any).onvolumechange = function() {
+      //alert("The volume has been changed!");
+      this.showPauseButton = true;
+      console.log('culo', this.showPauseButton);
+      
+    };
+
+    this.intervalId = setInterval(this.unmute, 1000);
+  }
+
+  ngOnDestroy(): void {
+    //this.intervalId?.unsubscribe();
+    clearInterval(this.intervalId);
   }
 
   playAudio(url: string) {
@@ -203,9 +228,21 @@ export class NotFoundComponent implements OnInit, AfterViewInit {
 
   async unmute() {
     console.log('unmute');
-    (document.getElementById('video') as any).muted = false; 
+    var vid = (document.getElementById('video') as any);
+    if (vid) {
+      vid.muted = false; 
+    }
     /* while (true) {
     }  */
+  }
+
+  myFunction() {
+    console.log('PENE');
+  }
+
+
+  culo() {
+    this.showPauseButton = true;
   }
 
 }
