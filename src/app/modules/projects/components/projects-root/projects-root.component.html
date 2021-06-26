@@ -6,7 +6,7 @@
         <div class="year-columns-container" *ngIf="years.length !== 0; else loadingSpinner">
           <div
             class="year-column"
-            *ngFor="let year of years"
+            *ngFor="let year of years | reverse"
           >
             <div
               class="project-container"

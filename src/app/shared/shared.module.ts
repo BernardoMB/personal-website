@@ -11,6 +11,7 @@ import { TermDialogComponent } from './components/term-dialog/term-dialog.compon
 import { CoolBorderComponent } from './components/cool-border/cool-border.component';
 import { ReadTimePipe } from './pipes/read-time.pipe';
 import { CreditCardNumberPipe } from './pipes/credit-card-number.pipe';
+import { ReversePipe } from './pipes/reverse.pipe';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { CreditCardNumberPipe } from './pipes/credit-card-number.pipe';
     TermDialogComponent,
     CoolBorderComponent, // ! Practice
     ReadTimePipe,
-    CreditCardNumberPipe
+    CreditCardNumberPipe,
+    ReversePipe
   ],
   imports: [
     CommonModule,
@@ -37,7 +39,8 @@ import { CreditCardNumberPipe } from './pipes/credit-card-number.pipe';
     ScrollToTopComponent,
     CoolBorderComponent,
     ReadTimePipe,
-    CreditCardNumberPipe
+    CreditCardNumberPipe,
+    ReversePipe
   ],
   providers: [
     ThemeService

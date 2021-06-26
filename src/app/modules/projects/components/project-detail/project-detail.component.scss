@@ -78,11 +78,17 @@
       &::after {
         content: unset !important;
       }
+      &:focus {
+        outline: 1px dashed black;
+      }
     }
     .swiper-button-next {
       z-index: 1 !important;
       &::after {
         content: unset !important;
+      }
+      &:focus {
+        outline: 1px dashed black;
       }
     }
     .swiper-pagination {
