@@ -15,8 +15,7 @@ export class ProjectsService {
         { 
           id: 1, 
           name: 'ITJ Math', 
-          code: 'ITJM', 
-          //thumbnail: 'https://i.imgur.com/wEQyu7O.png', 
+          code: 'ITJM',
           thumbnail: 'assets/images/portfolio/MSIcons/ITJMath.svg', 
           description: `
             <p>This application was originally designed for students at ITJ (Thomas Jefferson Institute).</p>
@@ -122,14 +121,9 @@ export class ProjectsService {
             <p>Koomkin's biggets form for gathering potential client information.</p>
             <p>This application estimates the number of leads that can be generated for given customer depending on its characteristics.</p>
             <p>It also shows how Koomkin's Dashboard will look like if the customer purchases a Koomkin subscription.</p>
+            <p>More infromation coming soon.</p>
           `,
           images: [
-            'assets/images/portfolio/confidential.svg',
-            'assets/images/portfolio/confidential.svg',
-            'assets/images/portfolio/confidential.svg',
-            'assets/images/portfolio/confidential.svg',
-            'assets/images/portfolio/confidential.svg',
-            'assets/images/portfolio/confidential.svg',
             'assets/images/portfolio/confidential.svg',
           ]
         },
@@ -144,14 +138,9 @@ export class ProjectsService {
           code: 'FNRO', 
           thumbnail: 'assets/images/portfolio/MSIcons/AdminPanel.svg', 
           description: `
-            <p>Application for processing payments.</p>
+            <p>Application for processing payments. More infromation coming soon.</p>
           `,
           images: [
-            'assets/images/portfolio/confidential.svg',
-            'assets/images/portfolio/confidential.svg',
-            'assets/images/portfolio/confidential.svg',
-            'assets/images/portfolio/confidential.svg',
-            'assets/images/portfolio/confidential.svg',
             'assets/images/portfolio/confidential.svg',
           ]
         },
@@ -161,14 +150,9 @@ export class ProjectsService {
           code: 'NWAP', 
           thumbnail: 'assets/images/portfolio/MSIcons/Newt.svg', 
           description: `
-            <p>Application for processing payments.</p>
+            <p>Application for processing payments. More information coming soon.</p>
           `,
           images: [
-            'assets/images/portfolio/confidential.svg',
-            'assets/images/portfolio/confidential.svg',
-            'assets/images/portfolio/confidential.svg',
-            'assets/images/portfolio/confidential.svg',
-            'assets/images/portfolio/confidential.svg',
             'assets/images/portfolio/confidential.svg',
           ]
         },
@@ -178,14 +162,9 @@ export class ProjectsService {
           code: 'NWLP', 
           thumbnail: 'assets/images/portfolio/MSIcons/NewtLanding.svg', 
           description: `
-            <p>Application for processing payments.</p>
+            <p>Application for processing payments. More information coming soon.</p>
           `,
           images: [
-            'assets/images/portfolio/confidential.svg',
-            'assets/images/portfolio/confidential.svg',
-            'assets/images/portfolio/confidential.svg',
-            'assets/images/portfolio/confidential.svg',
-            'assets/images/portfolio/confidential.svg',
             'assets/images/portfolio/confidential.svg',
           ]
         },
@@ -195,14 +174,9 @@ export class ProjectsService {
           code: 'NWPS', 
           thumbnail: 'assets/images/portfolio/MSIcons/NewtPress.svg', 
           description: `
-            <p>Application for processing payments.</p>
+            <p>More information coming soon.</p>
           `,
           images: [
-            'assets/images/portfolio/confidential.svg',
-            'assets/images/portfolio/confidential.svg',
-            'assets/images/portfolio/confidential.svg',
-            'assets/images/portfolio/confidential.svg',
-            'assets/images/portfolio/confidential.svg',
             'assets/images/portfolio/confidential.svg',
           ]
         }
@@ -217,7 +191,7 @@ export class ProjectsService {
           code: 'AUAP', 
           thumbnail: 'assets/images/portfolio/MSIcons/AuroraAdminPanel.svg', 
           description: `
-            <p>This information is confidential.</p>
+            <p>More information coming soon.</p>
           `,
           images: [
             'assets/images/portfolio/confidential.svg'
@@ -229,7 +203,7 @@ export class ProjectsService {
           code: 'AUWS', 
           thumbnail: 'assets/images/portfolio/MSIcons/AuroraWebsite.svg', 
           description: `
-            <p>This information is confidential.</p>
+            <p>More information coming soon.</p>
           `,
           images: [
             'assets/images/portfolio/confidential.svg'
@@ -241,7 +215,7 @@ export class ProjectsService {
           code: 'MEDK', 
           thumbnail: 'assets/images/portfolio/MSIcons/Medkush.svg', 
           description: `
-            <p>This information is confidential.</p>
+            <p>More information coming soon.</p>
           `,
           images: [
             'assets/images/portfolio/confidential.svg'
@@ -253,7 +227,7 @@ export class ProjectsService {
           code: 'OTMD', 
           thumbnail: 'assets/images/portfolio/MSIcons/OM.svg', 
           description: `
-            <p>This information is confidential.</p>
+            <p>More information coming soon.</p>
           `,
           images: [
             'assets/images/portfolio/confidential.svg'
@@ -265,7 +239,7 @@ export class ProjectsService {
           code: 'STFF', 
           thumbnail: 'assets/images/portfolio/MSIcons/StaffPlan.svg', 
           description: `
-            <p>This information is confidential.</p>
+            <p>More information coming soon.</p>
           `,
           images: [
             'assets/images/portfolio/confidential.svg'
@@ -294,7 +268,7 @@ export class ProjectsService {
           code: 'BMBW', 
           thumbnail: 'assets/images/portfolio/MSIcons/PersonalWebsite.svg', 
           description: `
-            <p>This information is confidential.</p>
+            <p>More information coming soon.</p>
           `,
           images: [
             'assets/images/portfolio/confidential.svg'
