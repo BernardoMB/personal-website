@@ -1,90 +1,115 @@
-.about-jumbotron {
-  .jumbotron-container {
-    // background-image: url('/assets/images/jumbotrons/hero.png');
-    // background-size: contain;
-    .jumbotron-overlay {
-      //padding: 0px 16px;
-      .elements-container {
-        //max-width: 1280px;
-        //margin: auto;
-        h1 {
-          padding-bottom: 0;
-          font-size: 46px;
-          font-weight: bold;
-          line-height: 120%;
-          max-width: 1280px;
-          padding: 36px 16px;
-          margin: auto;
-        }
-        .year-columns-container {
-          display: flex;
-          align-items: stretch;
-          overflow-x: auto;
-          padding: 16px 0px;
-          justify-content: center;
-          .year-column {
+// Custom component theming
+@import '~@angular/material/theming';
+
+@mixin projects-root($light-theme) {
+  $primary: map-get($light-theme, primary);
+  $accent: map-get($light-theme, accent);
+
+  $primary-color: mat-color($primary);
+  $accent-color: mat-color($accent);
+
+  .about-jumbotron {
+    .jumbotron-container {
+      // background-image: url('/assets/images/jumbotrons/hero.png');
+      // background-size: contain;
+      .jumbotron-overlay {
+        //padding: 0px 16px;
+        .elements-container {
+          //max-width: 1280px;
+          //margin: auto;
+          h1 {
+            padding-bottom: 0;
+            font-size: 46px;
+            font-weight: bold;
+            line-height: 120%;
+            max-width: 1280px;
+            padding: 36px 16px;
+            margin: auto;
+          }
+          .year-columns-container {
             display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            .project-container {
-              .project-img {
-                height: 50px;
-                width: 50px;
-                margin: 0px 7px;
-                //border: 1px dashed gray;
-                cursor: pointer;
-                outline: none;
-                transition: transform .2s; // Animation
-                // Background image
-                background-size: cover;
-                resize: both;
-                background-position-x: center;
-                background-position-y: center;
-                &:hover {
-                  transform: scale(1.6);
+            align-items: stretch;
+            overflow-x: auto;
+            padding: 16px 0px;
+            justify-content: center;
+            .year-column {
+              display: flex;
+              flex-direction: column;
+              justify-content: flex-end;
+              .project-container {
+                .project-img {
+                  height: 50px;
+                  width: 50px;
+                  margin: 0px 7px;
+                  //border: 1px dashed gray;
+                  cursor: pointer;
+                  outline: none;
+                  transition: transform .2s; // Animation
+                  // Background image
+                  background-size: cover;
+                  resize: both;
+                  background-position-x: center;
+                  background-position-y: center;
+                  &:hover {
+                    transform: scale(1.6);
+                  }
+                }
+                .project-code {
+                  margin: 0px 7px;
+                  line-height: 1;
+                  font-size: 12px;
+                  margin-bottom: 2px;
                 }
               }
-              .project-code {
+              .year {
                 margin: 0px 7px;
-                line-height: 1;
-                font-size: 12px;
-                margin-bottom: 2px;
+                margin-top: 16px;
+                font-weight: bold;
               }
             }
-            .year {
-              margin: 0px 7px;
-              margin-top: 16px;
-              font-weight: bold;
+            @media screen and (max-width: 425px) {
+              justify-content: unset;
+            }
+            &::-webkit-scrollbar {
+              width: 20px;
+              height: 20px;
+            }
+            &::-webkit-scrollbar-track {
+              //box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+              //background-color: #f5f5f5;
+            }
+            &::-webkit-scrollbar-thumb {
+              background-color: #c1c1c1;
+              border: 7px solid #fafafa;
+              border-radius: 81px;
             }
           }
-          @media screen and (max-width: 425px) {
-            justify-content: unset;
+          .loading-spinner-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+            .mat-spinner {
+              circle {
+                stroke: mat-color($accent);
+              }
+            }
           }
-          &::-webkit-scrollbar {
-            width: 20px;
-            height: 20px;
-          }
-          &::-webkit-scrollbar-track {
-            //box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-            //background-color: #f5f5f5;
-          }
-          &::-webkit-scrollbar-thumb {
-            background-color: #c1c1c1;
-            border: 7px solid #fafafa;
-            border-radius: 81px;
-          }
-        }
-        .loading-spinner-container {
-          display: flex;
-          justify-content: center;
         }
       }
     }
   }
 }
 
+
 ::ng-deep {
   .dark-theme {
+    .loading-spinner-container {
+      .mat-spinner {
+        circle {
+          stroke: #0078d4 !important;
+        }
+      }
+    }
     .year-columns-container {
       &::-webkit-scrollbar-thumb {
         background-color: #424242 !important;

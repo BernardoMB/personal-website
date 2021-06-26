@@ -50,7 +50,7 @@ export class HobbiesService {
         obs.next(this.hobbies);
         obs.complete();
         this.loaderService.hide();
-      }, 3000);
+      }, 1000);
     });
   }
 }

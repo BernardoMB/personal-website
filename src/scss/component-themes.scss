@@ -6,6 +6,7 @@
 @import '../app/components/scroll-indicator/scroll-indicator.component';
 @import './ng-feedback-theme';
 @import '../app/components/landing/landing.component';
+@import '../app/modules/projects/components/projects-root/projects-root.component';
 
 @mixin component-themes($light-theme) {
   @include header-theme($light-theme);
@@ -16,4 +17,5 @@
   @include scroll-indicator-theme($light-theme);
   @include ng-feedback-theme($light-theme);
   @include landing-theme($light-theme);
+  @include projects-root($light-theme);
 }

@@ -6,6 +6,7 @@ import { Router } from '@angular/router';
 import { TranslateService, TranslateStore } from '@ngx-translate/core';
 import { fromEvent, of } from 'rxjs';
 import { map, pairwise, skip, switchMap, throttleTime } from 'rxjs/operators';
+import { environment } from '../../../environments/environment';
 import { DocumentRef } from '../../providers/document.provider';
 import { WindowRef } from '../../providers/window.provider';
 import { ThemeService } from '../../shared/services/theme.service';
@@ -140,7 +141,11 @@ export class HeaderComponent implements OnInit {
   //#region Copy to clipboard
   copyLinkToClipboard() {
     // TODO: Copy actual url. Should fetch this value from environment.ts
-    this.clipboard.copy('http://192.168.1.225:4204');
+    if (environment.production) {
+      this.clipboard.copy('https://bernardomondragon.azurewebsites.net');
+    } else {
+      this.clipboard.copy('http://192.168.1.225:4204');
+    }
   }
   //#endregion
 
