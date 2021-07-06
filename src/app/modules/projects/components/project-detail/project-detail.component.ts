@@ -55,12 +55,12 @@ export class ProjectDetailComponent implements OnInit, OnDestroy {
     this.projectDetailInfoSubscription?.unsubscribe();
   }
 
-  scroll(el: HTMLElement) {
-    el.scrollIntoView();
-  }
-
   navigateToProjects() {
     this.router.navigate(['/projects']);
+  }
+
+  scroll(el: HTMLElement) {
+    el.scrollIntoView();
   }
 
 }

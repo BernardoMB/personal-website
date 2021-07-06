@@ -29,6 +29,7 @@ export class ProjectsService {
               <li>Homework repository</li>
               <li>Blog</li>
             </ul>
+            <a href="https://github.com/BernardoMB">Repo</a>
           `,
           images: [
             'assets/images/portfolio/ITJM/ITJMath01.png',
