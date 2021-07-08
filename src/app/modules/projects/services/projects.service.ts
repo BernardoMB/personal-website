@@ -125,7 +125,8 @@ export class ProjectsService {
             <p>More infromation coming soon.</p>
           `,
           images: [
-            'assets/images/portfolio/confidential.svg',
+            'https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+            'https://images.pexels.com/photos/8602145/pexels-photo-8602145.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
           ]
         },
       ]
