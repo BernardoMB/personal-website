@@ -28,9 +28,9 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes, {
     scrollPositionRestoration: 'top',
     // Scrolling to section
-    useHash: false,
     scrollOffset: [0, 64],
-    anchorScrolling: 'enabled'
+    anchorScrolling: 'enabled',
+    useHash: false,
   })],
   exports: [RouterModule]
 })
