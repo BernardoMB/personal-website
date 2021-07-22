@@ -3,14 +3,14 @@
     <span (click)="navigateToHomePage()">{{initials}}</span>
   </mat-toolbar>
   <div class="navigation-container">
-    <a routerLink="/home" routerLinkActive="active" (click)="sideBarNavigation.emit()">Home</a>
-    <a routerLink="/about" routerLinkActive="active" (click)="sideBarNavigation.emit()">About</a>
-    <a routerLink="/cv" routerLinkActive="active" (click)="sideBarNavigation.emit()">Experience</a>
-    <a routerLink="/projects" routerLinkActive="active" (click)="sideBarNavigation.emit()">Projects</a>
-    <a routerLink="/hobbies" routerLinkActive="active" (click)="sideBarNavigation.emit()">Hobbies</a>
+    <a routerLink="/home" routerLinkActive="active" (click)="sideBarNavigation.emit()">{{ 'HEADER.HOME' | translate }}</a>
+    <a routerLink="/about" routerLinkActive="active" (click)="sideBarNavigation.emit()">{{ 'HEADER.ABOUT' | translate }}</a>
+    <a routerLink="/cv" routerLinkActive="active" (click)="sideBarNavigation.emit()">{{ 'HEADER.EXPERIENCE' | translate }}</a>
+    <a routerLink="/projects" routerLinkActive="active" (click)="sideBarNavigation.emit()">{{ 'HEADER.PROJECTS' | translate }}</a>
+    <a routerLink="/hobbies" routerLinkActive="active" (click)="sideBarNavigation.emit()">{{ 'HEADER.HOBBIES' | translate }}</a>
   </div>
   <div class="theming-contanier">
-    <div class="label">Language</div>
+    <div class="label">{{ 'HEADER.LANGUAGE' | translate }}</div>
     <div class="select-container">
       <mat-select class="language-select" [value]="selectedLanguage" (valueChange)="changeLanguage($event)">
         <mat-option [value]="'en'">English</mat-option>
@@ -19,11 +19,11 @@
     </div>
   </div>
   <div class="theming-contanier">
-    <div class="label">Theme</div>
+    <div class="label">{{ 'HEADER.THEME' | translate }}</div>
     <mat-radio-group class="theme-radio-group" aria-label="Select an option" [formControl]="themeControl">
-      <mat-radio-button [color]="'accent'" value="light-theme">Light</mat-radio-button>
-      <mat-radio-button [color]="'primary'" value="dark-theme">Dark</mat-radio-button>
-      <mat-radio-button [color]="'accent'" value="mint-theme">Mint</mat-radio-button>
+      <mat-radio-button [color]="'accent'" value="light-theme">{{ 'HEADER.LIGHT' | translate }}</mat-radio-button>
+      <mat-radio-button [color]="'primary'" value="dark-theme">{{ 'HEADER.DARK' | translate }}</mat-radio-button>
+      <mat-radio-button [color]="'accent'" value="mint-theme">{{ 'HEADER.MINT' | translate }}</mat-radio-button>
     </mat-radio-group>
   </div>
 </div>

@@ -20,34 +20,34 @@
               <div class="right"></div>
             </div>
             <div class="container">
-              <div class="element0">
-                bernardo@personal-website ~$
+              
+              <div
+              class="element0"
+                *ngIf="showElement0"
+                [ngClass]="showElement0 ? 'show' : 'nodisplay'"
+              >
+                bernardo@{{ 'LANDING.PERSONAL_WEBSITE' | translate }} ~$
                 <span class="typed-element typed-element-0"></span>
               </div>
+              
               <div
                 class="element1"
                 *ngIf="showElement1"
                 [ngClass]="showElement1 ? 'show' : 'nodisplay'"
               >
-                bernardo@personal-website ~$
+                bernardo@{{ 'LANDING.PERSONAL_WEBSITE' | translate }} ~$
                 <span class="typed-element typed-element-1"></span>
               </div>
+              
               <div
                 class="element2"
                 *ngIf="showElement2"
                 [ngClass]="showElement2 ? 'show' : 'nodisplay'"
               >
-                bernardo@personal-website ~$
+                bernardo@{{ 'LANDING.PERSONAL_WEBSITE' | translate }} ~$
                 <span class="typed-element typed-element-2"></span>
               </div>
-              <div
-                class="element3"
-                *ngIf="showElement3"
-                [ngClass]="showElement3 ? 'show' : 'nodisplay'"
-              >
-                bernardo@personal-website ~$
-                <span class="typed-element typed-element-3"></span>
-              </div>
+              
             </div>
           </div>
         </div>
@@ -60,9 +60,9 @@
       <div class="swiper-slide programming-slide">
         <div class="slide-container">
           <!-- <a class="contact-link" href="home/#contact">Contact me</a> -->
-          <a class="contact-link" href="/home#contact">Contact me</a>
-          <h1 class="title">Get to know me</h1>
-          <div class="phrase">Allways inspired by the beauty of knowledge</div>
+          <a class="contact-link" href="/home#contact">{{ "LANDING.CONTACT_ME" | translate }}</a>
+          <h1 class="title">{{ 'LANDING.KNOW_ME' | translate }}</h1>
+          <div class="phrase">{{ 'LANDING.INSPIRED' | translate }}</div>
         </div>
       </div>
       <div class="swiper-slide keyboard-slide">

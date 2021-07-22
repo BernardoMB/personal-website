@@ -1,7 +1,9 @@
 import { AfterViewChecked, AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { AbstractControl, FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
+import { skip, take } from 'rxjs/operators';
 import Typed, { TypedOptions } from 'typed.js';
 import { ContactService } from '../../services/contact.service';
 import { DialogService } from '../../services/dialog.service';
@@ -12,6 +14,9 @@ import { DialogService } from '../../services/dialog.service';
   styleUrls: ['./landing.component.scss']
 })
 export class LandingComponent implements OnInit, AfterViewInit {
+  currentLang;
+  phrase: string | undefined;
+
   //#region Swiper
   index = 0;
   config: SwiperConfigInterface = {
@@ -31,10 +36,12 @@ export class LandingComponent implements OnInit, AfterViewInit {
   //#endregion
 
   //#region TypedJS
-  typed: any;
+  typed1: any;
+  typed2: any;
+  typed3: any;
+  showElement0 = true;
   showElement1 = false;
   showElement2 = false;
-  showElement3 = false;
   //#endregion
 
   //#region Particles
@@ -145,10 +152,48 @@ export class LandingComponent implements OnInit, AfterViewInit {
     private contactService: ContactService,
     private dialogService: DialogService,
     private router: Router,
-    private route: ActivatedRoute
-  ) { }
+    private route: ActivatedRoute,
+    public translateService: TranslateService
+  ) {
+    //#region Translate
+    this.currentLang = this.translateService.currentLang;
+    switch(this.currentLang) {
+      case 'en':
+        this.phrase = 'Be yourself; everyone else is already taken.';
+        break;
+      case 'es':
+        this.phrase = 'Se tu mismo; los demás ya estan ocupados.';
+        break;
+      default:
+        this.phrase = 'Be yourself; everyone else is already taken.';
+        break;
+    }
+    //#endregion
+  }
 
   ngOnInit(): void {
+    //#region Translate
+    this.translateService.onLangChange.pipe(
+      skip(1)
+    ).subscribe((event: any) => {
+      this.currentLang = event.lang;
+      switch(this.currentLang) {
+        case 'en':
+          this.phrase = 'Be yourself; everyone else is already taken.';
+          break;
+        case 'es':
+          this.phrase = 'Se tu mismo; los demás ya estan ocupados.';
+          break;
+        default:
+          this.phrase = 'Be yourself; everyone else is already taken.';
+          break;
+      }
+      this.showElement0 = false;
+      this.showElement1 = false;
+      this.showElement2 = false;
+      this.type();
+    });
+    //#endregion
     //#region Contact form
     this.contactForm.controls.toggleControl.valueChanges.subscribe((value: string) => {
       switch (value) {
@@ -170,10 +215,15 @@ export class LandingComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
+    this.type();
+  }
+
+  type() {
     //#region Typed JS
+    this.showElement0 = true;
     const options0: TypedOptions = {
       strings: [
-        'Be yourself; everyone else is already taken.'
+        this.phrase?? ''
       ],
       typeSpeed: 30,
       cursorChar: '_',
@@ -182,11 +232,10 @@ export class LandingComponent implements OnInit, AfterViewInit {
       loopCount: 0,
       onComplete: function(self) {
         (<any>self).cursor.remove();
-
       }
     };
-    if (!!this.typed) this.typed.destroy();
-    this.typed = new Typed('.typed-element-0', options0);
+    if (!!this.typed1) this.typed1.destroy();
+    this.typed1 = new Typed('.typed-element-0', options0);
 
     setTimeout(() => {
       this.showElement1 = true;
@@ -208,7 +257,7 @@ export class LandingComponent implements OnInit, AfterViewInit {
         };
         var typedElement1 = document.getElementsByClassName('typed-element-1')[0];
         if (typedElement1 != null) {
-          this.typed = new Typed('.typed-element-1', options1);
+          this.typed2 = new Typed('.typed-element-1', options1);
         }
       }, 1);
     }, 2500);
@@ -228,7 +277,7 @@ export class LandingComponent implements OnInit, AfterViewInit {
         };
         var typedElement2 = document.getElementsByClassName('typed-element-2')[0];
         if (typedElement2 != null) {
-          this.typed = new Typed('.typed-element-2', options2);
+          this.typed3 = new Typed('.typed-element-2', options2);
         }
       }, 1);
     }, 4000);

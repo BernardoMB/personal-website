@@ -2,10 +2,24 @@
   "HEADER": {
     "HOME": "Home",
     "ABOUT": "About",
-    "CV": "CV",
+    "EXPERIENCE": "Experience",
     "PROJECTS": "Projects",
     "HOBBIES": "Hobbies",
-    "SHARE ON FACEBOOK": "Shore on facebook"
+    "COPY_LINK": "Copy link",
+    "SHARE_ON_FACEBOOK": "Share on Facebook",
+    "SHARE_ON_TWITTER": "Share on Twitter",
+    "SHARE_ON_REDDIT": "Share on Reddit",
+    "LANGUAGE": "Language",
+    "THEME": "Theme",
+    "LIGHT": "Light",
+    "DARK": "Dark",
+    "MINT": "Mint"
+  },
+  "LANDING": {
+    "PERSONAL_WEBSITE": "personal-website",
+    "CONTACT_ME": "Contact me",
+    "KNOW_ME": "Get to know me",
+    "INSPIRED": "Allways inspired by the beauty of knowledge"
   },
   "FOOTER": {
     "HOME": "Home",
