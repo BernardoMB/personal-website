@@ -70,9 +70,9 @@
           <div class="slide-container">
             <h1 class="title">{{ 'LANDING.CHECKOUT_MY_WORK' | translate }}</h1>
             <div class="phrase">
-              Vast experience delivering best quality software
+              {{ 'LANDING.EXPERIENCE_PHRASE' | translate }}
             </div>
-            <button mat-flat-button class="landing-button" [routerLink]="['/projects']">View projects</button>
+            <button mat-flat-button class="landing-button" [routerLink]="['/projects']">{{ 'LANDING.VIEW_PROJECTS' | translate }}</button>
           </div>
         </div>
       </div>
@@ -84,7 +84,7 @@
   </div>
 </section>
 
-<div class="welcome-banner">Welcome to my personal website!</div>
+<div class="welcome-banner">{{ 'LANDING.WELCOME_MESSAGE' | translate }}</div>
 
 <section id="services" class="services-section">
   <div class="services-container">
@@ -129,11 +129,9 @@
           </svg>
         </div>
       </div>
-      <h3 class="title">Actuary</h3>
+      <h3 class="title">{{ 'LANDING.ACTUARY' | translate }}</h3>
       <div class="description">
-        Applied Mathematics to assess risk in insurance, finance and other
-        industries and professions. More generally, actuaries apply rigorous
-        mathematics to model matters of uncertainty.
+        {{ 'LANDING.ACTUARY_DESCRIPTION' | translate }}
       </div>
     </div>
     <div class="service-container">
@@ -186,11 +184,9 @@
           </svg>
         </div>
       </div>
-      <h3 class="title">Developer</h3>
+      <h3 class="title">{{ 'LANDING.DEVELOPER' | translate }}</h3>
       <div class="description">
-        The process of conceiving, specifying, designing, programming,
-        documenting, testing, and bug fixing involved in creating and
-        maintaining applications, frameworks, or other software components.
+        {{ 'LANDING.DEVELOPER_DESCRIPTION' | translate }}
       </div>
     </div>
     <div class="service-container">
@@ -222,10 +218,9 @@
           </svg>
         </div>
       </div>
-      <h3 class="title">Teacher</h3>
+      <h3 class="title">{{ 'LANDING.TEACHER' | translate }}</h3>
       <div class="description">
-        I teach programming lessons for starters who want to jump into the
-        software development world.
+        {{ 'LANDING.TEACHER_DESCRIPTION' | translate }}
       </div>
     </div>
   </div>
@@ -233,7 +228,7 @@
 
 <section id="skills" class="skills-section">
   <div class="skills-container">
-    <h3 class="section-title skills-title">Skills</h3>
+    <h3 class="section-title skills-title">{{ 'LANDING.SKILLS' | translate }}</h3>
     <mat-card>
       <div class="skill-container" *ngFor="let skill of skills">
         <div class="skill-top-row">
@@ -252,15 +247,15 @@
 
 <section id="my-work" class="my-work-section">
   <div class="my-work-container">
-    <div class="sub-title">publications</div>
-    <h2 class="title">Some of my work is available to the public</h2>
+    <div class="sub-title">{{ 'LANDING.PUBLICATIONS' | translate }}</div>
+    <h2 class="title">{{ 'LANDING.JOB_AVAILABILITY' | translate }}</h2>
     <div class="cards-container">
       <div class="site-card">
         <div class="icon-box">
           <span></span>
           <i class="icon fab fa-medium-m"></i>
           <h4 (click)="navigateLink('https://medium.com/@bernardomondragonbrozon')">Medium</h4>
-          <p>Sometimes I write things</p>
+          <p>{{ 'LANDING.MEDIUM_DESCRIPTION' | translate }}</p>
         </div>
       </div>
       <div class="site-card">
@@ -268,7 +263,7 @@
           <span></span>
           <i class="icon fab fa-github-alt"></i>
           <h4 (click)="navigateLink('https://github.com/BernardoMB')">Github</h4>
-          <p>git checkout my repos</p>
+          <p>{{ 'LANDING.GITHUB_DESCRIPTION' | translate }}</p>
         </div>
       </div>
       <div class="site-card">
@@ -276,7 +271,7 @@
           <span></span>
           <i class="icon letter-a">A</i>
           <h4 (click)="navigateLink('https://independent.academia.edu/BernardoMondrag%C3%B3n')">Academia</h4>
-          <p>Here is where I publish math stuff</p>
+          <p>{{ 'LANDING.ACADEMIA_DESCRIPTION' | translate }}</p>
         </div>
       </div>
     </div>
@@ -292,20 +287,20 @@
 <section id="coffee" class="coffee-section">
   <div class="coffee-container">
     <mat-card>
-      <h1>Buy me a coffee</h1>
+      <h1>{{ 'LANDING.BUY_ME_A_COFFEE' | translate }}</h1>
       <div>
         <img style="height: 70px; shape-rendering: geometricPrecision;" src="assets/images/elements/coffee2.svg" alt="">
       </div>
-      <h2>Like my work?</h2>
-      <p>Feel free to donate and support my work</p>
-      <button mat-flat-button class="landing-button" [routerLink]="['/donate']">Donate now</button>
+      <h2>{{ 'LANDING.LIKE_MY_WORK' | translate }}</h2>
+      <p>{{ 'LANDING.SUPPORT_PHRASE' | translate }}</p>
+      <button mat-flat-button class="landing-button" [routerLink]="['/donate']">{{ 'LANDING.DONATE_NOW' | translate }}</button>
     </mat-card>
   </div>
 </section>
 
 <section id="contact" class="contact-section">
   <div class="contact-container">
-    <h3 class="section-title">Contact</h3>
+    <h3 class="section-title">{{ 'LANDING.CONTACT' | translate }}</h3>
     <form [formGroup]="contactForm" (ngSubmit)="submitContactForm()">
       <mat-button-toggle-group
         name="fontStyle"
@@ -314,13 +309,13 @@
         required
       >
         <mat-button-toggle value="whatsapp">Whatsapp</mat-button-toggle>
-        <mat-button-toggle value="email">Email</mat-button-toggle>
+        <mat-button-toggle value="email">{{ 'LANDING.EMAIL' | translate }}</mat-button-toggle>
       </mat-button-toggle-group>
       <mat-form-field appearance="outline" [color]="'accent'">
-        <mat-label>Full Name</mat-label>
+        <mat-label>{{ 'LANDING.FULL_NAME' | translate }}</mat-label>
         <input
           matInput
-          placeholder="Ex. John Doe"
+          placeholder="{{ 'LANDING.FULL_NAME_PLACEHOLDER' | translate }}"
           formControlName="nameControl"
           required
         />
@@ -329,7 +324,7 @@
             contactForm.controls.nameControl.errors &&
             contactForm.controls.nameControl.errors['required']
           "
-          >Full name is required.</mat-error
+          >{{ 'LANDING.FULL_NAME_ERROR_MESSAGE' | translate }}</mat-error
         >
       </mat-form-field>
       <mat-form-field
@@ -337,10 +332,10 @@
         [color]="'accent'"
         *ngIf="isSendEmail"
       >
-        <mat-label>Email</mat-label>
+        <mat-label>{{ 'LANDING.EMAIL' | translate }}</mat-label>
         <input
           matInput
-          placeholder="Ex. john.doe@example.com"
+          placeholder="{{ 'LANDING.EMAIL_PLACEHOLDER' | translate }}"
           formControlName="emailControl"
           required
         />
@@ -360,14 +355,19 @@
             contactForm.controls.emailControl.errors &&
             contactForm.controls.emailControl.errors['email']
           "
-          >Must enter a valid email address.</mat-error
-        >
+          >{{ 'LANDING.EMAIL_INVALID_ERROR_MESSAGE' | translate }}</mat-error>
+        <mat-error
+          *ngIf="
+            contactForm.controls.emailControl.errors &&
+            contactForm.controls.emailControl.errors['required']
+          "
+          >{{ 'LANDING.EMAIL_ERROR_MESSAGE' | translate }}</mat-error>
       </mat-form-field>
       <mat-form-field appearance="outline" [color]="'accent'">
-        <mat-label>Leave a message</mat-label>
+        <mat-label>{{ 'LANDING.MESSAGE' | translate }}</mat-label>
         <textarea
           matInput
-          placeholder="Ex. It makes me feel..."
+          placeholder="{{ 'LANDING.MESSAGE_PLACEHOLDER' | translate }}"
           formControlName="messageControl"
           required
         ></textarea>
@@ -376,19 +376,19 @@
             contactForm.controls.messageControl.errors &&
             contactForm.controls.messageControl.errors['required']
           "
-          >A message is required.</mat-error
+          >{{ 'LANDING.MESSAGE_ERROR_MESSAGE' | translate }}</mat-error
         >
         <mat-error
           *ngIf="
             contactForm.controls.messageControl.errors &&
             contactForm.controls.messageControl.errors['minlength']
           "
-          >Message requires a minimun length of
+          >{{ 'LANDING.MESSAGE_LENGTH_ERROR_MESSAGE' | translate }} 
           {{
             contactForm.controls.messageControl.errors["minlength"]
               .requiredLength
           }}
-          characters.</mat-error
+          {{ 'LANDING.MESSAGE_CHARACTERS' | translate }}.</mat-error
         >
       </mat-form-field>
       <button

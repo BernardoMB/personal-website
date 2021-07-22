@@ -114,21 +114,8 @@ export class LandingComponent implements OnInit, AfterViewInit {
   //#endregion
 
   //#region Skills
-  skills = [
-    { name: 'JavaScript/TypeScript', completion: 95, label: 'Experienced'},
-    { name: 'C#', completion: 80, label: 'Experienced'},
-    { name: 'HTML/CSS', completion: 90, label: 'Experienced'},
-    { name: 'R', completion: 80, label: 'Experienced'},
-    { name: 'Java', completion: 75, label: 'Experienced'},
-    { name: 'SQL', completion: 70, label: 'Experienced'},
-    { name: 'MongoDB', completion: 85, label: 'Experienced'},
-    { name: 'Azure', completion: 75, label: 'Experienced'},
-    { name: 'AWS', completion: 65, label: 'Intermediate'},
-    { name: 'Visual Basic', completion: 40, label: 'Beginner'},
-    { name: 'Microsoft Excel', completion: 75, label: 'Experienced'},
-    { name: 'LaTex', completion: 80, label: 'Experienced'},
-    { name: 'MatLab', completion: 40, label: 'Beginner'},
-  ];
+  skills: Array<any> | undefined;
+  labels: Array<string> | undefined;
   //#endregion
 
   //#region Contact form
@@ -176,6 +163,7 @@ export class LandingComponent implements OnInit, AfterViewInit {
     this.translateService.onLangChange.pipe(
       skip(1)
     ).subscribe((event: any) => {
+      //#region Adjust phrase
       this.currentLang = event.lang;
       switch(this.currentLang) {
         case 'en':
@@ -192,8 +180,63 @@ export class LandingComponent implements OnInit, AfterViewInit {
       this.showElement1 = false;
       this.showElement2 = false;
       this.type();
+      //#endregion
+      //#region Adjust skills
+      switch(this.currentLang) {
+        case 'en':
+          this.labels = ['Experienced', 'Intermediate', 'Beginner'];
+          break;
+        case 'es':
+          this.labels = ['Experimentado', 'Intermedio', 'Pricipiante'];
+          break;
+        default:
+          this.labels = ['Experienced', 'Intermediate', 'Beginner'];
+          break;
+      }
+      this.skills = [
+        { name: 'JavaScript/TypeScript', completion: 95, label: this.labels[0]},
+        { name: 'C#', completion: 80, label: this.labels[0]},
+        { name: 'HTML/CSS', completion: 90, label: this.labels[0]},
+        { name: 'R', completion: 80, label: this.labels[0]},
+        { name: 'Java', completion: 75, label: this.labels[0]},
+        { name: 'SQL', completion: 70, label: this.labels[0]},
+        { name: 'MongoDB', completion: 85, label: this.labels[0]},
+        { name: 'Azure', completion: 75, label: this.labels[0]},
+        { name: 'AWS', completion: 65, label: this.labels[1]},
+        { name: 'Visual Basic', completion: 40, label: this.labels[2]},
+        { name: 'Microsoft Excel', completion: 75, label: this.labels[0]},
+        { name: 'LaTex', completion: 80, label: this.labels[0]},
+        { name: 'MatLab', completion: 40, label: this.labels[2]},
+      ];
+      //#endregion
     });
     //#endregion
+    switch(this.currentLang) {
+      case 'en':
+        this.labels = ['Experienced', 'Intermediate', 'Beginner'];
+        break;
+      case 'es':
+        this.labels = ['Experimentado', 'Intermedio', 'Pricipiante'];
+        break;
+      default:
+        this.labels = ['Experienced', 'Intermediate', 'Beginner'];
+        break;
+    }
+    this.skills = [
+      { name: 'JavaScript/TypeScript', completion: 95, label: this.labels[0]},
+      { name: 'C#', completion: 80, label: this.labels[0]},
+      { name: 'HTML/CSS', completion: 90, label: this.labels[0]},
+      { name: 'R', completion: 80, label: this.labels[0]},
+      { name: 'Java', completion: 75, label: this.labels[0]},
+      { name: 'SQL', completion: 70, label: this.labels[0]},
+      { name: 'MongoDB', completion: 85, label: this.labels[0]},
+      { name: 'Azure', completion: 75, label: this.labels[0]},
+      { name: 'AWS', completion: 65, label: this.labels[1]},
+      { name: 'Visual Basic', completion: 40, label: this.labels[2]},
+      { name: 'Microsoft Excel', completion: 75, label: this.labels[0]},
+      { name: 'LaTex', completion: 80, label: this.labels[0]},
+      { name: 'MatLab', completion: 40, label: this.labels[2]},
+    ];
     //#region Contact form
     this.contactForm.controls.toggleControl.valueChanges.subscribe((value: string) => {
       switch (value) {
