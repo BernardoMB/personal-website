@@ -1,16 +1,16 @@
 <mat-toolbar class="footer">
   <mat-toolbar-row class="row-1">
     <div class="site-map">
-      <a [routerLink]="['/home']" routerLinkActive="router-link-active">{{ 'FOOTER.HOME' | translate }}</a>
-      <a [routerLink]="['/about']" routerLinkActive="router-link-active">About</a>
-      <a class="child-route" [routerLink]="['/about/description']" routerLinkActive="router-link-active">Description</a>
-      <a class="child-route" [routerLink]="['/about/biography']" routerLinkActive="router-link-active">Biography</a>
-      <a [routerLink]="['/cv']" routerLinkActive="router-link-active">Experience</a>
-      <a [routerLink]="['/projects']" routerLinkActive="router-link-active" >Projects</a>
-      <a [routerLink]="['/hobbies']" routerLinkActive="router-link-active" >Hobbies</a>
+      <a [routerLink]="['/home']" routerLinkActive="router-link-active">{{ 'HEADER.HOME' | translate }}</a>
+      <a [routerLink]="['/about']" routerLinkActive="router-link-active">{{ 'HEADER.ABOUT' | translate }}</a>
+      <a class="child-route" [routerLink]="['/about/description']" routerLinkActive="router-link-active">{{ 'FOOTER.DESCRIPTION' | translate }}</a>
+      <a class="child-route" [routerLink]="['/about/biography']" routerLinkActive="router-link-active">{{ 'FOOTER.BIOGRAPHY' | translate }}</a>
+      <a [routerLink]="['/cv']" routerLinkActive="router-link-active">{{ 'HEADER.EXPERIENCE' | translate }}</a>
+      <a [routerLink]="['/projects']" routerLinkActive="router-link-active" >{{ 'HEADER.PROJECTS' | translate }}</a>
+      <a [routerLink]="['/hobbies']" routerLinkActive="router-link-active" >{{ 'HEADER.HOBBIES' | translate }}</a>
     </div>
     <div class="middle-container">
-      <div class="label">Follow me</div>
+      <div class="label">{{ 'FOOTER.FOLLOW_ME' | translate }}</div>
       <div class="social-links-container">
         <i class="fab fa-linkedin-in" (click)="navigateLink('https://www.linkedin.com/in/bernardo-mondragon/')"></i>
         <i class="fab fa-facebook-f" (click)="navigateLink('https://www.facebook.com/BMondragonBrozon')"></i>
@@ -20,14 +20,13 @@
         <i class="fab fa-youtube" (click)="navigateLink('https://www.youtube.com/channel/UCxge1YMw1Pe11QtWkhhxMng')"></i>
       </div>
       <div class="site-terms-container">
-        <div class="link" (click)="openDialog('privacy')">Privacy</div>
-        <div class="link" (click)="openDialog('terms')">Terms of use</div>
+        <div class="link" (click)="openDialog('privacy')">{{ 'FOOTER.PRIVACY' | translate }}</div>
+        <div class="link" (click)="openDialog('terms')">{{ 'FOOTER.TERMS' | translate }}</div>
         <div class="link" (click)="openDialog('cookies')">Cookies</div>
       </div>
     </div>
     <app-presentation-card
       [name]="nameFooter"
-      [title]="titleFooter"
       [emailAddress]="emailAddressFooter"
       [phoneNumber]="phoneNumberFooter"
       [physicalAddress]="physicalAddressFooter"
@@ -35,6 +34,6 @@
     ></app-presentation-card>
   </mat-toolbar-row>
   <mat-toolbar-row class="row-2">
-    <div class="powered-by">Powered by {{nameFooter}}</div>
+    <div class="powered-by">{{ 'FOOTER.POWERED_BY' | translate }} {{nameFooter}}</div>
   </mat-toolbar-row>
 </mat-toolbar>

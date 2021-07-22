@@ -2,7 +2,7 @@
   <mat-card-header class="card-header">
     <div mat-card-avatar class="profile-image"></div>
     <mat-card-title>{{name}}</mat-card-title>
-    <mat-card-subtitle>{{title}}</mat-card-subtitle>
+    <mat-card-subtitle>{{ 'FOOTER.TITLE' | translate }}</mat-card-subtitle>
   </mat-card-header>
   <mat-card-content>
     <div class="card-field">
@@ -37,6 +37,6 @@
 </mat-card>
 
 <mat-menu #shareMenu="matMenu">
-  <button mat-menu-item (click)="copyToClipboard('525535592033')">Copy phone number</button>
-  <button mat-menu-item (click)="copyToClipboard('BMondragonBrozon@gmail.com')">Copy email</button>
+  <button mat-menu-item (click)="copyToClipboard('525535592033')">{{ 'FOOTER.COPY_PHONE' | translate }}</button>
+  <button mat-menu-item (click)="copyToClipboard('BMondragonBrozon@gmail.com')">{{ 'FOOTER.COPY_EMAIL' | translate }}</button>
 </mat-menu>

@@ -55,12 +55,15 @@
     "MESSAGE_CHARACTERS": "caracteres"
   },
   "FOOTER": {
-    "HOME": "Inicio",
-    "ABOUT": "Acerca de",
-    "CV": "CV",
-    "PROJECTS": "Proyectos",
-    "HOBBIES": "Pasatiempos",
-    "PRIVACY": "Politica de privacidad"
+    "DESCRIPTION": "Descripción",
+    "BIOGRAPHY": "Biografía",
+    "FOLLOW_ME": "Sígueme",
+    "PRIVACY": "Política de privacidad",
+    "TERMS": "Términos de uso",
+    "POWERED_BY": "Desarrollado por",
+    "TITLE": "Actuario y Desarrollador Ful-Stack",
+    "COPY_PHONE": "Copiar teléfono",
+    "COPY_EMAIL": "Copiar correo electrónico"
   },
   "CV": {
     "RESUME": "Hoja de vida"

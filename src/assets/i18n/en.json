@@ -55,12 +55,15 @@
     "MESSAGE_CHARACTERS": "characters"
   },
   "FOOTER": {
-    "HOME": "Home",
-    "ABOUT": "About",
-    "CV": "CV",
-    "PROJECTS": "Projects",
-    "HOBBIES": "Hobbies",
-    "PRIVACY": "Privacy"
+    "DESCRIPTION": "Description",
+    "BIOGRAPHY": "Biography",
+    "FOLLOW_ME": "Follow me",
+    "PRIVACY": "Privacy",
+    "TERMS": "Terms of use",
+    "POWERED_BY": "Powered by",
+    "TITLE": "Actuary & Ful-Stack Developer",
+    "COPY_PHONE": "Copy phone number",
+    "COPY_EMAIL": "Copy email"
   },
   "CV": {
     "RESUME": "Resume"

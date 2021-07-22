@@ -8,7 +8,6 @@ import { Clipboard } from '@angular/cdk/clipboard';
 })
 export class PresentationCardComponent implements OnInit {
   @Input() name: string | undefined;
-  @Input() title: string | undefined;
   @Input() phoneNumber: string | undefined;
   @Input() emailAddress: string | undefined;
   @Input() physicalAddress: string | undefined;
