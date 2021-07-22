@@ -206,7 +206,10 @@ export class LandingComponent implements OnInit, AfterViewInit {
             }, 1500);
           }
         };
-        this.typed = new Typed('.typed-element-1', options1);
+        var typedElement1 = document.getElementsByClassName('typed-element-1')[0];
+        if (typedElement1 != null) {
+          this.typed = new Typed('.typed-element-1', options1);
+        }
       }, 1);
     }, 2500);
 
@@ -223,7 +226,10 @@ export class LandingComponent implements OnInit, AfterViewInit {
           loop: false,
           loopCount: 0
         };
-        this.typed = new Typed('.typed-element-2', options2);
+        var typedElement2 = document.getElementsByClassName('typed-element-2')[0];
+        if (typedElement2 != null) {
+          this.typed = new Typed('.typed-element-2', options2);
+        }
       }, 1);
     }, 4000);
     //#endregion
