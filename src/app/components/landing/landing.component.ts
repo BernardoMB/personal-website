@@ -139,6 +139,8 @@ export class LandingComponent implements OnInit, AfterViewInit {
     messageControl: new FormControl('', [Validators.required, Validators.minLength(10)])
   });
   isSendEmail = false;
+  graceFullMessage = 'Thank you for your message.';
+  invalidFormErrorMessage = 'Submitted form is invalid.';
   //#endregion
 
   constructor(
@@ -191,12 +193,18 @@ export class LandingComponent implements OnInit, AfterViewInit {
       switch(this.currentLang) {
         case 'en':
           this.labels = ['Experienced', 'Intermediate', 'Beginner'];
+          this.graceFullMessage = 'Thank you for your message.';
+          this.invalidFormErrorMessage = 'Submitted form is invalid.';
           break;
         case 'es':
           this.labels = ['Experimentado', 'Intermedio', 'Pricipiante'];
+          this.graceFullMessage = 'Gracias por tu mensaje.';
+          this.invalidFormErrorMessage = 'El formulario es inválido.';
           break;
         default:
           this.labels = ['Experienced', 'Intermediate', 'Beginner'];
+          this.graceFullMessage = 'Thank you for your message.';
+          this.invalidFormErrorMessage = 'Submitted form is invalid.';
           break;
       }
       this.skills = [
@@ -220,12 +228,18 @@ export class LandingComponent implements OnInit, AfterViewInit {
     switch(this.currentLang) {
       case 'en':
         this.labels = ['Experienced', 'Intermediate', 'Beginner'];
+        this.graceFullMessage = 'Thank you for your message.';
+        this.invalidFormErrorMessage = 'Submitted form is invalid.';
         break;
       case 'es':
         this.labels = ['Experimentado', 'Intermedio', 'Pricipiante'];
+        this.graceFullMessage = 'Gracias por tu mensaje.';
+        this.invalidFormErrorMessage = 'El formulario es inválido.';
         break;
       default:
         this.labels = ['Experienced', 'Intermediate', 'Beginner'];
+        this.graceFullMessage = 'Thank you for your message.';
+        this.invalidFormErrorMessage = 'Submitted form is invalid.';
         break;
     }
     this.skills = [
@@ -354,7 +368,7 @@ export class LandingComponent implements OnInit, AfterViewInit {
       formDirective.resetForm();
       this.sendWhatsAppForm.reset();
     } else {
-      const message = 'Submitted form is invalid.';
+      const message = this.invalidFormErrorMessage;
       const options = ['Ok'];
       this.dialogService.openDialog(message, options).subscribe((result: string) => {});
       //this.sendWhatsAppForm.reset();
@@ -374,7 +388,7 @@ export class LandingComponent implements OnInit, AfterViewInit {
       const email = this.sendEmailForm.controls.emailControl.value;
       const message = this.sendEmailForm.controls.messageControl.value;
       this.contactService.sendEmail(name, email ,message).subscribe((response) => {
-        const msg = 'Thank you for your message.';
+        const msg = this.graceFullMessage;
         const options = ['Ok'];
         formDirective.resetForm();
         this.sendEmailForm.reset();
@@ -384,7 +398,7 @@ export class LandingComponent implements OnInit, AfterViewInit {
         this.dialogService.openDialog(msg, []).subscribe((result: string) => {});
       });
     } else {
-      const message = 'Submitted form is invalid.';
+      const message = this.invalidFormErrorMessage;
       const options = ['Ok'];
       this.dialogService.openDialog(message, options).subscribe((result: string) => {});
     }
