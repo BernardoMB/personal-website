@@ -12,7 +12,7 @@
       display: flex;
       justify-content: space-between;
       margin: auto;
-    max-width: 1312px;
+      max-width: 1312px;
       .site-map {
         display: flex;
         flex-direction: column;
@@ -101,11 +101,17 @@
         }
       }
     }
+  }
+
+  .bottom-row {
+    min-height: unset;
     .row-2 {
+      height: unset;
+      padding: 6px 16px;
       display: flex;
       justify-content: space-between;
-      height: unset;
-      padding: 10px 16px;
+      max-width: 1312px;
+      margin: auto;
       .powered-by {
         text-align: center;
         font-size: 11px;
@@ -124,9 +130,8 @@
     }
   }
   .dark-theme {
-    .row-2 {
-      padding: 6px 16px;
-      background-color: #c95000;
+    .bottom-row {
+      background-color: #c95000 !important;
     }
   }
 }
