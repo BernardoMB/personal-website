@@ -54,6 +54,19 @@
     "MESSAGE_LENGTH_ERROR_MESSAGE": "Message requires a minimun length of",
     "MESSAGE_CHARACTERS": "characters"
   },
+  "ABOUT": {
+    "ABOUT_ME": "About me",
+    "ABOUT_PHRASE": "“Make the change that you want to see in the world.”",
+    "TOUCH": "Get in touch",
+    "DESCRIPTION": "Description",
+    "BIOGRAPHY": "Biography",
+    "READ_TIME": "Read time",
+    "DESCRIPTION_P1": "I am an actuary with vast experience in Full Stack Development and with a demonstrated history of working in the information services industry.",
+    "DESCRIPTION_P2": "Skilled in Insurance Theory, Risk Management, Software Development, Business Intelligence, and Product Development.",
+    "DESCRIPTION_P3": "Strong analitical professional with a Bachelor's Degree In Actuarial Science focused in Applied Mathematics to assess risk in insurance, finance and other industries and professions.",
+    "DESCRIPTION_P4": "I consider myself a fully qualified actuary who has the confidence to work on my own initiative and with the ability to play a key role within a leading company. I am a quick learner who can balance theory along with practical solutions.",
+    "BIO_1": "Bernardo Mondragon Brozon is an actuary and programmer who is always looking forward to delivering the best practical solution for a given development. He loves getting involved in the most creative way possible to maximize the value that could be brought to the enterprise."
+  },
   "FOOTER": {
     "DESCRIPTION": "Description",
     "BIOGRAPHY": "Biography",
