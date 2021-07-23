@@ -301,16 +301,16 @@
 <section id="contact" class="contact-section">
   <div class="contact-container">
     <h3 class="section-title">{{ 'LANDING.CONTACT' | translate }}</h3>
-    <form [formGroup]="contactForm" (ngSubmit)="submitContactForm()">
-      <mat-button-toggle-group
-        name="fontStyle"
-        aria-label="Contact chanel"
-        formControlName="toggleControl"
-        required
-      >
-        <mat-button-toggle value="whatsapp">Whatsapp</mat-button-toggle>
-        <mat-button-toggle value="email">{{ 'LANDING.EMAIL' | translate }}</mat-button-toggle>
-      </mat-button-toggle-group>
+    <mat-button-toggle-group
+      name="fontStyle"
+      aria-label="Contact chanel"
+      [formControl]="toggleControl"
+      required
+    >
+      <mat-button-toggle value="whatsapp">Whatsapp</mat-button-toggle>
+      <mat-button-toggle value="email">{{ 'LANDING.EMAIL' | translate }}</mat-button-toggle>
+    </mat-button-toggle-group>
+    <form id="sendWhatsAppForm" *ngIf="showSendWhatsAppForm" [formGroup]="sendWhatsAppForm" #sendWhatsAppFormDirective="ngForm" (ngSubmit)="submitWhatsAppForm(sendWhatsAppFormDirective)">
       <mat-form-field appearance="outline" [color]="'accent'">
         <mat-label>{{ 'LANDING.FULL_NAME' | translate }}</mat-label>
         <input
@@ -321,8 +321,62 @@
         />
         <mat-error
           *ngIf="
-            contactForm.controls.nameControl.errors &&
-            contactForm.controls.nameControl.errors['required']
+            sendWhatsAppForm.controls.nameControl.errors &&
+            sendWhatsAppForm.controls.nameControl.errors['required']
+          "
+          >{{ 'LANDING.FULL_NAME_ERROR_MESSAGE' | translate }}</mat-error
+        >
+      </mat-form-field>
+      <mat-form-field appearance="outline" [color]="'accent'">
+        <mat-label>{{ 'LANDING.MESSAGE' | translate }}</mat-label>
+        <textarea
+          matInput
+          placeholder="{{ 'LANDING.MESSAGE_PLACEHOLDER' | translate }}"
+          formControlName="messageControl"
+          required
+        ></textarea>
+        <mat-error
+          *ngIf="
+            sendWhatsAppForm.controls.messageControl.errors &&
+            sendWhatsAppForm.controls.messageControl.errors['required']
+          "
+          >{{ 'LANDING.MESSAGE_ERROR_MESSAGE' | translate }}</mat-error
+        >
+        <mat-error
+          *ngIf="
+            sendWhatsAppForm.controls.messageControl.errors &&
+            sendWhatsAppForm.controls.messageControl.errors['minlength']
+          "
+          >{{ 'LANDING.MESSAGE_LENGTH_ERROR_MESSAGE' | translate }} 
+          {{
+            sendWhatsAppForm.controls.messageControl.errors["minlength"]
+              .requiredLength
+          }}
+          {{ 'LANDING.MESSAGE_CHARACTERS' | translate }}.</mat-error
+        >
+      </mat-form-field>
+      <button
+        class="send-whatsapp-button"
+        mat-fab
+        type="submit"
+        aria-label="Send whatsapp"
+      >
+        <mat-icon>send</mat-icon>
+      </button>
+    </form>
+    <form id="sendEmailForm" *ngIf="showSendEmailForm" [formGroup]="sendEmailForm" #sendEmailFormDirective="ngForm" (ngSubmit)="submitEmailForm(sendEmailFormDirective)">
+      <mat-form-field appearance="outline" [color]="'accent'">
+        <mat-label>{{ 'LANDING.FULL_NAME' | translate }}</mat-label>
+        <input
+          matInput
+          placeholder="{{ 'LANDING.FULL_NAME_PLACEHOLDER' | translate }}"
+          formControlName="nameControl"
+          required
+        />
+        <mat-error
+          *ngIf="
+            sendEmailForm.controls.nameControl.errors &&
+            sendEmailForm.controls.nameControl.errors['required']
           "
           >{{ 'LANDING.FULL_NAME_ERROR_MESSAGE' | translate }}</mat-error
         >
@@ -330,7 +384,6 @@
       <mat-form-field
         appearance="outline"
         [color]="'accent'"
-        *ngIf="isSendEmail"
       >
         <mat-label>{{ 'LANDING.EMAIL' | translate }}</mat-label>
         <input
@@ -352,14 +405,14 @@
         > -->
         <mat-error
           *ngIf="
-            contactForm.controls.emailControl.errors &&
-            contactForm.controls.emailControl.errors['email']
+            sendEmailForm.controls.emailControl.errors &&
+            sendEmailForm.controls.emailControl.errors['email']
           "
           >{{ 'LANDING.EMAIL_INVALID_ERROR_MESSAGE' | translate }}</mat-error>
         <mat-error
           *ngIf="
-            contactForm.controls.emailControl.errors &&
-            contactForm.controls.emailControl.errors['required']
+            sendEmailForm.controls.emailControl.errors &&
+            sendEmailForm.controls.emailControl.errors['required']
           "
           >{{ 'LANDING.EMAIL_ERROR_MESSAGE' | translate }}</mat-error>
       </mat-form-field>
@@ -373,19 +426,19 @@
         ></textarea>
         <mat-error
           *ngIf="
-            contactForm.controls.messageControl.errors &&
-            contactForm.controls.messageControl.errors['required']
+            sendEmailForm.controls.messageControl.errors &&
+            sendEmailForm.controls.messageControl.errors['required']
           "
           >{{ 'LANDING.MESSAGE_ERROR_MESSAGE' | translate }}</mat-error
         >
         <mat-error
           *ngIf="
-            contactForm.controls.messageControl.errors &&
-            contactForm.controls.messageControl.errors['minlength']
+            sendEmailForm.controls.messageControl.errors &&
+            sendEmailForm.controls.messageControl.errors['minlength']
           "
           >{{ 'LANDING.MESSAGE_LENGTH_ERROR_MESSAGE' | translate }} 
           {{
-            contactForm.controls.messageControl.errors["minlength"]
+            sendEmailForm.controls.messageControl.errors["minlength"]
               .requiredLength
           }}
           {{ 'LANDING.MESSAGE_CHARACTERS' | translate }}.</mat-error

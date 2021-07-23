@@ -1,5 +1,5 @@
 import { AfterViewChecked, AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { AbstractControl, FormControl, FormGroup, Validators } from '@angular/forms';
+import { AbstractControl, FormControl, FormGroup, FormGroupDirective, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
@@ -119,8 +119,14 @@ export class LandingComponent implements OnInit, AfterViewInit {
   //#endregion
 
   //#region Contact form
-  contactForm = new FormGroup({
-    toggleControl: new FormControl('whatsapp', [Validators.required]),
+  showSendWhatsAppForm = true;
+  showSendEmailForm = false;
+  toggleControl = new FormControl('whatsapp', [Validators.required]);
+  sendWhatsAppForm = new FormGroup({
+    nameControl: new FormControl('', [Validators.required]),
+    messageControl: new FormControl('', [Validators.required, Validators.minLength(10)])
+  });
+  sendEmailForm = new FormGroup({
     nameControl: new FormControl('', [Validators.required]),
     emailControl: new FormControl('', [Validators.email, /*(control: AbstractControl): {[key: string]: any} | null => {
       const regularExpresion = /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/;
@@ -238,15 +244,21 @@ export class LandingComponent implements OnInit, AfterViewInit {
       { name: 'MatLab', completion: 40, label: this.labels[2]},
     ];
     //#region Contact form
-    this.contactForm.controls.toggleControl.valueChanges.subscribe((value: string) => {
+    this.toggleControl.valueChanges.subscribe((value: string) => {
       switch (value) {
         case 'whatsapp':
+          this.showSendWhatsAppForm = true;
+          this.showSendEmailForm = false;
           this.isSendEmail = false;
           break;
         case 'email':
+          this.showSendWhatsAppForm = false;
+          this.showSendEmailForm = true;
           this.isSendEmail = true;
           break;
         default:
+          this.showSendWhatsAppForm = true;
+          this.showSendEmailForm = false;
           this.isSendEmail = false;
           break;
       }
@@ -328,55 +340,53 @@ export class LandingComponent implements OnInit, AfterViewInit {
   }
 
   //#region Contact form
-  submitContactForm() {
-    if (!this.isSendEmail) {
-      // Send whatsapp
-      if (
-        this.contactForm.controls.nameControl.valid &&
-        this.contactForm.controls.messageControl.valid
-      ) {
-        const name = this.contactForm.controls.nameControl.value;
-        const message = this.contactForm.controls.messageControl.value;
-        const phoneNumber = '5215535592033';
-        const whatsAppMessage = `Hola soy ${name}. ${message}`;
-        const encoded = encodeURIComponent(whatsAppMessage);
-        window.open(`https://wa.me/${phoneNumber}?text=${encoded}`);
-
-      } else {
-        const message = 'Submitted form is invalid.';
-        const options = ['Ok'];
-        this.dialogService.openDialog(message, options).subscribe((result: string) => {});
-        this.contactForm.reset();
-        this.contactForm.controls.toggleControl.setValue('email');
-        Object.keys(this.contactForm.controls).forEach((key) => {
-          this.contactForm.controls[`${key}`].setErrors(null);
-        });
-      }
+  submitWhatsAppForm(formDirective: FormGroupDirective) {
+    if (
+      this.sendWhatsAppForm.controls.nameControl.valid &&
+      this.sendWhatsAppForm.controls.messageControl.valid
+    ) {
+      const name = this.sendWhatsAppForm.controls.nameControl.value;
+      const message = this.sendWhatsAppForm.controls.messageControl.value;
+      const phoneNumber = '5215535592033';
+      const whatsAppMessage = `Hola soy ${name}. ${message}`;
+      const encoded = encodeURIComponent(whatsAppMessage);
+      window.open(`https://wa.me/${phoneNumber}?text=${encoded}`);
+      formDirective.resetForm();
+      this.sendWhatsAppForm.reset();
     } else {
-      // Send email
-      if (
-        this.contactForm.controls.nameControl.valid &&
-        this.contactForm.controls.messageControl.valid &&
-        this.contactForm.controls.emailControl.valid
-      ) {
-        const name = this.contactForm.controls.nameControl.value;
-        const email = this.contactForm.controls.emailControl.value;
-        const message = this.contactForm.controls.messageControl.value;
-        this.contactService.sendEmail(name, email ,message).subscribe((response) => {
-          const msg = 'Thank you for your message.';
-          const options = ['Ok'];
-          this.contactForm.reset();
-          this.contactForm.controls.toggleControl.setValue('email');
-          Object.keys(this.contactForm.controls).forEach((key) => {
-            this.contactForm.controls[`${key}`].setErrors(null);
-          });
-          this.dialogService.openDialog(msg, []).subscribe((result: string) => {});
-        });
-      } else {
-        const message = 'Submitted form is invalid.';
+      const message = 'Submitted form is invalid.';
+      const options = ['Ok'];
+      this.dialogService.openDialog(message, options).subscribe((result: string) => {});
+      //this.sendWhatsAppForm.reset();
+      // Object.keys(this.sendWhatsAppForm.controls).forEach((key) => {
+      //   this.sendWhatsAppForm.controls[`${key}`].setErrors(null);
+      // });
+    }
+  }
+
+  submitEmailForm(formDirective: FormGroupDirective) {
+    if (
+      this.sendEmailForm.controls.nameControl.valid &&
+      this.sendEmailForm.controls.messageControl.valid &&
+      this.sendEmailForm.controls.emailControl.valid
+    ) {
+      const name = this.sendEmailForm.controls.nameControl.value;
+      const email = this.sendEmailForm.controls.emailControl.value;
+      const message = this.sendEmailForm.controls.messageControl.value;
+      this.contactService.sendEmail(name, email ,message).subscribe((response) => {
+        const msg = 'Thank you for your message.';
         const options = ['Ok'];
-        this.dialogService.openDialog(message, options).subscribe((result: string) => {});
-      }
+        formDirective.resetForm();
+        this.sendEmailForm.reset();
+        // Object.keys(this.sendEmailForm.controls).forEach((key) => {
+        //   this.sendEmailForm.controls[`${key}`].setErrors(null);
+        // });
+        this.dialogService.openDialog(msg, []).subscribe((result: string) => {});
+      });
+    } else {
+      const message = 'Submitted form is invalid.';
+      const options = ['Ok'];
+      this.dialogService.openDialog(message, options).subscribe((result: string) => {});
     }
   }
   //#endregion
