@@ -17,6 +17,25 @@
   </mat-sidenav-content>
 </mat-sidenav-container>
 
-<button mat-raised-button class="feedback-button" color="accent" feedback (click)="deactivateSmothScrolling()" (send)="onSendFeedback($event)">Feedback</button>
+<button 
+  *ngIf="showFeedbackButton"
+  mat-raised-button 
+  class="feedback-button" 
+  color="accent" 
+  feedback 
+  (click)="deactivateSmothScrolling()" 
+  (send)="onSendFeedback($event)"
+  [title]="title"
+  [placeholder]="placeholder"
+  [editTip]="editTip"
+  [checkboxLabel]="checkboxLabel"
+  [cancelLabel]="cancelLabel"
+  [sendLabel]="sendLabel"
+  [moveToolbarTip]="moveToolbarTip"
+  [drawRectTip]="drawRectTip"
+  [highlightTip]="highlightTip"
+  [hideTip]="hideTip"
+  [editDoneLabel]="editDoneLabel"
+>{{ 'MAIN.FEEDBACK' | translate }}</button>
 
 <app-scroll-to-top></app-scroll-to-top>

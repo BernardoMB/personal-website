@@ -1,4 +1,7 @@
 {
+  "MAIN": {
+    "FEEDBACK": "Comentar"
+  },
   "HEADER": {
     "HOME": "Inicio",
     "ABOUT": "Acerca de",

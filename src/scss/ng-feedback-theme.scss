@@ -14,6 +14,9 @@
         }
         .dialog-title {
             background-color: mat-color($primary) !important;
+            .title-font {
+              height: 56px;
+            }
         }
         .dialog-content {
           height: 100px;

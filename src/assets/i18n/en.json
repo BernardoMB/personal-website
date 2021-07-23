@@ -1,4 +1,7 @@
 {
+  "MAIN": {
+    "FEEDBACK": "Feedback"
+  },
   "HEADER": {
     "HOME": "Home",
     "ABOUT": "About",
