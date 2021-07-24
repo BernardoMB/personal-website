@@ -12,7 +12,7 @@ const routes: Routes = [
       { path: '', redirectTo: '/home', pathMatch: 'full' },
       { path: 'home', component: LandingComponent },
       { path: 'about', loadChildren: () => import('./modules/about/about.module').then(mod => mod.AboutModule) },
-      { path: 'cv', loadChildren: () => import('./modules/cv/cv.module').then(mod => mod.CvModule) },
+      { path: 'experience', loadChildren: () => import('./modules/cv/cv.module').then(mod => mod.CvModule) },
       { path: 'projects', loadChildren: () => import('./modules/projects/projects.module').then(mod => mod.ProjectsModule) },
       { path: 'hobbies', loadChildren: () => import('./modules/hobbies/hobbies.module').then(mod => mod.HobbiesModule) },
       { path: 'donate', loadChildren: () => import('./modules/coffee/coffee.module').then(mod => mod.CoffeeModule) },

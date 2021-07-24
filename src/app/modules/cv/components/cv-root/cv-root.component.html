@@ -2,10 +2,10 @@
   <div class="jumbotron-container">
     <div class="jumbotron-overlay">
       <div class="elements-container">
-        <h1>Experience</h1>
-        <h5>Do what you love and you'll never work a day</h5>
+        <h1>{{ 'EXPERIENCE.EXPERIENCE' | translate }}</h1>
+        <h5>{{ 'EXPERIENCE.PHRASE' | translate }}</h5>
         <button class="download-resumes-button" (click)="downloadResumeZip()">
-          Free download
+          {{ 'EXPERIENCE.FREE_DOWNLOAD' | translate }}
           <mat-icon class="download-icon">download</mat-icon>
         </button>
       </div>
@@ -23,7 +23,7 @@
       <div class="cv-container">
         <div class="document">
           <div class="entries-container">
-            <h1>Education</h1>
+            <h1>{{ 'EXPERIENCE.EDUCATION' | translate }}</h1>
             <div class="entry-container" *ngFor="let experience of schools">
               <div class="left">
                 <img *ngIf="experience.logoUrl != ''" class="copmany-logo" src="{{experience.logoUrl}}" alt="company logo">
@@ -55,7 +55,7 @@
             </div>
           </div>
           <div class="entries-container">
-            <h1>Experience</h1>
+            <h1>{{ 'EXPERIENCE.EXPERIENCE' | translate }}</h1>
             <div class="entry-container" *ngFor="let experience of experiences">
               <div class="left">
                 <img *ngIf="experience.logoUrl != ''" class="copmany-logo" src="{{experience.logoUrl}}" alt="company logo">
@@ -90,7 +90,7 @@
       </div>
       <div class="cv-container" style="margin-top: 20px; padding: 20px;">
         <div class="document">
-          <h1>Freelance</h1>
+          <h1>{{ 'EXPERIENCE.FREELANCE' | translate }}</h1>
 
           <h3>Instructor</h3>
           <div style="display: flex; align-items: baseline;">
@@ -100,7 +100,7 @@
           <p>I teach online courses and create tutorials for students who want to get started  in the software development industry.</p>
           <p>I have taught hundreds of hours of programing lectures.</p>
 
-          <h1>Achievements</h1>
+          <h1>{{ 'EXPERIENCE.ACHIEVEMENTS' | translate }}</h1>
 
           <h3>Advisor and judge appointment</h3>
           <div style="display: flex; align-items: baseline;">
@@ -110,7 +110,7 @@
           <p>I was appointed to be judge and advisor of the UNAMxHacks Hackathon organized by the National University of Mexico (UNAM).</p>
           <p>Helped contenders to choose and implement different technologies in order for them to solve the event's challenges.</p>
 
-          <h1>Online courses</h1>
+          <h1>{{ 'EXPERIENCE.ONLINE_COURSES' | translate }}</h1>
 
           <p>The Complete Node.js Developer Course</p>
           <h3>35 hours</h3>
@@ -132,15 +132,15 @@
           <h3>4 hours</h3>
           <a href="https://www.linkedin.com/learning/blazor-getting-started/demo-blazor-project-structure?u=2107241">View course</a>
 
-          <h1>Programing Languages</h1>
+          <h1>{{ 'EXPERIENCE.PROGRAMING_LANGUAGES' | translate }}</h1>
 
           <p>SQL, R, Python, Java, C#, .Net, Blazor, MongoDB, PostgreSQL, MySQL, SQL Server,MySQL, SQL Server, TypeScript, JavaScript, Visual Basic, Objective C, Angular, RMarkdown, MatLab, Maple LaTeX, HTML5, CSS, SCSS, MongoDB, PostgreSQL, SQL, NodeJS, Express, NestJS</p>
 
-          <h1>Technologies</h1>
+          <h1>{{ 'EXPERIENCE.TECHNOLOGIES' | translate }}</h1>
 
           <p>Microsoft Azure, App Services, Azure Functions, CosmosDB, Event Grid, Azure Storage Azure Media Services, Azure Devops, Amazon Web Services, AWS Lambda, API Gateway, S3, EC2, Google Cloud, Heroku, Git, Jira, Bitbucket API, Gitlab</p>
 
-          <h1>Tools</h1>
+          <h1>{{ 'EXPERIENCE.TOOLS' | translate }}</h1>
 
           <p>Visual Studio 2019, Visual Studio Code, Sublime Text, Office Suite, Sketch, Photoshop, Illustrator, After Effects</p>
         </div>
@@ -153,7 +153,7 @@
   <mat-tab>
     <ng-template mat-tab-label>
       <mat-icon class="example-tab-icon">history_edu</mat-icon>
-      <div class="label">{{'CV.RESUME' | translate }}</div>
+      <div class="label">{{'EXPERIENCE.RESUME' | translate }}</div>
     </ng-template>
     <div class="tab tab-resume">
       <!-- <div class="resume-container">
@@ -256,7 +256,7 @@ the best talent, gain experience and face new challenges.
       </div>
       <div style="text-align: center;">
         <button class="download-resumes-button" (click)="downloadResumeZip()">
-          Download resume
+          {{'EXPERIENCE.DOWNLOAD_RESUME' | translate }}
           <mat-icon class="download-icon">download</mat-icon>
         </button>
       </div>
@@ -265,10 +265,10 @@ the best talent, gain experience and face new challenges.
   <mat-tab>
     <ng-template mat-tab-label>
       <mat-icon class="example-tab-icon">spellcheck</mat-icon>
-      <div class="label">Activities</div>
+      <div class="label">{{ 'EXPERIENCE.ACTIVITIES' | translate }}</div>
     </ng-template>
     <div class="tab tab-time">
-      <h1>My time</h1>
+      <h1>{{ 'EXPERIENCE.MY_TIME' | translate }}</h1>
       <ngx-charts-advanced-pie-chart
         class="time-chart"
         [view]="view"
@@ -280,7 +280,16 @@ the best talent, gain experience and face new challenges.
         (deactivate)="onDeactivate($event)"
       >
       </ngx-charts-advanced-pie-chart>
-      <h1>Other activities</h1>
+      <h1 style="margin-top: 20px;">{{ 'EXPERIENCE.OTHER_ACTIVITIES' | translate }}</h1>
+      <ul>
+        <li>{{ 'EXPERIENCE.FRIENDS_AND_FAMILY' | translate }}</li>
+        <li>{{ 'EXPERIENCE.DOGS' | translate }}</li>
+        <li>{{ 'EXPERIENCE.MOVIES_AND_SERIES' | translate }}</li>
+        <li>{{ 'EXPERIENCE.MUSIC' | translate }}</li>
+      </ul>
+      <div class="interrupter-container">
+        <div class="interrupter"></div>
+      </div>
     </div>
   </mat-tab>
 </mat-tab-group>

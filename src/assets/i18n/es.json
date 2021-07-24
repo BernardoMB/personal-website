@@ -76,6 +76,27 @@
     "BIO_6": "Bernardo tiene un especial interés en la ciencia actuarial porque aplica bellísimos modelos matemáticos para manejar el riesgo para así poder proteger a las personas y a la sociedad ante situaciones adversas y aleatorias.",
     "BIO_7": "Él sabe que estudiantes comprometidos se convierten en adultos exitosos. Este es su año No. {{teachingYears}} enseñando ciencias computacionales. ¡Bernardo se encuentra muy entusiasmado de comenzar el mejor año de su carrera!"
   },
+  "EXPERIENCE": {
+    "EXPERIENCE": "Experiencia",
+    "PHRASE": "Haz lo que amas y no trabajarás un día",
+    "FREE_DOWNLOAD": "Descarga gratis",
+    "EDUCATION": "Educación",
+    "FREELANCE": "Independiente",
+    "ACHIEVEMENTS": "Logros",
+    "ONLINE_COURSES": "Cursos en linea",
+    "PROGRAMING_LANGUAGES": "Programing Languages",
+    "TECHNOLOGIES": "Tecnologías",
+    "TOOLS": "Herramientas",
+    "RESUME": "Hoja de vida",
+    "DOWNLOAD_RESUME": "Descargar hoja de vida",
+    "ACTIVITIES": "Actividades",
+    "MY_TIME": "Mi tiempo",
+    "OTHER_ACTIVITIES": "Otras actividades",
+    "FRIENDS_AND_FAMILY": "Pasar tiempo con la familia y amigos",
+    "DOGS": "Pasear a los perros",
+    "MOVIES_AND_SERIES": "Ver series y películas",
+    "MUSIC": "Escuchar música"
+  },
   "FOOTER": {
     "DESCRIPTION": "Descripción",
     "BIOGRAPHY": "Biografía",
@@ -86,8 +107,5 @@
     "TITLE": "Actuario y Desarrollador Full-Stack",
     "COPY_PHONE": "Copiar teléfono",
     "COPY_EMAIL": "Copiar correo electrónico"
-  },
-  "CV": {
-    "RESUME": "Hoja de vida"
   }
 }

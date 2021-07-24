@@ -193,17 +193,6 @@
         }
       }
     }
-    .interrupter-container {
-      display: flex;
-      justify-content: center;
-      margin: 40px 0px;
-      .interrupter {
-        width: 80px;
-        height: 4px;
-        border-radius: 4px;
-        background-color: $cards-border;
-      }
-    }
   }
   .tab-resume {
     padding-left: 40px;
@@ -467,6 +456,17 @@
           }
         }
       }
+    }
+  }
+  .interrupter-container {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0px;
+    .interrupter {
+      width: 80px;
+      height: 4px;
+      border-radius: 4px;
+      background-color: gainsboro;
     }
   }
   ::ng-deep {

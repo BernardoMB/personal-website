@@ -76,6 +76,27 @@
     "BIO_6": "Bernardo has a special interest in actuarial science because it applies beautiful mathematical models for assessing risk to protect people and society from adverse random events.",
     "BIO_7": "He knows that commited students become successful adults. This is his year {{teachingYears}} teaching computer science. Bernardo is excited to begin the best year ever!"
   },
+  "EXPERIENCE": {
+    "EXPERIENCE": "Experience",
+    "PHRASE": "Do what you love and you'll never work a day",
+    "FREE_DOWNLOAD": "Free download",
+    "EDUCATION": "Education",
+    "FREELANCE": "Freelance",
+    "ACHIEVEMENTS": "Achievements",
+    "ONLINE_COURSES": "Online courses",
+    "PROGRAMING_LANGUAGES": "Programing Languages",
+    "TECHNOLOGIES": "Technologies",
+    "TOOLS": "Tools",
+    "RESUME": "Resume",
+    "DOWNLOAD_RESUME": "Download resume",
+    "ACTIVITIES": "Activities",
+    "MY_TIME": "My time",
+    "OTHER_ACTIVITIES": "Other activities",
+    "FRIENDS_AND_FAMILY": "Spend time with friends and family",
+    "DOGS": "Walk the dogs",
+    "MOVIES_AND_SERIES": "Watch movies and series",
+    "MUSIC": "Listen to music"
+  },
   "FOOTER": {
     "DESCRIPTION": "Description",
     "BIOGRAPHY": "Biography",
@@ -86,8 +107,5 @@
     "TITLE": "Actuary & Full-Stack Developer",
     "COPY_PHONE": "Copy phone number",
     "COPY_EMAIL": "Copy email"
-  },
-  "CV": {
-    "RESUME": "Resume"
   }
 }
