@@ -11,6 +11,9 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatSelectModule } from '@angular/material/select';
 import { SharedModule } from '../../shared/shared.module';
+import { HttpClient } from '@angular/common/http';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { HttpLoaderFactory } from 'src/app/app.module';
 
 
 @NgModule({
@@ -26,7 +29,14 @@ import { SharedModule } from '../../shared/shared.module';
     MatInputModule,
     MatButtonModule,
     MatMenuModule,
-    MatSelectModule
+    MatSelectModule,
+    TranslateModule.forChild({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    })
   ]
 })
 export class CoffeeModule { }

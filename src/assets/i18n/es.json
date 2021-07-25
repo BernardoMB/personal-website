@@ -107,6 +107,20 @@
     "LEARN_FREE_TIME": "Enterate que hago en mi",
     "FREE_TIME": "tiempo libre"
   },
+  "DONATE": {
+    "LIKE_MY_WORK": "¿Te gusta lo que hago?",
+    "DONATE": "Dona",
+    "ENTER_PAYMENT": "Ingresa la información de pago",
+    "NAME_CARD": "Nombre en la tarjeta",
+    "REQUIRED": "Requerido",
+    "CARD_NUMBER": "Número de tarjeta",
+    "CARD_ERROR": "El número de tarjeta no es válido",
+    "MONTH": "Mes de expiración",
+    "YEAR": "Año de expiración",
+    "CVV_ERROR": "El código de seguridad no es válido",
+    "SCURE": "Conexión",
+    "CONNECTION": "Segura"
+  },
   "FOOTER": {
     "DESCRIPTION": "Descripción",
     "BIOGRAPHY": "Biografía",

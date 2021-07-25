@@ -107,6 +107,20 @@
     "LEARN_FREE_TIME": "Learn what I like to do in my",
     "FREE_TIME": "free time"
   },
+  "DONATE": {
+    "LIKE_MY_WORK": "Like my work?",
+    "DONATE": "Donate",
+    "ENTER_PAYMENT": "Enter your card details",
+    "NAME_CARD": "Name on Card",
+    "REQUIRED": "Required",
+    "CARD_NUMBER": "Card Number",
+    "CARD_ERROR": "Please enter a valid credit card number",
+    "MONTH": "Expiry Month",
+    "YEAR": "Expiry Year",
+    "CVV_ERROR": "Please enter a valid security code (CVV)",
+    "SCURE": "Secure",
+    "CONNECTION": "Connection"
+  },
   "FOOTER": {
     "DESCRIPTION": "Description",
     "BIOGRAPHY": "Biography",
