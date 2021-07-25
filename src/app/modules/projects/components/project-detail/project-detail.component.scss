@@ -72,7 +72,6 @@
       height: unset !important;
       line-height: 1 !important;
       margin: 0px;
-      color: black;
     }
     .swiper-button-prev {
       z-index: 1 !important;
@@ -130,6 +129,11 @@
 }
 
 ::ng-deep {
+  .light-theme {
+    .swiper-button {
+      color: black !important;
+    }
+  }
   .dark-theme {
     .swiper-container {
       .swiper-wrapper {
@@ -142,8 +146,8 @@
         }
       }
     }
-  }
-  .swiper-button {
-    color: #ffffff !important;
+    .swiper-button {
+      color: #ffffff !important;
+    }
   }
 }
