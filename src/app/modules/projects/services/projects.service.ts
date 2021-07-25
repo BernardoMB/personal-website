@@ -125,8 +125,18 @@ export class ProjectsService {
             <p>More infromation coming soon.</p>
           `,
           images: [
-            'https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
-            'https://images.pexels.com/photos/8602145/pexels-photo-8602145.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
+            'https://i.imgur.com/obM2u2u.png',
+            'https://i.imgur.com/LHudrdM.png',
+            'https://i.imgur.com/e4xGBqx.png',
+            'https://i.imgur.com/vAILoQw.png',
+            'https://i.imgur.com/1NfL8MX.png',
+            'https://i.imgur.com/C8Zq1RU.png',
+            'https://i.imgur.com/T8sc4XJ.png',
+            'https://i.imgur.com/6bTm3iM.png',
+            'https://i.imgur.com/50eD5Dj.png',
+            'https://i.imgur.com/6PfXZUk.png',
+            'https://i.imgur.com/3xi3ZfD.png',
+            'https://i.imgur.com/rgt7zuh.png'
           ]
         },
       ]
