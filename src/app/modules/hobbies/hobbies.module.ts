@@ -6,6 +6,9 @@ import { HobbiesRootComponent } from './components/hobbies-root/hobbies-root.com
 import { HobbiesResolverService } from './services/hobbies-resolver.service';
 import { HobbiesService } from './services/hobbies.service';
 import { MatCardModule } from '@angular/material/card';
+import { HttpClient } from '@angular/common/http';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { HttpLoaderFactory } from 'src/app/app.module';
 
 
 @NgModule({
@@ -13,7 +16,14 @@ import { MatCardModule } from '@angular/material/card';
   imports: [
     CommonModule,
     HobbiesRoutingModule,
-    MatCardModule
+    MatCardModule,
+    TranslateModule.forChild({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    }),
   ],
   providers: [
     HobbiesResolverService,

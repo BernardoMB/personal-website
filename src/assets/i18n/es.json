@@ -97,6 +97,16 @@
     "MOVIES_AND_SERIES": "Ver series y películas",
     "MUSIC": "Escuchar música"
   },
+  "PROJECTS": {
+    "PROJECTS": "Proyectos",
+    "MORE_INFO": "Mas información próximamente."
+  },
+  "HOBBIES": {
+    "HOBBIES": "Pasatiempos",
+    "BALANCE": "Mi balance entre la vida profesional y personal",
+    "LEARN_FREE_TIME": "Enterate que hago en mi",
+    "FREE_TIME": "tiempo libre"
+  },
   "FOOTER": {
     "DESCRIPTION": "Descripción",
     "BIOGRAPHY": "Biografía",
