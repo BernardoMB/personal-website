@@ -3,11 +3,11 @@
   <div class="img-2"></div> -->
   <div class="jumbotron-container">
     <div style="z-index: 1; display: flex; justify-content: center; flex-direction: column; align-items: center;">
-      <h1 class="title">About me</h1>
+      <h1 class="title">{{ 'ABOUT.ABOUT_ME' | translate }}</h1>
       <div class="phrase">
-        “Make the change that you want to see in the world.”
+        {{ 'ABOUT.ABOUT_PHRASE' | translate }}
       </div>
-      <button mat-flat-button [routerLink]="['/home']" fragment="contact">Get in touch</button>
+      <button mat-flat-button [routerLink]="['/home']" fragment="contact">{{ 'ABOUT.TOUCH' | translate }}</button>
     </div>
   </div>
   <!-- <Particles
@@ -20,11 +20,11 @@
 <div class="tabs-navigation-container">
   <div class="tab focus-outline" routerLinkActive="active" [routerLink]="['./description']">
     <mat-icon>contact_page</mat-icon>
-    <div>Description</div>
+    <div>{{ 'ABOUT.DESCRIPTION' | translate }}</div>
   </div>
   <div class="tab focus-outline" routerLinkActive="active" [routerLink]="['./biography']">
     <mat-icon>auto_stories</mat-icon>
-    <div>Biography</div>
+    <div>{{ 'ABOUT.BIOGRAPHY' | translate }}</div>
   </div>
 </div>
 

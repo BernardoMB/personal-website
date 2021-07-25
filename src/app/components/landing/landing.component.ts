@@ -1,7 +1,9 @@
 import { AfterViewChecked, AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { AbstractControl, FormControl, FormGroup, Validators } from '@angular/forms';
+import { AbstractControl, FormControl, FormGroup, FormGroupDirective, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
+import { skip, take } from 'rxjs/operators';
 import Typed, { TypedOptions } from 'typed.js';
 import { ContactService } from '../../services/contact.service';
 import { DialogService } from '../../services/dialog.service';
@@ -12,6 +14,9 @@ import { DialogService } from '../../services/dialog.service';
   styleUrls: ['./landing.component.scss']
 })
 export class LandingComponent implements OnInit, AfterViewInit {
+  currentLang;
+  phrase: string | undefined;
+
   //#region Swiper
   index = 0;
   config: SwiperConfigInterface = {
@@ -31,10 +36,12 @@ export class LandingComponent implements OnInit, AfterViewInit {
   //#endregion
 
   //#region TypedJS
-  typed: any;
+  typed1: any;
+  typed2: any;
+  typed3: any;
+  showElement0 = true;
   showElement1 = false;
   showElement2 = false;
-  showElement3 = false;
   //#endregion
 
   //#region Particles
@@ -107,26 +114,19 @@ export class LandingComponent implements OnInit, AfterViewInit {
   //#endregion
 
   //#region Skills
-  skills = [
-    { name: 'JavaScript/TypeScript', completion: 95, label: 'Experienced'},
-    { name: 'C#', completion: 80, label: 'Experienced'},
-    { name: 'HTML/CSS', completion: 90, label: 'Experienced'},
-    { name: 'R', completion: 80, label: 'Experienced'},
-    { name: 'Java', completion: 75, label: 'Experienced'},
-    { name: 'SQL', completion: 70, label: 'Experienced'},
-    { name: 'MongoDB', completion: 85, label: 'Experienced'},
-    { name: 'Azure', completion: 75, label: 'Experienced'},
-    { name: 'AWS', completion: 65, label: 'Intermediate'},
-    { name: 'Visual Basic', completion: 40, label: 'Beginner'},
-    { name: 'Microsoft Excel', completion: 75, label: 'Experienced'},
-    { name: 'LaTex', completion: 80, label: 'Experienced'},
-    { name: 'MatLab', completion: 40, label: 'Beginner'},
-  ];
+  skills: Array<any> | undefined;
+  labels: Array<string> | undefined;
   //#endregion
 
   //#region Contact form
-  contactForm = new FormGroup({
-    toggleControl: new FormControl('whatsapp', [Validators.required]),
+  showSendWhatsAppForm = true;
+  showSendEmailForm = false;
+  toggleControl = new FormControl('whatsapp', [Validators.required]);
+  sendWhatsAppForm = new FormGroup({
+    nameControl: new FormControl('', [Validators.required]),
+    messageControl: new FormControl('', [Validators.required, Validators.minLength(10)])
+  });
+  sendEmailForm = new FormGroup({
     nameControl: new FormControl('', [Validators.required]),
     emailControl: new FormControl('', [Validators.email, /*(control: AbstractControl): {[key: string]: any} | null => {
       const regularExpresion = /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/;
@@ -139,26 +139,140 @@ export class LandingComponent implements OnInit, AfterViewInit {
     messageControl: new FormControl('', [Validators.required, Validators.minLength(10)])
   });
   isSendEmail = false;
+  graceFullMessage = 'Thank you for your message.';
+  invalidFormErrorMessage = 'Submitted form is invalid.';
   //#endregion
 
   constructor(
     private contactService: ContactService,
     private dialogService: DialogService,
     private router: Router,
-    private route: ActivatedRoute
-  ) { }
+    private route: ActivatedRoute,
+    public translateService: TranslateService
+  ) {
+    //#region Translate
+    this.currentLang = this.translateService.currentLang;
+    switch(this.currentLang) {
+      case 'en':
+        this.phrase = 'Be yourself; everyone else is already taken.';
+        break;
+      case 'es':
+        this.phrase = 'Se tu mismo; los demás ya estan ocupados.';
+        break;
+      default:
+        this.phrase = 'Be yourself; everyone else is already taken.';
+        break;
+    }
+    //#endregion
+  }
 
   ngOnInit(): void {
+    //#region Translate
+    this.translateService.onLangChange.pipe(
+      skip(1)
+    ).subscribe((event: any) => {
+      //#region Adjust phrase
+      this.currentLang = event.lang;
+      switch(this.currentLang) {
+        case 'en':
+          this.phrase = 'Be yourself; everyone else is already taken.';
+          break;
+        case 'es':
+          this.phrase = 'Se tu mismo; los demás ya estan ocupados.';
+          break;
+        default:
+          this.phrase = 'Be yourself; everyone else is already taken.';
+          break;
+      }
+      this.showElement0 = false;
+      this.showElement1 = false;
+      this.showElement2 = false;
+      this.type();
+      //#endregion
+      //#region Adjust skills
+      switch(this.currentLang) {
+        case 'en':
+          this.labels = ['Experienced', 'Intermediate', 'Beginner'];
+          this.graceFullMessage = 'Thank you for your message.';
+          this.invalidFormErrorMessage = 'Submitted form is invalid.';
+          break;
+        case 'es':
+          this.labels = ['Experimentado', 'Intermedio', 'Pricipiante'];
+          this.graceFullMessage = 'Gracias por tu mensaje.';
+          this.invalidFormErrorMessage = 'El formulario es inválido.';
+          break;
+        default:
+          this.labels = ['Experienced', 'Intermediate', 'Beginner'];
+          this.graceFullMessage = 'Thank you for your message.';
+          this.invalidFormErrorMessage = 'Submitted form is invalid.';
+          break;
+      }
+      this.skills = [
+        { name: 'JavaScript/TypeScript', completion: 95, label: this.labels[0]},
+        { name: 'C#', completion: 80, label: this.labels[0]},
+        { name: 'HTML/CSS', completion: 90, label: this.labels[0]},
+        { name: 'R', completion: 80, label: this.labels[0]},
+        { name: 'Java', completion: 75, label: this.labels[0]},
+        { name: 'SQL', completion: 70, label: this.labels[0]},
+        { name: 'MongoDB', completion: 85, label: this.labels[0]},
+        { name: 'Azure', completion: 75, label: this.labels[0]},
+        { name: 'AWS', completion: 65, label: this.labels[1]},
+        { name: 'Visual Basic', completion: 40, label: this.labels[2]},
+        { name: 'Microsoft Excel', completion: 75, label: this.labels[0]},
+        { name: 'LaTex', completion: 80, label: this.labels[0]},
+        { name: 'MatLab', completion: 40, label: this.labels[2]},
+      ];
+      //#endregion
+    });
+    //#endregion
+    switch(this.currentLang) {
+      case 'en':
+        this.labels = ['Experienced', 'Intermediate', 'Beginner'];
+        this.graceFullMessage = 'Thank you for your message.';
+        this.invalidFormErrorMessage = 'Submitted form is invalid.';
+        break;
+      case 'es':
+        this.labels = ['Experimentado', 'Intermedio', 'Pricipiante'];
+        this.graceFullMessage = 'Gracias por tu mensaje.';
+        this.invalidFormErrorMessage = 'El formulario es inválido.';
+        break;
+      default:
+        this.labels = ['Experienced', 'Intermediate', 'Beginner'];
+        this.graceFullMessage = 'Thank you for your message.';
+        this.invalidFormErrorMessage = 'Submitted form is invalid.';
+        break;
+    }
+    this.skills = [
+      { name: 'JavaScript/TypeScript', completion: 95, label: this.labels[0]},
+      { name: 'C#', completion: 80, label: this.labels[0]},
+      { name: 'HTML/CSS', completion: 90, label: this.labels[0]},
+      { name: 'R', completion: 80, label: this.labels[0]},
+      { name: 'Java', completion: 75, label: this.labels[0]},
+      { name: 'SQL', completion: 70, label: this.labels[0]},
+      { name: 'MongoDB', completion: 85, label: this.labels[0]},
+      { name: 'Azure', completion: 75, label: this.labels[0]},
+      { name: 'AWS', completion: 65, label: this.labels[1]},
+      { name: 'Visual Basic', completion: 40, label: this.labels[2]},
+      { name: 'Microsoft Excel', completion: 75, label: this.labels[0]},
+      { name: 'LaTex', completion: 80, label: this.labels[0]},
+      { name: 'MatLab', completion: 40, label: this.labels[2]},
+    ];
     //#region Contact form
-    this.contactForm.controls.toggleControl.valueChanges.subscribe((value: string) => {
+    this.toggleControl.valueChanges.subscribe((value: string) => {
       switch (value) {
         case 'whatsapp':
+          this.showSendWhatsAppForm = true;
+          this.showSendEmailForm = false;
           this.isSendEmail = false;
           break;
         case 'email':
+          this.showSendWhatsAppForm = false;
+          this.showSendEmailForm = true;
           this.isSendEmail = true;
           break;
         default:
+          this.showSendWhatsAppForm = true;
+          this.showSendEmailForm = false;
           this.isSendEmail = false;
           break;
       }
@@ -170,10 +284,15 @@ export class LandingComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
+    this.type();
+  }
+
+  type() {
     //#region Typed JS
+    this.showElement0 = true;
     const options0: TypedOptions = {
       strings: [
-        'Be yourself; everyone else is already taken.'
+        this.phrase?? ''
       ],
       typeSpeed: 30,
       cursorChar: '_',
@@ -182,11 +301,10 @@ export class LandingComponent implements OnInit, AfterViewInit {
       loopCount: 0,
       onComplete: function(self) {
         (<any>self).cursor.remove();
-
       }
     };
-    if (!!this.typed) this.typed.destroy();
-    this.typed = new Typed('.typed-element-0', options0);
+    if (!!this.typed1) this.typed1.destroy();
+    this.typed1 = new Typed('.typed-element-0', options0);
 
     setTimeout(() => {
       this.showElement1 = true;
@@ -206,7 +324,10 @@ export class LandingComponent implements OnInit, AfterViewInit {
             }, 1500);
           }
         };
-        this.typed = new Typed('.typed-element-1', options1);
+        var typedElement1 = document.getElementsByClassName('typed-element-1')[0];
+        if (typedElement1 != null) {
+          this.typed2 = new Typed('.typed-element-1', options1);
+        }
       }, 1);
     }, 2500);
 
@@ -223,62 +344,63 @@ export class LandingComponent implements OnInit, AfterViewInit {
           loop: false,
           loopCount: 0
         };
-        this.typed = new Typed('.typed-element-2', options2);
+        var typedElement2 = document.getElementsByClassName('typed-element-2')[0];
+        if (typedElement2 != null) {
+          this.typed3 = new Typed('.typed-element-2', options2);
+        }
       }, 1);
     }, 4000);
     //#endregion
   }
 
   //#region Contact form
-  submitContactForm() {
-    if (!this.isSendEmail) {
-      // Send whatsapp
-      if (
-        this.contactForm.controls.nameControl.valid &&
-        this.contactForm.controls.messageControl.valid
-      ) {
-        const name = this.contactForm.controls.nameControl.value;
-        const message = this.contactForm.controls.messageControl.value;
-        const phoneNumber = '5215535592033';
-        const whatsAppMessage = `Hola soy ${name}. ${message}`;
-        const encoded = encodeURIComponent(whatsAppMessage);
-        window.open(`https://wa.me/${phoneNumber}?text=${encoded}`);
-
-      } else {
-        const message = 'Submitted form is invalid.';
-        const options = ['Ok'];
-        this.dialogService.openDialog(message, options).subscribe((result: string) => {});
-        this.contactForm.reset();
-        this.contactForm.controls.toggleControl.setValue('email');
-        Object.keys(this.contactForm.controls).forEach((key) => {
-          this.contactForm.controls[`${key}`].setErrors(null);
-        });
-      }
+  submitWhatsAppForm(formDirective: FormGroupDirective) {
+    if (
+      this.sendWhatsAppForm.controls.nameControl.valid &&
+      this.sendWhatsAppForm.controls.messageControl.valid
+    ) {
+      const name = this.sendWhatsAppForm.controls.nameControl.value;
+      const message = this.sendWhatsAppForm.controls.messageControl.value;
+      const phoneNumber = '5215535592033';
+      const whatsAppMessage = `Hola soy ${name}. ${message}`;
+      const encoded = encodeURIComponent(whatsAppMessage);
+      window.open(`https://wa.me/${phoneNumber}?text=${encoded}`);
+      formDirective.resetForm();
+      this.sendWhatsAppForm.reset();
     } else {
-      // Send email
-      if (
-        this.contactForm.controls.nameControl.valid &&
-        this.contactForm.controls.messageControl.valid &&
-        this.contactForm.controls.emailControl.valid
-      ) {
-        const name = this.contactForm.controls.nameControl.value;
-        const email = this.contactForm.controls.emailControl.value;
-        const message = this.contactForm.controls.messageControl.value;
-        this.contactService.sendEmail(name, email ,message).subscribe((response) => {
-          const msg = 'Thank you for your message.';
-          const options = ['Ok'];
-          this.contactForm.reset();
-          this.contactForm.controls.toggleControl.setValue('email');
-          Object.keys(this.contactForm.controls).forEach((key) => {
-            this.contactForm.controls[`${key}`].setErrors(null);
-          });
-          this.dialogService.openDialog(msg, []).subscribe((result: string) => {});
-        });
-      } else {
-        const message = 'Submitted form is invalid.';
+      const message = this.invalidFormErrorMessage;
+      const options = ['Ok'];
+      this.dialogService.openDialog(message, options).subscribe((result: string) => {});
+      //this.sendWhatsAppForm.reset();
+      // Object.keys(this.sendWhatsAppForm.controls).forEach((key) => {
+      //   this.sendWhatsAppForm.controls[`${key}`].setErrors(null);
+      // });
+    }
+  }
+
+  submitEmailForm(formDirective: FormGroupDirective) {
+    if (
+      this.sendEmailForm.controls.nameControl.valid &&
+      this.sendEmailForm.controls.messageControl.valid &&
+      this.sendEmailForm.controls.emailControl.valid
+    ) {
+      const name = this.sendEmailForm.controls.nameControl.value;
+      const email = this.sendEmailForm.controls.emailControl.value;
+      const message = this.sendEmailForm.controls.messageControl.value;
+      this.contactService.sendEmail(name, email ,message).subscribe((response) => {
+        const msg = this.graceFullMessage;
         const options = ['Ok'];
-        this.dialogService.openDialog(message, options).subscribe((result: string) => {});
-      }
+        formDirective.resetForm();
+        this.sendEmailForm.reset();
+        // Object.keys(this.sendEmailForm.controls).forEach((key) => {
+        //   this.sendEmailForm.controls[`${key}`].setErrors(null);
+        // });
+        this.dialogService.openDialog(msg, []).subscribe((result: string) => {});
+      });
+    } else {
+      const message = this.invalidFormErrorMessage;
+      const options = ['Ok'];
+      this.dialogService.openDialog(message, options).subscribe((result: string) => {});
     }
   }
   //#endregion

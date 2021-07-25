@@ -6,9 +6,9 @@
     <div class="navigation-container">
       <div routerLink="/home" routerLinkActive="active">{{ 'HEADER.HOME' | translate }}</div>
       <div routerLink="/about" routerLinkActive="active">{{ 'HEADER.ABOUT' | translate }}</div>
-      <div routerLink="/cv" routerLinkActive="active">Experience</div>
-      <div routerLink="/projects" routerLinkActive="active">Projects</div>
-      <div routerLink="/hobbies" routerLinkActive="active">Hobbies</div>
+      <div routerLink="/experience" routerLinkActive="active">{{ 'HEADER.EXPERIENCE' | translate }}</div>
+      <div routerLink="/projects" routerLinkActive="active">{{ 'HEADER.PROJECTS' | translate }}</div>
+      <div routerLink="/hobbies" routerLinkActive="active">{{ 'HEADER.HOBBIES' | translate }}</div>
     </div>
     <button mat-icon-button [disabled]="!enableShareButton" [matMenuTriggerFor]="shareMenu" aria-label="share icon button">
       <mat-icon>share</mat-icon>
@@ -29,11 +29,11 @@
     <span (click)="navigateToHomePage()">{{name}}</span>
     <div class="spacer"></div>
     <div class="navigation-container">
-      <div routerLink="/home" routerLinkActive="active">Home</div>
+      <div routerLink="/home" routerLinkActive="active">{{ 'HEADER.HOME' | translate }}</div>
       <div routerLink="/about" routerLinkActive="active">{{ 'HEADER.ABOUT' | translate }}</div>
-      <div routerLink="/cv" routerLinkActive="active">Experience</div>
-      <div routerLink="/projects" routerLinkActive="active">Projects</div>
-      <div routerLink="/hobbies" routerLinkActive="active">Hobbies</div>
+      <div routerLink="/experience" routerLinkActive="active">{{ 'HEADER.EXPERIENCE' | translate }}</div>
+      <div routerLink="/projects" routerLinkActive="active">{{ 'HEADER.PROJECTS' | translate }}</div>
+      <div routerLink="/hobbies" routerLinkActive="active">{{ 'HEADER.HOBBIES' | translate }}</div>
     </div>
     <button mat-icon-button [disabled]="!enableShareButton" [matMenuTriggerFor]="shareMenu" aria-label="share icon button">
       <mat-icon>share</mat-icon>
@@ -86,23 +86,23 @@
 
 <!-- #region Menus -->
 <mat-menu #shareMenu="matMenu">
-  <button mat-menu-item (click)="copyLinkToClipboard()">Copy link</button>
-  <button mat-menu-item (click)="shareOnFacebook()">Share on Facebook</button>
-  <button mat-menu-item (click)="shareOnTwitter()">Share on Twitter</button>
-  <button mat-menu-item (click)="shareOnReddit()">Share on Reddit</button>
+  <button mat-menu-item (click)="copyLinkToClipboard()">{{ 'HEADER.COPY_LINK' | translate }}</button>
+  <button mat-menu-item (click)="shareOnFacebook()">{{ 'HEADER.SHARE_ON_FACEBOOK' | translate }}</button>
+  <button mat-menu-item (click)="shareOnTwitter()">{{ 'HEADER.SHARE_ON_TWITTER' | translate }}</button>
+  <button mat-menu-item (click)="shareOnReddit()">{{ 'HEADER.SHARE_ON_REDDIT' | translate }}</button>
 </mat-menu>
 
 <mat-menu class="settings-menu" #settingsMenu="matMenu">
-  <div class="label">Language</div>
+  <div class="label">{{ 'HEADER.LANGUAGE' | translate }}</div>
   <mat-select [value]="selectedLanguage" (valueChange)="changeLanguage($event)">
     <mat-option [value]="'en'">English</mat-option>
     <mat-option [value]="'es'">Español</mat-option>
   </mat-select>
-  <div class="label">Theme</div>
+  <div class="label">{{ 'HEADER.THEME' | translate }}</div>
   <mat-radio-group class="theme-radio-group" aria-label="Select an option" [formControl]="themeControl">
-    <mat-radio-button [color]="'accent'" value="light-theme">Light</mat-radio-button>
-    <mat-radio-button [color]="'primary'" value="dark-theme">Dark</mat-radio-button>
-    <mat-radio-button [color]="'primary'" value="mint-theme">Mint</mat-radio-button>
+    <mat-radio-button [color]="'accent'" value="light-theme">{{ 'HEADER.LIGHT' | translate }}</mat-radio-button>
+    <mat-radio-button [color]="'primary'" value="dark-theme">{{ 'HEADER.DARK' | translate }}</mat-radio-button>
+    <mat-radio-button [color]="'primary'" value="mint-theme">{{ 'HEADER.MINT' | translate }}</mat-radio-button>
   </mat-radio-group>
 </mat-menu>
 <!-- #endregion -->

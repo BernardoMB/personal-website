@@ -11,6 +11,9 @@ import { CoolBorderComponent } from '../../shared/components/cool-border/cool-bo
 import { SharedModule } from '../../shared/shared.module';
 import { SwiperModule } from 'ngx-swiper-wrapper';
 import { MatIconModule } from '@angular/material/icon';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { HttpLoaderFactory } from 'src/app/app.module';
+import { HttpClient } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -24,7 +27,14 @@ import { MatIconModule } from '@angular/material/icon';
     MatProgressSpinnerModule,
     SharedModule,
     SwiperModule,
-    MatIconModule
+    MatIconModule,
+    TranslateModule.forChild({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    }),
   ],
   providers: [
     ProjectsService,

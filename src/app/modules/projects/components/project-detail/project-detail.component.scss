@@ -37,6 +37,7 @@
         img {
           height: 100%;
           width: 100%;
+          background-color: #fafafa;
           object-fit: contain;
         }
       }
@@ -71,7 +72,6 @@
       height: unset !important;
       line-height: 1 !important;
       margin: 0px;
-      color: black;
     }
     .swiper-button-prev {
       z-index: 1 !important;
@@ -129,7 +129,23 @@
 }
 
 ::ng-deep {
+  .light-theme {
+    .swiper-button {
+      color: black !important;
+    }
+  }
   .dark-theme {
+    .swiper-container {
+      .swiper-wrapper {
+        .swiper-slide {
+          .slide-container {
+            img {
+              background-color: #303030 !important;
+            }
+          }
+        }
+      }
+    }
     .swiper-button {
       color: #ffffff !important;
     }

@@ -38,6 +38,7 @@
           font-size: 46px;
           font-weight: bold;
           line-height: 120%;
+          padding: 36px 0px;
         }
         h5 {
           margin: 10px 0px;
@@ -190,17 +191,6 @@
             }
           }
         }
-      }
-    }
-    .interrupter-container {
-      display: flex;
-      justify-content: center;
-      margin: 40px 0px;
-      .interrupter {
-        width: 80px;
-        height: 4px;
-        border-radius: 4px;
-        background-color: $cards-border;
       }
     }
   }
@@ -466,6 +456,17 @@
           }
         }
       }
+    }
+  }
+  .interrupter-container {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0px;
+    .interrupter {
+      width: 80px;
+      height: 4px;
+      border-radius: 4px;
+      background-color: gainsboro;
     }
   }
   ::ng-deep {

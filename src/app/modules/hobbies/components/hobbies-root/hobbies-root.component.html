@@ -12,16 +12,16 @@
 <div class="about-jumbotron">
   <div class="jumbotron-container">
     <div class="elements-container">
-      <h1 class="title">My hobbies</h1>
+      <h1 class="title">{{ 'HOBBIES.HOBBIES' | translate}}</h1>
       <div class="phrase">
-        My balance between personal and professional life
+        {{ 'HOBBIES.BALANCE' | translate}}
       </div>
-      <button mat-flat-button [routerLink]="['/home']" fragment="contact">Get in touch</button>
+      <button mat-flat-button [routerLink]="['/home']" fragment="contact">{{ 'ABOUT.TOUCH' | translate }}</button>
     </div>
   </div>
 </div>
 
-<div class="welcome-banner">Learn what I like to do in my <span style="margin-left: 5px;">free time</span></div>
+<div class="welcome-banner">{{ 'HOBBIES.LEARN_FREE_TIME' | translate }} <span style="margin-left: 5px;">{{ 'HOBBIES.FREE_TIME' | translate }}</span></div>
 
 <section class="hobbies-section">
   <div class="hobbies-container">
