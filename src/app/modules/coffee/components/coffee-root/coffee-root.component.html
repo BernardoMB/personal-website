@@ -2,10 +2,10 @@
   <div class="jumbotron-container">
     <div class="jumbotron-overlay">
       <div class="elements-container">
-        <h1>Like my work?</h1>
-        <h5>Feel free to donate and support my work</h5>
+        <h1>{{ 'DONATE.LIKE_MY_WORK' | translate }}</h1>
+        <h5>{{ 'LANDING.SUPPORT_PHRASE' | translate }}</h5>
         <button class="download-resumes-button" (click)="onCompletePayment()">
-          Donate $5 <span style="font-size: 10px; margin-left: 2px; margin-top: 6px;">USD</span>
+          {{ 'DONATE.DONATE' | translate }} $5 <span style="font-size: 10px; margin-left: 2px; margin-top: 6px;">USD</span>
           <mat-icon class="download-icon">volunteer_activism</mat-icon>
         </button>
       </div>
@@ -13,18 +13,18 @@
   </div>
 </section>
 
-<div class="welcome-banner">Enter your card details</div>
+<div class="welcome-banner">{{ 'DONATE.ENTER_PAYMENT' | translate }}</div>
 
 <section class="payment-section">
     <div class="payment-container">
         <div class="form-container">
           <form class="new-card-form" [formGroup]="newCardForm">
             <mat-form-field appearance="outline">
-              <mat-label>Name on Card</mat-label>
+              <mat-label>{{ 'DONATE.NAME_CARD' | translate }}</mat-label>
               <input
                 matInput
                 type="text"
-                placeholder="Name on Card"
+                placeholder="{{ 'DONATE.NAME_CARD' | translate }}"
                 formControlName="nameOnCardControl"
                 required
               />
@@ -33,14 +33,14 @@
                   newCardForm.controls.nameOnCardControl.errors &&
                   newCardForm.controls.nameOnCardControl.errors.required
                 "
-                >Required</mat-error
+                >{{ 'DONATE.REQUIRED' | translate }}</mat-error
               >
             </mat-form-field>
             <mat-form-field appearance="outline">
-              <mat-label>Card Number</mat-label>
+              <mat-label>{{ 'DONATE.CARD_NUMBER' | translate }}</mat-label>
               <input
                 matInput
-                placeholder="Card Number"
+                placeholder="{{ 'DONATE.CARD_NUMBER' | translate }}"
                 type="text"
                 inputmode="numeric"
                 formControlName="cardNumberControl"
@@ -52,20 +52,20 @@
                   newCardForm.controls.cardNumberControl.errors &&
                   newCardForm.controls.cardNumberControl.errors.notAValidCardNumber
                 "
-                >Please enter a valid credit card number</mat-error
+                >{{ 'DONATE.CARD_ERROR' | translate }}</mat-error
               >
               <mat-error
                 *ngIf="
                   newCardForm.controls.cardNumberControl.errors &&
                   newCardForm.controls.cardNumberControl.errors.required
                 "
-                >Required</mat-error
+                >{{ 'DONATE.REQUIRED' | translate }}</mat-error
               >
               <mat-icon matSuffix>lock</mat-icon>
             </mat-form-field>
             <div class="fields-container">
               <mat-form-field appearance="outline">
-                <mat-label>Expiry Month</mat-label>
+                <mat-label>{{ 'DONATE.MONTH' | translate }}</mat-label>
                 <mat-select formControlName="expiryMonthControl" required>
                   <mat-option style="color: gray">MM</mat-option>
                   <mat-option
@@ -94,11 +94,11 @@
                     newCardForm.controls.expiryMonthControl.errors &&
                     newCardForm.controls.expiryMonthControl.errors.required
                   "
-                  >Required</mat-error
+                  >{{ 'DONATE.REQUIRED' | translate }}</mat-error
                 >
               </mat-form-field>
               <mat-form-field appearance="outline">
-                <mat-label>Expiry Year</mat-label>
+                <mat-label>{{ 'DONATE.YEAR' | translate }}</mat-label>
                 <mat-select formControlName="expiryYearControl" required>
                   <mat-option style="color: gray">YYYY</mat-option>
                   <mat-option *ngFor="let year of expirationYears" [value]="year">{{
@@ -110,7 +110,7 @@
                     newCardForm.controls.expiryYearControl.errors &&
                     newCardForm.controls.expiryYearControl.errors.required
                   "
-                  >Required</mat-error
+                  >{{ 'DONATE.REQUIRED' | translate }}</mat-error
                 >
               </mat-form-field>
               <mat-form-field appearance="outline">
@@ -126,7 +126,7 @@
                     newCardForm.controls.securityCodeControl.errors &&
                     newCardForm.controls.securityCodeControl.errors['notAValidNumber']
                   "
-                  >Please enter a valid security code (CVV)</mat-error
+                  >{{ 'DONATE.CVV_ERROR' | translate }}</mat-error
                 >
                 <mat-icon matSuffix>help</mat-icon>
               </mat-form-field>
@@ -138,14 +138,14 @@
           <div class="secure-connection-container">
             <mat-icon>lock</mat-icon>
             <div class="labels-container">
-              <div>Secure</div>
-              <div>Connection</div>
+              <div>{{ 'DONATE.SCURE' | translate }}</div>
+              <div>{{ 'DONATE.CONNECTION' | translate }}</div>
             </div>
           </div>
         </div>
     </div>
     <button class="download-resumes-button" (click)="onCompletePayment()" style="margin-bottom: 40px; margin-top: 0px;">
-      Donate $5 <span style="font-size: 10px; margin-left: 2px; margin-top: 6px;">USD</span>
+      {{ 'DONATE.DONATE' | translate }} $5 <span style="font-size: 10px; margin-left: 2px; margin-top: 6px;">USD</span>
       <mat-icon class="download-icon">volunteer_activism</mat-icon>
     </button>
 </section>
