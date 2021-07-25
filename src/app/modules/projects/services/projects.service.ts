@@ -29,6 +29,12 @@ export class ProjectsService {
               <li>Homework repository</li>
               <li>Blog</li>
             </ul>
+            <p><b>Technologies</b></p>
+            <ul>
+              <li>OS: iOS 5</li>
+              <li>Languages: Objective-C</li>
+              <li>Tools: XCode</li>
+            </ul>
             <a href="https://github.com/BernardoMB">Repo</a>
           `,
           images: [
@@ -186,10 +192,28 @@ export class ProjectsService {
           code: 'NWPS', 
           thumbnail: 'assets/images/portfolio/MSIcons/NewtPress.svg', 
           description: `
-            <p>More information coming soon.</p>
+            <p>This application is an admin panel where Newt's press releases can be uploaded.</p>
+            <p>This tool was built for Newt's staff and was made for internal use only.</p>
+            <p>Role: full-stack development.</p>
+            <p>Dev work: Design, UX, front-end, back-end, database design, testing and documentation.</p>
+            <p><b>Features</b></p>
+            <ul>
+              <li>Rich text editor</li>
+              <li>Upload tool</li>
+            </ul>
+            <p><b>Technologies used</b></p>
+            <ul>
+              <li>Front-end: Angular</li>
+              <li>Back-end: NodeJS Express App</li>
+              <li>Database: MongoDB</li>
+              <li>Deployment: Amazon Web Services</li>
+            </ul>
           `,
           images: [
-            'assets/images/portfolio/confidential.svg',
+            'https://i.imgur.com/MaHjBNb.png',
+            'https://i.imgur.com/FoJo3Z2.png',
+            'https://i.imgur.com/c4QobJZ.png',
+            'https://i.imgur.com/fiaEmwK.png'
           ]
         }
       ]
