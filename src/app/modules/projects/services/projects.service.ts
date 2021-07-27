@@ -183,7 +183,9 @@ export class ProjectsService {
             <p>Application for processing payments. More information coming soon.</p>
           `,
           images: [
-            'assets/images/portfolio/confidential.svg',
+            'https://thumbs.gfycat.com/CompassionateLazyAlbatross.webp',
+            'https://thumbs.gfycat.com/FinishedJadedCero.webp',
+            'https://thumbs.gfycat.com/ShyBewitchedBudgie.webp'
           ]
         },
         { 
@@ -230,7 +232,7 @@ export class ProjectsService {
             <p>More information coming soon.</p>
           `,
           images: [
-            'assets/images/portfolio/confidential.svg'
+            'https://www.laralee.design/wp-content/uploads/2020/03/blog-20200309-web-design-display-4-daria-shevtsova-b-h.gif'
           ]
         },
         { 
