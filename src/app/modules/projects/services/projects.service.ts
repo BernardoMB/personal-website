@@ -183,7 +183,7 @@ export class ProjectsService {
             <p>Application for processing payments. More information coming soon.</p>
           `,
           images: [
-            'https://thumbs.gfycat.com/CompassionateLazyAlbatross.webp',
+            'https://thumbs.gfycat.com/MisguidedExcellentAzurevasesponge.webp',
             'https://thumbs.gfycat.com/FinishedJadedCero.webp',
             'https://thumbs.gfycat.com/ShyBewitchedBudgie.webp'
           ]
