@@ -23,7 +23,7 @@ export class PresentationCardComponent implements OnInit {
   }
 
   emitShowInfoEvent(): void {
-    const info = 'This is personal infromation and by no means shall be used for non-legal propuses.';
+    const info = 'This is personal infromation and by no means shall be used for non-legal propuses. Please read the privacy and terms of use.';
     this.showInfo.emit(info);
   }
 
