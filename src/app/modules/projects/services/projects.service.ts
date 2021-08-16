@@ -169,9 +169,17 @@ export class ProjectsService {
           thumbnail: 'assets/images/portfolio/MSIcons/Newt.svg', 
           description: `
             <p>Application for processing payments. More information coming soon.</p>
+            <p>Rol: Front-end developer.</p>
+            <p>Dev work: Design, UX, front-end</p>
+            <p>Technology stack: Angular, NestJS, MongoDB, Amazon Web Services</p>
           `,
           images: [
-            'assets/images/portfolio/confidential.svg',
+            'https://i.imgur.com/Lbei50Q.png',
+            'https://i.imgur.com/RXztGEa.png',
+            'https://i.imgur.com/vQ0OAli.png',
+            'https://i.imgur.com/ZiXjX0m.png',
+            'https://i.imgur.com/D3KWDQu.png',
+            'https://i.imgur.com/GyWwf12.png'
           ]
         },
         { 
