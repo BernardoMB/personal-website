@@ -156,10 +156,18 @@ export class ProjectsService {
           code: 'FNRO', 
           thumbnail: 'assets/images/portfolio/MSIcons/AdminPanel.svg', 
           description: `
-            <p>Application for processing payments. More infromation coming soon.</p>
+            <p>Application for procesing payments and sending money. More information coming soon.</p>
+            <p><b>Role:</b> Front end development.</p>
+            <p><b>Dev work:</b> Design, User Experience, and front-end code, API mantainance.<p>
+            <p><b>Technology stack:</b> Angular, NodeJS, MongoDB, Amazon Web Services</p>
           `,
           images: [
-            'assets/images/portfolio/confidential.svg',
+            'https://i.imgur.com/lXjbEDJ.png',
+            'https://i.imgur.com/9Pme2Jm.png',
+            'https://i.imgur.com/iPxiH3d.png',
+            'https://i.imgur.com/CmeKhKd.png',
+            'https://i.imgur.com/lsQGZeZ.png',
+            'https://i.imgur.com/iiGuUk4.png',
           ]
         },
         { 
@@ -169,9 +177,9 @@ export class ProjectsService {
           thumbnail: 'assets/images/portfolio/MSIcons/Newt.svg', 
           description: `
             <p>Application for processing payments. More information coming soon.</p>
-            <p>Rol: Front-end developer.</p>
-            <p>Dev work: Design, UX, front-end</p>
-            <p>Technology stack: Angular, NestJS, MongoDB, Amazon Web Services</p>
+            <p><b>Role:</b> Front-end developer.</p>
+            <p><b>Dev work:</b> Design, UX, front-end</p>
+            <p><b>Technology stack:</b> Angular, NestJS, MongoDB, Amazon Web Services</p>
           `,
           images: [
             'https://i.imgur.com/Lbei50Q.png',
@@ -237,10 +245,23 @@ export class ProjectsService {
           code: 'AUAP', 
           thumbnail: 'assets/images/portfolio/MSIcons/AuroraAdminPanel.svg', 
           description: `
-            <p>More information coming soon.</p>
+            <p>Application for managing the data available in the project's website: users, online courses, events, news, blog posts, and more. More information coming soon.</p>
+            <p><b>Role:</b> Full-stack development.</p>
+            <p><b>Dev work:</b> Dev work: Design, UX, front-end, back-end, database management and Devops.</p>
+            <p><b>Technology stack:</b> Angular, NestJS, MongoDB, Microsoft Azure</p>
           `,
           images: [
-            'https://www.laralee.design/wp-content/uploads/2020/03/blog-20200309-web-design-display-4-daria-shevtsova-b-h.gif'
+            'https://i.imgur.com/mc1KeSZ.png',
+            'https://i.imgur.com/f7XZ8nF.png',
+            'https://i.imgur.com/wObMWxs.png',
+            'https://i.imgur.com/A19Z5FM.png',
+            'https://i.imgur.com/tVYOHt0.png',
+            'https://i.imgur.com/oYm6sFL.png',
+            'https://i.imgur.com/XEqc8dS.png',
+            'https://i.imgur.com/avSWXWm.png',
+            'https://i.imgur.com/B0DIITV.png',
+            'https://i.imgur.com/5Zp3mOj.png',
+            'https://i.imgur.com/fBukO2B.png',
           ]
         },
         { 
@@ -249,10 +270,30 @@ export class ProjectsService {
           code: 'AUWS', 
           thumbnail: 'assets/images/portfolio/MSIcons/AuroraWebsite.svg', 
           description: `
-            <p>More information coming soon.</p>
+            <p>Website where people can purchase online courses, subscribe to events, comment on news and learn about investments.</p>
+            <p><b>Role:</b> Full stack development.</p>
+            <p><b>Dev work:</b> Design, UX, front-end, back-end, database management and Devops</p>
+            <p><b>Technology stack:</b> Angular, NestJS, MongoDB, Microsoft Azure</p>
+            <p><b>URL:</b> http://www.investnaija.com</p>
           `,
           images: [
-            'assets/images/portfolio/confidential.svg'
+            'https://i.imgur.com/wN5GIg6.png',
+            'https://i.imgur.com/TzAyaiE.png',
+            'https://i.imgur.com/OelTS0Z.png',
+            'https://i.imgur.com/nLNifpP.png',
+            'https://i.imgur.com/IXMgnud.png',
+            'https://i.imgur.com/jeF0RSp.png',
+            'https://i.imgur.com/L0bnQ4I.png',
+            'https://i.imgur.com/oIwjFyE.png',
+            'https://i.imgur.com/Ael2vr4.png',
+            'https://i.imgur.com/RgzOmE3.png',
+            'https://i.imgur.com/SPeoh8M.png',
+            'https://i.imgur.com/02tIbPB.png',
+            'https://i.imgur.com/8dA9pPX.png',
+            'https://i.imgur.com/2QuRHNd.png',
+            'https://i.imgur.com/kwH8v7C.png',
+            'https://i.imgur.com/RrWD8eb.png',
+            'https://i.imgur.com/cSlLbmn.png',
           ]
         },
         { 
@@ -261,10 +302,18 @@ export class ProjectsService {
           code: 'MEDK', 
           thumbnail: 'assets/images/portfolio/MSIcons/Medkush.svg', 
           description: `
-            <p>More information coming soon.</p>
+            <p>E-commerce where you can buy CBD products, learn about CBD and how it can improve your daily life.</p>
+            <p><b>Role:</b> Full stack development.</p>
+            <p><b>Dev work:</b> Design, UX, front-end, back-end, database management and Devops</p>
+            <p><b>Technology stack:</b> Angular, Serverles, MongoDB, Netlify</p>
+            <p><b>URL:</b> https://medkush.mx</p>
           `,
           images: [
-            'assets/images/portfolio/confidential.svg'
+            'assets/images/portfolio/Medkush/landing.gif',
+            'assets/images/portfolio/Medkush/landingMobile.gif',
+            'https://i.imgur.com/qSmrIPM.png',
+            'https://i.imgur.com/1XjiuCB.png',
+            'https://i.imgur.com/hiDZDS2.png',
           ]
         },
         { 
@@ -276,7 +325,8 @@ export class ProjectsService {
             <p>More information coming soon.</p>
           `,
           images: [
-            'assets/images/portfolio/confidential.svg'
+            'assets/images/portfolio/OM/landing.gif',
+            'assets/images/portfolio/OM/landingMobile.gif',
           ]
         },
         { 
