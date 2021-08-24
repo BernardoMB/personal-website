@@ -348,10 +348,20 @@ export class ProjectsService {
           code: 'STFF', 
           thumbnail: 'assets/images/portfolio/MSIcons/StaffPlan.svg', 
           description: `
-            <p>More information coming soon.</p>
+            <p>Staff management application. More information coming soon.</p>
+            <p><b>Role:</b> Full-stack developer</p>
+            <p><b>Dev work:</b> UX, front-end, back-end, and database management</p>
+            <p><b>Technology stack:</b> AngularJS, NodeJS, Amazon Web Services.</p>
           `,
           images: [
-            'assets/images/portfolio/confidential.svg'
+            'https://i.imgur.com/ymAgDPD.png',
+            'https://i.imgur.com/FxCsKK9.png',
+            'https://i.imgur.com/ruxaklu.png',
+            'https://i.imgur.com/FHPwb50.png',
+            'https://i.imgur.com/2lWIuR1.png',
+            'https://i.imgur.com/Htl8HKE.png',
+            'https://i.imgur.com/FnCkcP3.png',
+            'https://i.imgur.com/hKlaXiA.png',
           ]
         },
         { 
@@ -398,7 +408,7 @@ export class ProjectsService {
         obs.next(this.years);
         obs.complete();
         this.loaderService.hide();
-      }, 1000);
+      }, 0);
     });
   }
 
@@ -423,8 +433,23 @@ export class ProjectsService {
         obs.next(found);
         obs.complete();
         this.loaderService.hide();
-      }, 1000);
+      }, 0);
     });
   }
 
+  getProjects(): Observable<Project[]> {
+    this.loaderService.show();
+    return new Observable(obs => {
+      setTimeout(() => {
+        let projects: Project[] = [];
+        this.years.forEach((year: any) => {
+          const yearProjects = year.projects;
+          projects = [...projects, ...yearProjects];
+        });
+        obs.next(projects);
+        obs.complete();
+        this.loaderService.hide();
+      }, 0);
+    });
+  }
 }

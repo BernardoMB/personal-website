@@ -6,7 +6,7 @@
     "HOME": "Inicio",
     "ABOUT": "Acerca de",
     "EXPERIENCE": "Experiencia",
-    "PROJECTS": "Proyectos",
+    "PROJECTS": "Portafolios",
     "HOBBIES": "Pasatiempos",
     "COPY_LINK": "Copiar enlace",
     "SHARE_ON_FACEBOOK": "Compartir en Facebook",
@@ -99,7 +99,9 @@
   },
   "PROJECTS": {
     "PROJECTS": "Proyectos",
-    "MORE_INFO": "Mas información próximamente."
+    "MORE_INFO": "Mas información próximamente.",
+    "PREV": "Anterior",
+    "NEXT": "Siguiente"
   },
   "HOBBIES": {
     "HOBBIES": "Pasatiempos",

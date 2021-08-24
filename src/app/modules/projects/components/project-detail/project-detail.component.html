@@ -46,3 +46,20 @@
 <div class="interrupter-container">
   <div class="interrupter"></div>
 </div>
+
+<div class="controls-container">
+  <div class="controls">
+    <div>
+      <button *ngIf="!prevButtonDisabled" class="download-resumes-button prev" (click)="goToPreviousProject()" [disabled]="prevButtonDisabled">
+        <mat-icon class="download-icon">navigate_before</mat-icon>
+            {{ 'PROJECTS.PREV' | translate }}
+      </button>
+    </div>
+    <div>
+      <button *ngIf="!nextButtonDisabled" class="download-resumes-button next" (click)="goToNextProject()" [disabled]="nextButtonDisabled">
+        {{ 'PROJECTS.NEXT' | translate }}
+        <mat-icon class="download-icon">navigate_next</mat-icon>
+      </button>
+    </div>
+  </div>
+</div>

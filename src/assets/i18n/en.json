@@ -6,7 +6,7 @@
     "HOME": "Home",
     "ABOUT": "About",
     "EXPERIENCE": "Experience",
-    "PROJECTS": "Projects",
+    "PROJECTS": "Portfolio",
     "HOBBIES": "Hobbies",
     "COPY_LINK": "Copy link",
     "SHARE_ON_FACEBOOK": "Share on Facebook",
@@ -99,7 +99,9 @@
   },
   "PROJECTS": {
     "PROJECTS": "Projects",
-    "MORE_INFO": "More information coming soon."
+    "MORE_INFO": "More information coming soon.",
+    "PREV": "Previous",
+    "NEXT": "Next"
   },
   "HOBBIES": {
     "HOBBIES": "My Hobbies",

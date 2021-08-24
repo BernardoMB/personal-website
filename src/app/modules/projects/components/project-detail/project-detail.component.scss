@@ -1,3 +1,39 @@
+.download-resumes-button {
+  background-color: #d59dff;
+  border: 1px solid #d59dff;
+  &:disabled {
+    background-color: #e1bdfc;
+    border: 1px solid #e1bdfc;
+    cursor: not-allowed;
+  }
+  color: #1a1a1f;
+  font-weight: 600!important;
+  font-size: 1.125rem!important;
+  line-height: 1.333!important;
+  padding: 8px 10px;
+  border-radius: 2px;
+  align-items: center;
+  text-align: left;
+  display: inline-flex;
+  vertical-align: bottom;
+  font-family: inherit;
+  cursor: pointer;
+  .download-icon {
+    margin-left: 20px;
+    font-weight: 100;
+  }
+  &:hover {
+    background-color: #e1bdfc;
+    border: 1px solid #e1bdfc;
+  }
+}
+.download-resumes-button {
+  .download-icon {
+    margin: 0px;
+  }
+}
+
+
 .top-toolbar {
   margin-top: 20px;
   margin-left: auto;
@@ -113,6 +149,17 @@
     .project-description {
       margin: 30px 0px;
     }
+  }
+}
+
+.controls-container {
+  max-width: 1280px; 
+  margin: auto;
+  padding: 0px 16px;
+  margin-bottom: 40px;
+  .controls {
+    display: flex; 
+    justify-content: space-around;
   }
 }
 
