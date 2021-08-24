@@ -47,9 +47,9 @@ export class ProjectDetailComponent implements OnInit, OnDestroy {
     this.projectDetailInfoSubscription = this.route.data.subscribe((data: any) => {
       if (data.projectDetailInfo.project) {
         this.project = data.projectDetailInfo.project;
-        // console.log(this.project);
+        //console.log('Project', this.project);
         this.projects = data.projectDetailInfo.projects;
-        // console.log(this.projects);
+        //console.log('Projects', this.projects);
         this.prevButtonDisabled = this.projects.findIndex(x => x?.id === this.project?.id) === 0;
         this.nextButtonDisabled = this.projects.findIndex(x => x?.id === this.project?.id) === this.projects.length - 1;
       } else {
