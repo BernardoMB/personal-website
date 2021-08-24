@@ -322,11 +322,24 @@ export class ProjectsService {
           code: 'OTMD', 
           thumbnail: 'assets/images/portfolio/MSIcons/OM.svg', 
           description: `
-            <p>More information coming soon.</p>
+            <p>Coaching services. More information coming soon.</p>
+            <p><b>Role:</b> Full-stack developer</p>
+            <p><b>Dev work:</b> Design, UX, front-end, back-end, database management and Devops</p>
+            <p><b>Technology stack:</b> Angular, Amazon Web Services, Netlify, Whatsapp, Claendly.</p>
+            <p><b>URL:</b> https://outofyourmind.com.mx</p>
           `,
           images: [
             'assets/images/portfolio/OM/landing.gif',
             'assets/images/portfolio/OM/landingMobile.gif',
+            'https://i.imgur.com/nW4LFFs.png',
+            'https://i.imgur.com/JWWGBhm.png',
+            'https://i.imgur.com/vTuJhlW.png',
+            'https://i.imgur.com/MdkdPD6.png',
+            'https://i.imgur.com/051Cl7X.png',
+            'https://i.imgur.com/7mZ71uQ.png',
+            'https://i.imgur.com/eGtGrkp.png',
+            'https://i.imgur.com/VGZtRTm.png',
+            'https://i.imgur.com/1jmy64O.png',
           ]
         },
         { 
