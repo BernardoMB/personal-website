@@ -12,9 +12,11 @@ Run `npm run serve-devices` to debug this application locally in mobile devices.
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+## Build 
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+
+See Azure Pipelines.
 
 ## Running unit tests
 
@@ -115,12 +117,7 @@ See `header.component.ts`, `app-routing.module.ts`, styles for html on `styles.s
 
 ### NgRx
 
-## Other topics
-
-Camel case: myVariable
-Kebab case: my-variable
-Pascal case: MyVariable
-Sanke case: my_variable
+Not in much use accross the aplication.
 
 ## AWS
 
@@ -138,4 +135,15 @@ After deployment is done make sure your files are uploaded in directory site/www
 
 Add web.config file to src directory. Dot forget to include web.config file in angular.json
 
-Web config also includes tweks for making the NgxTranslate library to work.
+Web config also includes tweks for making the NgxTranslate library to work. See links:
+
+https://stackoverflow.com/questions/44756251/json-language-files-are-not-found-ngx-translate-angular-cli/51121032#51121032
+https://github.com/ngx-translate/core/issues/853
+https://stackoverflow.com/questions/54977651/ngx-translate-after-deply-getting-error-as-assets-i18n-shared-fr-json-404
+https://github.com/ngx-translate/core/issues/674
+
+# Adding projects
+
+Generate gif: Use API Gifs
+Croping and overlaping: https://www.kapwing.com/611c68fbcddde800645059b1/studio/editor/layer/822e9ec1-ee0b-41d1-a5de-2ef258574349
+Speed: https://ezgif.com/speed
