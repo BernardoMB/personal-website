@@ -5,7 +5,7 @@
 @import './themes/mint';
 @import './component-themes';
 
-// Default
+// Default theme
 
 // Override typography CSS classes (e.g., mat-h1, mat-display-1, mat-typography, etc.).
 @include mat-base-typography($light-theme-typography);
@@ -15,9 +15,10 @@
 @include angular-material-typography($light-theme-typography);
 // Use Angular Material themes
 @include mat-core($light-theme-typography);
-// Include Light theme
-@include angular-material-theme($light-theme);
-@include component-themes($light-theme);
+
+// // Include Light theme
+// @include angular-material-theme($light-theme);
+// @include component-themes($light-theme);
 
 // Light theme
 

@@ -28,6 +28,7 @@
             "aot": true,
             "assets": [
               "src/favicon.ico",
+              "src/site.webmanifest",
               "src/assets",
               "src/web.config"
             ],
@@ -35,7 +36,13 @@
               "src/scss/styles.scss",
               "node_modules/swiper/css/swiper.css"
             ],
-            "scripts": []
+            "scripts": [],
+            "allowedCommonJsDependencies": [
+              "tsparticles",
+              "ng2-pdf-viewer",
+              "pdfjs-dist/es5/build/pdf",
+							"pdfjs-dist/es5/web/pdf_viewer"
+            ]
           },
           "configurations": {
             "production": {
@@ -93,6 +100,7 @@
             "karmaConfig": "karma.conf.js",
             "assets": [
               "src/favicon.ico",
+              "src/site.webmanifest",
               "src/assets",
               "src/web.config"
             ],
