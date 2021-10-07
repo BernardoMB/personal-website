@@ -36,16 +36,16 @@ export class CvRootComponent implements OnInit {
   experiences = [
     {
       logoUrl: '../../../../../assets/images/logos/Zurich.PNG',
-      position: 'Senior Full-stack Developer',
+      position: 'Full-stack Developer',
       company: 'Zurich Insurance Company Ltd',
       employmentType: 'Full-time',
       startDate: '2020-11-01T00:00:00.000Z',
       endDate: null,
       location: 'Mexico City, Mexico',
       description: `
-        <p>Full stack development of sureties administration system for Zurich North América.</p>
+        <p>.Net development of sureties administration system for Zurich North América.</p>
         <p>Financial Analysis, Underwriting Automation and Account Management.</p>
-        <p>Technologies used: .Net, Blazor, Entity Framework, SQL Server, Git, Bitbucket, Jira, Jfrog, Jenkins, Linux VMs, Figma.</p>
+        <p>Technologies used: .Net, Blazor, Entity Framework, SQL Server, Git, Bitbucket, Jira, Jfrog, Redis, Dynatrace Jenkins, Linux VMs, Figma.</p>
       `
     },
     {

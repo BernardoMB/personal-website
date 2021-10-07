@@ -64,7 +64,14 @@
               <div class="right">
                 <h3 class="position">{{experience.position}}</h3>
                 <div class="company-container" [ngClass]="{'zurich': experience.company == 'Zurich Insurance Company Ltd' }">
-                  <p class="company">{{experience.company}}</p>
+                  
+                  <p *ngIf="experience.company == 'Kalyptio'; else elseBlock" class="company">
+                    <a href="https://kalyptio.com">Kalyptio</a>
+                  </p>
+                  <ng-template #elseBlock>
+                    {{experience.company}}
+                  </ng-template>
+                  
                   <p class="employment-type">{{experience.employmentType}}</p>
                 </div>
                 <div class="dates-container">
