@@ -168,7 +168,7 @@ export class CvRootComponent implements OnInit {
   //#endregion
 
   //#region Pdf viewer
-  pdfSrc = 'assets/CV En.pdf';
+  pdfSrc = 'assets/CV En plain.pdf';
   //#endregion
 
   //#endregion
