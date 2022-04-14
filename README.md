@@ -32,7 +32,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Features
 
-### Scroll to top button 
+### Scroll to top button
 
 See `scroll-to-top.component.ts`.
 
@@ -105,7 +105,7 @@ See `scroll-indicator.component.ts`.
 
 ### Ng Feedback
 
-See landing page component. This library's styles were modified, please see `ng-feedback-theme.scss`.
+See landing page component. This library's styles were modified, please see `ng-feedback-theme.scss`, and global styles
 
 ### Ngx Translate
 
