@@ -14,7 +14,7 @@ export class HobbiesService {
       imageUrl: 'assets/images/pictures/soccer-ball.jpeg',
       description: `
         <p>I love playing football with my friends who I see every weekend.</p>
-        <p>Football is a sport that joins a lot of peoble together so we can have a great time doing something that is very athletic and enjoyable.</p>
+        <p>Football is a sport that joins a lot of people together so we can have a great time doing something that is very athletic and enjoyable.</p>
         <p>My favorite teams are <b>Club America</b> (from Mexico) and <b>Real Madrid F.C.</b> (from Spain).</p>
       `
     },
