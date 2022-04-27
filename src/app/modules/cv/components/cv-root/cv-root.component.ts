@@ -200,7 +200,7 @@ export class CvRootComponent implements OnInit {
   //#endregion
 
   //#region Pdf viewer
-  pdfSrc = 'assets/CV En plain.pdf';
+  pdfSrc = 'assets/Resume En plain.pdf';
   //#endregion
 
   //#endregion
