@@ -192,6 +192,20 @@
           }
         }
       }
+      .document.other {
+        p {
+          margin-bottom: 0px;
+        }
+        h1 {
+          margin-top: 20px;
+          &:nth-child(1) { // or :last-child
+            margin-top: 0px;
+          }
+        }
+        .course-link {
+          margin-bottom: 20px;
+        }
+      }
     }
   }
   .tab-resume {
