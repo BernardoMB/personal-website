@@ -361,7 +361,7 @@ export class LandingComponent implements OnInit, AfterViewInit {
     ) {
       const name = this.sendWhatsAppForm.controls.nameControl.value;
       const message = this.sendWhatsAppForm.controls.messageControl.value;
-      const phoneNumber = '5215535592033';
+      const phoneNumber = '15716261227';
       const whatsAppMessage = `Hola soy ${name}. ${message}`;
       const encoded = encodeURIComponent(whatsAppMessage);
       window.open(`https://wa.me/${phoneNumber}?text=${encoded}`);

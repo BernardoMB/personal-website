@@ -12,7 +12,7 @@ import { TermDialogComponent } from '../../shared/components/term-dialog/term-di
 })
 export class FooterComponent implements OnInit {
   nameFooter = 'Bernardo Mondragón Brozon';
-  phoneNumberFooter = '+52 55 3559 2033';
+  phoneNumberFooter = '+1 571 626 1227';
   emailAddressFooter = 'bmondragonbrozon@gmail.com';
   physicalAddressFooter = 'Washington, District of Columbia 20002, USA';
 
