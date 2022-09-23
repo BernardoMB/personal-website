@@ -122,6 +122,8 @@ Not in much use accross the aplication.
 ## AWS
 
 This website makes API calls to AWS API Gateway integrated with AWS Lambda.
+* Coffe payment lambda: https://github.com/BernardoMB/buy-coffee-lambda.git
+* Feedback lambda: https://github.com/BernardoMB/send-feedback-lambda
 
 ## Azure
 
