@@ -1,12 +1,12 @@
-<div style="position: relative; display: inline-block;">
-  <button style="position: absolute; right: 0px;" mat-mini-fab aria-label="Close dialog" (click)="closeDialog()">
+<div class="privacy-dialog-container">
+  <button class="close-buttom" mat-mini-fab aria-label="Close dialog" (click)="closeDialog()">
     <mat-icon>close</mat-icon>
   </button>
   <h1>Website</h1>
   <p>This website is designed for recruiters and any other who is interested in knowing Bernardo Mondragon Brozon (e.g., journalists). Detailed information about Bernardo's life should not be subject of any ilegal activity. This website is operated and mantained by Bernardo himself, please reach out if you have any comments, feedback, or suggestions.</p>
   <h1>Data controller and contact details</h1>
   <p>Bernardo Mondragón Brozon is the data controller of this website and is responsible for its operation.</p>
-  <p>For any data protection related comment or question you may have in connection to this website you can reach him by contact information indicated in the footer or by email at <a style="font-size: 13px;" href="bmondragonbrozon@gmail.com">bmondragonbrozon@gmail.com</a>.</p>
+  <p>For any data protection related comment or question you may have in connection to this website you can reach him by contact information indicated in the footer or by email at <a style="font-size: 13px; color: '#0078c9';" href="bmondragonbrozon@gmail.com">bmondragonbrozon@gmail.com</a>.</p>
   <h1>What personal data do I process?</h1>
   <p>As a matter of principle, this website does not processes any personal data. Please read cookies policy.</p>
   <h1>Cookies</h1>
@@ -16,5 +16,7 @@
   <p>Thie website especially contains links to popular social networks (e.g., LinkedIn, Twitter, Facebook, Youtube). The data processing on such social media sites when you visit the respective Bernardo's profile is suject to the privacy policies of the respective social media site operator and outside the control of this website's administrators.</p>
   <p>These privacy terms are subject to admendments and changes at any time at Bernardo's sole discretion. Accordingly, it is suggested that you check these privacy terms periodically for updates.</p>
   <p>Last updated: Feb 2021</p>
-  <button style="float: right;" mat-flat-button color="accent" (click)="closeDialog()">Ok</button>
+  <div class="ok-button-wrapper">
+    <button style="float: right;" mat-flat-button color="accent" (click)="closeDialog()">Ok</button>
+  </div>
 </div>
