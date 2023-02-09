@@ -1,5 +1,5 @@
-<div style="position: relative; display: inline-block;">
-  <button style="position: absolute; right: 0px;" mat-mini-fab aria-label="Close dialog" (click)="closeDialog()">
+<div class="terms-dialog-container">
+  <button class="close-buttom" mat-mini-fab aria-label="Close dialog" (click)="closeDialog()">
     <mat-icon>close</mat-icon>
   </button>
   <h1>General</h1>
@@ -47,5 +47,7 @@
   <p>This website and any controversy or claim in connection with it is governed by the substantive laws of Mexico, without reference to its principles of conflicts of laws. The exclusive place of jurisdiction is Mexico City, Mexico.</p>
   <p>These Terms of Use are subject to amendments and changes at any time at Bernardo Mondragón Brozon's sole discretion. Accordingly, we suggest that you check these Terms of Use periodically for updates.</p>
   <p>Last updated: April 2021</p>
-  <button style="float: right;" mat-flat-button color="accent" (click)="closeDialog()">Ok</button>
+  <div class="ok-button-wrapper">
+    <button style="float: right;" mat-flat-button color="accent" (click)="closeDialog()">Ok</button>
+  </div>
 </div>

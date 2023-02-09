@@ -20,7 +20,7 @@
               <div class="right"></div>
             </div>
             <div class="container">
-              
+
               <div
               class="element0"
                 *ngIf="showElement0"
@@ -29,7 +29,7 @@
                 bernardo@{{ 'LANDING.PERSONAL_WEBSITE' | translate }} ~$
                 <span class="typed-element typed-element-0"></span>
               </div>
-              
+
               <div
                 class="element1"
                 *ngIf="showElement1"
@@ -38,7 +38,7 @@
                 bernardo@{{ 'LANDING.PERSONAL_WEBSITE' | translate }} ~$
                 <span class="typed-element typed-element-1"></span>
               </div>
-              
+
               <div
                 class="element2"
                 *ngIf="showElement2"
@@ -47,7 +47,7 @@
                 bernardo@{{ 'LANDING.PERSONAL_WEBSITE' | translate }} ~$
                 <span class="typed-element typed-element-2"></span>
               </div>
-              
+
             </div>
           </div>
         </div>
@@ -328,7 +328,7 @@
         >
       </mat-form-field>
       <mat-form-field appearance="outline" [color]="'accent'">
-        <mat-label>{{ 'LANDING.MESSAGE' | translate }}</mat-label>
+        <mat-label class="labelo">{{ 'LANDING.MESSAGE' | translate }}</mat-label>
         <textarea
           matInput
           placeholder="{{ 'LANDING.MESSAGE_PLACEHOLDER' | translate }}"
@@ -347,7 +347,7 @@
             sendWhatsAppForm.controls.messageControl.errors &&
             sendWhatsAppForm.controls.messageControl.errors['minlength']
           "
-          >{{ 'LANDING.MESSAGE_LENGTH_ERROR_MESSAGE' | translate }} 
+          >{{ 'LANDING.MESSAGE_LENGTH_ERROR_MESSAGE' | translate }}
           {{
             sendWhatsAppForm.controls.messageControl.errors["minlength"]
               .requiredLength
@@ -366,7 +366,7 @@
     </form>
     <form id="sendEmailForm" *ngIf="showSendEmailForm" [formGroup]="sendEmailForm" #sendEmailFormDirective="ngForm" (ngSubmit)="submitEmailForm(sendEmailFormDirective)">
       <mat-form-field appearance="outline" [color]="'accent'">
-        <mat-label>{{ 'LANDING.FULL_NAME' | translate }}</mat-label>
+        <mat-label class="labelo">{{ 'LANDING.FULL_NAME' | translate }}</mat-label>
         <input
           matInput
           placeholder="{{ 'LANDING.FULL_NAME_PLACEHOLDER' | translate }}"
@@ -436,7 +436,7 @@
             sendEmailForm.controls.messageControl.errors &&
             sendEmailForm.controls.messageControl.errors['minlength']
           "
-          >{{ 'LANDING.MESSAGE_LENGTH_ERROR_MESSAGE' | translate }} 
+          >{{ 'LANDING.MESSAGE_LENGTH_ERROR_MESSAGE' | translate }}
           {{
             sendEmailForm.controls.messageControl.errors["minlength"]
               .requiredLength

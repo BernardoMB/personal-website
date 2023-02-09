@@ -1,5 +1,5 @@
-<div style="position: relative; display: inline-block;">
-  <button style="position: absolute; right: 0px;" mat-mini-fab aria-label="Close dialog" (click)="closeDialog()">
+<div class="cookies-dialog-container">
+  <button class="close-buttom" mat-mini-fab aria-label="Close dialog" (click)="closeDialog()">
     <mat-icon>close</mat-icon>
   </button>
   <h1>Cookies</h1>
@@ -16,5 +16,7 @@
   <h1>Accept or block cookies</h1>
   <p>You can block any cookies from any website by activating the setting on your browser that allows you to refuse the setting of some or all cookies. However, if you block all cookies you may not be able to access all or part of this website. You can also use your browser settings to delete cookies. For more information about how to disable cookies in your browser please visit the following links; Internet Exporer, Google Chrome, Mozilla Firefox.</p>
   <p>If you share the use of a computer, accepting or rejecting the use of cookies may affect all users of that computer. Where a cookie is provided by a third party, you may be able to use that third party’s own guidance to block that cookie.</p>
-  <button style="float: right;" mat-flat-button color="accent" (click)="closeDialog()">Ok</button>
+  <div class="ok-button-wrapper">
+    <button style="float: right;" mat-flat-button color="accent" (click)="closeDialog()">Ok</button>
+  </div>
 </div>

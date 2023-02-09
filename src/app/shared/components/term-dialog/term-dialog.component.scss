@@ -1,0 +1,15 @@
+.terms-dialog-container {
+  position: relative;
+  .close-buttom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding:  0px !important;
+    position: absolute;
+    right: 0px;
+  }
+  .ok-button-wrapper {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
