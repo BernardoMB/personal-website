@@ -63,12 +63,42 @@ export class CvRootComponent implements OnInit {
   ];
   experiences = [
     {
+      logoUrl: '../../../../../assets/images/logos/Advent.png',
+      position: 'Computer Systems Analyst',
+      company: 'Andvent Infotech LLC',
+      employmentType: 'Full-time',
+      startDate: '2022-07-01T00:00:00.000Z',
+      endDate: null,
+      location: 'Washigton, DC',
+      description: `
+        <li>Researching, designing, implementing, and managing software programs</li>
+        <li>Testing and evaluating new programs</li>
+        <li>Manage clould infrastructure</li>
+        <li>Identifying areas for modification in existing programs and subsequently developing these modifications</li>
+        <li>Writing and implementing efficient code</li>
+        <li>Determining operational practicality</li>
+        <li>Developing quality assurance procedures</li>
+        <li>Deploying software tools, processes, and metrics</li>
+        <li>Maintaining and upgrading existing systems</li>
+        <li>Training users</li>
+        <li>Working closely with other developers, UX designers, business, and systems analysts</li>
+        <li>Design and develop solutions to complex applications problems</li>
+        <li>System administration issues, or network concerns. Perform systems management</li>
+        <li>Verify stability, interoperability, portability, security, or scalability of systems</li>
+        <li>Develop system engineering, software engineering, system integration, or distributed system architectures</li>
+        <li>Collaborate with other team members to ideate appropriate design solutions</li>
+        <li>Identify system data, hardware, or software components required to meet user needs</li>
+        <li>Communicate with staff or clients to understand specific system requirements</li>
+        <p>Technologies used: .NET, NodeJS, Angular, ASP.NET, Blazor, Entity Framework, SQL Server, Azure DevOps, Microsoft Azure, Git, Redis, Azure Active Directory, Azure AD B2C, Linux VMs, Visio, App Service, Key Vault, Blob Storage, Several API integrations, Message Queue, Azure Functions, Azure APIM, Azure DevOps, and more.</p>
+      `
+    },
+    {
       logoUrl: '../../../../../assets/images/logos/Zurich.PNG',
       position: 'Full-stack Developer',
       company: 'Zurich Insurance Company Ltd',
       employmentType: 'Full-time',
       startDate: '2020-11-01T00:00:00.000Z',
-      endDate: null,
+      endDate: '2022-07-01T00:00:00.000Z',
       location: 'Mexico City, Mexico',
       description: `
         <p>Financial Analysis, Underwriting Automation and Account Management.</p>
