@@ -86,7 +86,7 @@ export class MainComponent implements OnInit {
       }
       setTimeout(() => {
         this.showFeedbackButton = true;
-      }, 1);
+      }, 5 * 1000);
     });
     //#endregion
   }
@@ -118,6 +118,10 @@ export class MainComponent implements OnInit {
    */
   deactivateSmothScrolling() {
     this.document.getElementById('html-element').style.scrollBehavior = 'unset';
+  }
+
+  toggleShowFeedbackButton() {
+    this.showFeedbackButton = !this.showFeedbackButton;
   }
 
 }
