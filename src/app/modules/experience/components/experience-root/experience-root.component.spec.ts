@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CvRootComponent } from './cv-root.component';
+import { ExperienceRootComponent } from './experience-root.component';
 
-describe('CvRootComponent', () => {
-  let component: CvRootComponent;
-  let fixture: ComponentFixture<CvRootComponent>;
+describe('ExperienceRootComponent', () => {
+  let component: ExperienceRootComponent;
+  let fixture: ComponentFixture<ExperienceRootComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CvRootComponent ]
+      declarations: [ ExperienceRootComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CvRootComponent);
+    fixture = TestBed.createComponent(ExperienceRootComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

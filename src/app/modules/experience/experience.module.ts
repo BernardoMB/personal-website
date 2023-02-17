@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CvRoutingModule } from './cv-routing.module';
-import { CvRootComponent } from './components/cv-root/cv-root.component';
+import { ExperienceRoutingModule } from './experience-routing.module';
+import { ExperienceRootComponent } from './components/experience-root/experience-root.component';
 import { CvComponent } from './components/cv/cv.component';
 import { ResumeComponent } from './components/resume/resume.component';
 import {MatTabsModule} from '@angular/material/tabs';
@@ -14,10 +14,14 @@ import { PdfViewerModule } from 'ng2-pdf-viewer';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 @NgModule({
-  declarations: [CvRootComponent, CvComponent, ResumeComponent],
+  declarations: [
+    ExperienceRootComponent, 
+    CvComponent, 
+    ResumeComponent
+  ],
   imports: [
     CommonModule,
-    CvRoutingModule,
+    ExperienceRoutingModule,
     MatTabsModule,
     MatIconModule,
     MatButtonModule,
@@ -33,4 +37,4 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
     NgxChartsModule
   ]
 })
-export class CvModule { }
+export class ExperienceModule { }

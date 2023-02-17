@@ -7,11 +7,11 @@ import { Subscription } from 'rxjs';
 import { single } from './data';
 
 @Component({
-  selector: 'app-cv-root',
-  templateUrl: './cv-root.component.html',
-  styleUrls: ['./cv-root.component.scss']
+  selector: 'app-experience-root',
+  templateUrl: './experience-root.component.html',
+  styleUrls: ['./experience-root.component.scss']
 })
-export class CvRootComponent implements OnInit {
+export class ExperienceRootComponent implements OnInit {
   showDynamicDisplayContent: boolean = false;
   name = 'Bernardo Mondragon Brozon';
   date = moment().format('MM/DD/YYYY');

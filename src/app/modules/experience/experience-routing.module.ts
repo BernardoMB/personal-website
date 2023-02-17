@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { CvRootComponent } from './components/cv-root/cv-root.component';
+import { ExperienceRootComponent } from './components/experience-root/experience-root.component';
 import { CvComponent } from './components/cv/cv.component';
 import { ResumeComponent } from './components/resume/resume.component';
 
@@ -8,7 +8,7 @@ const routes: Routes = [
   {
     path: '',
     component:
-    CvRootComponent,
+    ExperienceRootComponent,
     /* children: [
       { path: '', redirectTo: 'cv', pathMatch: 'full' },
       { path: 'cv', component: CvComponent },
@@ -21,4 +21,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class CvRoutingModule { }
+export class ExperienceRoutingModule { }
