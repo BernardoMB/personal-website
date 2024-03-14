@@ -21,7 +21,7 @@ export class LandingComponent implements OnInit, AfterViewInit {
   index = 0;
   config: SwiperConfigInterface = {
     autoplay: {
-      delay: 8000,
+      delay: 13.5 * 1000,
       disableOnInteraction: true,
     },
     navigation: {
@@ -36,6 +36,11 @@ export class LandingComponent implements OnInit, AfterViewInit {
   //#endregion
 
   //#region TypedJS
+  quoteEnglish = 'Look at everything always as though you were seeing it either for the first or last time: Thus is your time on earth filled with glory.';
+  quoteSpanish = 'Observa todo como si fuera la primera o la última vez: entonces tu vida estará llena de gloria';
+  quoteAuthor = 'Betty Smith';
+  quoteTime = 7500; // 7.5 seconds
+  authorTime = 10 * 1000; // 10 seconds
   typed1: any;
   typed2: any;
   typed3: any;
@@ -154,13 +159,13 @@ export class LandingComponent implements OnInit, AfterViewInit {
     this.currentLang = this.translateService.currentLang;
     switch(this.currentLang) {
       case 'en':
-        this.phrase = 'Be yourself; everyone else is already taken.';
+        this.phrase = this.quoteEnglish;
         break;
       case 'es':
-        this.phrase = 'Se tu mismo; los demás ya estan ocupados.';
+        this.phrase = this.quoteSpanish;
         break;
       default:
-        this.phrase = 'Be yourself; everyone else is already taken.';
+        this.phrase = this.quoteEnglish;
         break;
     }
     //#endregion
@@ -175,13 +180,13 @@ export class LandingComponent implements OnInit, AfterViewInit {
       this.currentLang = event.lang;
       switch(this.currentLang) {
         case 'en':
-          this.phrase = 'Be yourself; everyone else is already taken.';
+          this.phrase = this.quoteEnglish;
           break;
         case 'es':
-          this.phrase = 'Se tu mismo; los demás ya estan ocupados.';
+          this.phrase = this.quoteSpanish;
           break;
         default:
-          this.phrase = 'Be yourself; everyone else is already taken.';
+          this.phrase = this.quoteEnglish;
           break;
       }
       this.showElement0 = false;
@@ -329,14 +334,14 @@ export class LandingComponent implements OnInit, AfterViewInit {
           this.typed2 = new Typed('.typed-element-1', options1);
         }
       }, 1);
-    }, 2500);
+    }, this.quoteTime);
 
     setTimeout(() => {
       this.showElement2 = true;
       setTimeout(() => {
         const options2: TypedOptions = {
           strings: [
-            'Oscar Wilde'
+            this.quoteAuthor
           ],
           typeSpeed: 30,
           cursorChar: '_',
@@ -349,7 +354,7 @@ export class LandingComponent implements OnInit, AfterViewInit {
           this.typed3 = new Typed('.typed-element-2', options2);
         }
       }, 1);
-    }, 4000);
+    }, this.authorTime);
     //#endregion
   }
 
