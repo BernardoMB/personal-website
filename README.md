@@ -144,6 +144,9 @@ https://github.com/ngx-translate/core/issues/853
 https://stackoverflow.com/questions/54977651/ngx-translate-after-deply-getting-error-as-assets-i18n-shared-fr-json-404
 https://github.com/ngx-translate/core/issues/674
 
+If having access token issues with deployment. checkout the following url:
+https://learn.microsoft.com/en-us/answers/questions/489768/could-not-fetch-access-token-for-azure-verify-if-t
+
 # Adding projects
 
 Generate gif: Use API Gifs
