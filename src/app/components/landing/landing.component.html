@@ -57,14 +57,6 @@
           [options]="particlesOptions"
         ></Particles>
       </div>
-      <div class="swiper-slide programming-slide">
-        <div class="slide-container">
-          <!-- <a class="contact-link" href="home/#contact">Contact me</a> -->
-          <a class="contact-link" href="/home#contact">{{ "LANDING.CONTACT_ME" | translate }}</a>
-          <h1 class="title">{{ 'LANDING.KNOW_ME' | translate }}</h1>
-          <div class="phrase">{{ 'LANDING.INSPIRED' | translate }}</div>
-        </div>
-      </div>
       <div class="swiper-slide keyboard-slide">
         <div class="keyboard-slide-wrapper">
           <div class="slide-container">
@@ -74,6 +66,14 @@
             </div>
             <button mat-flat-button class="landing-button" [routerLink]="['/projects']">{{ 'LANDING.VIEW_PROJECTS' | translate }}</button>
           </div>
+        </div>
+      </div>
+      <div class="swiper-slide programming-slide">
+        <div class="slide-container">
+          <!-- <a class="contact-link" href="home/#contact">Contact me</a> -->
+          <a class="contact-link" href="/home#contact">{{ "LANDING.CONTACT_ME" | translate }}</a>
+          <h1 class="title">{{ 'LANDING.KNOW_ME' | translate }}</h1>
+          <div class="phrase">{{ 'LANDING.INSPIRED' | translate }}</div>
         </div>
       </div>
     </div>

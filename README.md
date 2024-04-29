@@ -144,8 +144,22 @@ https://github.com/ngx-translate/core/issues/853
 https://stackoverflow.com/questions/54977651/ngx-translate-after-deply-getting-error-as-assets-i18n-shared-fr-json-404
 https://github.com/ngx-translate/core/issues/674
 
+If having access token issues with deployment. checkout the following url:
+https://learn.microsoft.com/en-us/answers/questions/489768/could-not-fetch-access-token-for-azure-verify-if-t
+
 # Adding projects
 
 Generate gif: Use API Gifs
 Croping and overlaping: https://www.kapwing.com/611c68fbcddde800645059b1/studio/editor/layer/822e9ec1-ee0b-41d1-a5de-2ef258574349
 Speed: https://ezgif.com/speed
+
+# Updating Resume
+
+4 files must be updated: 
+* assets/Resume Bernardo Mondragon.zip
+* Resume En plain.pdf
+* Resume En.pdf
+* Resume Es.pdf
+
+# Updating CV
+Add entries to Curriculum Vitae page
