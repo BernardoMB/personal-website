@@ -147,6 +147,10 @@ https://github.com/ngx-translate/core/issues/674
 If having access token issues with deployment. checkout the following url:
 https://learn.microsoft.com/en-us/answers/questions/489768/could-not-fetch-access-token-for-azure-verify-if-t
 
+**Check Deployment status**
+
+https://dev.azure.com/bmondragonbrozon/
+
 # Adding projects
 
 Generate gif: Use API Gifs
