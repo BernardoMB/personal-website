@@ -185,7 +185,6 @@ export class NotFoundComponent implements OnInit, AfterViewInit, OnDestroy {
       this.unmute();
     }, 5000); */
 
-
     (document.getElementById('video') as any).onplay = function() {
       console.log('Video played');
       this.showPauseButton = true;
@@ -195,8 +194,6 @@ export class NotFoundComponent implements OnInit, AfterViewInit, OnDestroy {
     (vid as any).onvolumechange = function() {
       //alert("The volume has been changed!");
       this.showPauseButton = true;
-      console.log('culo', this.showPauseButton);
-      
     };
 
     this.intervalId = setInterval(this.unmute, 1000);
@@ -237,9 +234,8 @@ export class NotFoundComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   myFunction() {
-    console.log('PENE');
+    console.log('Reacting to onplay event');
   }
-
 
   culo() {
     this.showPauseButton = true;
