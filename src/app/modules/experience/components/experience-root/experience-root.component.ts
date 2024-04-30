@@ -122,7 +122,7 @@ export class ExperienceRootComponent implements OnInit {
           <li>Successfully lly migrated, managed, monitored and maintained 200,000+ cases</li>
           <li>Provided 93,843+ students with better transportation</li>
           <li>Promptly and properly notified and informed schools, parents, and emergency services about incidents, accidents, and complaints</li>
-          <li>Helped Parent Resource Center, Ditpatch teams and investigators to assess cases</li>
+          <li>Helped Parent Resource Center, Dispatch teams and investigators to assess cases</li>
         </ul>
         <br/>
         <p>Technologies used: .NET, NodeJS, Angular, ASP.NET, Blazor, Entity Framework, SQL Server, Azure DevOps, Microsoft Azure, Git, Redis, Azure Active Directory, Azure AD B2C, Linux VMs, Visio, App Service, Key Vault, Blob Storage, Send Grid, Several API integrations, Message Queue, Azure Functions, Microsoft Excel Integrations, PDF Generation, Azure APIM, Azure DevOps, and more.</p>
