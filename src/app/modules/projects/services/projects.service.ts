@@ -402,7 +402,7 @@ export class ProjectsService {
           description: `
             <p>Financial Analysis, Underwriting Automation and Account Management.</p>
             <p>Full-stack development and database administration. Brokerage and underwriting automation.</p>
-            <p>Technologies used: .Net, Blazor, Entity Framework, SQL Server, Git, Bitbucket, Jira, Jfrog, Redis, Dynatrace Jenkins, Linux VMs, Figma, Microsoft Azure, App Service, and Azure DevOps.</p>
+            <p>Technologies used: .NET, Blazor, Entity Framework, SQL Server, Git, Bitbucket, Jira, Jfrog, Redis, Dynatrace Jenkins, Linux VMs, Figma, Microsoft Azure, App Service, and Azure DevOps.</p>
           `,
           images: [
             'assets/images/portfolio/confidential.svg'
@@ -421,7 +421,7 @@ export class ProjectsService {
           description: `
             <p>Brokerage and Underwriting Automation.</p>
             <p>Front-end development of brokerage and underwriting automation platform.</p>
-            <p>Technologies used: .Net, Blazor, Git, Azure Repos, Azure Work Items, Figma, Microsoft Azure, App Service, and Azure DevOps.</p>
+            <p>Technologies used: .NET, Blazor, Git, Azure Repos, Azure Work Items, Figma, Microsoft Azure, App Service, and Azure DevOps.</p>
           `,
           images: [
             'assets/images/portfolio/confidential.svg'
