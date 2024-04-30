@@ -119,7 +119,7 @@ export class ExperienceRootComponent implements OnInit {
         </ul>
         <h3>Department of Transportation Case Management System (Contract)</h2>
         <ul>
-          <li>Succesfully migrated, managed, monitored and maintained 200,000+ cases</li>
+          <li>Successfully lly migrated, managed, monitored and maintained 200,000+ cases</li>
           <li>Provided 93,843+ students with better transportation</li>
           <li>Promptly and properly notified and informed schools, parents, and emergency services about incidents, accidents, and complaints</li>
           <li>Helped Parent Resource Center, Ditpatch teams and investigators to assess cases</li>
