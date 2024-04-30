@@ -73,14 +73,14 @@ export class ExperienceRootComponent implements OnInit {
       description: `
         <li>Design, build, deploy, and support computer systems</li>
         <li>Testing and evaluating new programs following quality assurance procedures</li>
-        <li>Manage clould infrastructure</li>
+        <li>Manage cloud infrastructure</li>
         <li>Identifying areas for modification in existing programs and subsequently developing these modifications</li>
         <li>Writing and implementing efficient code</li>
         <li>Determining operational practicality</li>
         <li>Maintaining and upgrading existing systems</li>
         <li>Write documentation</li>
         <li>Training users</li>
-        <li>Working closely with other designers, busines analysts, project managers, testers, and developers</li>
+        <li>Working closely with other designers, business analysts, project managers, testers, and developers</li>
         <li>Design and develop solutions to complex applications problems</li>
         <li>System administration issues, or network concerns. Perform systems management</li>
         <li>Verify stability, interoperability, portability, security, or scalability of systems</li>
@@ -119,10 +119,10 @@ export class ExperienceRootComponent implements OnInit {
         </ul>
         <h3>Department of Transportation Case Management System (Contract)</h2>
         <ul>
-          <li>Succesfully migrated, managed, monitored and maintained 200,000+ cases</li>
+          <li>Successfully lly migrated, managed, monitored and maintained 200,000+ cases</li>
           <li>Provided 93,843+ students with better transportation</li>
           <li>Promptly and properly notified and informed schools, parents, and emergency services about incidents, accidents, and complaints</li>
-          <li>Helped Parent Resource Center, Ditpatch teams and investigators to assess cases</li>
+          <li>Helped Parent Resource Center, Dispatch teams and investigators to assess cases</li>
         </ul>
         <br/>
         <p>Technologies used: .NET, NodeJS, Angular, ASP.NET, Blazor, Entity Framework, SQL Server, Azure DevOps, Microsoft Azure, Git, Redis, Azure Active Directory, Azure AD B2C, Linux VMs, Visio, App Service, Key Vault, Blob Storage, Send Grid, Several API integrations, Message Queue, Azure Functions, Microsoft Excel Integrations, PDF Generation, Azure APIM, Azure DevOps, and more.</p>
