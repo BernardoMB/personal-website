@@ -80,7 +80,7 @@ export class ExperienceRootComponent implements OnInit {
         <li>Maintaining and upgrading existing systems</li>
         <li>Write documentation</li>
         <li>Training users</li>
-        <li>Working closely with other designers, busines analysts, project managers, testers, and developers</li>
+        <li>Working closely with other designers, business analysts, project managers, testers, and developers</li>
         <li>Design and develop solutions to complex applications problems</li>
         <li>System administration issues, or network concerns. Perform systems management</li>
         <li>Verify stability, interoperability, portability, security, or scalability of systems</li>
