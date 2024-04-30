@@ -88,15 +88,27 @@ export class ExperienceRootComponent implements OnInit {
         <li>Identify system data, hardware, or software components required to meet user needs</li>
         <li>Communicate with staff or clients to understand specific system requirements</li>
         <br/>
-        <h3>Toyota Handling Material HRS (Contact)</h2>
+        <div class="contract-job-heading">
+            <img class="copmany-logo" src="../../../../../assets/images/logos/Toyota.png" alt="company logo">
+            <span style="font-weight: bold; font-size: 18px;">Toyota Material Handling</span>
+        </div>
+        <h3>Toyota Handling Material HRS (Contract)</h2>
         <ul>
-          <li></li>
+          <li>Created a process and implementation strategy for TMHNA IT Asset management which satisfies the needs of the current financial process</li>
+          <li>Developed controls required by auditors and governance as part of a new and reformed financial strategy</li>
+          <li>Built trust with stakeholders in the areas of Reporting, Informing, and Consulting</li>
         </ul>
-        <h3>Toyota Handling Material Go to Market Tools (Contact)</h2>
+        <h3>Toyota Handling Material Go to Market Tools (Contract)</h2>
         <ul>
-          <li></li>
+          <li>Provided pricing team with a tool for determining the price and discounts based on incentives and marketing data</li>
+          <li>Implemented the decision making process for approving customer requests</li>
+          <li>Generated thousands of quotes for thousands of customers</li>
         </ul>
-        <h3>OSSE School Health Profiles (Contact)</h2>
+        <div class="contract-job-heading">
+            <img class="copmany-logo" src="../../../../../assets/images/logos/OSSE.png" alt="company logo">
+            <span style="font-weight: bold; font-size: 18px;">Office of the State Superintendent of Education</span>
+        </div>
+        <h3>School Health Profiles (Contract)</h2>
         <ul>
           <li>OSSE's School Health Profile portal full-stack development: https://data.osse.dc.gov/shp</li>
           <li>Helped District’s schools to achieve the goals of the <i>Healthy Schools Act of 2010</i></li>
@@ -105,7 +117,7 @@ export class ExperienceRootComponent implements OnInit {
           Youth and Schools Commission on the extent to which the District’s schools are achieving the 
           goals required by the <i>Healthy Schools Act of 2010</i></li>
         </ul>
-        <h3>OSSE Department of Transportation Case Management System (Contact)</h2>
+        <h3>Department of Transportation Case Management System (Contract)</h2>
         <ul>
           <li>Succesfully migrated, managed, monitored and maintained 200,000+ cases</li>
           <li>Provided 93,843+ students with better transportation</li>
