@@ -73,7 +73,7 @@ export class ExperienceRootComponent implements OnInit {
       description: `
         <li>Design, build, deploy, and support computer systems</li>
         <li>Testing and evaluating new programs following quality assurance procedures</li>
-        <li>Manage clould infrastructure</li>
+        <li>Manage cloud infrastructure</li>
         <li>Identifying areas for modification in existing programs and subsequently developing these modifications</li>
         <li>Writing and implementing efficient code</li>
         <li>Determining operational practicality</li>
