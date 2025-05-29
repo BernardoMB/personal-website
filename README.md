@@ -168,3 +168,8 @@ Resumes were createn on Canva. Update the resumes on Canva, export them as PDF a
 
 # Updating CV
 Add entries to Curriculum Vitae page
+
+Sec
+cq-8Q~5S03gpG59058
+bHaahEPoNlhOn_9058
+llHCK6cKxaJJ9058
