@@ -129,6 +129,21 @@ export class ExperienceRootComponent implements OnInit {
       `
     },
     {
+      logoUrl: '../../../../../assets/images/logos/OAV.png',
+      position: 'Data Scientist',
+      company: 'One Auction View',
+      employmentType: 'Consultancy',
+      startDate: '2020-11-01T00:00:00.000Z',
+      endDate: '2022-07-01T00:00:00.000Z',
+      location: 'Redlands, California',
+      description: `
+        <p>Processed, cleaned, and analyzed millions of records from the automotive industry.</p>
+        <p>Created powerful dashboards that provided valuable insights for lenders and financial institutions.</p>
+        <p>Assisted 20+ dealerships in the U.S. with decision-making for restocking and trend analysis, maximizing their profits through segmentation, forecasting, and data modeling.</p>
+        <p>Technologies used: Python, Databricks, Power BI Embedded, Azure Data Factory, PySpark, Distributed Computing, Delta Lake Storage, Parquet, Bright Data, Cosmos DB, Git, Linux VMs, Microsoft Azure, Docker, Figma, App Service, Azure DevOps, Cypress, React JS, Nest JS, Stripe</p>
+      `
+    },
+    {
       logoUrl: '../../../../../assets/images/logos/Zurich.PNG',
       position: 'Full-stack Developer',
       company: 'Zurich Insurance Company Ltd',

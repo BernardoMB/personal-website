@@ -11,10 +11,10 @@ import { TermDialogComponent } from '../../shared/components/term-dialog/term-di
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent implements OnInit {
-  nameFooter = 'Bernardo Mondragón Brozon';
+  nameFooter = 'Bernardo Mondragon Brozon';
   phoneNumberFooter = '+1 571 626 1227';
   emailAddressFooter = 'bmondragonbrozon@gmail.com';
-  physicalAddressFooter = 'Washington, District of Columbia 20002, USA';
+  physicalAddressFooter = 'Lancaster, Pennsylvania 17601, USA';
 
   constructor(
     public dialog: MatDialog,

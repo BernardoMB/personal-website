@@ -33,6 +33,8 @@
     "DEVELOPER_DESCRIPTION": "Los procesos de concebir, especificar, diseñar, programar, probar, desplegar y documentar, envueltos en la creación y mantenimiento de aplicaciones, librerias u otros componentes de software.",
     "TEACHER": "Profesor",
     "TEACHER_DESCRIPTION": "Enseño lecciones de programación para principiantes que quieren incursionar al mundo del desarrollo de software.",
+    "DATA_SCIENTIST": "Científico de datos",
+    "DATA_SCIENTIST_DESCRIPTION": "Análisis datos complejos utilizando estadísticas, machine learning y algoritmos para descubrir información que impulse decisiones eficazmente.",
     "SKILLS": "Habilidades",
     "PUBLICATIONS": "Publicaciones",
     "JOB_AVAILABILITY": "Parte de mi trabajo está disponible al público",
@@ -98,10 +100,12 @@
     "FRIENDS_AND_FAMILY": "Pasar tiempo con la familia y amigos",
     "DOGS": "Pasear a los perros",
     "MOVIES_AND_SERIES": "Ver series y películas",
-    "MUSIC": "Escuchar música"
+    "MUSIC": "Escuchar música",
+    "COOKING": "Cocinar"
   },
   "PROJECTS": {
     "PROJECTS": "Proyectos",
+    "PROJECTS_BACK": "🡠 Proyectos",
     "MORE_INFO": "Mas información próximamente.",
     "PREV": "Anterior",
     "NEXT": "Siguiente"
