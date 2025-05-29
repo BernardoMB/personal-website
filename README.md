@@ -159,8 +159,9 @@ Speed: https://ezgif.com/speed
 
 # Updating Resume
 
-4 files must be updated: 
-* assets/Resume Bernardo Mondragon.zip
+Resumes were createn on Canva. Update the resumes on Canva, export them as PDF and update the following files int he repository:
+
+* assets/Resume Bernardo Mondragon.zip (compressed folder with 'Resume En.pdf' and 'Resume Es.pdf')
 * Resume En plain.pdf
 * Resume En.pdf
 * Resume Es.pdf

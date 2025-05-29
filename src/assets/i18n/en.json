@@ -33,6 +33,8 @@
     "DEVELOPER_DESCRIPTION": "The process of conceiving, specifying, designing, programming, documenting, testing, and bug fixing involved in creating and maintaining applications, frameworks, or other software components.",
     "TEACHER": "Teacher",
     "TEACHER_DESCRIPTION": "I teach programming lessons for starters who want to jump into the software development world.",
+    "DATA_SCIENTIST": "Data Scientist",
+    "DATA_SCIENTIST_DESCRIPTION": "Analyze complex data using statistics, machine learning, and algorithms to uncover insights that drive business decisions effectively.",
     "SKILLS": "Skills",
     "PUBLICATIONS": "Publications",
     "JOB_AVAILABILITY": "Some of my work is available to the public",
@@ -68,10 +70,10 @@
     "DESCRIPTION_P2": "Skilled in Insurance Theory, Risk Management, Software Development, Business Intelligence, and Product Development.",
     "DESCRIPTION_P3": "Strong analytical professional with a Bachelor's Degree in Actuarial Science focused in Applied Mathematics to assess risk in insurance, finance and other industries and professions.",
     "DESCRIPTION_P4": "I consider myself a fully qualified actuary who has the confidence to work on my own initiative and with the ability to play a key role within a leading company. I am a quick learner who can balance theory along with practical solutions.",
-    "BIO_1": "Bernardo Mondragon Brozon is an actuary and programmer who is always looking forward to delivering the best practical solution for a given development. He loves getting involved in the most creative way possible to maximize the value that could be brought to the enterprise.",
+    "BIO_1": "Bernardo Mondragon Brozon is a dedicated professional committed to delivering the best practical solutions for any development project. He enjoys engaging creatively to maximize the value he brings to the enterprise.",
     "BIO_2": "He was born and grew up in Mexico's City (CDMX), and since he was 12 he has been engaging in challenging tasks such as developing applications and solving complex mathematical problems.",
-    "BIO_3": "“My strongest belief is that creativity is the most valuable intangible asset when pursuing any enterprise because in this highly competitive world it takes more than just hard work in order to be the one who gets the highest value.”",
-    "BIO_4": "Bernardo has over {{yearsOfExperience}} years of software development experience also being involved in data analysis and business intelligence.",
+    "BIO_3": "“I firmly believe that creativity is the most valuable intangible asset when pursuing any enterprise. In today’s highly competitive world, success requires more than just hard work—it demands innovation to achieve the highest value.”",
+    "BIO_4": "Bernardo has over {{yearsOfExperience}} years of software development experience while also being involved in data analysis, business intelligence, and data science.",
     "BIO_5": "He is a self-taught developer who has satisfied over 30+ clients over the past 5 years with reliable and scalable software solutions.",
     "BIO_6": "Bernardo has a special interest in actuarial science because it applies beautiful mathematical models for assessing risk to protect people and society from adverse random events.",
     "BIO_7": "He knows that committed students become successful adults. This is his year {{teachingYears}} teaching computer science. Bernardo is excited to begin the best year ever!"
@@ -98,10 +100,12 @@
     "FRIENDS_AND_FAMILY": "Spend time with friends and family",
     "DOGS": "Walk the dogs",
     "MOVIES_AND_SERIES": "Watch movies and series",
-    "MUSIC": "Listen to music"
+    "MUSIC": "Listen to music",
+    "COOKING": "Cooking"
   },
   "PROJECTS": {
     "PROJECTS": "Projects",
+    "PROJECTS_BACK": "🡠 Projects",
     "MORE_INFO": "More information coming soon.",
     "PREV": "Previous",
     "NEXT": "Next"
