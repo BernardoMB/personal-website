@@ -12,11 +12,11 @@ export class ProjectsService {
     {
       year: 2014,
       projects: [
-        { 
-          id: 1, 
-          name: 'ITJ Math', 
+        {
+          id: 1,
+          name: 'ITJ Math',
           code: 'ITJM',
-          thumbnail: 'assets/images/portfolio/MSIcons/ITJMath.svg', 
+          thumbnail: 'assets/images/portfolio/MSIcons/ITJMath.svg',
           description: `
             <p>This application was originally designed for students at ITJ (Thomas Jefferson Institute).</p>
             <p>With this application student were able to compute common values for specifical mathematical problems. It served as a usefull tool to check answers. It also has a section were student were able to check all mathematical formulas for a given type of problem.</p>
@@ -55,11 +55,11 @@ export class ProjectsService {
     {
       year: 2015,
       projects: [
-        { 
-          id: 2, 
-          name: 'Morpheus', 
-          code: 'MPHS', 
-          thumbnail: 'assets/images/portfolio/MSIcons/Maps.svg', 
+        {
+          id: 2,
+          name: 'Morpheus',
+          code: 'MPHS',
+          thumbnail: 'assets/images/portfolio/MSIcons/Maps.svg',
           description: `
             <p>This information is confidential.</p>
           `,
@@ -72,11 +72,11 @@ export class ProjectsService {
     {
       year: 2016,
       projects: [
-        { 
-          id: 3, 
-          name: 'Trinity', 
-          code: 'TRNY', 
-          thumbnail: 'assets/images/portfolio/MSIcons/LinkAnalysis.svg', 
+        {
+          id: 3,
+          name: 'Trinity',
+          code: 'TRNY',
+          thumbnail: 'assets/images/portfolio/MSIcons/LinkAnalysis.svg',
           description: `
             <p>This information is confidential.</p>
           `,
@@ -89,11 +89,11 @@ export class ProjectsService {
     {
       year: 2017,
       projects: [
-        { 
-          id: 4, 
-          name: 'Matrix Catcher', 
-          code: 'IMSI', 
-          thumbnail: 'assets/images/portfolio/MSIcons/MatrixCatcher.svg', 
+        {
+          id: 4,
+          name: 'Matrix Catcher',
+          code: 'IMSI',
+          thumbnail: 'assets/images/portfolio/MSIcons/MatrixCatcher.svg',
           description: `
             <p>This information is confidential.</p>
           `,
@@ -106,11 +106,11 @@ export class ProjectsService {
     {
       year: 2018,
       projects: [
-        { 
-          id: 5, 
-          name: 'Sion', 
-          code: 'SION', 
-          thumbnail: 'assets/images/portfolio/MSIcons/Sion.svg', 
+        {
+          id: 5,
+          name: 'Sion',
+          code: 'SION',
+          thumbnail: 'assets/images/portfolio/MSIcons/Sion.svg',
           description: `
             <p>This information is confidential.</p>
           `,
@@ -118,11 +118,11 @@ export class ProjectsService {
             'assets/images/portfolio/confidential.svg'
           ]
         },
-        { 
-          id: 6, 
-          name: 'Koomkin Brief', 
-          code: 'BRIF', 
-          thumbnail: 'assets/images/portfolio/MSIcons/Informe.svg', 
+        {
+          id: 6,
+          name: 'Koomkin Brief',
+          code: 'BRIF',
+          thumbnail: 'assets/images/portfolio/MSIcons/Informe.svg',
           description: `
             <p>Calculate bondage index with user's info to launch bussines proposal.</p>
             <p>Koomkin's biggets form for gathering potential client information.</p>
@@ -150,11 +150,11 @@ export class ProjectsService {
     {
       year: 2019,
       projects: [
-        { 
-          id: 7, 
-          name: 'Finero', 
-          code: 'FNRO', 
-          thumbnail: 'assets/images/portfolio/MSIcons/AdminPanel.svg', 
+        {
+          id: 7,
+          name: 'Finero',
+          code: 'FNRO',
+          thumbnail: 'assets/images/portfolio/MSIcons/AdminPanel.svg',
           description: `
             <p>Application for procesing payments and sending money. More information coming soon.</p>
             <p><b>Role:</b> Front end development.</p>
@@ -170,11 +170,11 @@ export class ProjectsService {
             'https://i.imgur.com/iiGuUk4.png',
           ]
         },
-        { 
-          id: 8, 
-          name: 'Newt Admin Panel', 
-          code: 'NWAP', 
-          thumbnail: 'assets/images/portfolio/MSIcons/Newt.svg', 
+        {
+          id: 8,
+          name: 'Newt Admin Panel',
+          code: 'NWAP',
+          thumbnail: 'assets/images/portfolio/MSIcons/Newt.svg',
           description: `
             <p>Application for processing payments. More information coming soon.</p>
             <p><b>Role:</b> Front-end developer.</p>
@@ -190,11 +190,11 @@ export class ProjectsService {
             'https://i.imgur.com/GyWwf12.png'
           ]
         },
-        { 
-          id: 9, 
-          name: 'Newt Landing Page', 
-          code: 'NWLP', 
-          thumbnail: 'assets/images/portfolio/MSIcons/NewtLanding.svg', 
+        {
+          id: 9,
+          name: 'Newt Landing Page',
+          code: 'NWLP',
+          thumbnail: 'assets/images/portfolio/MSIcons/NewtLanding.svg',
           description: `
             <p>Application for processing payments. More information coming soon.</p>
           `,
@@ -204,11 +204,11 @@ export class ProjectsService {
             'https://thumbs.gfycat.com/ShyBewitchedBudgie.webp'
           ]
         },
-        { 
-          id: 10, 
-          name: 'Newt Press', 
-          code: 'NWPS', 
-          thumbnail: 'assets/images/portfolio/MSIcons/NewtPress.svg', 
+        {
+          id: 10,
+          name: 'Newt Press',
+          code: 'NWPS',
+          thumbnail: 'assets/images/portfolio/MSIcons/NewtPress.svg',
           description: `
             <p>This application is an admin panel where Newt's press releases can be uploaded.</p>
             <p>This tool was built for Newt's staff and was made for internal use only.</p>
@@ -239,11 +239,11 @@ export class ProjectsService {
     {
       year: 2020,
       projects: [
-        { 
-          id: 11, 
-          name: 'Aurora Admin Panel', 
-          code: 'AUAP', 
-          thumbnail: 'assets/images/portfolio/MSIcons/AuroraAdminPanel.svg', 
+        {
+          id: 11,
+          name: 'Aurora Admin Panel',
+          code: 'AUAP',
+          thumbnail: 'assets/images/portfolio/MSIcons/AuroraAdminPanel.svg',
           description: `
             <p>Application for managing the data available in the project's website: users, online courses, events, news, blog posts, and more. More information coming soon.</p>
             <p><b>Role:</b> Full-stack development.</p>
@@ -264,11 +264,11 @@ export class ProjectsService {
             'https://i.imgur.com/fBukO2B.png',
           ]
         },
-        { 
-          id: 12, 
-          name: 'Invest Naija Website', 
-          code: 'AUWS', 
-          thumbnail: 'assets/images/portfolio/MSIcons/AuroraWebsite.svg', 
+        {
+          id: 12,
+          name: 'Invest Naija Website',
+          code: 'AUWS',
+          thumbnail: 'assets/images/portfolio/MSIcons/AuroraWebsite.svg',
           description: `
             <p>Website where people can purchase online courses, subscribe to events, comment on news and learn about investments.</p>
             <p><b>Role:</b> Full stack development.</p>
@@ -296,11 +296,11 @@ export class ProjectsService {
             'https://i.imgur.com/cSlLbmn.png',
           ]
         },
-        { 
-          id: 13, 
-          name: 'Medkush', 
-          code: 'MEDK', 
-          thumbnail: 'assets/images/portfolio/MSIcons/Medkush.svg', 
+        {
+          id: 13,
+          name: 'Medkush',
+          code: 'MEDK',
+          thumbnail: 'assets/images/portfolio/MSIcons/Medkush.svg',
           description: `
             <p>E-commerce where you can buy CBD products, learn about CBD and how it can improve your daily life.</p>
             <p><b>Role:</b> Full stack development.</p>
@@ -316,11 +316,11 @@ export class ProjectsService {
             'https://i.imgur.com/hiDZDS2.png',
           ]
         },
-        { 
-          id: 14, 
-          name: 'Out of Your Mind', 
-          code: 'OTMD', 
-          thumbnail: 'assets/images/portfolio/MSIcons/OM.svg', 
+        {
+          id: 14,
+          name: 'Out of Your Mind',
+          code: 'OTMD',
+          thumbnail: 'assets/images/portfolio/MSIcons/OM.svg',
           description: `
             <p>Coaching services. More information coming soon.</p>
             <p><b>Role:</b> Full-stack developer</p>
@@ -342,11 +342,11 @@ export class ProjectsService {
             'https://i.imgur.com/1jmy64O.png',
           ]
         },
-        { 
-          id: 15, 
-          name: 'Staff Plan', 
-          code: 'STFF', 
-          thumbnail: 'assets/images/portfolio/MSIcons/StaffPlan.svg', 
+        {
+          id: 15,
+          name: 'Staff Plan',
+          code: 'STFF',
+          thumbnail: 'assets/images/portfolio/MSIcons/StaffPlan.svg',
           description: `
             <p>Staff management application. More information coming soon.</p>
             <p><b>Role:</b> Full-stack developer</p>
@@ -364,11 +364,11 @@ export class ProjectsService {
             'https://i.imgur.com/hKlaXiA.png',
           ]
         },
-        { 
-          id: 16, 
-          name: 'Trinity 2.0', 
-          code: 'TRN2', 
-          thumbnail: 'assets/images/portfolio/MSIcons/Trinity2.svg', 
+        {
+          id: 16,
+          name: 'Trinity 2.0',
+          code: 'TRN2',
+          thumbnail: 'assets/images/portfolio/MSIcons/Trinity2.svg',
           description: `
             <p>This information is confidential.</p>
           `,
@@ -381,11 +381,11 @@ export class ProjectsService {
     {
       year: 2021,
       projects: [
-        { 
-          id: 17, 
-          name: 'Personal Wesbite', 
-          code: 'BMBW', 
-          thumbnail: 'assets/images/portfolio/MSIcons/PersonalWebsite.svg', 
+        {
+          id: 17,
+          name: 'Personal Wesbite',
+          code: 'BMBW',
+          thumbnail: 'assets/images/portfolio/MSIcons/PersonalWebsite.svg',
           description: `
             <p>You are already in this website.</p>
             <p>More information coming soon.</p>
@@ -394,11 +394,11 @@ export class ProjectsService {
             'assets/images/portfolio/confidential.svg'
           ]
         },
-        { 
-          id: 18, 
-          name: 'Sureties ERP', 
-          code: 'SRTY', 
-          thumbnail: 'assets/images/portfolio/MSIcons/ITJMath.svg', 
+        {
+          id: 18,
+          name: 'Sureties ERP',
+          code: 'SRTY',
+          thumbnail: 'assets/images/portfolio/MSIcons/ITJMath.svg',
           description: `
             <p>Financial Analysis, Underwriting Automation and Account Management.</p>
             <p>Full-stack development and database administration. Brokerage and underwriting automation.</p>
@@ -413,15 +413,165 @@ export class ProjectsService {
     {
       year: 2022,
       projects: [
-        { 
-          id: 19, 
-          name: 'Exporters Solutions', 
-          code: 'EXPS', 
-          thumbnail: 'assets/images/portfolio/MSIcons/AdminPanel.svg', 
+        {
+          id: 19,
+          name: 'Exporters Solutions',
+          code: 'EXPS',
+          thumbnail: 'assets/images/portfolio/MSIcons/AdminPanel.svg',
           description: `
             <p>Brokerage and Underwriting Automation.</p>
             <p>Front-end development of brokerage and underwriting automation platform.</p>
             <p>Technologies used: .NET, Blazor, Git, Azure Repos, Azure Work Items, Figma, Microsoft Azure, App Service, and Azure DevOps.</p>
+          `,
+          images: [
+            'assets/images/portfolio/confidential.svg'
+          ]
+        },
+        {
+          id: 20,
+          name: 'OAV Platform',
+          code: 'OAV',
+          thumbnail: 'assets/images/portfolio/MSIcons/AdminPanel.svg',
+          description: `
+            <h2>One Auction View</h2>
+            <p><a href="https://www.oneauctionview.com/home">https://www.oneauctionview.com/home</a></p>
+            <p><b>Users:</b> 1,000+</p>
+            <p>OAV is proprietary system platform that cleans, standardizes, and enhances vehicle data across multiple auto auctions, eliminating inconsistencies and making inventory searches more accurate and efficient for dealers. It offers refined search for vehicles in the market along with reports, comparisons, appraisals and other characteristics such as builsheets, locations, price, and more.</p>
+            <p>Working in this project I processed, cleaned, and analyzed millions of records from the automotive industry. Created powerful dashboards that provided valuable insights for lenders and financial institutions. Assisted 20+ dealerships in the U.S. with decision-making for restocking and trend analysis, maximizing their profits through segmentation, forecasting, and data modeling.</p>
+            <h3>QA:</h3>
+            <ul>
+              <li>Automated e2e Regression testing using Cypress</li>
+              <li>Manual testing</li>
+              <li>QA report</li>
+              <li>Defined Acceptance criteria for User Stories, Bugs and other work items</li>
+              <li>Structured the developments process from the definition of User Stories Tasks, Epics, Features, and other work items all the way up to deployments and product delivery</li>
+              <li>Bug tracking for production issues -> Reopening user stories or tasks</li>
+              <li>Testing users and Documentation</li>
+              <li>Integration Testing</li>
+            </ul>
+            <h3>DevOps:</h3>
+            <ul>
+              <li>Defined and implemented the development process to ensure continuous integration and seamless product delivery </li>
+              <li>Created the pipeline with stages and testing gate keeping</li>
+              <li>Tests on build server</li>
+            </ul>
+            <h3>Documentation:</h3>
+            <ul>
+              <li>Migrated existing documentation to Notion</li>
+              <li>Added readme files to all projects overcoming the struggle every new developer faces when joining an existing solution</li>
+              <li>Generated architectural diagrams and other technical design diagrams </li>
+              <li>Cost evaluation: cost of having all instances running as well as the cost of storage</li>
+            </ul>
+            <h3>Cloud:</h3>
+            <ul>
+              <li>Resource management and separation within resource groups</li>
+              <li>Added proper naming to several components within the architecture</li>
+              <li>Costs efficiency</li>
+              <li>Balance local and cloud resources</li>
+            </ul>
+            <p><b>Technologies used:</b> React, NodeJS, Nest, Cosmos DB, Bright Data, Web Scrappers, Bright Data, Cosmos DB, Git, Linux VMs, Microsoft Azure, Docker, Figma, App Service, Azure DevOps, Cypress, React JS, Nest JS, Stripe</p>
+          `,
+          images: [
+            'assets/images/portfolio/confidential.svg'
+          ]
+        },
+        {
+          id: 21,
+          name: 'Retail Vision By OAV',
+          code: 'RV',
+          thumbnail: 'assets/images/portfolio/MSIcons/AdminPanel.svg',
+          description: `
+            <h3>Retail Vision</h3>
+            <p><a href="https://www.oneauctionview.com/home">https://www.oneauctionview.com/home</a></p>
+            <p>OAV is proprietary system platform that cleans, standardizes, and enhances vehicle data across multiple auto auctions, eliminating inconsistencies and making inventory searches more accurate and efficient for dealers. It offers refined search for vehicles in the market along with reports, comparisons, appraisals and other characteristics such as builsheets, locations, price, and more.</p>
+            <p>Working in this project I processed, cleaned, and analyzed millions of records from the automotive industry. Created powerful dashboards that provided valuable insights for lenders and financial institutions. Assisted 20+ dealerships in the U.S. with decision-making for restocking and trend analysis, maximizing their profits through segmentation, forecasting, and data modeling.</p>
+            <h3>Architectural:</h3>
+            <ul>
+              <li>Data Ingestion</li>
+              <li>Designed data pipeline</li>
+              <li>Implementation of the 12 factor app principles for all solutions</li>
+              <li>Medallion architecture</li>
+              <li>Designed solution all the way from the data ingestion to the data presentation layer</li>
+            </ul>
+            <p><b>Technologies used:</b>React, Python, Databricks, Power BI Embedded, Azure Data Factory, PySpark, Distributed Computing, Delta Lake Storage, Parquet</p>
+          `,
+          images: [
+            'assets/images/portfolio/confidential.svg'
+          ]
+        },
+      ]
+    },
+    {
+      year: 2023,
+      projects: [
+        {
+          id: 22,
+          name: 'School Health Profile',
+          code: 'SHP',
+          thumbnail: 'assets/images/portfolio/MSIcons/AdminPanel.svg',
+          description: `
+            <h2>School Health Profiles</h2>
+            <p><a href="https://data.osse.dc.gov/shp/login">https://data.osse.dc.gov/shp</a></p>
+            <p><b>Users:</b> 1,000+</p>
+            <p><b>Technologies:</b> Angular, .NET, SQL Server, Azure Blob Storage, Excel</p>
+            <h3>Overview</h3>
+            <p>This application was developed to manage the health profiles of schools within the district, used by all registered Local Education Agencies (LEAs). The Health Manager utilizes this application to answer approximately 400 questions, providing the Superintendent of Education with critical data on various health-related aspects such as students' outdoor activities, dietary habits, and health-related subjects taught in the curriculum.</p>
+            <h3>Features</h3>
+            <p><b>Dynamic Reactive Forms:</b> Highly dynamic, responsive forms generated based on attributes provided by back-end APIs. The visibility and validation of form controls depend, that can depend on the answers to other questions is all defined by an external source.</p>
+            <p><b>Reports and Statistics:</b> Generates comprehensive reports and statistical data, accessible by users with appropriate privileges.</p>
+            <p><b>Compliance Management:</b> Schools' health data is certified, and non-compliant schools (as per the Act of Healthy Schools of 2022) must submit an action plan through the system. The plan is reviewed, managed, and approved within the application.</p>
+            <p><b>Data Access:</b> Provides access to data points and aggregated data depending on user privileges, with features for charts and detailed reports.</p>
+            <h3>Technical Challenges</h3>
+            <p>The most challenging aspect of developing this application was the form generation process. The front-end dynamically generates all form controls (questions) based on attributes from back-end APIs. The system supports conditional visibility and validation based on responses to other questions.</p>
+            <h3>Data Handling</h3>
+            <p>The questionnaire is defined by a Microsoft Excel file maintained by the agency and stored in OneDrive. This file is parsed and uploaded to the SQL database. All information was stored in SQL server and Azure Blob Storage.</p>
+            <h3>User Access</h3>
+            <p>Users with adequate privileges can log in to the system to access charts, reports, aggregated data, and every individual data point entered by any school.</p>
+            <h3>Additional Features</h3>
+            <ul>
+              <li>Email notifications</li>
+              <li>Report generation</li>
+              <li>File uploads</li>
+              <li>PDF generation</li>
+              <li>Data visualizations</li>
+              <li>Training modules</li>
+              <li>FAQ section</li>
+              <li>Historical data repository</li>
+            </ul>
+          `,
+          images: [
+            'assets/images/portfolio/confidential.svg'
+          ]
+        },
+      ]
+    },
+    {
+      year: 2024,
+      projects: [
+        {
+          id: 23,
+          name: 'DOT CMS',
+          code: 'DOT',
+          thumbnail: 'assets/images/portfolio/MSIcons/AdminPanel.svg',
+          description: `
+            <h2>Division of Transportation Case Management System</h2>
+            <p><a href="https://dotcm.osse.dc.gov/login">https://dotcm.osse.dc.gov</a></p>
+            <p><b>Users:</b> 1,000+</p>
+            <p><b>Technologies:</b> Angular, .NET, SQL Server, Azure Blob Storage, Azure Hosting, PDF, Excel</p>
+            <h3>Overview</h3>
+            <p>Platform used for managing student transportation services, particularly for students with disabilities who require specialized transportation. The system helps ensure safe, reliable, and efficient transportation for eligible students, supporting their learning opportunities. Parents and guardians can use it to track transportation updates, access resources, and communicate with OSSE DOT.</p>
+            <p>The Division of Student Transportation provides safe, reliable, and efficient transportation services that positively support learning opportunities for eligible students from the District of Columbia. The division’s work is designed to achieve four main objectives: Safety, Efficiency, Reliability, and Customer Focus.</p>
+            <p>This application is used to manage reports, complaints, incidents and accidents involving DC school Transportation infrastructure.</p>
+            <p>This application had to be integrated with many other external services and applications from the agency.</p>
+            <h3>Additional Features</h3>
+            <ul>
+              <li>Highly dynamic and reactive forms</li>
+              <li>Case Management System (CMS)</li>
+              <li>Data migration from Salesforce to our inhouse development</li>
+              <li>File Management</li>
+              <li>PDF generation and export</li>
+              <li>Email notifications with send grid integration</li>
+            </ul>
           `,
           images: [
             'assets/images/portfolio/confidential.svg'

@@ -14,7 +14,7 @@ export class FooterComponent implements OnInit {
   nameFooter = 'Bernardo Mondragon Brozon';
   phoneNumberFooter = '+1 571 626 1227';
   emailAddressFooter = 'bmondragonbrozon@gmail.com';
-  physicalAddressFooter = 'Lancaster, Pennsylvania 17601, USA';
+  physicalAddressFooter = 'Hershey, Pennsylvania 17033, USA';
 
   constructor(
     public dialog: MatDialog,
