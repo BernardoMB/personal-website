@@ -431,7 +431,7 @@ export class ProjectsService {
           id: 20,
           name: 'OAV Platform',
           code: 'OAV',
-          thumbnail: 'assets/images/portfolio/MSIcons/AdminPanel.svg',
+          thumbnail: 'assets/images/portfolio/MSIcons/gauge.svg',
           description: `
             <h2>One Auction View</h2>
             <p><a href="https://www.oneauctionview.com/home">https://www.oneauctionview.com/home</a></p>
@@ -479,7 +479,7 @@ export class ProjectsService {
           id: 21,
           name: 'Retail Vision By OAV',
           code: 'RV',
-          thumbnail: 'assets/images/portfolio/MSIcons/AdminPanel.svg',
+          thumbnail: 'assets/images/portfolio/MSIcons/retailVision.svg',
           description: `
             <h3>Retail Vision</h3>
             <p><a href="https://www.oneauctionview.com/home">https://www.oneauctionview.com/home</a></p>
@@ -571,6 +571,94 @@ export class ProjectsService {
               <li>File Management</li>
               <li>PDF generation and export</li>
               <li>Email notifications with send grid integration</li>
+            </ul>
+          `,
+          images: [
+            'assets/images/portfolio/confidential.svg'
+          ]
+        },
+      ]
+    },
+    {
+      year: 2025,
+      projects: [
+        {
+          id: 24,
+          name: 'Go To Market Tools',
+          code: 'GTM',
+          thumbnail: 'assets/images/portfolio/MSIcons/AdminPanel.svg',
+          description: `
+            <p><b>Porpuse:</b> For internal use</p>
+            <p><b>Users:</b> 100</p>
+            <p><b>Technologies:</b> ASP.NET, Telerik's Kendo UI, .NET, SQL Server, Azure DevOps, App Service, Azure Blob Storage, Azure Delta Lake, Azure AI Search, Microsoft Power BI, Azure Key Vault, Azure API Manager, Azure App Configuration, Application Insights, Azure Cache for Redis, Azure Data Factory, Function Apps, Azure Search Service, Virtual Machines, Azure Web PubSub Service, ASP Integration</p>
+            <h3>Overview</h3>
+            <p>Internal, non-customer-facing application used for several porpuses: pricing, cost management, reporting, manage discount requeste, purchase orders, retail orders, forescasting, CMS, Bridge between customer and client, financial reports, user management, documentation, executive dashboards, tracking lists, manage special design requests for engineering teams, sale coordination, non-conforming solutions, among other uses and functionalities.</p>
+            <h3>Additional Features</h3>
+            <ul>
+              <li>Notifications</li>
+              <li>Cache management</li>
+              <li>Admin Portal</li>
+              <li>Catalogs</li>
+              <li>Dealer maps</li>
+              <li>Tools for Active Pricing, Customer Trends, Quote Comparisons, Discount Trends</li>
+              <li>Market Share reports</li>
+            </ul>
+          `,
+          images: [
+            'assets/images/portfolio/confidential.svg'
+          ]
+        },
+        {
+          id: 25,
+          name: 'Mercury',
+          code: 'MER',
+          thumbnail: 'assets/images/portfolio/MSIcons/AdminPanel.svg',
+          description: `
+            <p><b>Porpuse:</b> For internal use</p>
+            <p><b>Users:</b> 15</p>
+            <p><b>Technologies:</b> ASP.NET, Telerik's Kendo UI, .NET, SQL Server, Azure DevOps, App Service, Azure Blob Storage, Azure Delta Lake, Azure AI Search, Azure Key Vault, Azure API Manager, Azure App Configuration, Application Insights, Azure Cache for Redis, Azure Data Factory, Function Apps, Virtual Machines, Azure Web PubSub Service, ASP Integration</p>
+            <h3>Overview</h3>
+            <p>This is an internal tool for managing special pricing requests from customers and dealers. Pricing Analysts work to approve the highest possible discount while maintaining the company's profitability. This includes analyzing requests, factory and distribution costs, and other key metrics.</p>
+            <h3>Additional Features</h3>
+            <ul>
+              <li>Dashboards</li>
+              <li>Trend Analysis</li>
+              <li>Work sheets</li>
+              <li>Customer Reports</li>
+              <li>Request-Approval flow </li>
+              <li>Pivot tables</li>
+              <li>Charts</li>
+            </ul>
+          `,
+          images: [
+            'assets/images/portfolio/confidential.svg'
+          ]
+        },
+        {
+          id: 26,
+          name: 'Houkoku Renraku Soudan',
+          code: 'HRS',
+          thumbnail: 'assets/images/portfolio/MSIcons/AdminPanel.svg',
+          description: `
+            <p>報告 (Houkoku) – Reporting<br>連絡 (Renraku) – Informing<br>相談 (Soudan) – Consulting</p>
+            <p>報連相 – HonRenSou</p>
+            <p><b>Porpuse:</b> For internal use</p>
+            <p><b>Users:</b> 35</p>
+            <p><b>Technologies:</b> ASP.NET, Telerik's Kendo UI, .NET, SQL Server, Azure DevOps, App Service, Azure Blob Storage, Azure Delta Lake, Azure AI Search, Azure Key Vault, Azure API Manager, Azure App Configuration, Application Insights, Azure Cache for Redis, Azure Data Factory, Function Apps, Virtual Machines, ASP Integration</p>
+            <h3>Overview</h3>
+            <p>This application was developed to create a process and implementation strategy for TMHNA IT Asset management which satisfies the needs of the current financial process as well as future controls required by auditors and governance. This goal is achieved by building trust with stakeholders in the areas of Reporting, Informing and Consulting.</p>
+            <h3>Additional Features</h3>
+            <ul>
+              <li>Asset Expenditure Requests managements</li>
+              <li>Scope Of Work management</li>
+              <li>Invoice management</li>
+              <li>Dasboards</li>
+              <li>Documents</li>
+              <li>Project Identification and funding</li>
+              <li>Capital Expenditure amortization schedule</li>
+              <li>Operational Expenditure amortization schedule</li>
+              <li>Asset management</li>
+              <li>Product delivery schedule and completion</li>
             </ul>
           `,
           images: [
