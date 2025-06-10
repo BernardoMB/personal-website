@@ -508,7 +508,7 @@ export class ProjectsService {
           id: 22,
           name: 'School Health Profile',
           code: 'SHP',
-          thumbnail: 'assets/images/portfolio/MSIcons/AdminPanel.svg',
+          thumbnail: 'assets/images/portfolio/MSIcons/healthProfile.svg',
           description: `
             <h2>School Health Profiles</h2>
             <p><a href="https://data.osse.dc.gov/shp/login">https://data.osse.dc.gov/shp</a></p>
@@ -552,7 +552,7 @@ export class ProjectsService {
           id: 23,
           name: 'DOT CMS',
           code: 'DOT',
-          thumbnail: 'assets/images/portfolio/MSIcons/AdminPanel.svg',
+          thumbnail: 'assets/images/portfolio/MSIcons/dot.svg',
           description: `
             <h2>Division of Transportation Case Management System</h2>
             <p><a href="https://dotcm.osse.dc.gov/login">https://dotcm.osse.dc.gov</a></p>
