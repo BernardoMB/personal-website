@@ -3,6 +3,7 @@ import { Observable } from 'rxjs';
 import { LoaderService } from 'src/app/services/loader.service';
 import { Project } from '../view-models/project.interface';
 import { ProjectsYear } from '../view-models/projects-year.interface';
+import { retailVisionArchitectureDiagram } from './retailVisionArchitectureDiagram';
 
 @Injectable({
   providedIn: 'root'
@@ -485,6 +486,7 @@ export class ProjectsService {
             <p><a href="https://www.oneauctionview.com/home">https://www.oneauctionview.com/home</a></p>
             <p>OAV is proprietary system platform that cleans, standardizes, and enhances vehicle data across multiple auto auctions, eliminating inconsistencies and making inventory searches more accurate and efficient for dealers. It offers refined search for vehicles in the market along with reports, comparisons, appraisals and other characteristics such as builsheets, locations, price, and more.</p>
             <p>Working in this project I processed, cleaned, and analyzed millions of records from the automotive industry. Created powerful dashboards that provided valuable insights for lenders and financial institutions. Assisted 20+ dealerships in the U.S. with decision-making for restocking and trend analysis, maximizing their profits through segmentation, forecasting, and data modeling.</p>
+            ${retailVisionArchitectureDiagram}
             <h3>Architectural:</h3>
             <ul>
               <li>Data Ingestion</li>
