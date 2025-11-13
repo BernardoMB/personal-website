@@ -157,6 +157,8 @@ Generate gif: Use API Gifs
 Croping and overlaping: https://www.kapwing.com/611c68fbcddde800645059b1/studio/editor/layer/822e9ec1-ee0b-41d1-a5de-2ef258574349
 Speed: https://ezgif.com/speed
 
+Some images are hosted in ImageKit
+
 # Updating Resume
 
 Resumes were createn on Canva. Update the resumes on Canva, export them as PDF and update the following files int he repository:

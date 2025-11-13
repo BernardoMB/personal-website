@@ -667,6 +667,48 @@ export class ProjectsService {
             'assets/images/portfolio/confidential.svg'
           ]
         },
+        {
+          id: 27,
+          name: 'Freight-99',
+          code: 'F99',
+          thumbnail: 'assets/images/portfolio/MSIcons/AdminPanel.svg',
+          description: `
+            <p>Freight99 is an AI-powered logistics intelligence platform that helps shippers unlock hidden pricing data from emails to drive smarter, faster revenue decisions.</p>
+
+            <p>Freight99 transforms how logistics professionals analyze and act on their shipping data. By leveraging artificial intelligence, the platform extracts and organizes pricing insights buried in email communications—turning scattered quotes and shipment details into actionable dashboards. Users can:</p>
+            <p>
+              <ul>
+                <li>Spot pricing trends across lanes, customers, and time periods</li>
+
+                <li>Track win/loss rates to understand performance and competitiveness</li>
+
+                <li>Analyze quotes and shipments to identify revenue opportunities</li>
+
+                <li>Make data-driven decisions faster with intuitive visual tools</li>
+              </ul>
+            </p>
+
+            <p>Whether you're optimizing freight lanes or refining your quoting strategy, Freight99 offers a streamlined way to harness your existing data for better outcomes.</p>
+
+            <p>This application was build using the following technologies: NodeJS, Next JS, MUI Component library, Outlook SDK, Gmail SDK, Open AI API integration, Docker, PostgreSQL, Redis, MQ Rabbit.</p>
+            
+            <p>The entirety of the code for this application was generated using AI following spec-driven development patterns. For this reason, this appliation is very special withtin this portfolio./p>
+          `,
+          images: [
+            'https://ik.imagekit.io/8bzml48kky/Personal%20Website%20Projects/Freight99/1.png?updatedAt=1763001629229',
+            'https://ik.imagekit.io/8bzml48kky/Personal%20Website%20Projects/Freight99/2.png?updatedAt=1763001629073',
+            'https://ik.imagekit.io/8bzml48kky/Personal%20Website%20Projects/Freight99/3.png?updatedAt=1763001629140',
+            'https://ik.imagekit.io/8bzml48kky/Personal%20Website%20Projects/Freight99/4.png?updatedAt=1763001629044',
+            'https://ik.imagekit.io/8bzml48kky/Personal%20Website%20Projects/Freight99/5.png?updatedAt=1763001629020',
+            'https://ik.imagekit.io/8bzml48kky/Personal%20Website%20Projects/Freight99/6.png?updatedAt=1763001629040',
+            'https://ik.imagekit.io/8bzml48kky/Personal%20Website%20Projects/Freight99/7.png?updatedAt=1763001629301',
+            'https://ik.imagekit.io/8bzml48kky/Personal%20Website%20Projects/Freight99/8.png?updatedAt=1763001629097',
+            'https://ik.imagekit.io/8bzml48kky/Personal%20Website%20Projects/Freight99/9.png?updatedAt=1763001629022',
+            'https://ik.imagekit.io/8bzml48kky/Personal%20Website%20Projects/Freight99/10.png?updatedAt=1763001629008',
+            'https://ik.imagekit.io/8bzml48kky/Personal%20Website%20Projects/Freight99/11.png?updatedAt=1763002459136',
+            'https://ik.imagekit.io/8bzml48kky/Personal%20Website%20Projects/Freight99/12.png?updatedAt=1763002459151'
+          ]
+        },
       ]
     },
   ];
