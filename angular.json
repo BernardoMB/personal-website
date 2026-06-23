@@ -41,7 +41,7 @@
               "tsparticles",
               "ng2-pdf-viewer",
               "pdfjs-dist/es5/build/pdf",
-							"pdfjs-dist/es5/web/pdf_viewer"
+              "pdfjs-dist/es5/web/pdf_viewer"
             ]
           },
           "configurations": {
@@ -139,5 +139,8 @@
       }
     }
   },
-  "defaultProject": "personal-website"
+  "defaultProject": "personal-website",
+  "cli": {
+    "analytics": "a706d0d3-38c1-4653-b530-7d8883325566"
+  }
 }

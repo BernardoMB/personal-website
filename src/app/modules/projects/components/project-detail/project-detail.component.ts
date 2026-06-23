@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
 import { Subscription } from 'rxjs';
 import { Project } from '../../view-models/project.interface';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-project-detail',
@@ -38,7 +39,8 @@ export class ProjectDetailComponent implements OnInit, OnDestroy {
 
   constructor(
     private route: ActivatedRoute,
-    private router: Router
+    private router: Router,
+    private sanitizer: DomSanitizer
   ) {
   }
 
@@ -60,6 +62,11 @@ export class ProjectDetailComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
     this.projectDetailInfoSubscription?.unsubscribe();
+  }
+
+  getSafeDescription(desc: string) {
+    // Bypass Angular Security enabling styles tags and different sanitizer for rendered HTML in [innerHtml]
+    return this.sanitizer.bypassSecurityTrustHtml(desc);
   }
 
   navigateToProjects() {

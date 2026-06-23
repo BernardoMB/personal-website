@@ -37,9 +37,9 @@
     <!-- <div class="project-name">{{ project.name }}</div> -->
     <div
       class="project-description"
-      [innerHtml]="project.description"
+      [innerHtml]="getSafeDescription(project.description)"
     >
-  </div>
+    </div>
   </div>
 </section>
 
