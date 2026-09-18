@@ -420,9 +420,180 @@ export class ProjectsService {
           code: 'EXPS',
           thumbnail: 'assets/images/portfolio/MSIcons/AdminPanel.svg',
           description: `
+          <style>
+    .exporters-solutions-container * { margin: 0; padding: 0; box-sizing: border-box; }
+    .exporters-solutions-container body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.7;
+      color: #1a1a2e;
+      background: #f8f9fc;
+      padding: 2rem 1rem;
+    }
+    .exporters-solutions-container .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+      padding: 3rem;
+    }
+    .exporters-solutions-container .intro {
+      font-size: 1.1rem;
+      color: #3a3a5c;
+      border-left: 4px solid #003399;
+      padding-left: 1.25rem;
+      margin-bottom: 2.5rem;
+    }
+    .exporters-solutions-container h1 {
+      font-size: 1.75rem;
+      color: #003399;
+      margin-bottom: 1.5rem;
+    }
+    .exporters-solutions-container h2 {
+      font-size: 1.25rem;
+      color: #003399;
+      margin-top: 2rem;
+      margin-bottom: 0.75rem;
+    }
+    .exporters-solutions-container h2 .num {
+      display: inline-block;
+      background: #003399;
+      color: #fff;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 28px;
+      font-size: 0.85rem;
+      margin-right: 0.5rem;
+      vertical-align: middle;
+    }
+    .exporters-solutions-container p { margin-bottom: 0.75rem; color: #3a3a5c; }
+    .exporters-solutions-container ul {
+      list-style: none;
+      margin: 0.5rem 0 1rem 0;
+      padding: 0;
+    }
+    .exporters-solutions-container ul li {
+      position: relative;
+      padding-left: 1.5rem;
+      margin-bottom: 0.4rem;
+      color: #3a3a5c;
+    }
+    .exporters-solutions-container ul li::before {
+      content: "\\2022";
+      color: #003399;
+      font-weight: bold;
+      position: absolute;
+      left: 0.25rem;
+    }
+    .exporters-solutions-container .premium-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+    }
+    .exporters-solutions-container .premium-table th,
+    .exporters-solutions-container .premium-table td {
+      text-align: left;
+      padding: 0.6rem 1rem;
+      border-bottom: 1px solid #e8e8f0;
+    }
+    .exporters-solutions-container .premium-table th {
+      background: #f0f2fa;
+      color: #003399;
+      font-weight: 600;
+    }
+    .exporters-solutions-container .premium-table tr:last-child td { border-bottom: none; }
+    .exporters-solutions-container .summary {
+      background: #f0f2fa;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin-top: 2.5rem;
+    }
+    .exporters-solutions-container .summary h2 { margin-top: 0; }
+    .exporters-solutions-container .summary p { margin-bottom: 0.5rem; }
+    .exporters-solutions-container .summary p:last-child { margin-bottom: 0; }
+    .exporters-solutions-container strong { color: #1a1a2e; }
+  </style>
+            <h1>Zurich Exporter Solutions</h1>
             <p>Brokerage and Underwriting Automation.</p>
             <p>Front-end development of brokerage and underwriting automation platform.</p>
             <p>Technologies used: .NET, Blazor, Git, Azure Repos, Azure Work Items, Figma, Microsoft Azure, App Service, and Azure DevOps.</p>
+            <div class="container exporters-solutions-container">
+
+              <p class="intro">
+                Zurich's Exporter Solutions is a digital, pre-packaged international insurance program designed for U.S. companies that export products or have incidental overseas exposure &mdash; but do not have foreign offices, subsidiaries, or employees. It fills the coverage gaps that domestic U.S. policies leave when a business begins selling abroad or sending staff overseas.
+              </p>
+
+              <h2><span class="num">1</span> International insurance coverage for small and mid-sized exporters</h2>
+              <p>Exporter Solutions offers a bundle of international coverages such as:</p>
+              <ul>
+                <li>International General Liability</li>
+                <li>Workers' Compensation for overseas travel</li>
+                <li>Excess Auto Liability</li>
+                <li>Accident &amp; Health coverage</li>
+              </ul>
+              <p>These cover exposures that domestic U.S. policies typically exclude once a product or employee crosses a border.</p>
+
+              <h2><span class="num">2</span> Covers companies with no foreign entities but with overseas activity</h2>
+              <p>Specifically built for U.S.-based companies that:</p>
+              <ul>
+                <li>Ship products internationally</li>
+                <li>Have employees who travel abroad</li>
+                <li>Have incidental or occasional international exposures</li>
+                <li>Do not have foreign offices, subsidiaries, or legal entities</li>
+              </ul>
+
+              <h2><span class="num">3</span> Enables brokers to quote and bind policies in minutes</h2>
+              <p>The Exporter Solutions Digital Platform (ESDP) allows brokers to:</p>
+              <ul>
+                <li>Answer a short set of online questions</li>
+                <li>Receive an automated quote</li>
+                <li>Bind a multi-year international policy in as little as 15 minutes</li>
+              </ul>
+              <p>This is dramatically faster than traditional multinational underwriting workflows.</p>
+
+              <h2><span class="num">4</span> Multi-year, pre-packaged international programs</h2>
+              <p>Coverage options include 1-, 2-, or 3-year policies with adjusted premiums. Minimum premiums were recently reduced to:</p>
+              <table class="premium-table">
+                <thead>
+                  <tr>
+                    <th>Term</th>
+                    <th>Minimum Premium</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>1 year</td><td>$2,000</td></tr>
+                  <tr><td>2 years</td><td>$4,000</td></tr>
+                  <tr><td>3 years</td><td>$6,000</td></tr>
+                </tbody>
+              </table>
+
+              <h2><span class="num">5</span> Expanded eligibility for more industries</h2>
+              <p>Zurich recently broadened the platform to accept 400+ SIC codes, including:</p>
+              <ul>
+                <li>Life sciences (excluding clinical trials)</li>
+                <li>Aviation</li>
+                <li>Architecture &amp; engineering</li>
+                <li>Construction (travel exposures only)</li>
+              </ul>
+
+              <h2><span class="num">6</span> Closes coverage gaps for new exporters</h2>
+              <p>Companies new to exporting often discover too late that domestic policies don't cover:</p>
+              <ul>
+                <li>Product liability overseas</li>
+                <li>Employee injuries abroad</li>
+                <li>International auto exposures</li>
+                <li>Local legal requirements in foreign jurisdictions</li>
+              </ul>
+              <p>Exporter Solutions is designed to plug these gaps.</p>
+
+              <div class="summary">
+                <h2>In short</h2>
+                <p><strong>Exporter Solutions</strong> = a fast, digital, multinational insurance package for U.S. companies that export but don't have foreign operations.</p>
+                <p>It provides essential international liability and travel-related coverages, binds quickly, and is tailored for middle-market businesses with limited but real international exposure.</p>
+              </div>
+            </div>
           `,
           images: [
             'assets/images/portfolio/confidential.svg'

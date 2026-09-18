@@ -12,9 +12,9 @@ import { TermDialogComponent } from '../../shared/components/term-dialog/term-di
 })
 export class FooterComponent implements OnInit {
   nameFooter = 'Bernardo Mondragon Brozon';
-  phoneNumberFooter = '+1 571 626 1227';
+  phoneNumberFooter = '+52 55 3559 2033';
   emailAddressFooter = 'bmondragonbrozon@gmail.com';
-  physicalAddressFooter = 'Hershey, Pennsylvania 17033, USA';
+  physicalAddressFooter = 'Ciudad de México, México';
 
   constructor(
     public dialog: MatDialog,

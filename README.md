@@ -2,7 +2,12 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.0.
 
-## Development server
+## Debugging
+
+<div style="padding:12px;border-left:4px solid #0288d1;background:#e1f5fe;">
+  <strong>Note:</strong> You must have installed NodeJS version 14.4.0.
+</div>
+</br>
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4204/`. The app will automatically reload if you change any of the source files.
 
@@ -119,6 +124,10 @@ See `header.component.ts`, `app-routing.module.ts`, styles for html on `styles.s
 
 Not in much use accross the aplication.
 
+# Back-end
+
+This is a front-end application connected to a serverless back-end. The compute layer is only lambdas running in AWS.
+
 ## AWS
 
 This website makes API calls to AWS API Gateway integrated with AWS Lambda.
@@ -130,6 +139,10 @@ This website makes API calls to AWS API Gateway integrated with AWS Lambda.
 Deployed using the following tutorial: https://towardsdatascience.com/how-to-deploy-web-apps-with-azure-52ca340b41b9
 
 App service name: bernardomondragon
+
+# CI/CD
+
+Push changes to the ``release/v1`` branch. **Azure DevOps** is tracking the **Github** repository. See ``azure-pipelines.yml``.
 
 # Deployment notes
 
