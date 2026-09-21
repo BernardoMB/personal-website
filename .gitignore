@@ -45,3 +45,27 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+# --- AI development workflow framework ---
+# Machine-local workflow config: holds local checkout paths and secret references.
+.ai-dev-workflow.local.yaml
+
+# Claude Code local state
+.claude/settings.local.json
+.claude/worktrees/
+.claude/scheduled_tasks.lock
+
+# Agent worktrees (parallel batch isolation)
+.worktrees/
+
+# Python bytecode from scripts/lint and scripts/development-workflow helpers
+__pycache__/
+*.pyc
+
+# Scratch space used by workflow scripts
+.tmp/
+
+# Environment files
+.env
+.env.*
+!.env.example
