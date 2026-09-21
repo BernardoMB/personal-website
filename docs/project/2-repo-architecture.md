@@ -108,26 +108,35 @@ npm run lint              # ng lint (tslint + codelyzer)
 # builds and deploys to the Azure Web App. There is no manual deploy command.
 ```
 
-> **Test status**: the unit and e2e suites are unmodified Angular CLI stubs and
-> do **not** currently pass — `src/app/app.component.spec.ts` references
-> `app.title`, a property `AppComponent` does not have, which is a compile
-> error. See `3-software-architecture.md` § Testing Strategy.
+> **Verified baseline (2026-09-21, Node v24.21.0)**: `npm ci` **passes**,
+> `ng build --prod` **passes** (budget warnings only), `ng test` **fails** on 2
+> pre-existing TypeScript errors in CLI stub specs, `ng lint` **fails** with 477
+> pre-existing errors across 39 files. See `3-software-architecture.md` §
+> Testing Strategy.
 
 ## Environment Setup
 
-**Node version is the main constraint.** Angular CLI 11 requires Node 12.x or
-14.x. `azure-pipelines.yml` pins `14.x`. The repository has no `.nvmrc`, and
-`package.json` declares the constraint under the misspelled key `"engine"`
-(singular), which npm silently ignores — so nothing enforces it locally.
+`azure-pipelines.yml` pins Node `14.x` and the README documents 14.4.0. The
+repository has no `.nvmrc`, and `package.json` declares the constraint under the
+misspelled key `"engine"` (singular), which npm silently ignores — so nothing
+enforces it locally.
+
+**Modern Node also works.** Verified on v24.21.0 / npm 11.19.0: `npm ci` and
+`ng build --prod` both succeed, provided webpack 4's MD4 hashing is allowed under
+OpenSSL 3:
 
 ```bash
-nvm install 14
-nvm use 14
+export NODE_OPTIONS=--openssl-legacy-provider   # required on Node 17+, harmless to omit on 14
 npm ci
 ```
 
-The lockfile is `lockfileVersion: 1` (npm 6). Installing with a modern npm
-rewrites it wholesale; avoid committing that churn unless it is intentional.
+Without that flag every `ng` command fails with
+`ERR_OSSL_EVP_UNSUPPORTED: digital envelope routines::unsupported`. Use
+`nvm use 14` instead if you want to match CI exactly.
+
+The lockfile is `lockfileVersion: 1` (npm 6). `npm ci` reads it without
+rewriting — confirmed. `npm install` under a modern npm **will** rewrite it
+wholesale; avoid committing that churn unless it is intentional.
 
 No environment variables, API keys or `.env` files are required. Both
 `environment.ts` and `environment.prod.ts` contain only the `production` flag;

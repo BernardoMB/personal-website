@@ -21,19 +21,21 @@ baseline.
 
 ## 0. Environment Prerequisite — read this first
 
-**Angular CLI 11 requires Node 12.x or 14.x.** Nothing in this repository can be
-served, built, linted or tested on a modern Node. There is no `.nvmrc`, and
-`package.json` declares the constraint under the misspelled key `"engine"`, so
-npm does not enforce it.
+`azure-pipelines.yml` pins Node `14.x`. **Modern Node also works** — verified on
+v24.21.0 — but only with the OpenSSL legacy provider enabled, because Angular
+11's webpack 4 uses MD4 hashing that OpenSSL 3 rejects:
 
 ```bash
-nvm use 14      # or: nvm install 14
-npm ci          # node_modules is not committed
+export NODE_OPTIONS=--openssl-legacy-provider   # required on Node 17+; omit on Node 14
+npm ci                                          # node_modules is not committed
 ```
 
-If `nvm` is unavailable, **stop and report the blocker** rather than attempting a
-run on the system Node. A failure caused by the wrong Node version is not a
-finding about the code under test.
+Without the flag, every `ng` command fails with
+`ERR_OSSL_EVP_UNSUPPORTED: digital envelope routines::unsupported`. **That is an
+environment error, not a finding about the code under test** — set the flag and
+re-run before reporting anything.
+
+Use `nvm use 14` instead if you need to reproduce CI exactly.
 
 ---
 
@@ -62,15 +64,22 @@ Does a committed spec cover the feature under test?
   └─ Neither                   → Ad-hoc manual walkthrough (Section 3)
 ```
 
-> **Important caveat.** The committed specs are currently **unmodified Angular
-> CLI stubs and do not pass.** All 35 `*.spec.ts` files are generated
-> scaffolding; `src/app/app.component.spec.ts` fails to compile because it
-> asserts `app.title`, a property `AppComponent` does not define. The Protractor
-> spec asserts against `.content span`, which does not exist in the template.
+> **Important caveat — verified, not assumed.** The committed specs are
+> unmodified Angular CLI stubs and the unit suite **does not compile**. A run on
+> 2026-09-21 produced exactly two TypeScript errors:
 >
-> Do not treat a failing suite as a regression introduced by the change under
-> test. Establish whether the failure pre-exists by running the suite on a clean
-> checkout first, and say so explicitly in the smoke test report.
+> - `src/app/app.component.spec.ts:26` — `Property 'title' does not exist on type 'AppComponent'` (file last modified 2020-11-12)
+> - `src/app/directives/better-highlight.directive.spec.ts:5` — `Expected 2 arguments, but got 0` (file last modified 2021-03-18)
+>
+> `ng lint` is likewise red with 477 pre-existing errors across 39 files. The
+> Protractor spec asserts against `.content span`, which does not exist in the
+> template.
+>
+> **`ng build --prod` passes.** The application itself is healthy; only the test
+> and lint scaffolding is not.
+>
+> Do not report any of these as a regression introduced by the change under test.
+> State explicitly in the smoke test report which failures pre-existed.
 
 ---
 

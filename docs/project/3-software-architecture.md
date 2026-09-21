@@ -165,17 +165,31 @@ No secret names are referenced from this repository.
 
 ## Testing Strategy
 
-> **Current state, stated plainly**: the test suites are unmodified Angular CLI
-> stubs and do not pass. All 35 `*.spec.ts` files are generated scaffolding —
-> 34 contain a single `should create` assertion, declared without the providers
-> or module imports their components actually require. `app.component.spec.ts`
-> additionally fails to compile because it asserts `app.title`, which
-> `AppComponent` does not define. The Protractor spec asserts against
-> `.content span`, an element that does not exist. **No test has ever gated a
-> deploy** — the Azure pipeline runs neither `ng test` nor `ng lint`.
+> **Current state — measured 2026-09-21 on Node v24.21.0, not assumed.**
 >
-> Treat the tiers below as the target model, and fixing the stubs as
-> outstanding work.
+> | Command           | Result   | Detail                                                                                          |
+> | ----------------- | -------- | ------------------------------------------------------------------------------------------------- |
+> | `npm ci`          | **pass** | 971 packages; `package-lock.json` unchanged.                                                      |
+> | `ng build --prod` | **pass** | 2.24 MB initial bundle, built in ~14 s. Budget *warnings* only.                                   |
+> | `ng test`         | **fail** | Does not compile. 2 TypeScript errors.                                                            |
+> | `ng lint`         | **fail** | 477 errors across 39 files (quotemark 155, object-literal-key-quotes 86, typedef 59, …).           |
+>
+> The application builds and ships correctly; the **test and lint scaffolding is
+> what is broken**. All 35 `*.spec.ts` files are unmodified Angular CLI
+> generation — 34 contain a single `should create` assertion, declared without
+> the providers or module imports their components actually require. The two
+> compile errors are `app.component.spec.ts:26` (asserts `app.title`, which
+> `AppComponent` does not define; last modified 2020-11-12) and
+> `better-highlight.directive.spec.ts:5` (constructs the directive with no
+> arguments; last modified 2021-03-18). The Protractor spec asserts against
+> `.content span`, an element that does not exist.
+>
+> **No test has ever gated a deploy** — the Azure pipeline runs neither `ng test`
+> nor `ng lint`, only `ng build --prod`. That is why the suite could rot for five
+> years without anyone noticing.
+>
+> Treat the tiers below as the target model, and fixing the stubs as outstanding
+> work.
 
 ### Overview
 

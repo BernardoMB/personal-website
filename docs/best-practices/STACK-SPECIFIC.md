@@ -73,11 +73,18 @@ The rules most likely to be violated in this codebase. Detail lives in
   is 15 MB). Compress new images before adding them; prefer SVG for icons.
 
 - **Test stubs are not a baseline.** All 35 `*.spec.ts` files are unmodified CLI
-  scaffolding and the suite does not currently pass. When touching a component,
-  write a real spec with `TranslateModule.forRoot()`, `RouterTestingModule`,
-  `HttpClientTestingModule` and the Material modules it needs — do not copy the
-  neighbouring stub.
+  scaffolding and the suite does not compile (2 errors, verified). When touching
+  a component, write a real spec with `TranslateModule.forRoot()`,
+  `RouterTestingModule`, `HttpClientTestingModule` and the Material modules it
+  needs — do not copy the neighbouring stub.
 
-- **Angular 11 needs Node 14.** The CLI will not run on modern Node. Use
-  `nvm use 14` before `npm ci`. Note `package.json` declares this under the
+- **`ng lint` is already red — 477 errors across 39 files.** Fix lint errors in
+  the files you touch; do not attempt a repo-wide cleanup inside a feature
+  change, and do not treat the pre-existing noise as your regression.
+
+- **On Node 17+, export `NODE_OPTIONS=--openssl-legacy-provider`.** Angular 11's
+  webpack 4 uses MD4 hashing, which OpenSSL 3 rejects. With the flag set,
+  `npm ci` and `ng build --prod` both succeed on Node 24 (verified). Without it
+  every `ng` command dies with `ERR_OSSL_EVP_UNSUPPORTED`. CI pins Node 14, where
+  the flag is unnecessary. Note `package.json` declares the version under the
   misspelled key `"engine"`, so npm does not enforce it.

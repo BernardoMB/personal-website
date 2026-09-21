@@ -142,15 +142,22 @@ For normal Codex usage, use `/run-work` to scan the portfolio and discover what 
 
 ## Common Commands
 
-> **Node version**: Angular CLI 11 requires Node 12.x or 14.x. Run `nvm use 14`
-> before any `ng` command. There is no `.nvmrc`, and `package.json` declares the
-> constraint under the misspelled key `"engine"` (singular), which npm ignores —
-> so nothing enforces it for you.
+> **Node version.** `azure-pipelines.yml` pins Node 14, and the README documents
+> 14.4.0. In practice the toolchain **also works on modern Node** (verified on
+> v24.21.0: `npm ci` and `ng build --prod` both succeed) **provided you set
+> `NODE_OPTIONS=--openssl-legacy-provider`**. Without it, webpack 4's MD4 hashing
+> fails under OpenSSL 3 with `ERR_OSSL_EVP_UNSUPPORTED`.
+>
+> There is no `.nvmrc`, and `package.json` declares the constraint under the
+> misspelled key `"engine"` (singular), which npm ignores. Use `nvm use 14` to
+> match CI exactly, or export the flag below.
 
 <!-- workflow-shell-contract: bash -->
 ```bash
+# Required on Node 17+ (omit entirely on Node 14)
+export NODE_OPTIONS=--openssl-legacy-provider
+
 # Install
-nvm use 14
 npm ci
 
 # Development
@@ -170,11 +177,21 @@ npm run e2e                                           # ng e2e (Protractor)
 npm run lint              # ng lint (tslint + codelyzer)
 ```
 
-> **Test status**: the 35 `*.spec.ts` files and the Protractor spec are
-> unmodified Angular CLI stubs and **do not currently pass** —
-> `src/app/app.component.spec.ts` asserts `app.title`, which `AppComponent` does
-> not define. Do not report a failing suite as a regression without first
-> confirming the failure pre-exists your change.
+> **Verified baseline, 2026-09-21, Node v24.21.0.** Establish whether a failure
+> pre-exists your change before reporting it as a regression:
+>
+> | Command          | Result   | Detail                                                                                          |
+> | ---------------- | -------- | ------------------------------------------------------------------------------------------------- |
+> | `npm ci`         | **pass** | 971 packages; `package-lock.json` unchanged.                                                      |
+> | `ng build --prod`| **pass** | 2.24 MB initial bundle. Budget *warnings* only (initial and 5 component stylesheets over budget). |
+> | `ng test`        | **fail** | 2 pre-existing TypeScript errors, both in CLI stub specs — see below.                             |
+> | `ng lint`        | **fail** | 477 pre-existing errors across 39 files (quotemark 155, object-literal-key-quotes 86, typedef 59). |
+>
+> The two test failures are `src/app/app.component.spec.ts:26` (asserts
+> `app.title`, which `AppComponent` does not define) and
+> `src/app/directives/better-highlight.directive.spec.ts:5` (constructs the
+> directive with no arguments). Those files were last modified in 2020 and 2021
+> respectively. All 35 `*.spec.ts` files are unmodified Angular CLI scaffolding.
 
 Markdown lint for workflow artifacts (specs, plans, changelog fragments). These
 are **not** installed as devDependencies, because `markdownlint-cli2` requires
@@ -299,8 +316,9 @@ Read [`docs/best-practices/STACK-SPECIFIC.md`](docs/best-practices/STACK-SPECIFI
 
 | Symptom                                                  | Cause / fix                                                                                                    |
 | -------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| Any `ng` command fails immediately                       | Angular CLI 11 needs Node 12/14. `nvm use 14`, then `npm ci`.                                                     |
-| `ng test` fails on `app.title`                           | Pre-existing. `app.component.spec.ts` is an unmodified CLI stub asserting a property `AppComponent` lacks.         |
+| `ERR_OSSL_EVP_UNSUPPORTED` / `digital envelope routines::unsupported` | webpack 4 MD4 hashing under OpenSSL 3. `export NODE_OPTIONS=--openssl-legacy-provider`, or use Node 14. |
+| `ng test` fails on `app.title`                           | Pre-existing since 2020. `app.component.spec.ts` is an unmodified CLI stub asserting a property `AppComponent` lacks. |
+| `ng lint` reports hundreds of errors                     | Pre-existing: 477 across 39 files in `src/`. Not caused by your change; fix only what you touch.                    |
 | Raw keys like `HEADER.HOME` render instead of text       | A lazy module is missing `TranslateModule.forChild` with `HttpLoaderFactory`, or the i18n catalogue 404'd.         |
 | A style change leaks into unrelated pages                | Nine component stylesheets are also globally imported via `src/scss/component-themes.scss`.                        |
 | `DOCUMENT` injection behaves unexpectedly                | `src/app/providers/document.provider.ts` exports a `DOCUMENT` token that shadows `@angular/common`'s. Check the import. |
