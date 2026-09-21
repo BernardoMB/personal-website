@@ -89,9 +89,19 @@ review:
   on_ready:
     # Ordered list of GitHub/App/CLI reviewers that run only after draft gates
     # are clean and the PR has been converted with `gh pr ready`.
-    # Empty: Bugbot requires the Cursor GitHub App on this repository. Listing
-    # it would make pr-review-loop.sh poll for a check-run that never appears.
-    github: []
+    # CodeRabbit runs here, in the ready phase rather than on draft PRs, so it
+    # only spends quota once the internal Claude reviewer has the PR locally
+    # clean and it has been converted with `gh pr ready`.
+    #
+    # Requires BOTH: the CodeRabbit GitHub App installed on this repository, and
+    # `reviews.auto_review.enabled: true` in .coderabbit.yaml (already set).
+    # .coderabbit.yaml keeps `drafts: false` to match this bucket — if you move
+    # coderabbit to on_draft.github above, flip that too.
+    #
+    # Bugbot was the template default here; it needs the Cursor GitHub App and a
+    # paid plan, so it is not listed.
+    github:
+      - coderabbit
 
   # Optional: TWO independent reviewer-loop cycle caps enforced by
   # pr-review-loop.sh (issue #1502; dual-cap decision recorded on PR #1507's

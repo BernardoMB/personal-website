@@ -1,0 +1,90 @@
+# CodeRabbit configuration
+#
+# Docs: https://docs.coderabbit.ai/reference/configuration
+#
+# CodeRabbit is enabled here as the READY-PHASE reviewer. The lifecycle bucket is
+# declared in .ai-dev-workflow.yaml as review.on_ready.github: [coderabbit].
+#
+# The two files must agree. Because `coderabbit` sits in on_ready (not
+# on_draft), `auto_review.drafts` stays false: draft PRs are covered by the
+# internal Claude reviewer (review.on_draft.runner), and CodeRabbit only spends
+# quota once the PR is locally clean and converted with `gh pr ready`.
+#
+# If you ever move `coderabbit` into review.on_draft.github, you MUST also set
+# drafts: true below — otherwise every draft PR gets a "Review skipped" banner,
+# which pr-review-loop.sh escalates as REASON=review_skipped_banner.
+
+reviews:
+  profile: "assertive"
+
+  # Restrict review to files in the PR diff so CodeRabbit does not expand into
+  # unrelated files and pull agents into scope-inflating edits.
+  changed_files_only: true
+
+  tools:
+    github-checks:
+      enabled: true
+      timeout_ms: 600000
+
+  auto_review:
+    enabled: true
+
+    # false: CodeRabbit is the ready-phase reviewer here, not a draft reviewer.
+    drafts: false
+
+    # CodeRabbit pauses auto review after this many reviewed commits arrive
+    # without human interaction. At 1, every reviewer-loop fix commit trips the
+    # pause banner and costs a poll cycle while the loop posts
+    # "@coderabbitai resume". Convergence routinely needs several fix rounds.
+    auto_pause_after_reviewed_commits: 10
+
+    # Every base branch a PR in this repository can target. Entries are regexes.
+    # A PR whose base is absent here gets a "Review skipped" banner rather than
+    # a review — a false-clean the reviewer loop is built to catch.
+    #   develop        — the integration branch all feature/fix/refactor PRs target
+    #   develop-.*     — epic integration branches (protocol 05b)
+    #   master         — the release base for this repository (there is no `main`)
+    base_branches:
+      - develop
+      - develop-.*
+      - master
+
+  path_filters:
+    - "!dist/**"
+    - "!**/node_modules/**"
+    - "!**/*.lock"
+    - "!package-lock.json"
+    # 49 MB of images, fonts, audio and PDFs — nothing reviewable.
+    - "!src/assets/**"
+    # A single 292 KB line holding an inline base64 JPEG.
+    - "!**/retailVisionArchitectureDiagram.ts"
+
+  path_instructions:
+    - path: "**/*.spec.ts"
+      instructions: >-
+        All 35 spec files in this repository are unmodified Angular CLI
+        scaffolding, and the unit suite does not currently compile. Do not
+        repeat generic "this test is inadequate" findings on untouched stubs.
+        Do review any spec the PR actually adds or modifies, and hold it to the
+        real standard: TestBed configured with the providers and modules the
+        component under test injects, rather than a bare declarations array.
+
+    - path: "src/scss/**"
+      instructions: >-
+        Nine component stylesheets are imported directly by
+        src/scss/component-themes.scss, so they are both Angular-scoped
+        component styles and global CSS. Flag changes to header, sidebar,
+        footer, loadingbar, scroll-to-top, scroll-indicator, ng-feedback-theme,
+        landing or projects-root styles that assume component-only scoping.
+
+    - path: "docs/workflow/**"
+      instructions: >-
+        This tree is vendored from the upstream ai-dev-framework-template and is
+        classified always_sync. Do not suggest edits to it; changes belong
+        upstream. Review only that local deviations are recorded in AGENTS.md.
+
+    - path: "scripts/development-workflow/**"
+      instructions: >-
+        Vendored framework scripts, always_sync from the upstream template. Do
+        not report style or docstring findings here. Shell scripts have no
+        formal docstring standard.

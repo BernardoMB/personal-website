@@ -300,6 +300,31 @@ outright. See [`docs/workflow/development-workflow/integrations/haystack.md`](do
 project`, `Fixed typo`. It is not Conventional Commits. Match the surrounding
 history rather than introducing a new convention unilaterally.
 
+### Automated PR review — CodeRabbit (ready phase)
+
+Two-layer review, configured in [`.ai-dev-workflow.yaml`](.ai-dev-workflow.yaml):
+
+1. **Draft PRs** — the internal Claude reviewer (`review.on_draft.runner: claude`) runs the Step 7a gate against [`REVIEW.md`](REVIEW.md). No external service, no quota.
+2. **Ready PRs** — CodeRabbit (`review.on_ready.github: coderabbit`) reviews only after the draft gate is clean and the PR is converted with `gh pr ready`. This ordering is deliberate: CodeRabbit's allowance is counted in trigger attempts, so it should not be spent on drafts that are still churning.
+
+> **One-time setup still required**: install the [CodeRabbit GitHub App](https://www.coderabbit.ai) on `BernardoMB/personal-website`. Until that is done, `pr-review-loop.sh` polls for a review that never arrives.
+
+[`.coderabbit.yaml`](.coderabbit.yaml) is already configured to match: `auto_review.enabled: true`, `drafts: false`, and `base_branches` covering `develop`, `develop-.*` and `master`.
+
+**The two files must stay in agreement.** If `coderabbit` is ever moved into
+`review.on_draft.github`, `.coderabbit.yaml` must set `drafts: true` in the same
+change — otherwise every draft PR gets a "Review skipped" banner, which
+`pr-review-loop.sh` escalates as `REASON=review_skipped_banner`. That reason
+means "fix `.coderabbit.yaml`", not "wait for quota". Likewise, a PR based on a
+branch absent from `base_branches` is skipped rather than reviewed.
+
+When several PRs are open, trigger CodeRabbit one at a time — parallel
+`@coderabbitai` requests consume the same hourly quota without producing extra
+reviews. The loop reports `CODERABBIT_TRIGGER_ATTEMPTS` and
+`CODERABBIT_REVIEWS_RECEIVED` so the ratio is visible.
+
+See [`integrations/coderabbit.md`](docs/workflow/development-workflow/integrations/coderabbit.md).
+
 ### Stack Conventions
 
 Read [`docs/best-practices/STACK-SPECIFIC.md`](docs/best-practices/STACK-SPECIFIC.md) for the stack summary and the most important cross-cutting rules. For detailed conventions per technology, see the files in [`docs/best-practices/stack/`](docs/best-practices/stack/).
@@ -341,14 +366,16 @@ re-accepted from upstream.
 | `scripts/development-workflow/tests/` not copied (178 files)                       | The framework's own self-test harness; nothing here would run it.                   |
 | `docs/specs/developments/` and `docs/testing/workflow/` seeded empty               | The template ships its own 143 spec folders and 143 smoke runbooks — foreign history. |
 | `e2e/` (Playwright) not copied                                                    | Would enter `ng lint`'s TypeScript program via `e2e/tsconfig.json` and break it. Protractor is retained. |
-| `hooks/`, `LLM_RULES.md`, `.coderabbit.yaml`, `.pr_agent.toml`, `.prettierrc.json` not copied | Vendor/tooling configs for services not used here; prettier would fight tslint and `.editorconfig`. |
+| `hooks/`, `LLM_RULES.md`, `.pr_agent.toml`, `.prettierrc.json` not copied        | Vendor/tooling configs for services not used here; prettier would fight tslint and `.editorconfig`. |
+| `.coderabbit.yaml` written fresh rather than copied                              | The template's copy keeps auto-review **off** and is tuned for a markdown/shell repo. This one enables auto-review, adds `master` to `base_branches`, and filters the 49 MB asset tree. |
 | `docs/best-practices/4-database.md`, `stack/supabase.md` not copied               | No database, no Supabase.                                                            |
 | `docs/workflow/retro-metrics.md` truncated to its header                          | The template's copy carried 27 rows of its own batch history (migration note 0.41.1). |
 | `docs/best-practices/stack/i18n.md` worked example rewritten                      | Upstream targets React Native + i18next; this project uses @ngx-translate.           |
 | `.cursor/rules/*.mdc` globs changed                                               | Upstream globs matched nothing in an Angular tree, so no rule ever attached to `src/`. |
 | `.claude/settings.json`: `pnpm` → `npm`/`npx ng`, force-push denied               | This is an npm + Angular CLI repo; the blanket `Bash(git push:*)` allow also covered `--force`. |
 | `guardrails.mode`: `delegated` → `manual`, all `may_merge_pr` false               | Live production site; merge authority stays with a human.                            |
-| `review.on_draft.runner`: `codex` → `claude`; reviewer lists emptied              | Codex, Bugbot, PR-Agent and CodeRabbit are not installed or licensed here.            |
+| `review.on_draft.runner`: `codex` → `claude`; `on_draft.github` emptied           | Codex, PR-Agent and the local-ai-reviewer's Codex backend are not installed here.     |
+| `review.on_ready.github`: `bugbot` → `coderabbit`                                 | Bugbot needs the Cursor GitHub App and a paid plan. CodeRabbit runs in the ready phase so it only spends quota after the draft gate is clean. **Requires the CodeRabbit GitHub App to be installed on the repository** — see below. |
 
 Upstream version integrated: **v0.44.0**, recorded in
 `.ai-dev-workflow.yaml` under `template.last_synced_version`.
