@@ -71,7 +71,8 @@ stored; the page state is unchanged.
   below. A technology may not be moved between cards without a spec change.
 - Within each card, entries are ordered by completion percentage from highest to
   lowest. Ordering is independent per card; the cards are not merged or re-ranked
-  against one another.
+  against one another. Entries sharing the same percentage may appear in either
+  order relative to each other.
 - Every entry has a completion percentage and a proficiency label. Neither may be
   blank.
 - Completion percentages are whole numbers in the range 40 to 95 inclusive, matching
@@ -152,8 +153,9 @@ stated in Business Rules.
 - The existing Skills section heading remains above the cards, unchanged in wording,
   placement and translation behaviour.
 - Each card carries its own subtitle, shown at the top of that card.
-- On desktop-width screens the three cards sit side by side in a single row, in the
-  order Card 1, Card 2, Card 3 from left to right, with equal visual weight.
+- At viewport widths above roughly 768 pixels the three cards sit side by side in a
+  single row, in the order Card 1, Card 2, Card 3 from left to right, with equal
+  visual weight.
 - At viewport widths of roughly 768 pixels and below, the cards stack vertically at
   full width, one above another, preserving the same order top to bottom. This
   matches how the rest of the landing page reflows on narrow screens.
@@ -224,8 +226,8 @@ content and the site is redeployed.
 - [ ] Every proficiency label is one of the three existing tier labels for the
       current language, and agrees with the entry's percentage band defined in
       Proficiency Labels.
-- [ ] On a desktop-width browser window the three cards render side by side in one
-      row, in the order Card 1, Card 2, Card 3 from left to right.
+- [ ] At a viewport width of 1024 pixels or wider, the three cards render side by
+      side in one row, in the order Card 1, Card 2, Card 3 from left to right.
 - [ ] Narrowing the browser window to roughly 768 pixels or less stacks the three
       cards vertically at full width, in the same order top to bottom, with no
       horizontal overflow or clipped content.
@@ -239,7 +241,9 @@ content and the site is redeployed.
       bar.
 - [ ] The section remains reachable at its existing in-page anchor and its position
       in the landing page's scroll order is unchanged.
-- [ ] The section renders correctly in all three site themes.
+- [ ] In each of the three site themes, every card subtitle, technology name,
+      proficiency label, percentage and progress bar stays visible and legible
+      against its background.
 
 ---
 
