@@ -45,7 +45,7 @@ width (Decision 5).
 | Skills array is duplicated | `grep -c "completion:" src/app/components/landing/landing.component.ts` | `26` — 13 entries written twice (constructor-path init in `ngOnInit` and the `onLangChange` callback) |
 | Where the section is rendered | `grep -n -i "skill" src/app/components/landing/landing.component.html` | One block, lines 200-217: `<section id="skills">` → `.skills-container` → single `<mat-card>` → `*ngFor` over `skills` |
 | Where the section is styled | `grep -n "skills" src/app/components/landing/landing.component.scss` | One block, lines 316-359, nested inside `@mixin landing-theme` |
-| Other consumers of the `#skills` anchor | `grep -rn "skills" src/app` | Only `header.component.ts` (scroll-spy section id list) and the landing component. No route, no sidebar entry |
+| Other consumers of the `#skills` anchor | `grep -rln "skills" src/app` | 6 files match: the landing component (`.ts`/`.html`/`.scss`, this feature) and `header.component.ts` (scroll-spy section id list), plus two unrelated false-positive text matches on the word "skills" — `hobbies.service.ts` ("motor skills" in a hobby description) and `experience-root.component.html` (the `/experience` page's own separate "Skills" section-title and "developed skills in" body text). Neither of the latter two references the landing page's `#skills` anchor. No route and no sidebar entry consume the anchor. |
 | i18n catalogue parity | `python3` key-diff over `src/assets/i18n/en.json` and `es.json` | 126 keys each; one pre-existing mismatch (`LANDING.MESSAGE_CHARACTERS` vs `LANDING.MESSAGE_CHARACTE1RS`) that this change must not add to |
 | Material modules already available | `grep -rn "MatCardModule\|MatProgressBarModule" src/app/app.module.ts` | Both imported (lines 16-17) and registered (lines 87, 94) |
 | Browser targets (for flex `gap`) | `cat .browserslistrc` | `last 2 Safari major versions`, `last 2 iOS major versions`, current Chrome/Firefox/Edge — all well past Safari 14.1, so flex `gap` is safe |
@@ -189,16 +189,26 @@ cards are stacked full width and the existing 528px behaviour is untouched.
   only works above ~1800px, and breaks the landing page's consistent
   centred-column layout at every other width.
 
-**AC tension, stated plainly for the reviewer**: acceptance criterion "Each
-individual entry looks and behaves as it does today, including the
-narrow-viewport behaviour of moving the proficiency label beneath the progress
-bar" is satisfied at the element level (identical markup, identical four
-elements, identical relocation mechanism, identical behaviour at every stacked
-width), but the desktop presentation of an entry changes: the label sits below
-the bar rather than inline. There is no layout that keeps the inline centre label
-and also satisfies "three cards side by side at 1024px". If the human prefers
-strict desktop parity over three-up layout, that is a spec change, not an
-implementation choice — escalate rather than improvise.
+**AC13 alignment (resolved via a sibling spec fix)**: acceptance criterion 13
+was amended on `fix/expand-skills-section-ac13` (PR #8) to state this exact
+rule — the proficiency label renders beneath the progress bar whenever the
+card is too narrow for an inline label to avoid overlapping the technology
+name, which includes every side-by-side desktop layout (above 768px) as well
+as narrow stacked viewports (roughly 528px or below); inline placement remains
+for a stacked card between roughly 528px and 768px. This decision is what
+motivated that amendment: the previous wording ("looks and behaves as it does
+today … narrow-viewport behaviour") described only the stacked-viewport
+relocation and did not account for three cards that are always narrower than
+the old single-card proxy width. There is no layout that keeps the inline
+centre label at every desktop width and also satisfies "three cards side by
+side at 1024px" (acceptance criterion 9), so the amendment is the correct
+resolution rather than a third improvised layout.
+
+**Sequencing dependency**: this plan's spec-alignment for AC13 assumes PR #8
+has merged. If the base branch still carries the pre-amendment AC13 wording
+when implementation starts, stop and re-verify rather than assuming the
+amendment landed — do not implement Decision 5 against stale spec text without
+confirming which wording is current.
 
 ### Decision 6 — Container width and the responsive mechanism
 
@@ -495,7 +505,7 @@ after `"SKILLS"`):
 
 | Risk | Likelihood | Impact | Mitigation |
 | --- | --- | --- | --- |
-| Reviewer reads acceptance criterion 13 strictly and rejects the desktop label placement (Decision 5) | Med | Med | Decision 5 states the tension explicitly, shows the two rejected alternatives, and names the escalation path: this is a spec question, not an implementation fix. Do not improvise a third layout. |
+| Implementation starts before PR #8's AC13 amendment merges, so the base branch still carries the pre-amendment wording that appears to conflict with Decision 5 | Low | Med | AC13 was amended in PR #8 to state Decision 5's exact rule; Decision 5 records the resolution and the sequencing dependency. If the base branch does not yet carry the amendment when implementation starts, stop and confirm PR #8's status rather than improvising a third layout or implementing against stale spec wording. |
 | Long names wrap awkwardly between 769px and ~1000px, where each card is ~230-280px wide | Med | Low | `min-width: 0` plus `overflow-wrap: break-word` on `.skill-name`, `white-space: nowrap` on `.completion`; smoke Step 5 checks 1024px and Step 6 checks the 768px boundary specifically. |
 | A key is added to `en.json` but not `es.json` (the repository already has one such live mismatch) | Low | Med | Implementation Order Step 2 ends with the catalogue parity command; the expected result is 129 keys each with the single pre-existing `MESSAGE_CHARACTERS` mismatch and nothing new. |
 | A style change leaks outside the section, because `landing.component.scss` is also a global stylesheet | Low | Med | Decision 7: every new rule is nested under `.skills-section` inside the mixin. Smoke Step 9 scrolls the whole landing page to confirm the other five sections are visually unchanged. |
