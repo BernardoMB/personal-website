@@ -148,6 +148,13 @@ The listing order above is the authoring order, not the display order: within ea
 card, entries are displayed sorted by completion percentage, highest first, as
 stated in Business Rules.
 
+Naming note: "vLLM / Triton" and "CUDA / NVIDIA Triton Inference Server" are two
+separate entries, not a duplication. The first refers to the Triton GPU kernel
+language; the second refers to NVIDIA's inference-serving platform. The wording
+above is the author's confirmed wording. Should the author prefer the unambiguous
+form "vLLM / OpenAI Triton", that is a label-only substitution that changes no rule,
+count or criterion elsewhere in this spec.
+
 ### Layout
 
 - The existing Skills section heading remains above the cards, unchanged in wording,
