@@ -237,8 +237,15 @@ This repository follows the default template workflow (documented in `docs/workf
 > `azure-pipelines.yml` triggers on `release/*` and its final step deploys to the
 > live Azure Web App `bernardomondragon`. Protocol 05 pushes the release branch
 > **before** opening any PR, so running `/prepare-release` would ship to
-> production with no review. Narrow the trigger or add a deployment approval gate
-> before using the release workflow.
+> production with no review. This hazard is unchanged; a deployment approval gate
+> is still recommended before using the release workflow.
+>
+> A related, broader hazard was found and fixed during framework integration:
+> `azure-pipelines.yml` had no `pr:` trigger, so Azure Pipelines defaulted to
+> validating **every** PR by running the whole pipeline — deploy step included —
+> regardless of target branch. It was safe only because the build happened to be
+> failing. `pr: none` now disables PR-triggered runs entirely; the `release/*`
+> hazard above is the only remaining path to an unreviewed production deploy.
 
 Workflow branches must use a bare tracker identifier (for example,
 fix/1858-safe-name), never an issue-reference form such as
@@ -350,7 +357,7 @@ Read [`docs/best-practices/STACK-SPECIFIC.md`](docs/best-practices/STACK-SPECIFI
 | A nav link lands on `/not-found`                         | `footer.component.html` links `/cv`, which is not a route. The correct path is `/experience`.                      |
 | Translation JSON 404s in a deployed build                | `web.config` MIME configuration — see the deployment notes in `README.md`.                                          |
 | Workflow scripts exit with code 2                        | `gh` is not authenticated. Run `gh auth login`.                                                                    |
-| `/run-item` stops at the readiness gate                  | Expected. Protocol 91 Step 8a requires at least one GitHub check, and this repo has no GitHub Actions. See below.   |
+| `/run-item` stalls at the readiness gate                 | Check what's actually failing — see the row below. This repo is not check-less. |
 
 ---
 
@@ -361,7 +368,9 @@ re-accepted from upstream.
 
 | Deviation                                                                       | Why                                                                               |
 | --------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| `.github/` not adopted (no GitHub Actions)                                        | CI/CD is Azure Pipelines. Consequence: Protocol 91 Step 8a exits 5 on zero checks, and `/batch-merge` treats an empty check set as blocked — so orchestrated end-to-end runs stop at the readiness gate. Per-stage commands are unaffected. |
+| `.github/` not adopted (no GitHub Actions)                                        | CI/CD is Azure Pipelines. **Correction (found in practice, not zero checks as originally assumed here)**: this repo is not check-less — GitGuardian, Vercel, and Vercel Preview Comments already post checks via pre-existing GitHub App integrations, unrelated to `.github/workflows`. Before the `pr: none` fix below, Azure Pipelines *also* posted a check that failed on every PR (its PR-validation trigger ran the full deploy pipeline by default, absent an explicit `pr:` block) — **that failing check**, not an absent one, was the actual readiness-gate blocker. With Azure PR validation now disabled, the remaining checks (GitGuardian, Vercel ×2) have been consistently green across every PR observed so far, so Protocol 91 Step 8a and `/batch-merge` should no longer stall here by default — verify against the actual check set on the PR in front of you rather than assuming either outcome. |
+| `azure-pipelines.yml` gained `pr: none`                                           | Without it, Azure Pipelines defaulted to validating *every* PR by running the whole pipeline — including the `AzureRmWebAppDeployment@4` step to the live site. It was only safe by accident (the build was failing). Production deploys still happen via the `release/*` push trigger only; see the hazard note under Git & Branching. |
+| `.coderabbit.yaml` `base_branches` gained `agentic-dev` (temporary)               | Spec and plan PRs currently target `agentic-dev`, not `develop` (see above) — without this entry CodeRabbit silently skips review with a "Review skipped" banner instead of reviewing. Remove this entry once `agentic-dev` merges into `develop`. |
 | `.codex/skills/` and `.agents/skills/` not copied (57 files)                       | Only Claude Code and Cursor are used here.                                          |
 | `scripts/development-workflow/tests/` not copied (178 files)                       | The framework's own self-test harness; nothing here would run it.                   |
 | `docs/specs/developments/` and `docs/testing/workflow/` seeded empty               | The template ships its own 143 spec folders and 143 smoke runbooks — foreign history. |

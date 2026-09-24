@@ -44,10 +44,15 @@ reviews:
     #   develop        — the integration branch all feature/fix/refactor PRs target
     #   develop-.*     — epic integration branches (protocol 05b)
     #   master         — the release base for this repository (there is no `main`)
+    #   agentic-dev    — TEMPORARY: the framework's own docs/scripts/config only
+    #                    exist on this branch until it merges to develop. Spec and
+    #                    plan PRs target it in the meantime (see AGENTS.md > Local
+    #                    Deviations). Remove this entry once agentic-dev merges.
     base_branches:
       - develop
       - develop-.*
       - master
+      - agentic-dev
 
   path_filters:
     - "!dist/**"
