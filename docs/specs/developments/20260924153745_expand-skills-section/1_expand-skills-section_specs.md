@@ -243,9 +243,16 @@ content and the site is redeployed.
       technology name and percentage unchanged.
 - [ ] No raw translation key and no untranslated placeholder text is visible in the
       section in either language.
-- [ ] Each individual entry looks and behaves as it does today, including the
-      narrow-viewport behaviour of moving the proficiency label beneath the progress
-      bar.
+- [ ] Each individual entry keeps today's name / label / percentage / progress-bar
+      elements and content unchanged. The proficiency label's position is driven by
+      the rendering card's width, not the browser viewport: beneath the progress bar
+      whenever the card is too narrow for an inline label to avoid overlapping the
+      technology name — this includes every side-by-side desktop layout (viewport
+      above 768px, where each of the three cards is far narrower than today's single
+      725px-wide card) as well as narrow stacked viewports (roughly 528px or below,
+      unchanged from today's rule). Inline placement remains wherever a card is wide
+      enough to fit it, which today's single card always was, and a stacked card
+      still is between roughly 528px and 768px viewport width.
 - [ ] The section remains reachable at its existing in-page anchor and its position
       in the landing page's scroll order is unchanged.
 - [ ] In each of the three site themes, every card subtitle, technology name,
