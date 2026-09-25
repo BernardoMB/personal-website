@@ -341,9 +341,28 @@
         @media screen and (max-width: 768px) {
           flex-direction: column;
         }
-        // Decision 5: side-by-side cards are always narrower than the 528px
-        // proxy, so the label moves beneath the bar for the whole three-up range.
-        @media screen and (min-width: 769px) {
+        // Decision 5 (implementation-time extension — see PR description):
+        // the plan's Decision 5 moved the label beneath the bar only for the
+        // three-up range (viewport above 768px), on the assumption that a
+        // stacked single-column card (roughly 528-768px) stays wide enough
+        // for the inline label to avoid overlapping the technology name, as
+        // it did before this change. Rendering the actual thirty-entry list
+        // showed that assumption does not hold: several of the longest names
+        // (e.g. "Diffusion models / Generative Agents",
+        // "Vertex AI / Azure ML / AWS SageMaker") overlap the absolutely
+        // positioned inline label at every width from roughly 375px up to
+        // and including 768px, not only in the narrower three-up layout.
+        // Applying AC13's own general rule — the label renders beneath the
+        // bar whenever the card is too narrow for an inline label to avoid
+        // overlapping the name — this rule is therefore applied
+        // unconditionally (no media query) rather than gated to
+        // min-width: 769px, since no card width produced by this component
+        // (stacked or three-up) is wide enough to fit every frozen entry
+        // name inline without overlap. Selectors are qualified with an extra
+        // `.skill-container` level so this rule outranks the unconditional
+        // `.skill-bottom-row { display: none; }` base rule below on
+        // specificity rather than relying on source order.
+        .skill-container {
           .skill-top-row .center-label {
             display: none;
           }
