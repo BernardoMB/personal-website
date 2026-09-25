@@ -147,10 +147,10 @@ no text overlaps the percentage and no text is clipped.
 
 **Expected result**: at 768px and below the three cards are stacked vertically at
 full width, in the same order top to bottom. There is no horizontal scrollbar at
-any of the three widths and no content is clipped. Between 600px and 768px the
-proficiency label sits inline, centred in the name row — the unchanged existing
-behaviour for a full-width card. At 375px the label has moved beneath the
-progress bar, again matching current behaviour.
+any of the three widths and no content is clipped. The proficiency label renders
+beneath the progress bar at all three widths (768px, 600px, 375px) — this section
+does not use the single-card section's inline-label behaviour at any width; see
+AC13.
 
 ### Step 7: Language switch
 
@@ -238,10 +238,9 @@ Each checkbox maps to an acceptance criterion from the spec.
 - [ ] AC12 — No raw translation key or untranslated placeholder in either
       language
 - [ ] AC13 — Entry presentation preserved; proficiency label renders beneath
-      the progress bar whenever a card is too narrow for it to sit inline —
-      every side-by-side desktop layout (above 768px) and narrow stacked
-      viewports (roughly 528px or below) — and stays inline for a stacked card
-      between roughly 528px and 768px
+      the progress bar at every viewport width, in both the stacked and
+      side-by-side layouts — no width produced by this component keeps the
+      label inline
 - [ ] AC14 — Section still reachable at `#skills` and in the same scroll position
 - [ ] AC15 — Legible in the light, dark, and mint themes
 
