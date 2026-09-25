@@ -244,15 +244,15 @@ content and the site is redeployed.
 - [ ] No raw translation key and no untranslated placeholder text is visible in the
       section in either language.
 - [ ] Each individual entry keeps today's name / label / percentage / progress-bar
-      elements and content unchanged. The proficiency label's position is driven by
-      the rendering card's width, not the browser viewport: beneath the progress bar
-      whenever the card is too narrow for an inline label to avoid overlapping the
-      technology name — this includes every side-by-side desktop layout (viewport
-      above 768px, where each of the three cards is far narrower than today's single
-      725px-wide card) as well as narrow stacked viewports (roughly 528px or below,
-      unchanged from today's rule). Inline placement remains wherever a card is wide
-      enough to fit it, which today's single card always was, and a stacked card
-      still is between roughly 528px and 768px viewport width.
+      elements and content unchanged. The proficiency label always renders beneath
+      the progress bar, at every viewport width, in both the stacked and side-by-side
+      layouts. This differs from today's single-card behaviour, where the label sits
+      inline beside the bar above roughly 528px: with this section's longest
+      technology names (e.g. "Diffusion models / Generative Agents", "CUDA / NVIDIA
+      Triton Inference Server"), no card width this component produces — stacked or
+      side-by-side — is wide enough to fit every entry's label inline without
+      overlapping its name, so the inline placement is dropped rather than applied
+      inconsistently across entries.
 - [ ] The section remains reachable at its existing in-page anchor and its position
       in the landing page's scroll order is unchanged.
 - [ ] In each of the three site themes, every card subtitle, technology name,
@@ -264,7 +264,8 @@ content and the site is redeployed.
 ## Out of Scope (MVP)
 
 - Redesigning the individual skill entry. The name, label, percentage and progress
-  bar presentation stays exactly as it is.
+  bar elements and their styling stay exactly as they are, except for the label's
+  position, which is governed entirely by the acceptance criterion above.
 - Any new interactivity in the section: filtering, searching, sorting controls,
   expand/collapse, tooltips, technology logos or links to external documentation.
 - Translating technology names. They stay identical in English and Spanish.
