@@ -46,8 +46,8 @@ are persisted, and none have identifiers issued by a backend.
 
 ### Skill
 
-- **Description**: A technology or tool with a self-assessed proficiency percentage and a bilingual proficiency label. 13 entries rendered as sorted progress bars.
-- **Key attributes**: name, percentage (40-95), proficiency label.
+- **Description**: A technology or tool with a self-assessed proficiency percentage and a bilingual proficiency label. 30 entries grouped into three themed cards (AI, Agents & LLMs; Infrastructure & MLOps; Full-Stack, Data & Testing) with fixed card membership, sorted within each card as progress bars.
+- **Key attributes**: name, percentage (40-95), proficiency label (derived from the percentage).
 - **Source**: hardcoded array in `src/app/components/landing/landing.component.ts`.
 
 ### CV Entry
