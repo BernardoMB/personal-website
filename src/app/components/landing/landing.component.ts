@@ -77,6 +77,13 @@ export const SKILL_GROUP_DEFINITIONS: SkillGroupDefinition[] = [
   },
 ];
 
+/**
+ * Derives the proficiency tier label for a completion percentage.
+ *
+ * @param completion whole-number completion percentage (40-95)
+ * @param labels current-language tier labels, ordered [top, middle, entry]
+ * @returns labels[0] at 70 and above, labels[1] from 55 to 69, labels[2] below 55
+ */
 export function labelForCompletion(completion: number, labels: string[]): string {
   if (completion >= 70) {
     return labels[0];
@@ -87,6 +94,16 @@ export function labelForCompletion(completion: number, labels: string[]): string
   return labels[2];
 }
 
+/**
+ * Builds the three rendered skill groups from the frozen skill definitions,
+ * deriving each entry's proficiency label and sorting each group by
+ * descending completion. Pure and idempotent: the same labels array always
+ * produces the same result, so both the initial-load path and the
+ * onLangChange callback can call this directly.
+ *
+ * @param labels current-language tier labels, ordered [top, middle, entry]
+ * @returns the three skill groups, each with its entries sorted highest first
+ */
 export function buildSkillGroups(labels: string[]): SkillGroup[] {
   return SKILL_GROUP_DEFINITIONS.map((group) => ({
     titleKey: group.titleKey,
