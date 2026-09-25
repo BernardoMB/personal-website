@@ -8,6 +8,98 @@ import Typed, { TypedOptions } from 'typed.js';
 import { ContactService } from '../../services/contact.service';
 import { DialogService } from '../../services/dialog.service';
 
+export interface SkillDefinition {
+  name: string;
+  completion: number;
+}
+
+export interface SkillGroupDefinition {
+  titleKey: string;
+  skills: SkillDefinition[];
+}
+
+export interface Skill {
+  name: string;
+  completion: number;
+  label: string;
+}
+
+export interface SkillGroup {
+  titleKey: string;
+  skills: Skill[];
+}
+
+export const SKILL_GROUP_DEFINITIONS: SkillGroupDefinition[] = [
+  {
+    titleKey: 'LANDING.SKILLS_GROUP_AI',
+    skills: [
+      { name: 'Python', completion: 95 },
+      { name: 'Agentic Development', completion: 90 },
+      { name: 'OpenAI API / Anthropic Claude API', completion: 88 },
+      { name: 'RAG', completion: 85 },
+      { name: 'LangChain / LangGraph', completion: 82 },
+      { name: 'OpenAI Function Calling / MCP', completion: 80 },
+      { name: 'AutoGen / CrewAI', completion: 72 },
+      { name: 'TensorFlow / PyTorch', completion: 68 },
+      { name: 'Diffusion models / Generative Agents', completion: 58 },
+      { name: 'Unreal Engine for AI', completion: 45 },
+    ]
+  },
+  {
+    titleKey: 'LANDING.SKILLS_GROUP_INFRA',
+    skills: [
+      { name: 'Docker', completion: 90 },
+      { name: 'CI/CD pipelines', completion: 88 },
+      { name: 'Kubernetes (K8s)', completion: 78 },
+      { name: 'Vertex AI / Azure ML / AWS SageMaker', completion: 75 },
+      { name: 'Kafka / Pub/Sub / RabbitMQ', completion: 70 },
+      { name: 'Prometheus / Grafana', completion: 65 },
+      { name: 'Terraform / Pulumi', completion: 62 },
+      { name: 'vLLM / Triton', completion: 58 },
+      { name: 'Distributed training frameworks', completion: 55 },
+      { name: 'CUDA / NVIDIA Triton Inference Server', completion: 50 },
+    ]
+  },
+  {
+    titleKey: 'LANDING.SKILLS_GROUP_FULLSTACK',
+    skills: [
+      { name: 'SQL + NoSQL + Redis', completion: 90 },
+      { name: 'Next.js / React', completion: 88 },
+      { name: 'Unit + Integration Testing', completion: 85 },
+      { name: 'FastAPI / Flask', completion: 82 },
+      { name: 'OAuth2 / JWT', completion: 78 },
+      { name: 'Data pipelines', completion: 75 },
+      { name: 'GraphQL', completion: 72 },
+      { name: 'Playwright / Cypress', completion: 68 },
+      { name: 'ETL tools', completion: 62 },
+      { name: 'Snowflake / BigQuery', completion: 52 },
+    ]
+  },
+];
+
+export function labelForCompletion(completion: number, labels: string[]): string {
+  if (completion >= 70) {
+    return labels[0];
+  }
+  if (completion >= 55) {
+    return labels[1];
+  }
+  return labels[2];
+}
+
+export function buildSkillGroups(labels: string[]): SkillGroup[] {
+  return SKILL_GROUP_DEFINITIONS.map((group) => ({
+    titleKey: group.titleKey,
+    skills: group.skills
+      .map((skill) => ({
+        name: skill.name,
+        completion: skill.completion,
+        label: labelForCompletion(skill.completion, labels)
+      }))
+      .sort((a, b) => b.completion - a.completion)
+  }));
+}
+
 @Component({
   selector: 'app-landing',
   templateUrl: './landing.component.html',
@@ -119,7 +211,7 @@ export class LandingComponent implements OnInit, AfterViewInit {
   //#endregion
 
   //#region Skills
-  skills: Array<any> | undefined;
+  skillGroups: SkillGroup[] | undefined;
   labels: Array<string> | undefined;
   //#endregion
 
@@ -212,21 +304,7 @@ export class LandingComponent implements OnInit, AfterViewInit {
           this.invalidFormErrorMessage = 'Submitted form is invalid.';
           break;
       }
-      this.skills = [
-        { name: 'JavaScript/TypeScript', completion: 95, label: this.labels[0]},
-        { name: 'C#', completion: 80, label: this.labels[0]},
-        { name: 'HTML/CSS', completion: 90, label: this.labels[0]},
-        { name: 'R', completion: 80, label: this.labels[0]},
-        { name: 'Java', completion: 75, label: this.labels[0]},
-        { name: 'SQL', completion: 70, label: this.labels[0]},
-        { name: 'MongoDB', completion: 85, label: this.labels[0]},
-        { name: 'Azure', completion: 75, label: this.labels[0]},
-        { name: 'AWS', completion: 65, label: this.labels[1]},
-        { name: 'Visual Basic', completion: 40, label: this.labels[2]},
-        { name: 'Microsoft Excel', completion: 75, label: this.labels[0]},
-        { name: 'LaTex', completion: 80, label: this.labels[0]},
-        { name: 'MatLab', completion: 40, label: this.labels[2]},
-      ];
+      this.skillGroups = buildSkillGroups(this.labels);
       //#endregion
     });
     //#endregion
@@ -247,21 +325,7 @@ export class LandingComponent implements OnInit, AfterViewInit {
         this.invalidFormErrorMessage = 'Submitted form is invalid.';
         break;
     }
-    this.skills = [
-      { name: 'JavaScript/TypeScript', completion: 95, label: this.labels[0]},
-      { name: 'C#', completion: 80, label: this.labels[0]},
-      { name: 'HTML/CSS', completion: 90, label: this.labels[0]},
-      { name: 'R', completion: 80, label: this.labels[0]},
-      { name: 'Java', completion: 75, label: this.labels[0]},
-      { name: 'SQL', completion: 70, label: this.labels[0]},
-      { name: 'MongoDB', completion: 85, label: this.labels[0]},
-      { name: 'Azure', completion: 75, label: this.labels[0]},
-      { name: 'AWS', completion: 65, label: this.labels[1]},
-      { name: 'Visual Basic', completion: 40, label: this.labels[2]},
-      { name: 'Microsoft Excel', completion: 75, label: this.labels[0]},
-      { name: 'LaTex', completion: 80, label: this.labels[0]},
-      { name: 'MatLab', completion: 40, label: this.labels[2]},
-    ];
+    this.skillGroups = buildSkillGroups(this.labels);
     //#region Contact form
     this.toggleControl.valueChanges.subscribe((value: string) => {
       switch (value) {
@@ -282,9 +346,6 @@ export class LandingComponent implements OnInit, AfterViewInit {
           break;
       }
     });
-    //#endregion
-    //#region Skills
-    this.skills = this.skills.sort((a, b) => b.completion - a.completion);
     //#endregion
   }
 

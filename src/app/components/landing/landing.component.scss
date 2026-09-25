@@ -315,7 +315,7 @@
 
   .skills-section {
     .skills-container {
-      max-width: 725px;
+      max-width: 1280px; // was 725px
       margin: auto;
       padding: 60px 16px;
       .section-title {
@@ -323,12 +323,45 @@
         font-size: 20px;
         font-weight: 600;
       }
+      .skills-cards-container {
+        display: flex;
+        gap: 24px;
+        align-items: stretch;
+        margin-top: 24px;
+        .skills-card {
+          flex: 1 1 0;
+          min-width: 0;
+          .skills-card-title {
+            margin: 0 0 16px;
+            font-size: 16px;
+            font-weight: 600;
+            text-align: center;
+          }
+        }
+        @media screen and (max-width: 768px) {
+          flex-direction: column;
+        }
+        // Decision 5: side-by-side cards are always narrower than the 528px
+        // proxy, so the label moves beneath the bar for the whole three-up range.
+        @media screen and (min-width: 769px) {
+          .skill-top-row .center-label {
+            display: none;
+          }
+          .skill-bottom-row {
+            display: flex;
+          }
+        }
+      }
       .skill-container {
         margin-bottom: 10px;
         .skill-top-row {
           display: flex;
           justify-content: space-between;
           position: relative;
+          .skill-name {
+            min-width: 0;
+            overflow-wrap: break-word;
+          }
           .center-label {
             position: absolute;
             left: calc(50% - 44px);
@@ -339,6 +372,7 @@
           }
           .completion {
             font-weight: 300;
+            white-space: nowrap;
           }
         }
         .skill-bottom-row {

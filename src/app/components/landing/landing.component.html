@@ -200,19 +200,22 @@
 <section id="skills" class="skills-section">
   <div class="skills-container">
     <h3 class="section-title skills-title">{{ 'LANDING.SKILLS' | translate }}</h3>
-    <mat-card>
-      <div class="skill-container" *ngFor="let skill of skills">
-        <div class="skill-top-row">
-          <div>{{skill.name}}</div>
-          <div class="center-label">{{skill.label}}</div>
-          <div class="completion">{{skill.completion / 100 | percent }}</div>
+    <div class="skills-cards-container">
+      <mat-card class="skills-card" *ngFor="let group of skillGroups">
+        <h4 class="skills-card-title">{{ group.titleKey | translate }}</h4>
+        <div class="skill-container" *ngFor="let skill of group.skills">
+          <div class="skill-top-row">
+            <div class="skill-name">{{skill.name}}</div>
+            <div class="center-label">{{skill.label}}</div>
+            <div class="completion">{{skill.completion / 100 | percent }}</div>
+          </div>
+          <mat-progress-bar mode="determinate" value="{{skill.completion}}"></mat-progress-bar>
+          <div class="skill-bottom-row">
+            <div class="center-label">{{skill.label}}</div>
+          </div>
         </div>
-        <mat-progress-bar mode="determinate" value="{{skill.completion}}"></mat-progress-bar>
-        <div class="skill-bottom-row">
-          <div class="center-label">{{skill.label}}</div>
-        </div>
-      </div>
-    </mat-card>
+      </mat-card>
+    </div>
   </div>
 </section>
 
