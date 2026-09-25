@@ -188,3 +188,18 @@ Sec
 cq-8Q~5S03gpG59058
 bHaahEPoNlhOn_9058
 llHCK6cKxaJJ9058
+
+# AI Development Workflow
+
+This repository uses a staged, AI-assisted development workflow for feature work:
+specification, review, implementation planning, implementation, testing, code
+review, and pull request preparation.
+
+- [`AGENTS.md`](AGENTS.md) — project instructions read by Claude Code, Cursor and other AI tools
+- [`docs/workflow/development-workflow/README.md`](docs/workflow/development-workflow/README.md) — the full workflow specification
+- [`docs/project/`](docs/project/) — business domain, repository and software architecture
+- [`docs/best-practices/`](docs/best-practices/) — coding, version control, testing and stack conventions
+- [`REVIEW.md`](REVIEW.md) — the review contract used by the spec, plan and code review gates
+
+The workflow is documentation-driven and does not affect the Angular application
+build, tests, or the Azure Pipelines deployment.

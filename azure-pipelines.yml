@@ -6,6 +6,14 @@
 trigger:
 - release/*
 
+# Without an explicit `pr:` trigger, Azure Pipelines defaults to validating
+# every pull request against this file — including the AzureRmWebAppDeployment@4
+# step below, which deploys to the live production Web App. That means any PR
+# whose build happens to succeed deploys to production, regardless of target
+# branch or review state. `pr: none` disables PR-triggered runs entirely;
+# production deploys still only happen via the `release/*` push trigger above.
+pr: none
+
 pool:
   # vmImage: ubuntu-latest
   vmImage: ubuntu-24.04
