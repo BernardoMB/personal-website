@@ -144,6 +144,10 @@ App service name: bernardomondragon
 
 Push changes to the ``release/v1`` branch. **Azure DevOps** is tracking the **Github** repository. See ``azure-pipelines.yml``.
 
+This application is no longer hosted in **Azure**. It domain name lease is.
+
+The application is now hosted in **Vercel**. Deployments are configured in **Vercel**. When there is a new change in branch `develop`.
+
 # Deployment notes
 
 After deployment is done make sure your files are uploaded in directory site/wwwroot. If not, then map physical path to site/wwwroot/<app_name> in Azure App Settings configurations.
@@ -163,6 +167,8 @@ https://learn.microsoft.com/en-us/answers/questions/489768/could-not-fetch-acces
 **Check Deployment status**
 
 https://dev.azure.com/bmondragonbrozon/
+
+To check deployment status navigate to the **Vercel** console.
 
 # Adding projects
 
