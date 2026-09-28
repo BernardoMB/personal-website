@@ -1,6 +1,7 @@
 <section class="description-section">
   <div class="description-container">
     <div class="read-time">{{ 'ABOUT.READ_TIME' | translate }}: {{ readTime | readTime }}</div>
+    <!--
     <p>
       {{ 'ABOUT.DESCRIPTION_P1' | translate }}
     </p>
@@ -13,6 +14,8 @@
     <p>
       {{ 'ABOUT.DESCRIPTION_P4' | translate }}
     </p>
+    -->
+    <div [innerHtml]="'ABOUT.DESCRIPTION_FULL' | translate"></div>
   </div>
   <div class="interrupter-container">
     <div class="interrupter"></div>
