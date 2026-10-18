@@ -61,161 +61,161 @@ export class ExperienceRootComponent implements OnInit {
       `
     },
   ];
-  experiences = [
-    {
-      logoUrl: '../../../../../assets/images/logos/Advent.png',
-      position: 'Computer Systems Analyst',
-      company: 'Andvent Infotech LLC',
-      employmentType: 'Full-time',
-      startDate: '2022-07-01T00:00:00.000Z',
-      endDate: null,
-      location: 'Washigton, DC',
-      description: `
-        <li>Design, build, deploy, and support computer systems</li>
-        <li>Testing and evaluating new programs following quality assurance procedures</li>
-        <li>Manage cloud infrastructure</li>
-        <li>Identifying areas for modification in existing programs and subsequently developing these modifications</li>
-        <li>Writing and implementing efficient code</li>
-        <li>Determining operational practicality</li>
-        <li>Maintaining and upgrading existing systems</li>
-        <li>Write documentation</li>
-        <li>Training users</li>
-        <li>Working closely with other designers, business analysts, project managers, testers, and developers</li>
-        <li>Design and develop solutions to complex applications problems</li>
-        <li>System administration issues, or network concerns. Perform systems management</li>
-        <li>Verify stability, interoperability, portability, security, or scalability of systems</li>
-        <li>Full-stack development of various system architectures</li>
-        <li>Identify system data, hardware, or software components required to meet user needs</li>
-        <li>Communicate with staff or clients to understand specific system requirements</li>
-        <br/>
-        <div class="contract-job-heading">
-            <img class="copmany-logo" src="../../../../../assets/images/logos/Toyota.png" alt="company logo">
-            <span style="font-weight: bold; font-size: 18px;">Toyota Material Handling</span>
-        </div>
-        <h3>Toyota Handling Material HRS (Contract)</h2>
-        <ul>
-          <li>Created a process and implementation strategy for TMHNA IT Asset management which satisfies the needs of the current financial process</li>
-          <li>Developed controls required by auditors and governance as part of a new and reformed financial strategy</li>
-          <li>Built trust with stakeholders in the areas of Reporting, Informing, and Consulting</li>
-        </ul>
-        <h3>Toyota Handling Material Go to Market Tools (Contract)</h2>
-        <ul>
-          <li>Provided pricing team with a tool for determining the price and discounts based on incentives and marketing data</li>
-          <li>Implemented the decision making process for approving customer requests</li>
-          <li>Generated thousands of quotes for thousands of customers</li>
-        </ul>
-        <div class="contract-job-heading">
-            <img class="copmany-logo" src="../../../../../assets/images/logos/OSSE.png" alt="company logo">
-            <span style="font-weight: bold; font-size: 18px;">Office of the State Superintendent of Education</span>
-        </div>
-        <h3>School Health Profiles (Contract)</h2>
-        <ul>
-          <li>OSSE's School Health Profile portal full-stack development: https://data.osse.dc.gov/shp</li>
-          <li>Helped District’s schools to achieve the goals of the <i>Healthy Schools Act of 2010</i></li>
-          <li>Made 251 schools healthier and made a positive impact on 93,843+ students</li>
-          <li>Generated reports with hundreds of statistics to inform the OSSE, the Mayor, DC Council and the Healthy 
-          Youth and Schools Commission on the extent to which the District’s schools are achieving the 
-          goals required by the <i>Healthy Schools Act of 2010</i></li>
-        </ul>
-        <h3>Department of Transportation Case Management System (Contract)</h2>
-        <ul>
-          <li>Successfully lly migrated, managed, monitored and maintained 200,000+ cases</li>
-          <li>Provided 93,843+ students with better transportation</li>
-          <li>Promptly and properly notified and informed schools, parents, and emergency services about incidents, accidents, and complaints</li>
-          <li>Helped Parent Resource Center, Dispatch teams and investigators to assess cases</li>
-        </ul>
-        <br/>
-        <p>Technologies used: .NET, NodeJS, Angular, ASP.NET, Blazor, Entity Framework, SQL Server, Azure DevOps, Microsoft Azure, Git, Redis, Azure Active Directory, Azure AD B2C, Linux VMs, Visio, App Service, Key Vault, Blob Storage, Send Grid, Several API integrations, Message Queue, Azure Functions, Microsoft Excel Integrations, PDF Generation, Azure APIM, Azure DevOps, and more.</p>
-      `
-    },
-    {
-      logoUrl: '../../../../../assets/images/logos/OAV.png',
-      position: 'Data Scientist',
-      company: 'One Auction View',
-      employmentType: 'Consultancy',
-      startDate: '2020-11-01T00:00:00.000Z',
-      endDate: '2022-07-01T00:00:00.000Z',
-      location: 'Redlands, California',
-      description: `
-        <p>Processed, cleaned, and analyzed millions of records from the automotive industry.</p>
-        <p>Created powerful dashboards that provided valuable insights for lenders and financial institutions.</p>
-        <p>Assisted 20+ dealerships in the U.S. with decision-making for restocking and trend analysis, maximizing their profits through segmentation, forecasting, and data modeling.</p>
-        <p>Technologies used: Python, Databricks, Power BI Embedded, Azure Data Factory, PySpark, Distributed Computing, Delta Lake Storage, Parquet, Bright Data, Cosmos DB, Git, Linux VMs, Microsoft Azure, Docker, Figma, App Service, Azure DevOps, Cypress, React JS, Nest JS, Stripe</p>
-      `
-    },
-    {
-      logoUrl: '../../../../../assets/images/logos/Zurich.PNG',
-      position: 'Full-stack Developer',
-      company: 'Zurich Insurance Company Ltd',
-      employmentType: 'Full-time',
-      startDate: '2020-11-01T00:00:00.000Z',
-      endDate: '2022-07-01T00:00:00.000Z',
-      location: 'Mexico City, Mexico',
-      description: `
-        <p>Financial Analysis, Underwriting Automation and Account Management.</p>
-        <p>Successfully developed and deployed sureties administration system for Zurich North America.</p>
-        <p>Successfully developed and deployed underwriting systems for exporter's property and casualty in North America.</p> 
-        <p>Full-stack development and database administration. Brokerage and underwriting automation.</p>
-        <p>Technologies used: .NET, Blazor, Entity Framework, SQL Server, Git, Bitbucket, Jira, Jfrog, Redis, Dynatrace Jenkins, Linux VMs, Figma, Microsoft Azure, App Service, and Azure DevOps.</p>
-      `
-    },
-    {
-      logoUrl: '../../../../../assets/images/logos/Kalyptio.png',
-      position: 'Founding Partner',
-      company: 'Kalyptio',
-      employmentType: 'Full-time',
-      startDate: '2019-01-01T00:00:00.000Z',
-      endDate: '2022-01-01T00:00:00.000Z',
-      location: 'Mexico City, Mexico',
-      description: `
-      <p>Designed and executed strategic processes to deliver best quality software for our clients.</p>
-      <p>Monitored that industry standards were met according to best development practices.</p>
-      <p>Satisfied over 30+ customers providing them with software that suits their needs</p>
-      `
-    },
-    {
-      logoUrl: '',
-      position: 'Lead Developer',
-      company: 'Neolinx de Mexico',
-      employmentType: 'Full-time',
-      startDate: '2014-01-01T00:00:00.000Z',
-      endDate: '2019-01-01T00:00:00.000Z',
-      location: 'Mexico City, Mexico',
-      description: `
-        <p>Full-stack development</p>
-        <p>Successfully developed and implemented software solutions to manipulate and analyze data generated by the telecommunication industry for Mexico's Attorney-General's Office (PGR) and Mexico's Center of Investigation and Nation Security (CISEN).</p>
-        <p>Helped saving hundreds of lives and preventing thousands of crimes.</p>
-        <p>Successfully parsed over 700 million CDR (call detail registries) from different random formats.</p>
-      `
-    },
-    {
-      logoUrl: '../../../../../assets/images/logos/Koomkin.PNG',
-      position: 'Full-stack Developer',
-      company: 'Grupo Koomkin',
-      employmentType: 'Full-time',
-      startDate: '2016-08-01T00:00:00.000Z',
-      endDate: '2017-02-01T00:00:00.000Z',
-      location: 'Mexico City, Mexico',
-      description: `
-      <p>Analyzed digital marketing campaigns data to maximize lead conversion rates for customers.</p>
-          <p>Coded algorithms and designed UI UX flows for lead generation in digital platforms.</p>
-          <p>Successfully increased the lead conversion ratio for 40+ clients.</p>
-      `
-    },
-    {
-      logoUrl: '../../../../../assets/images/logos/Ecorise.png',
-      position: 'Producer',
-      company: 'Ecorise Youth Innovations',
-      employmentType: 'Full-time',
-      startDate: '2016-08-01T00:00:00.000Z',
-      endDate: '2017-02-01T00:00:00.000Z',
-      location: 'Austin, TX',
-      description: `
-          <p>Pedagogue, designer, and producer of educational interactive and animated content.</p>
-          <p>Animated over 40 educational video lectures for hundreds of students coursing elementary school.</p>
-      `
-    }
-  ];
+  // experiences = [
+  //   {
+  //     logoUrl: '../../../../../assets/images/logos/Advent.png',
+  //     position: 'Computer Systems Analyst',
+  //     company: 'Andvent Infotech LLC',
+  //     employmentType: 'Full-time',
+  //     startDate: '2022-07-01T00:00:00.000Z',
+  //     endDate: null,
+  //     location: 'Washigton, DC',
+  //     description: `
+  //       <li>Design, build, deploy, and support computer systems</li>
+  //       <li>Testing and evaluating new programs following quality assurance procedures</li>
+  //       <li>Manage cloud infrastructure</li>
+  //       <li>Identifying areas for modification in existing programs and subsequently developing these modifications</li>
+  //       <li>Writing and implementing efficient code</li>
+  //       <li>Determining operational practicality</li>
+  //       <li>Maintaining and upgrading existing systems</li>
+  //       <li>Write documentation</li>
+  //       <li>Training users</li>
+  //       <li>Working closely with other designers, business analysts, project managers, testers, and developers</li>
+  //       <li>Design and develop solutions to complex applications problems</li>
+  //       <li>System administration issues, or network concerns. Perform systems management</li>
+  //       <li>Verify stability, interoperability, portability, security, or scalability of systems</li>
+  //       <li>Full-stack development of various system architectures</li>
+  //       <li>Identify system data, hardware, or software components required to meet user needs</li>
+  //       <li>Communicate with staff or clients to understand specific system requirements</li>
+  //       <br/>
+  //       <div class="contract-job-heading">
+  //           <img class="copmany-logo" src="../../../../../assets/images/logos/Toyota.png" alt="company logo">
+  //           <span style="font-weight: bold; font-size: 18px;">Toyota Material Handling</span>
+  //       </div>
+  //       <h3>Toyota Handling Material HRS (Contract)</h2>
+  //       <ul>
+  //         <li>Created a process and implementation strategy for TMHNA IT Asset management which satisfies the needs of the current financial process</li>
+  //         <li>Developed controls required by auditors and governance as part of a new and reformed financial strategy</li>
+  //         <li>Built trust with stakeholders in the areas of Reporting, Informing, and Consulting</li>
+  //       </ul>
+  //       <h3>Toyota Handling Material Go to Market Tools (Contract)</h2>
+  //       <ul>
+  //         <li>Provided pricing team with a tool for determining the price and discounts based on incentives and marketing data</li>
+  //         <li>Implemented the decision making process for approving customer requests</li>
+  //         <li>Generated thousands of quotes for thousands of customers</li>
+  //       </ul>
+  //       <div class="contract-job-heading">
+  //           <img class="copmany-logo" src="../../../../../assets/images/logos/OSSE.png" alt="company logo">
+  //           <span style="font-weight: bold; font-size: 18px;">Office of the State Superintendent of Education</span>
+  //       </div>
+  //       <h3>School Health Profiles (Contract)</h2>
+  //       <ul>
+  //         <li>OSSE's School Health Profile portal full-stack development: https://data.osse.dc.gov/shp</li>
+  //         <li>Helped District’s schools to achieve the goals of the <i>Healthy Schools Act of 2010</i></li>
+  //         <li>Made 251 schools healthier and made a positive impact on 93,843+ students</li>
+  //         <li>Generated reports with hundreds of statistics to inform the OSSE, the Mayor, DC Council and the Healthy 
+  //         Youth and Schools Commission on the extent to which the District’s schools are achieving the 
+  //         goals required by the <i>Healthy Schools Act of 2010</i></li>
+  //       </ul>
+  //       <h3>Department of Transportation Case Management System (Contract)</h2>
+  //       <ul>
+  //         <li>Successfully lly migrated, managed, monitored and maintained 200,000+ cases</li>
+  //         <li>Provided 93,843+ students with better transportation</li>
+  //         <li>Promptly and properly notified and informed schools, parents, and emergency services about incidents, accidents, and complaints</li>
+  //         <li>Helped Parent Resource Center, Dispatch teams and investigators to assess cases</li>
+  //       </ul>
+  //       <br/>
+  //       <p>Technologies used: .NET, NodeJS, Angular, ASP.NET, Blazor, Entity Framework, SQL Server, Azure DevOps, Microsoft Azure, Git, Redis, Azure Active Directory, Azure AD B2C, Linux VMs, Visio, App Service, Key Vault, Blob Storage, Send Grid, Several API integrations, Message Queue, Azure Functions, Microsoft Excel Integrations, PDF Generation, Azure APIM, Azure DevOps, and more.</p>
+  //     `
+  //   },
+  //   {
+  //     logoUrl: '../../../../../assets/images/logos/OAV.png',
+  //     position: 'Data Scientist',
+  //     company: 'One Auction View',
+  //     employmentType: 'Consultancy',
+  //     startDate: '2020-11-01T00:00:00.000Z',
+  //     endDate: '2022-07-01T00:00:00.000Z',
+  //     location: 'Redlands, California',
+  //     description: `
+  //       <p>Processed, cleaned, and analyzed millions of records from the automotive industry.</p>
+  //       <p>Created powerful dashboards that provided valuable insights for lenders and financial institutions.</p>
+  //       <p>Assisted 20+ dealerships in the U.S. with decision-making for restocking and trend analysis, maximizing their profits through segmentation, forecasting, and data modeling.</p>
+  //       <p>Technologies used: Python, Databricks, Power BI Embedded, Azure Data Factory, PySpark, Distributed Computing, Delta Lake Storage, Parquet, Bright Data, Cosmos DB, Git, Linux VMs, Microsoft Azure, Docker, Figma, App Service, Azure DevOps, Cypress, React JS, Nest JS, Stripe</p>
+  //     `
+  //   },
+  //   {
+  //     logoUrl: '../../../../../assets/images/logos/Zurich.PNG',
+  //     position: 'Full-stack Developer',
+  //     company: 'Zurich Insurance Company Ltd',
+  //     employmentType: 'Full-time',
+  //     startDate: '2020-11-01T00:00:00.000Z',
+  //     endDate: '2022-07-01T00:00:00.000Z',
+  //     location: 'Mexico City, Mexico',
+  //     description: `
+  //       <p>Financial Analysis, Underwriting Automation and Account Management.</p>
+  //       <p>Successfully developed and deployed sureties administration system for Zurich North America.</p>
+  //       <p>Successfully developed and deployed underwriting systems for exporter's property and casualty in North America.</p> 
+  //       <p>Full-stack development and database administration. Brokerage and underwriting automation.</p>
+  //       <p>Technologies used: .NET, Blazor, Entity Framework, SQL Server, Git, Bitbucket, Jira, Jfrog, Redis, Dynatrace Jenkins, Linux VMs, Figma, Microsoft Azure, App Service, and Azure DevOps.</p>
+  //     `
+  //   },
+  //   {
+  //     logoUrl: '../../../../../assets/images/logos/Kalyptio.png',
+  //     position: 'Founding Partner',
+  //     company: 'Kalyptio',
+  //     employmentType: 'Full-time',
+  //     startDate: '2019-01-01T00:00:00.000Z',
+  //     endDate: '2022-01-01T00:00:00.000Z',
+  //     location: 'Mexico City, Mexico',
+  //     description: `
+  //     <p>Designed and executed strategic processes to deliver best quality software for our clients.</p>
+  //     <p>Monitored that industry standards were met according to best development practices.</p>
+  //     <p>Satisfied over 30+ customers providing them with software that suits their needs</p>
+  //     `
+  //   },
+  //   {
+  //     logoUrl: '',
+  //     position: 'Lead Developer',
+  //     company: 'Neolinx de Mexico',
+  //     employmentType: 'Full-time',
+  //     startDate: '2014-01-01T00:00:00.000Z',
+  //     endDate: '2019-01-01T00:00:00.000Z',
+  //     location: 'Mexico City, Mexico',
+  //     description: `
+  //       <p>Full-stack development</p>
+  //       <p>Successfully developed and implemented software solutions to manipulate and analyze data generated by the telecommunication industry for Mexico's Attorney-General's Office (PGR) and Mexico's Center of Investigation and Nation Security (CISEN).</p>
+  //       <p>Helped saving hundreds of lives and preventing thousands of crimes.</p>
+  //       <p>Successfully parsed over 700 million CDR (call detail registries) from different random formats.</p>
+  //     `
+  //   },
+  //   {
+  //     logoUrl: '../../../../../assets/images/logos/Koomkin.PNG',
+  //     position: 'Full-stack Developer',
+  //     company: 'Grupo Koomkin',
+  //     employmentType: 'Full-time',
+  //     startDate: '2016-08-01T00:00:00.000Z',
+  //     endDate: '2017-02-01T00:00:00.000Z',
+  //     location: 'Mexico City, Mexico',
+  //     description: `
+  //         <p>Analyzed digital marketing campaigns data to maximize lead conversion rates for customers.</p>
+  //         <p>Coded algorithms and designed UI UX flows for lead generation in digital platforms.</p>
+  //         <p>Successfully increased the lead conversion ratio for 40+ clients.</p>
+  //     `
+  //   },
+  //   {
+  //     logoUrl: '../../../../../assets/images/logos/Ecorise.png',
+  //     position: 'Producer',
+  //     company: 'Ecorise Youth Innovations',
+  //     employmentType: 'Full-time',
+  //     startDate: '2016-08-01T00:00:00.000Z',
+  //     endDate: '2017-02-01T00:00:00.000Z',
+  //     location: 'Austin, TX',
+  //     description: `
+  //         <p>Pedagogue, designer, and producer of educational interactive and animated content.</p>
+  //         <p>Animated over 40 educational video lectures for hundreds of students coursing elementary school.</p>
+  //     `
+  //   }
+  // ];
   //#endregion
 
   //#region Resume tab
