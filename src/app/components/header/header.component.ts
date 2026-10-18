@@ -142,7 +142,7 @@ export class HeaderComponent implements OnInit {
   copyLinkToClipboard() {
     // TODO: Copy actual url. Should fetch this value from environment.ts
     if (environment.production) {
-      this.clipboard.copy('https://bernardomondragon.azurewebsites.net');
+      this.clipboard.copy('https://bernardomondragon.net');
     } else {
       this.clipboard.copy('http://192.168.1.225:4204');
     }
