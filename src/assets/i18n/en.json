@@ -29,8 +29,8 @@
     "WELCOME_MESSAGE": "Welcome to my personal website!",
     "ACTUARY": "Actuary",
     "ACTUARY_DESCRIPTION": "Applied Mathematics to assess risk in insurance, finance and other industries and professions. More generally, actuaries apply rigorous mathematics to model matters of uncertainty.",
-    "AI_DEV": "AI Developer",
-    "AI_DEV_DESCRIPTION": "Applied Artificial Intelligence to automate software development using agents, orchestration frameworks, and AI tools. More generally, AI developers design workflows where intelligent systems generate, test, and refine code to handle complexity and uncertainty in engineering.",
+    "AI_DEV": "AI Consultant",
+    "AI_DEV_DESCRIPTION": "I Apply Artificial Intelligence harness to automate software development or business solutions using agents, orchestration frameworks, and AI tools. More generally, I design workflows where intelligent systems generate, test, and refine code to handle complexity and uncertainty in engineering.",
     "DEVELOPER": "Full-stack Engineer",
     "DEVELOPER_DESCRIPTION": "The process of conceiving, specifying, designing, documenting, programming, testing, and bug fixing involved in creating and maintaining applications, frameworks, or other software components.",
     "TEACHER": "Teacher",
@@ -107,7 +107,8 @@
     "DOGS": "Walk the dogs",
     "MOVIES_AND_SERIES": "Watch movies and series",
     "MUSIC": "Listen to music",
-    "COOKING": "Cooking"
+    "COOKING": "Cooking",
+    "AI": "Artificial Intelligence"
   },
   "PROJECTS": {
     "PROJECTS": "Projects",

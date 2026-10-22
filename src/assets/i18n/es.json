@@ -29,8 +29,8 @@
     "WELCOME_MESSAGE": "¡Bienvenido a mi sitio web personal!",
     "ACTUARY": "Actuario",
     "ACTUARY_DESCRIPTION": "Aplicación modelos estadísticos y matemáticos para administrar riesgos en las industrias aseguradora y financiera, principalmente. Los actuarios abordan la gestión y evaluación del impacto financiero del riesgo y la incertidumbre de una entidad.",
-    "AI_DEV": "Desarrollador de IA",
-    "AI_DEV_DESCRIPTION": "Inteligencia Artificial aplicada para automatizar el desarrollo de software mediante agentes, marcos de orquestación y herramientas de IA. Más generalmente, los desarrolladores de IA diseñan flujos de trabajo donde sistemas inteligentes generan, prueban y refinan código para manejar la complejidad y la incertidumbre en la ingeniería.",
+    "AI_DEV": "Consultor de IA",
+    "AI_DEV_DESCRIPTION": "Aplico la Inteligencia Artificial para automatizar el desarrollo de software o soluciones empresariales mediante el uso de agentes, marcos de orquestación y herramientas de IA. De manera más general, diseño flujos de trabajo en los que sistemas inteligentes generan, prueban y refinan código para gestionar la complejidad y la incertidumbre en procesos de ingeniería.",
     "DEVELOPER": "Ingeniero Full-Stack",
     "DEVELOPER_DESCRIPTION": "Los procesos de concebir, especificar, diseñar, programar, probar, desplegar y documentar, envueltos en la creación y mantenimiento de aplicaciones, librerias u otros componentes de software.",
     "TEACHER": "Profesor",
@@ -107,7 +107,8 @@
     "DOGS": "Pasear a los perros",
     "MOVIES_AND_SERIES": "Ver series y películas",
     "MUSIC": "Escuchar música",
-    "COOKING": "Cocinar"
+    "COOKING": "Cocinar",
+    "AI": "Inteligencia Artificial"
   },
   "PROJECTS": {
     "PROJECTS": "Proyectos",
