@@ -17,7 +17,7 @@ Historial comprobado en la entrega de sistemas utilizados por **más de 100,000 
 **IA/ML:** Python, Machine Learning, scikit‑learn, Intelligent Document Processing, Deep Learning, LLMs, modelos de pronóstico, Desarrollo Agéntico, Big Data, EDA, Machine Learning, Azure ML, RAG.  
 **Otros:** DDD, sistemas distribuidos, arquitectura orientada a eventos, Diseño Serverless, DevOps, Agile/Scrum, Alto Volumen y Alto Rendimiento, Embeddings, Cursor, Claude Code
 
-**EXPERIENCIA PROFESIONAL**
+## EXPERIENCIA PROFESIONAL
 
 ## **Senior Developer — Toyota Material Handling (TMHNA)**
 
@@ -136,7 +136,7 @@ Historial comprobado en la entrega de sistemas utilizados por **más de 100,000 
 
 *Ciudad de México | Dic 2017 – Ene 2021*
 
-> **Tech Stack:** Amazon RDS for SQL Server, AWS Elastic Beanstalk, AWS Secrets Manager, AWS KMS, AWS AppConfig, AWS Lambda, Amazon S3, AWS IAM Identity Center, AWS Directory Service, Amazon Cognito, AWS Lake Formation, Amazon API Gateway, AWS Glue, AWS Step Functions, Amazon EventBridge, Amazon CloudWatch, AWS X-Ray, Amazon DynamoDB, Amazon CloudWatch Logs Insights, Amazon EMR, Amazon RDS for PostgreSQL, Amazon Aurora, Amazon ECS, Amazon ECR, AWS Fargate, AWS CloudFormation, AWS CDK, Amazon SageMaker AI, Amazon RDS for MySQL, Amazon EC2, AWS Outposts, Amazon Redshift, AWS IAM, Terraform, Amazon EC2
+> **Tech Stack:** Amazon RDS for SQL Server, AWS Elastic Beanstalk, AWS Secrets Manager, AWS KMS, AWS AppConfig, AWS Lambda, Amazon S3, AWS IAM Identity Center, AWS Directory Service, Amazon Cognito, AWS Lake Formation, Amazon API Gateway, AWS Glue, AWS Step Functions, Amazon EventBridge, Amazon CloudWatch, AWS X-Ray, Amazon DynamoDB, Amazon CloudWatch Logs Insights, Amazon EMR, Amazon RDS for PostgreSQL, Amazon Aurora, Amazon ECS, Amazon ECR, AWS Fargate, AWS CloudFormation, AWS CDK, Amazon SageMaker AI, Amazon RDS for MySQL, Amazon EC2, AWS Outposts, Amazon Redshift, AWS IAM, Terraform
 
 Lideró la estrategia, la arquitectura, el UX, el desarrollo, DevOps y la entrega para **más de 30 clientes**.
 
@@ -153,7 +153,7 @@ Lideró la estrategia, la arquitectura, el UX, el desarrollo, DevOps y la entreg
 
 *Ciudad de México | Ene 2012 – Nov 2017*
 
-> **Tech Stack:** ASP.NET, .NET, Ext.NET, Angular, Node.js, SQL Server, Oracle, SignalR, Firebase, Azure, MySQL, Java, FTP, Oracle DB, PL/SQL, Linux Servers, On-prem Deployments, D3.js, Angular Material, Postman, SOAP, TCP/IP, C#, TypeScript, JavaScript, HTML, CSS, SCSS, SQL, T-SQL, PowerShell, Bash, YAML, JSON, 
+> **Tech Stack:** ASP.NET, .NET, Ext.NET, Angular, Node.js, SQL Server, Oracle, SignalR, Firebase, Azure, MySQL, Java, FTP, Oracle DB, PL/SQL, Linux Servers, On-prem Deployments, D3.js, Angular Material, Postman, SOAP, TCP/IP, C#, TypeScript, JavaScript, HTML, CSS, SCSS, SQL, T-SQL, PowerShell, Bash, YAML, JSON
 
 ### Logros clave
 
@@ -163,7 +163,7 @@ Lideró la estrategia, la arquitectura, el UX, el desarrollo, DevOps y la entreg
 
 ### Iniciativas
 
-**Matrix Cacther**
+**Matrix Catcher**
 
 * Localiza de forma encubierta a suscriptores de telefonía móvil en cualquier parte del mundo utilizando infraestructura de telecomunicaciones en lugar de torres celulares falsas.
 
@@ -189,11 +189,11 @@ Lideró la estrategia, la arquitectura, el UX, el desarrollo, DevOps y la entreg
 
 **Zion**
 
-* Consola de operaciones en tiempo real: Sion funcionaba como la interfaz de monitoreo en vivo de Neolinx, mostrando infecciones activas, consultas de geolocalización y flujos de intercepción legal en un único panel.
+* Consola de operaciones en tiempo real: Zion funcionaba como la interfaz de monitoreo en vivo de Neolinx, mostrando infecciones activas, consultas de geolocalización y flujos de intercepción legal en un único panel.
 
 * Orquestación multisistema: coordinaba acciones en todas las herramientas de vigilancia que Neolinx desplegaba —activando tareas, extrayendo datos y sincronizando resultados— sin realizar la intercepción directamente.
 
-* Capa de auditoría y cumplimiento: Sion registraba las acciones de los operadores, mantenía registros de cadena de custodia y empaquetaba evidencia para revisión legal o interna, y fungía como marco de supervisión de las operaciones de vigilancia.
+* Capa de auditoría y cumplimiento: Zion registraba las acciones de los operadores, mantenía registros de cadena de custodia y empaquetaba evidencia para revisión legal o interna, y fungía como marco de supervisión de las operaciones de vigilancia.
 
 ## EDUCACIÓN
 

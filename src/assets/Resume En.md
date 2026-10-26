@@ -10,14 +10,14 @@ Proven track record delivering systems used by **100k+ users**, processing **mil
 
 ## CORE SKILLS
 
-**Backend:** .NET (C#), Node.js, Python, Microservices, REST, SOAP, XML, TC/IP  
+**Backend:** .NET (C#), Node.js, Python, Microservices, REST, SOAP, XML, TCP/IP  
 **Frontend:** Angular, React, TypeScript, Blazor, ASP.NET, Vue  
-**Cloud:** Azure, AWS, GCP. Vercel, Containerization & Orchestration, Serverless Design, Even Driven Architectures, Power BI, Docker, CI/CD , Terraform, Observability & Reliability CloudWatch, Prometheus/Grafana, distributed tracing.  
+**Cloud:** Azure, AWS, GCP, Vercel, Containerization & Orchestration, Serverless Design, Event Driven Architectures, Power BI, Docker, CI/CD , Terraform, Observability & Reliability CloudWatch, Prometheus/Grafana, distributed tracing.  
 **Data:** SQL Server, PostgreSQL, MongoDB, Databricks, Spark, Delta Lake, Power BI, Cosmos DB.  
 **AI/ML:** Python, Machine Learning, scikit‑learn, Intelligent Document Processing, Deep Learning, LLMs, forecasting models, Agentic Development, Big data, EDA, Machine learning, Azure ML, RAG.  
 **Other:** DDD, distributed systems, event‑driven architecture, Serverless Design, DevOps, Agile/Scrum, High Volume & High Throughput, Embeddings, Cursor, Claude Code
 
-**PROFESSIONAL EXPERIENCE**
+## PROFESSIONAL EXPERIENCE
 
 ## **Senior Developer — Toyota Material Handling (TMHNA)**
 
@@ -62,7 +62,7 @@ Proven track record delivering systems used by **100k+ users**, processing **mil
 
 - Delivered mission‑critical systems for public safety, health, and education.
 - Enabled real‑time reporting for the Mayor, DC Council, and the Healthy Youth & Schools Commission.
-- Improved the lives of 10000+ children helping their school adopt better health standars
+- Improved the lives of 10000+ children helping their school adopt better health standards
 - Helped District’s schools to achieve the goals of the Healthy Schools Act of 2010
 Made 251 schools healthier and made a positive impact on 93,843+ students
 - Promptly and properly notified and informed schools, parents, and emergency services about incidents, accidents, and complaints
@@ -136,7 +136,7 @@ Made 251 schools healthier and made a positive impact on 93,843+ students
 
 *Mexico City | Dec 2017 – Jan 2021*
 
-> **Tech Stack:** Amazon RDS for SQL Server, AWS Elastic Beanstalk, AWS Secrets Manager, AWS KMS, AWS AppConfig, AWS Lambda, Amazon S3, AWS IAM Identity Center, AWS Directory Service, Amazon Cognito, AWS Lake Formation, Amazon API Gateway, AWS Glue, AWS Step Functions, Amazon EventBridge, Amazon CloudWatch, AWS X-Ray, Amazon DynamoDB, Amazon CloudWatch Logs Insights, Amazon EMR, Amazon RDS for PostgreSQL, Amazon Aurora, Amazon ECS, Amazon ECR, AWS Fargate, AWS CloudFormation, AWS CDK, Amazon SageMaker AI, Amazon RDS for MySQL, Amazon EC2, AWS Outposts, Amazon Redshift, AWS IAM, Terraform, Amazon EC2
+> **Tech Stack:** Amazon RDS for SQL Server, AWS Elastic Beanstalk, AWS Secrets Manager, AWS KMS, AWS AppConfig, AWS Lambda, Amazon S3, AWS IAM Identity Center, AWS Directory Service, Amazon Cognito, AWS Lake Formation, Amazon API Gateway, AWS Glue, AWS Step Functions, Amazon EventBridge, Amazon CloudWatch, AWS X-Ray, Amazon DynamoDB, Amazon CloudWatch Logs Insights, Amazon EMR, Amazon RDS for PostgreSQL, Amazon Aurora, Amazon ECS, Amazon ECR, AWS Fargate, AWS CloudFormation, AWS CDK, Amazon SageMaker AI, Amazon RDS for MySQL, Amazon EC2, AWS Outposts, Amazon Redshift, AWS IAM, Terraform
 
 Led strategy, architecture, UX, development, DevOps, and delivery for **30+ clients**.
 
@@ -153,7 +153,7 @@ Led strategy, architecture, UX, development, DevOps, and delivery for **30+ clie
 
 *Mexico City | Jan 2012 – Nov 2017*
 
-> **Tech Stack:** ASP.NET, .NET, Ext.NET, Angular, Node.js, SQL Server, Oracle, SignalR, Firebase, Azure, MySQL, Java, FTP, Oracle DB, PL/SQL, Linux Servers, On-prem Deployments, D3.js, Angular Material, Postman, SOAP, TCP/IP, C#, TypeScript, JavaScript, HTML, CSS, SCSS, SQL, T-SQL, PowerShell, Bash, YAML, JSON, 
+> **Tech Stack:** ASP.NET, .NET, Ext.NET, Angular, Node.js, SQL Server, Oracle, SignalR, Firebase, Azure, MySQL, Java, FTP, Oracle DB, PL/SQL, Linux Servers, On-prem Deployments, D3.js, Angular Material, Postman, SOAP, TCP/IP, C#, TypeScript, JavaScript, HTML, CSS, SCSS, SQL, T-SQL, PowerShell, Bash, YAML, JSON
 
 ### Key Achievements
 
@@ -163,7 +163,7 @@ Led strategy, architecture, UX, development, DevOps, and delivery for **30+ clie
 
 ### Initiatives
 
-**Matrix Cacther**
+**Matrix Catcher**
 
 * Locate mobile phone subscribers covertly anywhere in the world using telecom infrastructure rather than fake cell towers. 
 
@@ -189,19 +189,19 @@ Led strategy, architecture, UX, development, DevOps, and delivery for **30+ clie
 
 **Zion**
 
-* Real‑time operations console: Sion served as Neolinx’s live monitoring interface, showing active infections, geolocation queries, and lawful‑interception streams in one unified dashboard.
+* Real‑time operations console: Zion served as Neolinx’s live monitoring interface, showing active infections, geolocation queries, and lawful‑interception streams in one unified dashboard.
 
 * Multi‑system orchestration: It coordinated actions across all surveillance tools Neolinx deployed—triggering tasks, pulling data, and synchronizing results—without performing interception itself.
 
-* Audit and compliance layer: Sion logged operator actions, maintained chain‑of‑custody records, and packaged evidence for legal or internal review, acting as the oversight framework for surveillance operations.
+* Audit and compliance layer: Zion logged operator actions, maintained chain‑of‑custody records, and packaged evidence for legal or internal review, acting as the oversight framework for surveillance operations.
 
 ## EDUCATION
 
 **Bachelor’s in Actuarial Science** — *ITAM (2013–2018)* Applied mathematics, statistics, risk modeling, insurance theory.
 
-**Diplomat on Insurance** — *ITAM (2020–2021)* Insurance Theory in Depth for types of Insurance and how insurance copmanies operate. 
+**Insurance Diploma** — *ITAM (2020–2021)* Insurance Theory in Depth for types of Insurance and how insurance companies operate. 
 
-**Solvency II Diploma** — *UNAM (2019)* Diploma on Solvency II regulation for Insurance copmanies in Mexico.
+**Solvency II Diploma** — *UNAM (2019)* Diploma on Solvency II regulation for Insurance companies in Mexico.
 
 ## KEY ACHIEVEMENTS
 
