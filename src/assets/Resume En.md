@@ -136,6 +136,8 @@ Made 251 schools healthier and made a positive impact on 93,843+ students
 
 *Mexico City | Dec 2017 – Jan 2021*
 
+> **Tech Stack:** Amazon RDS for SQL Server, AWS Elastic Beanstalk, AWS Secrets Manager, AWS KMS, AWS AppConfig, AWS Lambda, Amazon S3, AWS IAM Identity Center, AWS Directory Service, Amazon Cognito, AWS Lake Formation, Amazon API Gateway, AWS Glue, AWS Step Functions, Amazon EventBridge, Amazon CloudWatch, AWS X-Ray, Amazon DynamoDB, Amazon CloudWatch Logs Insights, Amazon EMR, Amazon RDS for PostgreSQL, Amazon Aurora, Amazon ECS, Amazon ECR, AWS Fargate, AWS CloudFormation, AWS CDK, Amazon SageMaker AI, Amazon RDS for MySQL, Amazon EC2, AWS Outposts, Amazon Redshift, AWS IAM, Terraform, Amazon EC2
+
 Led strategy, architecture, UX, development, DevOps, and delivery for **30+ clients**.
 
 ### Initiatives
@@ -151,7 +153,7 @@ Led strategy, architecture, UX, development, DevOps, and delivery for **30+ clie
 
 *Mexico City | Jan 2012 – Nov 2017*
 
-> **Tech Stack:** ASP.NET, .NET, Ext.NET, Angular, Node.js, SQL Server, Oracle, SignalR, Firebase, Azure, MySQL, Java, FTP, Oracle DB, PL/SQL, Linux Servers, On-prem Deployments, D3.js, Angular Material, Postman, SOAP, TCP/IP, C#, TypeScript, JavaScript, HTML, CSS, SCSS, SQL, T-SQL, PowerShell, Bash, YAML, JSON
+> **Tech Stack:** ASP.NET, .NET, Ext.NET, Angular, Node.js, SQL Server, Oracle, SignalR, Firebase, Azure, MySQL, Java, FTP, Oracle DB, PL/SQL, Linux Servers, On-prem Deployments, D3.js, Angular Material, Postman, SOAP, TCP/IP, C#, TypeScript, JavaScript, HTML, CSS, SCSS, SQL, T-SQL, PowerShell, Bash, YAML, JSON, 
 
 ### Key Achievements
 
