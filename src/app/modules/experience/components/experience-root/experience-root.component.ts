@@ -280,7 +280,7 @@ export class ExperienceRootComponent implements OnInit {
   //#endregion
 
   //#region Pdf viewer
-  pdfSrc = 'assets/Resume En plain.pdf';
+  pdfSrc = 'assets/Resume En.pdf';
   //#endregion
 
   //#endregion
